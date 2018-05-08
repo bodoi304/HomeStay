@@ -8,7 +8,9 @@
             <p><a href="/Sila">- SiLa - Đà Lạt</a></p>
             <p><a href="/Yoko/index.aspx">- Yoko - Đà Lạt</a></p>
             <p><a href="/Happi">- Happi - Hải Phòng</a></p>
+            <p>  <a href="https://www.facebook.com/tinahomestay/">- Tina - Phước Hải</a></p>
             <p><a href="/SamSam">- Samsam - Vũng Tàu</a></p>
+            <p> <a href="/Amigo">- Amigo - Vũng Tàu</a></p>
             <p><a href="/Safa">- SaFa - Sapa</a></p>
             <p><a href="/AnAn">- AnAn - Sapa</a></p>
             <p><a href="/LaLa">- LaLa - Sải Gòn</a></p>
