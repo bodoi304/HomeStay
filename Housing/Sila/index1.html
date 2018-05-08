@@ -1,0 +1,1154 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SiLa Houzing</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content='HOUZING' property='og:title' />
+    <meta content='UNLOCKED THE FUTURE OF TRAVELLERS' property='og:description' />
+    <meta content='http://nguyenphituan.com/icon/LogoHouzing.jpg' property='og:image' />
+    <meta name="keywords" content="HomeStay,Home,Houzing" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="css/chocolat.css" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
+    <link href="css/iconeffects.css" rel='stylesheet' type='text/css' />
+    <!--fonts-->
+    <link href="//fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
+    <!--//fonts-->
+    <!--fonts-->
+</head>
+<body>
+    <!--Header-->
+    <div class="header" id="home">
+        <!-- /header-left -->
+        <div class="header-left">
+            <!-- /sidebar -->
+            <div id="sidebar">
+                <h4 class="menu">Menu</h4>
+                <ul>
+                    <li><a class="scroll" href="#about">About Us</a></li>
+                    <li><a class="scroll" href="#service">Our Services</a></li>
+
+                    <li><a class="scroll" href="#projects">Other Images</a></li>
+                    <li><a class="scroll" href="#port">Portfolio</a></li>
+                    <li><a class="scroll" href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#FAQ">FAQ</a>
+                    </li>
+                </ul>
+                <div id="sidebar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <script>
+                var sidebarbtn = document.getElementById('sidebar-btn');
+                var sidebar = document.getElementById('sidebar');
+                sidebarbtn.addEventListener('click', function () {
+                    if (sidebar.classList.contains('visible')) {
+                        sidebar.classList.remove('visible');
+                    } else {
+                        sidebar.className = 'visible';
+                    }
+                });
+            </script>
+            <!-- //sidebar -->
+        </div>
+        <!-- //header-left -->
+        <!-- /header-right -->
+        <div class="header-right">
+            <!--<div class="tag one"><a href="#" data-toggle="modal" data-target="#myModal11"><span class="glyphicon glyphicon-tag"></span> Login</a></div>
+            <div class="tag"><a href="#" data-toggle="modal" data-target="#myModal12"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></div>-->
+            <ul class="top-links">
+                <li><a href="https://www.facebook.com/silahouzing/"><i class="fa fa-facebook"></i></a></li>
+                <!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+            </ul>
+        </div>
+        <!-- //header-right -->
+        <div class="clearfix"></div>
+        <!-- login -->
+        <div class="modal fade" id="myModal11" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content modal-info">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body modal-spa">
+                        <div class="login-grids">
+                            <div class="login-bottom">
+                                <h3>Login</h3>
+                                <form action="#" method="post">
+                                    <input type="text" class="user" name="email" placeholder="Email" required="">
+                                    <input type="password" name="Password" placeholder="Password" required="">
+                                    <input type="submit" value="Submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //login -->
+        <!--/signup -->
+        <div class="modal fade" id="myModal12" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content modal-info">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body modal-spa">
+                        <div class="login-grids">
+                            <div class="login-bottom">
+                                <h3>Sign Up</h3>
+                                <form action="#" method="post">
+                                    <input type="text" name="Name" placeholder="Your Name" required="">
+                                    <input type="email" name="Email" placeholder="Your Email" required="">
+                                    <input type="tel" name="tel" placeholder="Mobile" required="">
+                                    <input type="password" name="Password" placeholder="Password" required="">
+                                    <input type="password" name="Password" placeholder="Confirm Password" required="">
+                                    <div class="signup">
+                                        <span class="agree-checkbox">
+                                            <label class="checkbox"><input type="checkbox" name="checkbox">I agree to your <a class="w3layouts-t" href="#">Terms of Use</a></label>
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <input type="submit" value="Sign Up">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //signup -->
+        <!--Slider-->
+        <div class="slider">
+            <div class="callbacks_container">
+                <ul class="rslides" id="slider3">
+                    <li>
+                        <div class="slider-img">
+                            <img src="imagePhong/3O7A7056-min.jpg" class="img-responsive" alt="SILA Designs" />
+
+                        </div>
+                        <div class="slider-info">
+                            <h3 class="logo"><a href="index.html" style="color: #203b48; ">SILA <span style="color: #250201; ">HOUZING</span></a></h3>
+                            <h4 style="color: #203b48; ">UNLOCKED THE FUTURE OF TRAVELLERS</h4>
+                            <div class="search">
+                                <form action="#" method="post"></form>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-img">
+                            <img src="imagePhong/3O7A7048-min.jpg" class="img-responsive" alt="SILA Designs" />
+
+                        </div>
+
+                        <div class="slider-info">
+                            <h3 class="logo"><a href="index.html" style="color: #203b48; ">SILA <span style="color: #250201; ">HOUZING</span></a></h3>
+                            <h4 style="color: #203b48; ">UNLOCKED THE FUTURE OF TRAVELLERS</h4>
+                            <div class="search">
+                                <form action="#" method="post"></form>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-img">
+
+                            <img src="imagePhong/phongngubanner.jpg" class="img-responsive" alt="SILA Designs" />
+
+                        </div>
+                        <div class="slider-info">
+                            < <h3 class="logo"><a href="index.html" style="color: #203b48; ">SILA <span style="color: #250201; ">HOUZING</span></a></h3>
+                            <h4 style="color: #203b48; ">UNLOCKED THE FUTURE OF TRAVELLERS </h4>
+                            <div class="search">
+                                <form action="#" method="post"></form>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-img">
+
+                            <img src="imagePhong/3O7A6940-min.jpg" class="img-responsive" alt="Sila Designs" />
+
+                        </div>
+                        <div class="slider-info">
+                            <h3 class="logo"><a href="index.html" style="color: #203b48; ">SILA <span style="color: #250201; ">HOUZING</span></a></h3>
+                            <h4 style="color: #203b48; ">UNLOCKED THE FUTURE OF TRAVELLERS </h4>
+
+                            <div class="search">
+                                <form action="#" method="post"></form>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!--//Slider-->
+    </div>
+
+    <!-- about -->
+    <div class="about" id="about" style=" padding-bottom : 100px">
+        <div class="container">
+            <div class="about-w3l-agileifo-grid">
+                <div class="agile-w3l-ab">
+                    <ul class="rslides" id="slider">
+                        <li>
+                            <div class="agile-w3l-ab-img">
+                                <img src="imagePhong/phongkhach444444.jpg" class="img-responsive" alt="SiLa Designs">
+                            </div>
+
+                        </li>
+                        <li>
+
+                            <div class="agile-w3l-ab-img">
+                                <img src="imagePhong/phongkhach11.jpg" class="img-responsive" alt="SiLa Designs">
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="agile-w3l-ab-img">
+                                <img src="imagePhong/3O7A7043-min.jpg" class="img-responsive" alt="SiLa Designs">
+                            </div>
+
+                        </li>
+
+
+
+                    </ul>
+                </div>
+                <div class="ab-w3l-text w3l-pop">
+                    <div class="ab-agile-top">
+                        <h1>About Us</h1>
+
+                        <div class="ab-agile-bottom">
+                            <p>SILA is a luxury apartment in the peaceful Yersin area, next to Da Lat College of Pedagogy. It was designed in the luxury Nordic style and located in the quiet residential area in the center of Dalat city, surrounded by Da Lat people, Da Lat people are cute, friendly if you are in a few days here will see that.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- //about -->
+    <!-- services-section -->
+    <div style=" height:100px "></div>
+    <div class="services-section" id="service">
+        <div class="container">
+            <div class="port-head">
+                <h3 class="tittle">Our Services</h3>
+            </div>
+            <div class="service-grids">
+                <div class="col-md-5 service-icons">
+                    <div class="serve-one">
+                        <div class="hi-icon-wrap hi-icon-effect-4 hi-icon-effect-4b">
+                            <div class="icon-one">
+                                <a href="#" class="hi-icon icon1"></a>
+                            </div>
+                            <div class="abt-icon">
+
+                                <h4>Free Smart Phone</h4>
+                                <p>- Phone for you call taxi (already have LADO taxi number on the phone), look up information when needed.</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="serve-one two">
+                        <div class="hi-icon-wrap hi-icon-effect-4 hi-icon-effect-4b">
+                            <div class="icon-one">
+                                <a href="#" class="hi-icon icon2"></a>
+                            </div>
+                            <div class="abt-icon">
+
+                                <h4>Free - ALL IN ONE</h4>
+                                <p>
+                                    - Here you can go to Yersin market for self-cooking, Free wifi, Free Rice, Free clean coffee, Free Instant noodles, Free Water , Free scented candles.
+                                </p>
+                                <p>- Free Laundry, Free shampoo, conditioner, soap, always full in the bathroom.</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!--<div class="serve-one">
+                        <div class="hi-icon-wrap hi-icon-effect-4 hi-icon-effect-4b">
+                            <div class="icon-one">
+                                <a href="#" class="hi-icon icon3"></a>
+                            </div>
+                            <div class="abt-icon">
+
+                                <h4>Service 3</h4>
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>-->
+                </div>
+                <div class="col-md-7 service-text">
+                    <div class="agile-w3l-serve">
+
+                        <img class="img-responsive" src="imagePhong/phongkhach10.jpg" alt="Image-3">
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- differencials -->
+    <!-- Portfolio -->
+    <div class="portfolio" id="port">
+        <div class="port-head">
+            <h3 class="tittle">Portfolio</h3>
+        </div>
+        <ul class="simplefilter">
+            <li class="active" data-filter="all">All</li>
+            <li data-filter="1">Living Room</li>
+            <li data-filter="2">Bed Room</li>
+            <li data-filter="3">Kitchen</li>
+            <!--<li data-filter="4">Bath Room</li>-->
+
+        </ul>
+
+        <div class="filtr-container">
+            <div class="  filtr-item gallery-t" data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach5.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach5.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class=" filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach444444.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach444444.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach6.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach6.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach4.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach4.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach3333.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach3333.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach3.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach222.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach222.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach2.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach11.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach11.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach10.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach10.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach1.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="1" data-sort="Busy streets">
+
+                <a href="imagePhong/phongkhach.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongkhach.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="  filtr-item " data-category="2" data-sort="City wonders">
+
+                <a href="imagePhong/phongngu1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongngu1.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="2" data-sort="City wonders">
+
+                <a href="imagePhong/phongngu2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongngu2.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="2" data-sort="City wonders">
+
+                <a href="imagePhong/phongngu3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongngu3.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="2" data-sort="City wonders">
+
+                <a href="imagePhong/phongngu4.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/phongngu4.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="  filtr-item " data-category="3" data-sort="Industrial site">
+
+                <a href="imagePhong/bep3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/bep3.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="  filtr-item " data-category="3" data-sort="Industrial site">
+
+                <a href="imagePhong/bep1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/bep1.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+
+            <div class="  filtr-item " data-category="3" data-sort="Industrial site">
+
+                <a href="imagePhong/bep11.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/bep11.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="3" data-sort="Industrial site">
+
+                <a href="imagePhong/bep2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/bep2.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item " data-category="3" data-sort="Peaceful lake">
+
+                <a href="imagePhong/toilet1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                    <figure>
+                        <img src="imagePhong/toilet1.jpg" class="img-responsive" alt=" " />	<figcaption>
+                            <h3>SiLa Designs</h3>
+
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+   
+    <!-- //client -->
+    <!-- projects -->
+    <div class="projects" id="projects">
+        <div class="container">
+            <div class="port-head">
+                <h3 class="tittle">Other Images</h3>
+
+            </div>
+        </div>
+        <div class="projects-grids">
+            <div class="sreen-gallery-cursual">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="projects-agile-grid-info">
+                            <img src="imagePhong/caovesinh1.jpg" alt="" />
+                            <div class="projects-grid-caption">
+
+                                <h4>SiLa Designs</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="projects-agile-grid-info">
+                            <img src="imagePhong/caovesinh.jpg" alt="" />
+                            <div class="projects-grid-caption">
+
+                                <h4>SiLa Designs</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="projects-agile-grid-info">
+                            <img src="imagePhong/nhavesing1cao.jpg" alt="" />
+                            <div class="projects-grid-caption">
+
+                                <h4>SiLa Designs</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="projects-agile-grid-info">
+                            <img src="imagePhong/3O7A7067-min.jpg" alt="" />
+                            <div class="projects-grid-caption">
+
+                                <h4>SiLa Designs</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="projects-agile-grid-info">
+                            <img src="imagePhong/3O7A7172-min.jpg" alt="" />
+                            <div class="projects-grid-caption">
+
+                                <h4>SiLa Designs</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="projects-agile-grid-info">
+                            <img src="imagePhong/anhcao1.jpg" alt="" />
+                            <div class="projects-grid-caption">
+
+                                <h4>SiLa Designs</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="projects-agile-grid-info">
+                            <img src="imagePhong/anhcao3.jpg" alt="" />
+                            <div class="projects-grid-caption">
+
+                                <h4>SiLa Designs</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="projects-agile-grid-info">
+                            <img src="imagePhong/anhcao2.jpg" alt="" />
+                            <div class="projects-grid-caption">
+
+                                <h4>SiLa Designs</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //projects -->
+    <!-- /contact -->
+    <style>
+        .faqHeader {
+            font-size: 27px;
+            margin: 20px;
+        }
+
+        .panel-heading [data-toggle="collapse"]:after {
+            font-family: 'Glyphicons Halflings';
+            content: "\e072"; /* "play" icon */
+            float: right;
+            color: #F58723;
+            font-size: 18px;
+            line-height: 22px;
+            /* rotate "play" icon from > (right arrow) to down arrow */
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+
+        .panel-heading [data-toggle="collapse"].collapsed:after {
+            /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+            color: #454444;
+        }
+    </style>
+    <div class="services-section" id="FAQ">
+        <div class="container">
+            <div class="port-head">
+                <h3 class="tittle">FAQ</h3>
+            </div>
+            <div class="service-grids">
+       
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#13">
+                                    Is YOKO HOUSE near
+                                    <br />
+                                    Da Lat city center?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="13" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                It is located in Da Lat city center, far from airport 30km, near Thanh Buoi & Phuong Trang coach station if you travel from Sai Gon to Da Lat. The road leading to YOKO
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#14">
+
+                                    What is check-in, check-out time?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="14" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Check-in time is from 12pm to late at night, check-out time is 11 am. The time can be earlier or later if your room is available before or after check-in/ check-out time. (E.g.: If there is no guest using your room after you check out, you can stay more without paying any fee. If there is a guest check-in right after you check out, please follow the check-out time as regulations.
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#15">What are advantages of YOKO?</a>
+                            </h4>
+                        </div>
+                        <div id="15" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                It’s a special homestay located in city center operating as “cooking & culture” style:
+
+
+                                <br />
+                                staying here you can easily go to Da Lat market for buying food, cook by yourself.
+
+                                <br />
+                                <img src="../HoiDapYoKo/1f332.png" />free wifi.
+                                <br />
+                                <img src="../HoiDapYoKo/1f332.png" />
+                                free rice.
+                                <br />
+                                <img src="../HoiDapYoKo/1f332.png" />
+                                free coffee.
+                                <br />
+                                <img src="../HoiDapYoKo/1f332.png" />
+                                free jam strawberry.
+                                <br />
+                                <img src="../HoiDapYoKo/1f332.png" />
+                                free instant noodles for breakfast.
+                                <br />
+                                <img src="../HoiDapYoKo/1f332.png" />
+                                free a small kitchen with fully equipment
+                                <br />
+                                <img src="../HoiDapYoKo/1f332.png" />
+                                a front yard for parking (even for car).
+                                <br />
+                                <img src="../HoiDapYoKo/1f332.png" />
+                                2 bathrooms with water heaters
+                                <br />
+                                <img src="../HoiDapYoKo/1f332.png" />
+                                Toilet is the most concern at YOKO so that it is always kept clean.
+                                <br />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#16">Quite time?</a>
+                            </h4>
+                        </div>
+                        <div id="16" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                If there are no planned special events, please kindly follow regulations on “Quite time” at YOKO HOUSE from 22:00pm to 6am of the next day, which ensures resting and relax time for other people.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#17">
+                                    What time do cherry blossoms
+                                    bloom?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="17" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Normally, from the middle of January to the end of February, it depends on weather, the time shall be longer or shorter.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#18">What time of the year do Mexican sunflower bloom?</a>
+                            </h4>
+                        </div>
+                        <div id="18" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Mexican sunflower beautifully blooms from November to the end of December.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#19">
+                                    How to rent a motorbike and how much?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="19" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                To rent a motorbike, please book firstly with Ms. Huong: 0633.500.499, she will deliver the motorbike to YOKO.
+                                The price is from 80k to 120k/ 1 motorbike/ 1 day (you only need to provide ID card and pay the fee).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#20">
+                                    How to update weather situation<br />
+                                    in Da Lat?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="20" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Please contact to hotline: 0868.248.396 or via inbox to fanpage:
+                                <br />
+                                <a href="https://www.facebook.com/yokohouse01/messages">https://www.facebook.com/yokohouse01/messages </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#21">If you have any issues or complaints, what are contact points?</a>
+                            </h4>
+                        </div>
+                        <div id="21" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Please directly call to hotline: 0868.248.396 or inbox to fanpage: https://www.facebook.com/yokohouse01/messages
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#22">How to go to YOKO HOUSE from airport and price?</a>
+                            </h4>
+                        </div>
+                        <div id="22" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Catch a taxi, deal to taxi driver 200k to city center (address: 21BIS Tran Phu street – behind state treasury)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#23">How to get YOHO HOUSE from Thanh Buoi or Phuong Trang coach station?</a>
+                            </h4>
+                        </div>
+                        <div id="23" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Please call taxi, more details: <a href="http://nguyenphituan.com/thongtinyoko/en">http://nguyenphituan.com/thongtinyoko/en</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#24">Where are the places of interest?</a>
+                            </h4>
+                        </div>
+                        <div id="24" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                1.Lam Vien Square,  poetic Xuan Huong lake, Than Tho lake, Am Phu (Hell) market – Da Lat night market, Chicken church (Da Lat cathedral), Da Lat flower garden (in city center).
+                                <br />
+                                <br />
+                                2.Datanla waterfall (about 9km from city center): 100k/ 2 people/ 1 alpine coaster/ 2 ways.
+                                <br />
+                                3.Preen waterfall is about 10km from city center, next to Datanla waterfall.
+                                <br />
+                                4.Clay tunnel – 20km from city center
+                                <br />
+                                5.Pink grass hill is near Golden valley
+                                <br />
+                                6.Golden valley – 30km from city center
+                                <br />
+                                7.Langbiang tourist base.
+                            </div>
+                        </div>
+                    </div>
+
+           
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-main-agile-info" id="contact">
+        <div class="container">
+            <h3 class="tittle">Contact Us</h3>
+            <div class="contact-top-agileits">
+                <div class="col-md-4 contact-grid ">
+                    <div class="contact-grid1 agileits-w3layouts">
+                        <i class="fa fa-location-arrow"></i>
+                        <div class="con-w3l-info">
+                            <h4>Address </h4>
+                            <p>SILA Houzing, yersin<span> Đà Lạt City.</span></p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 contact-grid">
+                    <div class="contact-grid2 w3">
+                        <i class="fa fa-volume-control-phone"></i>
+                        <div class="con-w3l-info">
+                            <h4>Call Us</h4>
+                            <p>0868 248 396</p>
+                            <p> &nbsp;</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 contact-grid">
+                    <div class="contact-grid3 w3l">
+                        <i class="fa fa-envelope"></i>
+                        <div class="con-w3l-info">
+                            <h4>Email</h4>
+                            <p>
+                                <a href="mailto:silahouzing@gmail.com">silahouzing@gmail.com</a>
+
+
+                            </p>
+                            <p> &nbsp;</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 contact-grid ">
+                    <div class="contact-grid1 agileits-w3layouts">
+                        <i class="fa fa-location-arrow"></i>
+                        <div class="con-w3l-info">
+                            <h4>Hệ thống HomeStay </h4>
+                            <p><a href="/Sila">SiLa houzing Đà Lạt</a></p>
+                            <p><a href="/Yoko/index.aspx">Yoko houzing Đà Lạt</a></p>
+                            <p><a href="/Happi">Happi houzing Hải Phòng</a></p>
+                            <p><a href="/SamSam">Samsam houzing Vũng Tàu</a></p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- smooth scrolling -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+    <a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!--banner Slider starts Here-->
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider3").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+    </script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider").responsiveSlides({
+                auto: true,
+                pager: false,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+    </script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider4").responsiveSlides({
+                auto: true,
+                pager: false,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+    </script>
+    <!--banner Slider starts Here-->
+    <!-- PopUp-Box-JavaScript -->
+    <script src="js/jquery.chocolat.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.filtr-item a').Chocolat();
+        });
+    </script>
+    <!-- //PopUp-Box-JavaScript -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- Tabs-JavaScript -->
+    <script src="js/jquery.filterizr.js"></script>
+    <script src="js/controls.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.filtr-container').filterizr();
+        });
+    </script>
+    <!-- //Tabs-JavaScript -->
+    <script src="js/owl.carousel.js"></script>
+    <link href="css/owl.theme.css" rel="stylesheet">
+
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+                autoPlay: true,
+                navigation: true,
+
+                items: 4,
+                itemsDesktop: [640, 5],
+                itemsDesktopSmall: [414, 4]
+
+            });
+
+        });
+    </script>
+    <!-- for bootstrap working -->
+    <script src="js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Housing", "Housing\Housing.csproj", "{CA804140-3F8E-4112-88CC-FF6CC5CA2A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcees", "DataAcees\DataAcees.csproj", "{8F9AD059-41CE-4165-962C-9184A4E65914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIPhong", "WebAPIPhong\WebAPIPhong.csproj", "{51824CD0-2BE8-4B99-A978-6899752ABA08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA804140-3F8E-4112-88CC-FF6CC5CA2A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA804140-3F8E-4112-88CC-FF6CC5CA2A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA804140-3F8E-4112-88CC-FF6CC5CA2A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA804140-3F8E-4112-88CC-FF6CC5CA2A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F9AD059-41CE-4165-962C-9184A4E65914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F9AD059-41CE-4165-962C-9184A4E65914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F9AD059-41CE-4165-962C-9184A4E65914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F9AD059-41CE-4165-962C-9184A4E65914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51824CD0-2BE8-4B99-A978-6899752ABA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51824CD0-2BE8-4B99-A978-6899752ABA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51824CD0-2BE8-4B99-A978-6899752ABA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51824CD0-2BE8-4B99-A978-6899752ABA08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

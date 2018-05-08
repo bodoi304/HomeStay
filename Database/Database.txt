@@ -1,0 +1,93 @@
+USE [Houzing]
+GO
+
+/****** Object:  Table [bodoi304].[VIDEO]    Script Date: 4/30/2017 12:00:22 AM ******/
+DROP TABLE [bodoi304].[VIDEO]
+GO
+
+/****** Object:  Table [bodoi304].[QuanLyAnhVideo]    Script Date: 4/30/2017 12:00:22 AM ******/
+DROP TABLE [bodoi304].[QuanLyAnhVideo]
+GO
+
+/****** Object:  Table [bodoi304].[Anh]    Script Date: 4/30/2017 12:00:22 AM ******/
+DROP TABLE [bodoi304].[Anh]
+GO
+
+/****** Object:  Table [bodoi304].[Anh]    Script Date: 4/30/2017 12:00:22 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [bodoi304].[Anh](
+	[ID] [bigint] IDENTITY(1,1) NOT NULL,
+	[ID_IMAGE] [bigint] NULL,
+	[IMAGE_THUMB_URL] [varchar](200) NULL,
+	[IMAGE_URL] [varchar](200) NULL,
+	[VITRI_IMAGE] [nvarchar](200) NULL,
+	[TITLE_IMAGE] [nvarchar](200) NULL,
+	[IMAGE_HOVER] [nvarchar](500) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/****** Object:  Table [bodoi304].[QuanLyAnhVideo]    Script Date: 4/30/2017 12:00:22 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [bodoi304].[QuanLyAnhVideo](
+	[ID] [bigint] IDENTITY(1,1) NOT NULL,
+	[ID_IMAGE] [bigint] NULL,
+	[ID_VIDEO] [bigint] NULL,
+	[IS_IMAGE_VIDEO] [smallint] NULL,
+	[QUOTE] [nvarchar](500) NULL,
+	[NAME] [nvarchar](500) NULL,
+	[ICON_VIDEO_IMAGE] [varchar](100) NULL,
+	[DURATION_VIDEO] [varchar](20) NULL,
+	[DIA_DIEM] [smallint] NULL,
+	[LOAI_VIDEO] [smallint] NULL,
+	[LOAI_IMAGE] [smallint] NULL,
+	[THU_TU_UU_TIEN] [bigint] NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/****** Object:  Table [bodoi304].[VIDEO]    Script Date: 4/30/2017 12:00:22 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [bodoi304].[VIDEO](
+	[ID] [bigint] IDENTITY(1,1) NOT NULL,
+	[ID_VIDEO] [bigint] NULL,
+	[VIDEO_URL] [varchar](200) NULL,
+	[MAIN_HOVER_TEXT] [nvarchar](300) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

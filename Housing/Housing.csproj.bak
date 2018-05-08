@@ -1,0 +1,1551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA804140-3F8E-4112-88CC-FF6CC5CA2A30}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Housing</RootNamespace>
+    <AssemblyName>Housing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Data.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Printing.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.RichEdit.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxThemes.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.8.2\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.24\lib\net40\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.1\lib\net40\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.0\lib\net40\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutMe\AboutMe.aspx" />
+    <Content Include="AboutMe\nguyenphituanHoso.jpg" />
+    <Content Include="AboutMe\tuan.jpg" />
+    <Content Include="Admin\css\bootstrap.min.css" />
+    <Content Include="Admin\css\clndr.css" />
+    <Content Include="Admin\css\custom.css" />
+    <Content Include="Admin\css\font-awesome.css" />
+    <Content Include="Admin\css\jqvmap.css" />
+    <Content Include="Admin\css\lines.css" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\images\1.png" />
+    <Content Include="Admin\images\2.png" />
+    <Content Include="Admin\images\3.png" />
+    <Content Include="Admin\images\4.png" />
+    <Content Include="Admin\images\5.png" />
+    <Content Include="Admin\images\arrow-left.png" />
+    <Content Include="Admin\images\arrow-right.png" />
+    <Content Include="Admin\images\bg.jpg" />
+    <Content Include="Admin\images\cloud.png" />
+    <Content Include="Admin\images\logo.png" />
+    <Content Include="Admin\images\pic1.png" />
+    <Content Include="Admin\images\pic2.png" />
+    <Content Include="Admin\images\pic3.jpg" />
+    <Content Include="Admin\images\pic4.jpg" />
+    <Content Include="Admin\js\bootstrap.min.js" />
+    <Content Include="Admin\js\Chart.js" />
+    <Content Include="Admin\js\clndr.js" />
+    <Content Include="Admin\js\custom.js" />
+    <Content Include="Admin\js\d3.v3.js" />
+    <Content Include="Admin\js\jquery.min.js" />
+    <Content Include="Admin\js\jquery.vmap.js" />
+    <Content Include="Admin\js\jquery.vmap.sampledata.js" />
+    <Content Include="Admin\js\jquery.vmap.world.js" />
+    <Content Include="Admin\js\metisMenu.min.js" />
+    <Content Include="Admin\js\moment-2.2.1.js" />
+    <Content Include="Admin\js\rickshaw.js" />
+    <Content Include="Admin\js\site.js" />
+    <Content Include="Admin\js\underscore-min.js" />
+    <Content Include="Admin\QuanLyPhong\css\basictable.css" />
+    <Content Include="Admin\QuanLyPhong\css\bootstrap.css" />
+    <Content Include="Admin\QuanLyPhong\css\circles.css" />
+    <Content Include="Admin\QuanLyPhong\css\component.css" />
+    <Content Include="Admin\QuanLyPhong\css\export.css" />
+    <Content Include="Admin\QuanLyPhong\css\flipclock.css" />
+    <Content Include="Admin\QuanLyPhong\css\font-awesome.css" />
+    <Content Include="Admin\QuanLyPhong\css\jQuery-plugin-progressbar1.css" />
+    <Content Include="Admin\QuanLyPhong\css\monthly.css" />
+    <Content Include="Admin\QuanLyPhong\css\style.css" />
+    <Content Include="Admin\QuanLyPhong\css\style_grid.css" />
+    <Content Include="Admin\QuanLyPhong\css\table-style.css" />
+    <Content Include="Admin\QuanLyPhong\EDP.aspx" />
+    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\QuanLyPhong\images\a1.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\a2.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\a3.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\a4.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\admin.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\bottom.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\overlay.png" />
+    <Content Include="Admin\QuanLyPhong\images\pic.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\pic1.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\profile.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\profile_bg.jpg" />
+    <Content Include="Admin\QuanLyPhong\images\progress.jpg" />
+    <Content Include="Admin\QuanLyPhong\input.html" />
+    <Content Include="Admin\QuanLyPhong\js\amcharts.js" />
+    <Content Include="Admin\QuanLyPhong\js\bars.js" />
+    <Content Include="Admin\QuanLyPhong\js\bootstrap-3.1.1.min.js" />
+    <Content Include="Admin\QuanLyPhong\js\Chart.min.js" />
+    <Content Include="Admin\QuanLyPhong\js\circles.js" />
+    <Content Include="Admin\QuanLyPhong\js\classie.js" />
+    <Content Include="Admin\QuanLyPhong\js\contact_me.js" />
+    <Content Include="Admin\QuanLyPhong\js\export.js" />
+    <Content Include="Admin\QuanLyPhong\js\flipclock.js" />
+    <Content Include="Admin\QuanLyPhong\js\gauge.js" />
+    <Content Include="Admin\QuanLyPhong\js\gnmenu.js" />
+    <Content Include="Admin\QuanLyPhong\js\jqBootstrapValidation.js" />
+    <Content Include="Admin\QuanLyPhong\js\jquery-2.1.4.min.js" />
+    <Content Include="Admin\QuanLyPhong\js\jQuery-plugin-progressbar.js" />
+    <Content Include="Admin\QuanLyPhong\js\jquery.basictable.min.js" />
+    <Content Include="Admin\QuanLyPhong\js\jquery.nicescroll.js" />
+    <Content Include="Admin\QuanLyPhong\js\light.js" />
+    <Content Include="Admin\QuanLyPhong\js\modernizr.custom.js" />
+    <Content Include="Admin\QuanLyPhong\js\monthly.js" />
+    <Content Include="Admin\QuanLyPhong\js\pie.js" />
+    <Content Include="Admin\QuanLyPhong\js\prettymaps.js" />
+    <Content Include="Admin\QuanLyPhong\js\radar.js" />
+    <Content Include="Admin\QuanLyPhong\js\screenfull.js" />
+    <Content Include="Admin\QuanLyPhong\js\scripts.js" />
+    <Content Include="Admin\QuanLyPhong\js\serial.js" />
+    <Content Include="Admin\QuanLyPhong\js\skycons.js" />
+    <Content Include="Admin\QuanLyPhong\js\valida.2.1.6.min.js" />
+    <Content Include="Admin\QuanLyPhong\js\validator.min.js" />
+    <Content Include="Admin\QuanLyPhong\js\xy.js" />
+    <Content Include="Admin\QuanLyPhong\Login.aspx" />
+    <Content Include="Admin\QuanLyPhong\QLP.aspx" />
+    <Content Include="Admin\QuanLyPhong\signin.html" />
+    <Content Include="Admin\QuanLyVideoAnh.aspx" />
+    <Content Include="Admin\Upload_Anh.aspx" />
+    <Content Include="AnAn\Cau_hoi_Thuong_gapAnAn.aspx" />
+    <Content Include="AnAn\index.aspx" />
+    <Content Include="AnAn\RoomAnAn.aspx" />
+    <Content Include="AnAn\ThongTinAnAn.aspx" />
+    <Content Include="AnAn\Thuc_Don_AnAn.aspx" />
+    <Content Include="HoiPhong\1.aspx" />
+    <Content Include="HoiPhong\css\jquery-ui.css" />
+    <Content Include="HoiPhong\css\style.css" />
+    <Content Include="HoiPhong\default.aspx" />
+    <Content Include="HoiPhong\HtmlPage1.html" />
+    <Content Include="HoiPhong\images\1.jpg" />
+    <Content Include="HoiPhong\images\a.png" />
+    <Content Include="HoiPhong\images\arrow1.png" />
+    <Content Include="HoiPhong\images\b.png" />
+    <Content Include="HoiPhong\js\jquery-1.11.1.min.js" />
+    <Content Include="HoiPhong\js\jquery-ui.js" />
+    <Content Include="icon\arrow-samsam.png" />
+    <Content Include="icon\Book-now-samsam.png" />
+    <Content Include="icon\samsam.png" />
+    <Content Include="javascripts\jssor.slider-25.2.0.min.js" />
+    <Content Include="NonLa\free.png" />
+    <Content Include="NonLa\ThongTinNonLa.ascx" />
+    <Content Include="NonLa\ThongTinNonLaEn.ascx" />
+    <Content Include="NonLa\xungquang.png" />
+    <Content Include="NonLa\AnhPhong\1.jpg" />
+    <Content Include="NonLa\AnhPhong\10.jpg" />
+    <Content Include="NonLa\AnhPhong\11.jpg" />
+    <Content Include="NonLa\AnhPhong\12.jpg" />
+    <Content Include="NonLa\AnhPhong\13.jpg" />
+    <Content Include="NonLa\AnhPhong\14.jpg" />
+    <Content Include="NonLa\AnhPhong\15.jpg" />
+    <Content Include="NonLa\AnhPhong\16.jpg" />
+    <Content Include="NonLa\AnhPhong\17.jpg" />
+    <Content Include="NonLa\AnhPhong\18.jpg" />
+    <Content Include="NonLa\AnhPhong\19.jpg" />
+    <Content Include="NonLa\AnhPhong\2.jpg" />
+    <Content Include="NonLa\AnhPhong\20.jpg" />
+    <Content Include="NonLa\AnhPhong\21.jpg" />
+    <Content Include="NonLa\AnhPhong\22.jpg" />
+    <Content Include="NonLa\AnhPhong\23.jpg" />
+    <Content Include="NonLa\AnhPhong\24.jpg" />
+    <Content Include="NonLa\AnhPhong\25.jpg" />
+    <Content Include="NonLa\AnhPhong\3.jpg" />
+    <Content Include="NonLa\AnhPhong\4.jpg" />
+    <Content Include="NonLa\AnhPhong\5.jpg" />
+    <Content Include="NonLa\AnhPhong\6.jpg" />
+    <Content Include="NonLa\AnhPhong\7.jpg" />
+    <Content Include="NonLa\AnhPhong\8.jpg" />
+    <Content Include="NonLa\AnhPhong\9.jpg" />
+    <Content Include="NonLa\Image\1.jpg" />
+    <Content Include="NonLa\Image\Icon1.jpg" />
+    <Content Include="NonLa\Image\non-la1.png" />
+    <Content Include="NonLa\Index.aspx" />
+    <Content Include="NonLa\roomnonla.aspx" />
+    <Content Include="Safa\room.aspx" />
+    <Content Include="SamSam\CauHoiThuongGapSamSam.ascx" />
+    <Content Include="Sapa\Cau_hoi_thuong_gap.aspx" />
+    <Content Include="Sapa\css\bootstrap.css" />
+    <Content Include="Sapa\css\flexslider.css" />
+    <Content Include="Sapa\css\galleryeffect.css" />
+    <Content Include="Sapa\css\owl.carousel.css" />
+    <Content Include="Sapa\css\style.css" />
+    <Content Include="Sapa\default.aspx" />
+    <Content Include="Sapa\fonts\fontawesome-webfont.svg" />
+    <Content Include="Sapa\images\ba1.jpg" />
+    <Content Include="Sapa\images\ba2.jpg" />
+    <Content Include="Sapa\images\ba3.jpg" />
+    <Content Include="Sapa\images\banner.jpg" />
+    <Content Include="Sapa\images\banner1.jpg" />
+    <Content Include="Sapa\images\ga.jpg" />
+    <Content Include="Sapa\images\ga1.jpg" />
+    <Content Include="Sapa\images\ga2.jpg" />
+    <Content Include="Sapa\images\ga3.jpg" />
+    <Content Include="Sapa\images\ga4.jpg" />
+    <Content Include="Sapa\images\ga5.jpg" />
+    <Content Include="Sapa\images\ga6.jpg" />
+    <Content Include="Sapa\images\ga7.jpg" />
+    <Content Include="Sapa\images\img-sprite.png" />
+    <Content Include="Sapa\images\p.jpg" />
+    <Content Include="Sapa\images\p1.jpg" />
+    <Content Include="Sapa\images\p2.jpg" />
+    <Content Include="Sapa\images\r1.jpg" />
+    <Content Include="Sapa\images\r2.jpg" />
+    <Content Include="Sapa\images\r3.jpg" />
+    <Content Include="Sapa\images\r4.jpg" />
+    <Content Include="Sapa\images\r5.jpg" />
+    <Content Include="Sapa\images\r6.jpg" />
+    <Content Include="Sapa\images\r7.jpg" />
+    <Content Include="Sapa\images\r8.jpg" />
+    <Content Include="Sapa\images\s.jpg" />
+    <Content Include="Sapa\images\s1.jpg" />
+    <Content Include="Sapa\images\s2.jpg" />
+    <Content Include="Sapa\images\s3.jpg" />
+    <Content Include="Sapa\images\s4.jpg" />
+    <Content Include="Sapa\images\t1.jpg" />
+    <Content Include="Sapa\images\t10.jpg" />
+    <Content Include="Sapa\images\t2.jpg" />
+    <Content Include="Sapa\images\t3.jpg" />
+    <Content Include="Sapa\images\t4.jpg" />
+    <Content Include="Sapa\images\t5.jpg" />
+    <Content Include="Sapa\images\t6.jpg" />
+    <Content Include="Sapa\images\t7.jpg" />
+    <Content Include="Sapa\images\t8.jpg" />
+    <Content Include="Sapa\images\t9.jpg" />
+    <Content Include="Sapa\images\w1.jpg" />
+    <Content Include="Sapa\images\w2.jpg" />
+    <Content Include="Sapa\images\w3.jpg" />
+    <Content Include="Sapa\images\w4.jpg" />
+    <Content Include="Sapa\images\w5.jpg" />
+    <Content Include="Sapa\ImageWeb\1.jpg" />
+    <Content Include="Sapa\ImageWeb\2.JPG" />
+    <Content Include="Sapa\ImageWeb\3.jpg" />
+    <Content Include="Sapa\ImageWeb\baner1.jpg" />
+    <Content Include="Sapa\ImageWeb\banner2.jpg" />
+    <Content Include="Sapa\ImageWeb\p1.jpg" />
+    <Content Include="Sapa\ImageWeb\p2.jpg" />
+    <Content Include="Sapa\ImageWeb\p3.jpg" />
+    <Content Include="Sapa\ImageWeb\p4.jpg" />
+    <Content Include="Sapa\ImageWeb\p40.JPG" />
+    <Content Include="Sapa\ImageWeb\p5.JPG" />
+    <Content Include="Sapa\ImageWeb\p6.JPG" />
+    <Content Include="Sapa\ImageWeb\sh1.jpg" />
+    <Content Include="Sapa\ImageWeb\sh2.jpg" />
+    <Content Include="Sapa\ImageWeb\sh4.jpg" />
+    <Content Include="Sapa\index1.html" />
+    <Content Include="Sapa\js\bootstrap.min.js" />
+    <Content Include="Sapa\js\jquery.flexslider.js" />
+    <Content Include="Sapa\js\jquery.min.js" />
+    <Content Include="Sapa\js\numscroller-1.0.js" />
+    <Content Include="Sapa\js\owl.carousel.js" />
+    <Content Include="Sapa\RoomSafa.aspx" />
+    <Content Include="Sapa\style.css" />
+    <Content Include="Sapa\ThongTinSapa.aspx" />
+    <Content Include="Sapa\Thuc_Don.aspx" />
+    <Content Include="Sila\css\bootstrap.css" />
+    <Content Include="Sila\css\chocolat.css" />
+    <Content Include="Sila\css\component.css" />
+    <Content Include="Sila\css\font-awesome.min.css" />
+    <Content Include="Sila\css\iconeffects.css" />
+    <Content Include="Sila\css\index.css" />
+    <Content Include="Sila\css\owl.carousel.css" />
+    <Content Include="Sila\css\owl.theme.css" />
+    <Content Include="Sila\css\style.css" />
+    <Content Include="Sila\icons.html" />
+    <Content Include="Sila\imagePhong\3O7A6940-min.jpg" />
+    <Content Include="Sila\imagePhong\3O7A7043-min.jpg" />
+    <Content Include="Sila\imagePhong\3O7A7048-min.jpg" />
+    <Content Include="Sila\imagePhong\3O7A7056-min.jpg" />
+    <Content Include="Sila\imagePhong\3O7A7067-min.jpg" />
+    <Content Include="Sila\imagePhong\3O7A7172-min.jpg" />
+    <Content Include="Sila\images\1.jpeg" />
+    <Content Include="Sila\images\arrows.png" />
+    <Content Include="Sila\images\arrows1.png" />
+    <Content Include="Sila\images\banner.jpg" />
+    <Content Include="Sila\images\banner1.jpg" />
+    <Content Include="Sila\images\banner2.jpg" />
+    <Content Include="Sila\images\banner3.jpg" />
+    <Content Include="Sila\images\banner4.jpg" />
+    <Content Include="Sila\images\close.png" />
+    <Content Include="Sila\images\email.png" />
+    <Content Include="Sila\images\f1.jpg" />
+    <Content Include="Sila\images\f2.jpg" />
+    <Content Include="Sila\images\f3.jpg" />
+    <Content Include="Sila\images\f4.jpg" />
+    <Content Include="Sila\images\g1.jpg" />
+    <Content Include="Sila\images\g11.jpg" />
+    <Content Include="Sila\images\g2.jpg" />
+    <Content Include="Sila\images\g21.jpg" />
+    <Content Include="Sila\images\g3.jpg" />
+    <Content Include="Sila\images\g31.jpeg" />
+    <Content Include="Sila\images\g31.jpg" />
+    <Content Include="Sila\images\g4.jpg" />
+    <Content Include="Sila\images\g5.jpg" />
+    <Content Include="Sila\images\g51.jpg" />
+    <Content Include="Sila\images\g6.jpg" />
+    <Content Include="Sila\images\g61.jpg" />
+    <Content Include="Sila\images\g7.jpg" />
+    <Content Include="Sila\images\g8.jpg" />
+    <Content Include="Sila\images\g81.jpeg" />
+    <Content Include="Sila\images\g81.jpg" />
+    <Content Include="Sila\images\g9.jpg" />
+    <Content Include="Sila\images\g91.jpg" />
+    <Content Include="Sila\images\icon1.png" />
+    <Content Include="Sila\images\icon2.png" />
+    <Content Include="Sila\images\icon3.png" />
+    <Content Include="Sila\images\left.png" />
+    <Content Include="Sila\images\move-top.png" />
+    <Content Include="Sila\images\right.png" />
+    <Content Include="Sila\images\s1.jpg" />
+    <Content Include="Sila\images\s2.jpg" />
+    <Content Include="Sila\images\s3.jpg" />
+    <Content Include="Sila\images\s4.jpg" />
+    <Content Include="Sila\images\s5.jpg" />
+    <Content Include="Sila\images\s6.jpg" />
+    <Content Include="Sila\images\s7.jpg" />
+    <Content Include="Sila\images\search.png" />
+    <Content Include="Sila\images\t1.jpg" />
+    <Content Include="Sila\images\t2.jpg" />
+    <Content Include="Sila\images\t3.jpg" />
+    <Content Include="Sila\images\t4.jpg" />
+    <Content Include="Sila\index.html" />
+    <Content Include="Sila\index1.html" />
+    <Content Include="Sila\js\bootstrap.js" />
+    <Content Include="Sila\js\classie.js" />
+    <Content Include="Sila\js\controls.js" />
+    <Content Include="Sila\js\easing.js" />
+    <Content Include="Sila\js\easyResponsiveTabs.js" />
+    <Content Include="Sila\js\jquery-2.1.4.min.js" />
+    <Content Include="Sila\js\jquery.chocolat.js" />
+    <Content Include="Sila\js\jquery.filterizr.js" />
+    <Content Include="Sila\js\jquery.flexisel.js" />
+    <Content Include="Sila\js\modernizr-2.6.2.min.js" />
+    <Content Include="Sila\js\move-top.js" />
+    <Content Include="Sila\js\owl.carousel.js" />
+    <Content Include="Sila\js\responsiveslides.min.js" />
+    <Content Include="Sila\js\uisearch.js" />
+    <Content Include="Safa\18516264_1347932368655162_160061118_n.png" />
+    <Content Include="Safa\js\jssor.slider-25.2.0.min.js" />
+    <Content Include="Safa\ThongTinSaFa\ThongTinSaFaEn.ascx" />
+    <Content Include="SamSam\CommonImage\1-min.jpg" />
+    <Content Include="SamSam\CommonImage\10-min.jpg" />
+    <Content Include="SamSam\CommonImage\11-min.jpg" />
+    <Content Include="SamSam\CommonImage\12-min.jpg" />
+    <Content Include="SamSam\CommonImage\13-min.jpg" />
+    <Content Include="SamSam\CommonImage\14-min.jpg" />
+    <Content Include="SamSam\CommonImage\15-min.jpg" />
+    <Content Include="SamSam\CommonImage\16-min.jpg" />
+    <Content Include="SamSam\CommonImage\17-min.jpg" />
+    <Content Include="SamSam\CommonImage\18-min.jpg" />
+    <Content Include="SamSam\CommonImage\19-min.jpg" />
+    <Content Include="SamSam\CommonImage\2-min.jpg" />
+    <Content Include="SamSam\CommonImage\20-min.jpg" />
+    <Content Include="SamSam\CommonImage\21-min.jpg" />
+    <Content Include="SamSam\CommonImage\22-min.jpg" />
+    <Content Include="SamSam\CommonImage\23-min.jpg" />
+    <Content Include="SamSam\CommonImage\24-min.jpg" />
+    <Content Include="SamSam\CommonImage\25-min.jpg" />
+    <Content Include="SamSam\CommonImage\26-min.jpg" />
+    <Content Include="SamSam\CommonImage\27-min.jpg" />
+    <Content Include="SamSam\CommonImage\28-min.jpg" />
+    <Content Include="SamSam\CommonImage\29-min.jpg" />
+    <Content Include="SamSam\CommonImage\3-min.jpg" />
+    <Content Include="SamSam\CommonImage\30-min.jpg" />
+    <Content Include="SamSam\CommonImage\31-min.jpg" />
+    <Content Include="SamSam\CommonImage\32-min.jpg" />
+    <Content Include="SamSam\CommonImage\33-min.jpg" />
+    <Content Include="SamSam\CommonImage\34-min.jpg" />
+    <Content Include="SamSam\CommonImage\35-min.jpg" />
+    <Content Include="SamSam\CommonImage\4-min.jpg" />
+    <Content Include="SamSam\CommonImage\5-min.jpg" />
+    <Content Include="SamSam\CommonImage\6-min.jpg" />
+    <Content Include="SamSam\CommonImage\7-min.jpg" />
+    <Content Include="SamSam\CommonImage\8-min.jpg" />
+    <Content Include="SamSam\CommonImage\9-min.jpg" />
+    <Content Include="SamSam\CommonImage\pT5onAzgc.png" />
+    <Content Include="SamSam\default.aspx" />
+    <Content Include="SamSam\dot.png" />
+    <Content Include="SamSam\S1\image\1.jpg" />
+    <Content Include="SamSam\S1\image\2.jpg" />
+    <Content Include="SamSam\S1\image\3.jpg" />
+    <Content Include="SamSam\S1\image\4.jpg" />
+    <Content Include="SamSam\S1\image\5.jpg" />
+    <Content Include="SamSam\S1\S1.ascx" />
+    <Content Include="SamSam\S2\image\1.jpg" />
+    <Content Include="SamSam\S2\image\2.jpg" />
+    <Content Include="SamSam\S2\image\3.jpg" />
+    <Content Include="SamSam\S2\S2.ascx" />
+    <Content Include="SamSam\ThongTinSamSam\ThongTinSamSam.ascx" />
+    <Content Include="Sapa\ThienDuongTaVan.aspx" />
+    <Content Include="Sapa\Image\11.jpg" />
+    <Content Include="Sapa\Image\1.jpg" />
+    <Content Include="Sapa\Image\9.jpg" />
+    <Content Include="Sapa\Image\5.jpg" />
+    <Content Include="Sapa\Image\2.jpg" />
+    <Content Include="Sapa\Image\6.jpg" />
+    <Content Include="Sapa\Image\7.jpg" />
+    <Content Include="Sapa\Image\8.jpg" />
+    <Content Include="Sapa\Image\10.jpg" />
+    <Content Include="Sapa\Image\12.jpg" />
+    <Content Include="Sapa\Image\13.jpg" />
+    <Content Include="Sapa\Image\14.jpg" />
+    <Content Include="Sapa\Image\15.jpg" />
+    <Content Include="Sapa\Image\16.jpg" />
+    <Content Include="Sapa\Image\18.jpg" />
+    <Content Include="Sapa\Image\20.jpg" />
+    <Content Include="Sapa\Image\17.jpg" />
+    <Content Include="Sapa\Image\19.jpg" />
+    <Content Include="Sapa\Image\21.jpg" />
+    <Content Include="Sapa\Image\22.jpg" />
+    <Content Include="Sapa\Image\23.jpg" />
+    <Content Include="Sapa\Image\VeSinh.jpg" />
+    <Content Include="Sapa\Image\lua.png" />
+    <Content Include="Sapa\Image\4.jpg" />
+    <Content Include="Sapa\Image\3.jpg" />
+    <Content Include="Sapa\kenh14flat-20170621v1.min.css" />
+    <Content Include="icon\18302161_1008188045983380_458660803_n.jpg" />
+    <Content Include="icon\18360335_1010994525702732_1565072256_n.jpg" />
+    <Content Include="icon\arrow-38-green.png" />
+    <Content Include="icon\Book-nowgreen.png" />
+    <Content Include="icon\icoImail.png" />
+    <Content Include="icon\icon-safa.png" />
+    <Content Include="icon\iconhouse.png" />
+    <Content Include="icon\iconphone.png" />
+    <Content Include="icon\LogoHouzing.jpg" />
+    <Content Include="icon\LogoSafa.jpg" />
+    <Content Include="images\blog-icon1.png" />
+    <Content Include="images\blog-icon2.png" />
+    <Content Include="images\blog-icon3.png" />
+    <Content Include="images\blog-icon5.png" />
+    <Content Include="javascripts\ios-orientationchange-fix.js" />
+    <Content Include="javascripts\jquery.imagesloaded.js" />
+    <Content Include="javascripts\jquery.lazyload.js" />
+    <Content Include="javascripts\jquery.swipebox.min.js" />
+    <Content Include="javascripts\jquery.wookmark.js" />
+    <Content Include="Login\css\font-awesome.css" />
+    <Content Include="Login\css\style.css" />
+    <Content Include="Login\images\bg.jpg" />
+    <Content Include="Login\Login.aspx" />
+    <Content Include="BootTraps\bootstrap-theme.min.css" />
+    <Content Include="BootTraps\bootstrap.js" />
+    <Content Include="BootTraps\bootstrap.min.css" />
+    <Content Include="film\film.aspx" />
+    <Content Include="film\film1.aspx" />
+    <Content Include="Gallary\Gallery.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HoiDapYoKo\1f332.png" />
+    <Content Include="HoiDapYoKo\bootstrap\css\bootstrap.css" />
+    <Content Include="HoiDapYoKo\bootstrap\css\bootstrap.min.css" />
+    <Content Include="HoiDapYoKo\bootstrap\js\bootstrap.js" />
+    <Content Include="HoiDapYoKo\bootstrap\js\bootstrap.min.js" />
+    <Content Include="HoiDapYoKo\font-awesome\css\font-awesome.css" />
+    <Content Include="HoiDapYoKo\font-awesome\css\font-awesome.min.css" />
+    <Content Include="HoiDapYoKo\HoiDapYoKo.ascx" />
+    <Content Include="HoiDapYoKo\index.html" />
+    <Content Include="HoiDapYoKo\js\jquery-1.10.2.min.js" />
+    <Content Include="icon\arrow-38-xxl.png" />
+    <Content Include="icon\Book-now.png" />
+    <Content Include="icon\Book-now_blue.png" />
+    <Content Include="icon\icon-yoko.jpg" />
+    <Content Include="icon\icon_happi.jpg" />
+    <Content Include="imageofthumb\HaiPhong\1.jpg" />
+    <Content Include="imageofthumb\HaiPhong\10.jpg" />
+    <Content Include="imageofthumb\HaiPhong\11.jpg" />
+    <Content Include="imageofthumb\HaiPhong\24.jpg" />
+    <Content Include="imageofthumb\HaiPhong\26.jpg" />
+    <Content Include="imageofthumb\HaiPhong\26.png" />
+    <Content Include="imageofthumb\HaiPhong\27.jpg" />
+    <Content Include="imageofthumb\HaiPhong\28.jpg" />
+    <Content Include="imageofthumb\HaiPhong\28.png" />
+    <Content Include="imageofthumb\HaiPhong\29.jpg" />
+    <Content Include="imageofthumb\HaiPhong\29.png" />
+    <Content Include="imageofthumb\HaiPhong\30.jpg" />
+    <Content Include="imageofthumb\HaiPhong\30.png" />
+    <Content Include="imageofthumb\HaiPhong\31.jpg" />
+    <Content Include="imageofthumb\HaiPhong\31.png" />
+    <Content Include="imageofthumb\HaiPhong\33.jpg" />
+    <Content Include="imageofthumb\HaiPhong\33.png" />
+    <Content Include="imageofthumb\HaiPhong\34.jpg" />
+    <Content Include="imageofthumb\HaiPhong\34.png" />
+    <Content Include="imageofthumb\HaiPhong\35.jpg" />
+    <Content Include="imageofthumb\HaiPhong\35.png" />
+    <Content Include="imageofthumb\HaiPhong\36.jpg" />
+    <Content Include="imageofthumb\HaiPhong\37.jpg" />
+    <Content Include="imageofthumb\HaiPhong\38.jpg" />
+    <Content Include="imageofthumb\HaiPhong\39.jpg" />
+    <Content Include="imageofthumb\HaiPhong\40.jpg" />
+    <Content Include="imageofthumb\HaiPhong\12.jpg" />
+    <Content Include="imageofthumb\HaiPhong\41.jpg" />
+    <Content Include="imageofthumb\HaiPhong\42.jpg" />
+    <Content Include="imageofthumb\HaiPhong\42.png" />
+    <Content Include="imageofthumb\HaiPhong\43.jpg" />
+    <Content Include="imageofthumb\HaiPhong\43.png" />
+    <Content Include="imageofthumb\HaiPhong\44.jpg" />
+    <Content Include="imageofthumb\HaiPhong\44.png" />
+    <Content Include="imageofthumb\HaiPhong\45.jpg" />
+    <Content Include="imageofthumb\HaiPhong\45.png" />
+    <Content Include="imageofthumb\HaiPhong\9.jpg" />
+    <Content Include="imageofthumb\HaiPhong\13.jpg" />
+    <Content Include="imageofthumb\HaiPhong\14.jpg" />
+    <Content Include="imageofthumb\HaiPhong\15.jpg" />
+    <Content Include="imageofthumb\HaiPhong\16.jpg" />
+    <Content Include="imageofthumb\HaiPhong\17.jpg" />
+    <Content Include="imageofthumb\HaiPhong\18.jpg" />
+    <Content Include="imageofthumb\HaiPhong\19.jpg" />
+    <Content Include="imageofthumb\HaiPhong\2.jpg" />
+    <Content Include="imageofthumb\HaiPhong\20.jpg" />
+    <Content Include="imageofthumb\HaiPhong\21.jpg" />
+    <Content Include="imageofthumb\HaiPhong\22.jpg" />
+    <Content Include="imageofthumb\HaiPhong\3.jpg" />
+    <Content Include="imageofthumb\HaiPhong\4.jpg" />
+    <Content Include="imageofthumb\HaiPhong\5.jpg" />
+    <Content Include="imageofthumb\HaiPhong\6.jpg" />
+    <Content Include="imageofthumb\HaiPhong\7.jpg" />
+    <Content Include="imageofthumb\HaiPhong\8.jpg" />
+    <Content Include="imageofthumb\HaiPhong\23.jpg" />
+    <Content Include="imageofthumb\HaiPhong\25.jpg" />
+    <Content Include="imageofthumb\HaiPhong\32.png" />
+    <Content Include="Safa\18516264_1347932368655162_160061118_n.jpg" />
+    <Content Include="Safa\18516336_1347936205321445_1677069061_n.jpg" />
+    <Content Include="Safa\CauHoiTGSafa.ascx" />
+    <Content Include="Safa\CommonImage\03_waterfall.gif" />
+    <Content Include="Safa\CommonImage\7.jpg" />
+    <Content Include="Safa\CommonImage\2.jpg" />
+    <Content Include="Safa\CommonImage\3.jpg" />
+    <Content Include="Safa\CommonImage\4.jpg" />
+    <Content Include="Safa\CommonImage\5.jpg" />
+    <Content Include="Safa\CommonImage\6.jpg" />
+    <Content Include="Safa\CommonImage\1.jpg" />
+    <Content Include="Safa\CommonImage\AnhNenSafa.jpg" />
+    <Content Include="Safa\CommonImage\iconbckground.png" />
+    <Content Include="Safa\CommonImage\iconCayThong.png" />
+    <Content Include="Safa\Default.aspx" />
+    <Content Include="Safa\dot.png" />
+    <Content Include="Safa\F1\F1.ascx" />
+    <Content Include="Safa\F1\image\1.JPG" />
+    <Content Include="Safa\F1\image\10.JPG" />
+    <Content Include="Safa\F1\image\11.JPG" />
+    <Content Include="Safa\F1\image\12.JPG" />
+    <Content Include="Safa\F1\image\13.JPG" />
+    <Content Include="Safa\F1\image\14.JPG" />
+    <Content Include="Safa\F1\image\15.JPG" />
+    <Content Include="Safa\F1\image\16.JPG" />
+    <Content Include="Safa\F1\image\17.JPG" />
+    <Content Include="Safa\F1\image\18.jpg" />
+    <Content Include="Safa\F1\image\2.JPG" />
+    <Content Include="Safa\F1\image\3.JPG" />
+    <Content Include="Safa\F1\image\4.JPG" />
+    <Content Include="Safa\F1\image\5.JPG" />
+    <Content Include="Safa\F1\image\6.JPG" />
+    <Content Include="Safa\F1\image\7.JPG" />
+    <Content Include="Safa\F1\image\8.JPG" />
+    <Content Include="Safa\F1\image\9.JPG" />
+    <Content Include="Safa\F2\F2.ascx" />
+    <Content Include="Safa\F2\image\1.JPG" />
+    <Content Include="Safa\F2\image\10.JPG" />
+    <Content Include="Safa\F2\image\11.JPG" />
+    <Content Include="Safa\F2\image\12.JPG" />
+    <Content Include="Safa\F2\image\13.JPG" />
+    <Content Include="Safa\F2\image\14.JPG" />
+    <Content Include="Safa\F2\image\15.JPG" />
+    <Content Include="Safa\F2\image\16.JPG" />
+    <Content Include="Safa\F2\image\17.JPG" />
+    <Content Include="Safa\F2\image\18.jpg" />
+    <Content Include="Safa\F2\image\19.JPG" />
+    <Content Include="Safa\F2\image\2.JPG" />
+    <Content Include="Safa\F2\image\3.JPG" />
+    <Content Include="Safa\F2\image\4.JPG" />
+    <Content Include="Safa\F2\image\5.JPG" />
+    <Content Include="Safa\F2\image\6.jpg" />
+    <Content Include="Safa\F2\image\7.JPG" />
+    <Content Include="Safa\F2\image\8.JPG" />
+    <Content Include="Safa\F2\image\9.JPG" />
+    <Content Include="Safa\F3\F3.ascx" />
+    <Content Include="Safa\F3\image\1.jpg" />
+    <Content Include="Safa\F3\image\10.JPG" />
+    <Content Include="Safa\F3\image\11.JPG" />
+    <Content Include="Safa\F3\image\12.JPG" />
+    <Content Include="Safa\F3\image\13.JPG" />
+    <Content Include="Safa\F3\image\14.JPG" />
+    <Content Include="Safa\F3\image\15.JPG" />
+    <Content Include="Safa\F3\image\16.JPG" />
+    <Content Include="Safa\F3\image\17.JPG" />
+    <Content Include="Safa\F3\image\2.JPG" />
+    <Content Include="Safa\F3\image\3.JPG" />
+    <Content Include="Safa\F3\image\4.JPG" />
+    <Content Include="Safa\F3\image\5.JPG" />
+    <Content Include="Safa\F3\image\6.jpg" />
+    <Content Include="Safa\F3\image\7.JPG" />
+    <Content Include="Safa\F3\image\8.JPG" />
+    <Content Include="Safa\F3\image\9.JPG" />
+    <Content Include="Safa\F4\F4.ascx" />
+    <Content Include="Safa\F4\image\1.JPG" />
+    <Content Include="Safa\F4\image\10.JPG" />
+    <Content Include="Safa\F4\image\11.JPG" />
+    <Content Include="Safa\F4\image\12.JPG" />
+    <Content Include="Safa\F4\image\13.JPG" />
+    <Content Include="Safa\F4\image\14.JPG" />
+    <Content Include="Safa\F4\image\15.JPG" />
+    <Content Include="Safa\F4\image\16.JPG" />
+    <Content Include="Safa\F4\image\17.JPG" />
+    <Content Include="Safa\F4\image\18.JPG" />
+    <Content Include="Safa\F4\image\19.JPG" />
+    <Content Include="Safa\F4\image\2.JPG" />
+    <Content Include="Safa\F4\image\3.JPG" />
+    <Content Include="Safa\F4\image\4.JPG" />
+    <Content Include="Safa\F4\image\5.JPG" />
+    <Content Include="Safa\F4\image\6.jpg" />
+    <Content Include="Safa\F4\image\7.JPG" />
+    <Content Include="Safa\F4\image\8.JPG" />
+    <Content Include="Safa\F4\image\9.JPG" />
+    <Content Include="Safa\Menu\css\flexslider.css" />
+    <Content Include="Safa\Menu\css\style.css" />
+    <Content Include="Safa\Menu\Image\BuaSang\1.jpg" />
+    <Content Include="Safa\Menu\Image\2.png" />
+    <Content Include="Safa\Menu\Image\3.png" />
+    <Content Include="Safa\Menu\Image\4.jpg" />
+    <Content Include="Safa\Menu\Image\5.jpg" />
+    <Content Include="Safa\Menu\Image\BuaSang\2.jpg" />
+    <Content Include="Safa\Menu\Image\chucngonmieng.png" />
+    <Content Include="Safa\Menu\Image\lua.png" />
+    <Content Include="Safa\Menu\js\jquery-1.11.2.min.js" />
+    <Content Include="Safa\Menu\js\jquery.flexslider.js" />
+    <Content Include="Safa\Menu\MenuSafa.ascx" />
+    <Content Include="Safa\Menu\Image\ga.png" />
+    <Content Include="Safa\ThongTinSaFa\ThongTinSaFa.ascx" />
+    <Content Include="stylesheets\grids.css" />
+    <Content Include="stylesheets\style.css" />
+    <Content Include="stylesheets\swipebox.css" />
+    <Content Include="thumb\AnhTuan.jpg" />
+    <Content Include="images\bs-logo.png" />
+    <Content Include="images\bs_pause.png" />
+    <Content Include="images\bs_play.png" />
+    <Content Include="images\collapsed-menu.png" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\menu-collections.png" />
+    <Content Include="images\menu-media.png" />
+    <Content Include="images\menu-themes.png" />
+    <Content Include="images\menu-towns.png" />
+    <Content Include="images\next-arrow.png" />
+    <Content Include="images\photo_essay_buttons.png" />
+    <Content Include="images\previous-arrow.png" />
+    <Content Include="images\share-menu.png" />
+    <Content Include="images\toggle-dock.png" />
+    <Content Include="images\toggle-menu.png" />
+    <Content Include="images\type-filmmaker.png" />
+    <Content Include="images\type-gallery.png" />
+    <Content Include="images\watermark.png" />
+    <Content Include="index.aspx" />
+    <Content Include="index1.aspx" />
+    <Content Include="javascripts\bigstories.js" />
+    <Content Include="javascripts\jquery.cookie.js" />
+    <Content Include="javascripts\jquery.scrollTo.js" />
+    <Content Include="javascripts\pageless.js" />
+    <Content Include="javascripts\jquery-1.4.2.js" />
+    <Content Include="javascripts\jquery-ui-1.8.4.custom.min.js" />
+    <Content Include="javascripts\jquery.anythingslider.js" />
+    <Content Include="javascripts\jquery.hoverIntent.minified.js" />
+    <Content Include="javascripts\mm.full.js" />
+    <Content Include="javascripts\share.js" />
+    <Content Include="stylesheets\anythingslider.css" />
+    <Content Include="stylesheets\bigstories.css" />
+    <Content Include="stylesheets\bootstrap.min.css" />
+    <Content Include="stylesheets\cssweb.css" />
+    <Content Include="stylesheets\public.css" />
+    <Content Include="Happi\default.aspx" />
+    <Content Include="ThongTinYoko\1f332.png" />
+    <Content Include="ThongTinYoko\1f4f2.png" />
+    <Content Include="ThongTinYoko\25.jpg" />
+    <Content Include="ThongTinYoko\26.jpg" />
+    <Content Include="ThongTinYoko\28.jpg" />
+    <Content Include="ThongTinYoko\29.jpg" />
+    <Content Include="ThongTinYoko\30.jpg" />
+    <Content Include="ThongTinYoko\31.jpg" />
+    <Content Include="ThongTinYoko\91.jpg" />
+    <Content Include="ThongTinYoko\92.jpg" />
+    <Content Include="ThongTinYoko\en\Index.html" />
+    <Content Include="ThongTinYoko\en\ThongTinEn.ascx" />
+    <Content Include="ThongTinYoko\phongbep.jpg" />
+    <Content Include="ThongTinYoko\ThongTinYoKo.ascx" />
+    <Content Include="thumb\grid_thumb.jpg" />
+    <Content Include="thumb\grid_thumb1.jpg" />
+    <Content Include="thumb\images.jpg" />
+    <Content Include="icon\arrow-37-xxl.png" />
+    <Content Include="YoKo\CommonImage\1.jpg" />
+    <Content Include="YoKo\CommonImage\10.jpg" />
+    <Content Include="YoKo\CommonImage\11.jpg" />
+    <Content Include="YoKo\CommonImage\12.jpg" />
+    <Content Include="YoKo\CommonImage\13.jpg" />
+    <Content Include="YoKo\CommonImage\14.jpg" />
+    <Content Include="YoKo\CommonImage\15.jpg" />
+    <Content Include="YoKo\CommonImage\16.jpg" />
+    <Content Include="YoKo\CommonImage\17.jpg" />
+    <Content Include="YoKo\CommonImage\18.jpg" />
+    <Content Include="YoKo\CommonImage\19.jpg" />
+    <Content Include="YoKo\CommonImage\2.jpg" />
+    <Content Include="YoKo\CommonImage\20.jpg" />
+    <Content Include="YoKo\CommonImage\21.jpg" />
+    <Content Include="YoKo\CommonImage\22.jpg" />
+    <Content Include="YoKo\CommonImage\23.jpg" />
+    <Content Include="YoKo\CommonImage\24.jpg" />
+    <Content Include="YoKo\CommonImage\25.jpg" />
+    <Content Include="YoKo\CommonImage\26.jpg" />
+    <Content Include="YoKo\CommonImage\27.jpg" />
+    <Content Include="YoKo\CommonImage\28.jpg" />
+    <Content Include="YoKo\CommonImage\29.jpg" />
+    <Content Include="YoKo\CommonImage\3.jpg" />
+    <Content Include="YoKo\CommonImage\30.jpg" />
+    <Content Include="YoKo\CommonImage\31.jpg" />
+    <Content Include="YoKo\CommonImage\32.jpg" />
+    <Content Include="YoKo\CommonImage\33.jpg" />
+    <Content Include="YoKo\CommonImage\34.jpg" />
+    <Content Include="YoKo\CommonImage\35.jpg" />
+    <Content Include="YoKo\CommonImage\36.jpg" />
+    <Content Include="YoKo\CommonImage\37.jpg" />
+    <Content Include="YoKo\CommonImage\38.jpg" />
+    <Content Include="YoKo\CommonImage\39.jpg" />
+    <Content Include="YoKo\CommonImage\4.jpg" />
+    <Content Include="YoKo\CommonImage\40.jpg" />
+    <Content Include="YoKo\CommonImage\41.jpg" />
+    <Content Include="YoKo\CommonImage\42.jpg" />
+    <Content Include="YoKo\CommonImage\43.jpg" />
+    <Content Include="YoKo\CommonImage\44.jpg" />
+    <Content Include="YoKo\CommonImage\45.jpg" />
+    <Content Include="YoKo\CommonImage\46.jpg" />
+    <Content Include="YoKo\CommonImage\47.jpg" />
+    <Content Include="YoKo\CommonImage\48.jpg" />
+    <Content Include="YoKo\CommonImage\5.jpg" />
+    <Content Include="YoKo\CommonImage\6.jpg" />
+    <Content Include="YoKo\CommonImage\7.jpg" />
+    <Content Include="YoKo\CommonImage\8.jpg" />
+    <Content Include="YoKo\CommonImage\9.jpg" />
+    <Content Include="ThongTinYoko\90.jpg" />
+    <Content Include="ThongTinYoko\HoatHinhXe.jpg" />
+    <Content Include="YoKo\CommonImage\phongbep.jpg" />
+    <Content Include="YoKo\css\bootstrap.css" />
+    <Content Include="YoKo\css\chocolat.css" />
+    <Content Include="YoKo\css\component.css" />
+    <Content Include="YoKo\css\font-awesome.min.css" />
+    <Content Include="YoKo\css\iconeffects.css" />
+    <Content Include="YoKo\css\index.css" />
+    <Content Include="YoKo\css\owl.carousel.css" />
+    <Content Include="YoKo\css\owl.theme.css" />
+    <Content Include="YoKo\css\style.css" />
+    <Content Include="YoKo\Index.aspx" />
+    <Content Include="YoKo\PhongVeSinh\y24.JPG" />
+    <Content Include="YoKo\PhongVeSinh\y25.JPG" />
+    <Content Include="YoKo\PhongVeSinh\y26.JPG" />
+    <Content Include="ThongTinYoko\anhnen.png" />
+    <Content Include="ThongTinYoko\css\w3.css" />
+    <Content Include="YoKo\YoKoY1\image\y1.jpg" />
+    <Content Include="YoKo\YoKoY1\image\y11.jpg" />
+    <Content Include="YoKo\YoKoY1\image\thump.jpg" />
+    <Content Include="YoKo\YoKoY1\image\y111.jpg" />
+    <Content Include="YoKo\YoKoY1\image\y1111.jpg" />
+    <Content Include="YoKo\YoKoY1\image\y111111.jpg" />
+    <Content Include="YoKo\YoKoY1\PhongY1.ascx" />
+    <Content Include="YoKo\YoKoY1\PhongY1.aspx" />
+    <Content Include="YoKo\YoKoY2\image\ab.jpg" />
+    <Content Include="YoKo\YoKoY2\image\y22.jpg" />
+    <Content Include="YoKo\YoKoY2\image\y222.jpg" />
+    <Content Include="YoKo\YoKoY2\image\y2222.jpg" />
+    <Content Include="YoKo\YoKoY2\image\y222222.jpg" />
+    <Content Include="YoKo\YoKoY2\PhongY2.ascx" />
+    <Content Include="YoKo\YoKoY2\PhongY2.aspx" />
+    <Content Include="YoKo\YokoY3\image\a.jpg" />
+    <Content Include="YoKo\YokoY3\image\b.jpg" />
+    <Content Include="YoKo\YokoY3\image\y3.jpg" />
+    <Content Include="YoKo\YokoY3\image\y33.jpg" />
+    <Content Include="icons.html" />
+    <Content Include="YoKo\images\1.jpeg" />
+    <Content Include="YoKo\images\arrows.png" />
+    <Content Include="YoKo\images\arrows1.png" />
+    <Content Include="YoKo\images\banner.jpg" />
+    <Content Include="YoKo\images\banner1.jpg" />
+    <Content Include="YoKo\images\banner2.jpg" />
+    <Content Include="YoKo\images\banner3.jpg" />
+    <Content Include="YoKo\images\banner4.jpg" />
+    <Content Include="YoKo\images\close.png" />
+    <Content Include="YoKo\images\email.png" />
+    <Content Include="YoKo\images\f1.jpg" />
+    <Content Include="YoKo\images\f2.jpg" />
+    <Content Include="YoKo\images\f3.jpg" />
+    <Content Include="YoKo\images\f4.jpg" />
+    <Content Include="YoKo\images\g1.jpg" />
+    <Content Include="YoKo\images\g11.jpg" />
+    <Content Include="YoKo\images\g2.jpg" />
+    <Content Include="YoKo\images\g21.jpg" />
+    <Content Include="YoKo\images\g3.jpg" />
+    <Content Include="YoKo\images\g31.jpeg" />
+    <Content Include="YoKo\images\g31.jpg" />
+    <Content Include="YoKo\images\g4.jpg" />
+    <Content Include="YoKo\images\g5.jpg" />
+    <Content Include="YoKo\images\g51.jpg" />
+    <Content Include="YoKo\images\g6.jpg" />
+    <Content Include="YoKo\images\g61.jpg" />
+    <Content Include="YoKo\images\g7.jpg" />
+    <Content Include="YoKo\images\g8.jpg" />
+    <Content Include="YoKo\images\g81.jpeg" />
+    <Content Include="YoKo\images\g81.jpg" />
+    <Content Include="YoKo\images\g9.jpg" />
+    <Content Include="YoKo\images\g91.jpg" />
+    <Content Include="YoKo\images\icon1.png" />
+    <Content Include="YoKo\images\icon2.png" />
+    <Content Include="YoKo\images\icon3.png" />
+    <Content Include="YoKo\images\left.png" />
+    <Content Include="YoKo\images\move-top.png" />
+    <Content Include="YoKo\images\right.png" />
+    <Content Include="YoKo\images\s1.jpg" />
+    <Content Include="YoKo\images\s2.jpg" />
+    <Content Include="YoKo\images\s3.jpg" />
+    <Content Include="YoKo\images\s4.jpg" />
+    <Content Include="YoKo\images\s5.jpg" />
+    <Content Include="YoKo\images\s6.jpg" />
+    <Content Include="YoKo\images\s7.jpg" />
+    <Content Include="YoKo\images\search.png" />
+    <Content Include="YoKo\images\t1.jpg" />
+    <Content Include="YoKo\images\t2.jpg" />
+    <Content Include="YoKo\images\t3.jpg" />
+    <Content Include="YoKo\images\t4.jpg" />
+    <Content Include="YoKo\js\bootstrap.js" />
+    <Content Include="YoKo\js\classie.js" />
+    <Content Include="YoKo\js\controls.js" />
+    <Content Include="YoKo\js\easing.js" />
+    <Content Include="YoKo\js\easyResponsiveTabs.js" />
+    <Content Include="YoKo\js\jquery-2.1.4.min.js" />
+    <Content Include="YoKo\js\jquery.chocolat.js" />
+    <Content Include="YoKo\js\jquery.filterizr.js" />
+    <Content Include="YoKo\js\jquery.flexisel.js" />
+    <Content Include="YoKo\js\modernizr-2.6.2.min.js" />
+    <Content Include="YoKo\js\move-top.js" />
+    <Content Include="YoKo\js\owl.carousel.js" />
+    <Content Include="YoKo\js\responsiveslides.min.js" />
+    <Content Include="YoKo\js\uisearch.js" />
+    <Content Include="packages.config" />
+    <Content Include="TemplateChung\footer.ascx" />
+    <Content Include="YoKo\YokoY3\PhongY3.ascx" />
+    <Content Include="YoKo\YokoY3\PhongY3.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="YoKo\fonts\fontawesome-webfont.ttf" />
+    <Content Include="YoKo\fonts\fontawesome-webfont.woff" />
+    <Content Include="YoKo\fonts\fontawesome-webfont.woff2" />
+    <Content Include="YoKo\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="YoKo\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="YoKo\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="YoKo\images\Thumbs.db" />
+    <Content Include="HoiDapYoKo\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="HoiDapYoKo\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="HoiDapYoKo\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="HoiDapYoKo\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="HoiDapYoKo\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="HoiDapYoKo\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="HoiDapYoKo\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="HoiDapYoKo\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="HoiDapYoKo\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="HoiDapYoKo\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="HoiDapYoKo\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="HoiDapYoKo\font-awesome\less\bordered-pulled.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\core.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\fixed-width.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\font-awesome.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\icons.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\larger.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\list.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\mixins.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\path.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\rotated-flipped.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\spinning.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\stacked.less" />
+    <Content Include="HoiDapYoKo\font-awesome\less\variables.less" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\font-awesome.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_core.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_icons.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_larger.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_list.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_mixins.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_path.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_spinning.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_stacked.scss" />
+    <Content Include="HoiDapYoKo\font-awesome\scss\_variables.scss" />
+    <Content Include="Login\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login\fonts\fontawesome-webfont.svg" />
+    <Content Include="Login\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login\fonts\FontAwesome.otf" />
+    <Content Include="Login\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Login\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Login\images\Thumbs.db" />
+    <Content Include="Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Admin\fonts\FontAwesome.otf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Admin\AdminTemplate.Master" />
+    <Content Include="Sila\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Sila\fonts\fontawesome-webfont.woff" />
+    <Content Include="Sila\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Sila\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Sila\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Sila\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Sila\images\Thumbs.db" />
+    <Content Include="AnAn\AnAnmaster.Master" />
+    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Admin\QuanLyPhong\fonts\FontAwesome.otf" />
+    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Admin\QuanLyPhong\images\Thumbs.db" />
+    <Content Include="Admin\QuanLyPhong\js\js" />
+    <Content Include="Admin\QuanLyPhong\AdminPhong.Master" />
+    <None Include="Properties\PublishProfiles\huy.pubxml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Template.Master" />
+    <Content Include="SubTemplate.Master" />
+    <Content Include="Happi\VNF-Znikomit.ttf" />
+    <Content Include="Sapa\fonts\fontawesome-webfont.eot" />
+    <Content Include="Sapa\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Sapa\fonts\fontawesome-webfont.woff" />
+    <Content Include="Sapa\fonts\FontAwesome.otf" />
+    <Content Include="Sapa\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Sapa\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Sapa\SapaMaster.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutMe\AboutMe.aspx.cs">
+      <DependentUpon>AboutMe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutMe\AboutMe.aspx.designer.cs">
+      <DependentUpon>AboutMe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminTemplate.Master.cs">
+      <DependentUpon>AdminTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminTemplate.Master.designer.cs">
+      <DependentUpon>AdminTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\AdminPhong.Master.cs">
+      <DependentUpon>AdminPhong.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\AdminPhong.Master.designer.cs">
+      <DependentUpon>AdminPhong.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\EDP.aspx.cs">
+      <DependentUpon>EDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\EDP.aspx.designer.cs">
+      <DependentUpon>EDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\QLP.aspx.cs">
+      <DependentUpon>QLP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\QLP.aspx.designer.cs">
+      <DependentUpon>QLP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyVideoAnh.aspx.cs">
+      <DependentUpon>QuanLyVideoAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyVideoAnh.aspx.designer.cs">
+      <DependentUpon>QuanLyVideoAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Upload_Anh.aspx.cs">
+      <DependentUpon>Upload_Anh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Upload_Anh.aspx.designer.cs">
+      <DependentUpon>Upload_Anh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnAn\AnAnmaster.Master.cs">
+      <DependentUpon>AnAnmaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnAn\AnAnmaster.Master.designer.cs">
+      <DependentUpon>AnAnmaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AnAn\Cau_hoi_Thuong_gapAnAn.aspx.cs">
+      <DependentUpon>Cau_hoi_Thuong_gapAnAn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnAn\Cau_hoi_Thuong_gapAnAn.aspx.designer.cs">
+      <DependentUpon>Cau_hoi_Thuong_gapAnAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnAn\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnAn\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnAn\RoomAnAn.aspx.cs">
+      <DependentUpon>RoomAnAn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnAn\RoomAnAn.aspx.designer.cs">
+      <DependentUpon>RoomAnAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnAn\ThongTinAnAn.aspx.cs">
+      <DependentUpon>ThongTinAnAn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnAn\ThongTinAnAn.aspx.designer.cs">
+      <DependentUpon>ThongTinAnAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnAn\Thuc_Don_AnAn.aspx.cs">
+      <DependentUpon>Thuc_Don_AnAn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnAn\Thuc_Don_AnAn.aspx.designer.cs">
+      <DependentUpon>Thuc_Don_AnAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\utilsWeb.cs" />
+    <Compile Include="HoiPhong\1.aspx.cs">
+      <DependentUpon>1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HoiPhong\1.aspx.designer.cs">
+      <DependentUpon>1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HoiPhong\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HoiPhong\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NonLa\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NonLa\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NonLa\roomnonla.aspx.cs">
+      <DependentUpon>roomnonla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NonLa\roomnonla.aspx.designer.cs">
+      <DependentUpon>roomnonla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NonLa\ThongTinNonLa.ascx.cs">
+      <DependentUpon>ThongTinNonLa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NonLa\ThongTinNonLa.ascx.designer.cs">
+      <DependentUpon>ThongTinNonLa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NonLa\ThongTinNonLaEn.ascx.cs">
+      <DependentUpon>ThongTinNonLaEn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NonLa\ThongTinNonLaEn.ascx.designer.cs">
+      <DependentUpon>ThongTinNonLaEn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Safa\room.aspx.cs">
+      <DependentUpon>room.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\room.aspx.designer.cs">
+      <DependentUpon>room.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Safa\ThongTinSaFa\ThongTinSaFaEn.ascx.cs">
+      <DependentUpon>ThongTinSaFaEn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\ThongTinSaFa\ThongTinSaFaEn.ascx.designer.cs">
+      <DependentUpon>ThongTinSaFaEn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SamSam\CauHoiThuongGapSamSam.ascx.cs">
+      <DependentUpon>CauHoiThuongGapSamSam.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamSam\CauHoiThuongGapSamSam.ascx.designer.cs">
+      <DependentUpon>CauHoiThuongGapSamSam.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SamSam\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamSam\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SamSam\S1\S1.ascx.cs">
+      <DependentUpon>S1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamSam\S1\S1.ascx.designer.cs">
+      <DependentUpon>S1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SamSam\S2\S2.ascx.cs">
+      <DependentUpon>S2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamSam\S2\S2.ascx.designer.cs">
+      <DependentUpon>S2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SamSam\ThongTinSamSam\ThongTinSamSam.ascx.cs">
+      <DependentUpon>ThongTinSamSam.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamSam\ThongTinSamSam\ThongTinSamSam.ascx.designer.cs">
+      <DependentUpon>ThongTinSamSam.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Sapa\Cau_hoi_thuong_gap.aspx.cs">
+      <DependentUpon>Cau_hoi_thuong_gap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sapa\Cau_hoi_thuong_gap.aspx.designer.cs">
+      <DependentUpon>Cau_hoi_thuong_gap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sapa\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sapa\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sapa\RoomSafa.aspx.cs">
+      <DependentUpon>RoomSafa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sapa\RoomSafa.aspx.designer.cs">
+      <DependentUpon>RoomSafa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sapa\SapaMaster.Master.cs">
+      <DependentUpon>SapaMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sapa\SapaMaster.Master.designer.cs">
+      <DependentUpon>SapaMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sapa\ThienDuongTaVan.aspx.cs">
+      <DependentUpon>ThienDuongTaVan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sapa\ThienDuongTaVan.aspx.designer.cs">
+      <DependentUpon>ThienDuongTaVan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="film\film.aspx.cs">
+      <DependentUpon>film.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="film\film.aspx.designer.cs">
+      <DependentUpon>film.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="film\film1.aspx.cs">
+      <DependentUpon>film1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="film\film1.aspx.designer.cs">
+      <DependentUpon>film1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallary\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallary\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HoiDapYoKo\HoiDapYoKo.ascx.cs">
+      <DependentUpon>HoiDapYoKo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HoiDapYoKo\HoiDapYoKo.ascx.designer.cs">
+      <DependentUpon>HoiDapYoKo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index1.aspx.cs">
+      <DependentUpon>index1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index1.aspx.designer.cs">
+      <DependentUpon>index1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Safa\CauHoiTGSafa.ascx.cs">
+      <DependentUpon>CauHoiTGSafa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\CauHoiTGSafa.ascx.designer.cs">
+      <DependentUpon>CauHoiTGSafa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Safa\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Safa\F1\F1.ascx.cs">
+      <DependentUpon>F1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\F1\F1.ascx.designer.cs">
+      <DependentUpon>F1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Safa\F2\F2.ascx.cs">
+      <DependentUpon>F2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\F2\F2.ascx.designer.cs">
+      <DependentUpon>F2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Safa\F3\F3.ascx.cs">
+      <DependentUpon>F3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\F3\F3.ascx.designer.cs">
+      <DependentUpon>F3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Safa\F4\F4.ascx.cs">
+      <DependentUpon>F4.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\F4\F4.ascx.designer.cs">
+      <DependentUpon>F4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Safa\Menu\MenuSafa.ascx.cs">
+      <DependentUpon>MenuSafa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\Menu\MenuSafa.ascx.designer.cs">
+      <DependentUpon>MenuSafa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Safa\ThongTinSaFa\ThongTinSaFa.ascx.cs">
+      <DependentUpon>ThongTinSaFa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safa\ThongTinSaFa\ThongTinSaFa.ascx.designer.cs">
+      <DependentUpon>ThongTinSaFa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Sapa\ThongTinSapa.aspx.cs">
+      <DependentUpon>ThongTinSapa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sapa\ThongTinSapa.aspx.designer.cs">
+      <DependentUpon>ThongTinSapa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sapa\Thuc_Don.aspx.cs">
+      <DependentUpon>Thuc_Don.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sapa\Thuc_Don.aspx.designer.cs">
+      <DependentUpon>Thuc_Don.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubTemplate.Master.cs">
+      <DependentUpon>SubTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubTemplate.Master.designer.cs">
+      <DependentUpon>SubTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Template.Master.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template.Master.designer.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateChung\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateChung\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Happi\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Happi\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinYoko\en\ThongTinEn.ascx.cs">
+      <DependentUpon>ThongTinEn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongTinYoko\en\ThongTinEn.ascx.designer.cs">
+      <DependentUpon>ThongTinEn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinYoko\ThongTinYoKo.ascx.cs">
+      <DependentUpon>ThongTinYoKo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongTinYoko\ThongTinYoKo.ascx.designer.cs">
+      <DependentUpon>ThongTinYoKo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="YoKo\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoKo\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YoKo\YoKoY1\PhongY1.ascx.cs">
+      <DependentUpon>PhongY1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoKo\YoKoY1\PhongY1.ascx.designer.cs">
+      <DependentUpon>PhongY1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="YoKo\YoKoY1\PhongY1.aspx.cs">
+      <DependentUpon>PhongY1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoKo\YoKoY1\PhongY1.aspx.designer.cs">
+      <DependentUpon>PhongY1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YoKo\YoKoY2\PhongY2.ascx.cs">
+      <DependentUpon>PhongY2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoKo\YoKoY2\PhongY2.ascx.designer.cs">
+      <DependentUpon>PhongY2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="YoKo\YoKoY2\PhongY2.aspx.cs">
+      <DependentUpon>PhongY2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoKo\YoKoY2\PhongY2.aspx.designer.cs">
+      <DependentUpon>PhongY2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YoKo\YokoY3\PhongY3.ascx.cs">
+      <DependentUpon>PhongY3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoKo\YokoY3\PhongY3.ascx.designer.cs">
+      <DependentUpon>PhongY3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="YoKo\YokoY3\PhongY3.aspx.cs">
+      <DependentUpon>PhongY3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoKo\YokoY3\PhongY3.aspx.designer.cs">
+      <DependentUpon>PhongY3.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAcees\DataAcees.csproj">
+      <Project>{8f9ad059-41ce-4165-962c-9184a4e65914}</Project>
+      <Name>DataAcees</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ImageAlbum\DaLat\" />
+    <Folder Include="ImageAlbum\HaiPhong\" />
+    <Folder Include="ImageAlbum\Sapa\" />
+    <Folder Include="imageofthumb\DaLat\" />
+    <Folder Include="imageofthumb\Sapa\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>20035</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:20035/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,105 @@
+﻿.square-box {
+    position: relative;
+    width: 12%;
+    overflow: hidden;
+    background: red;
+    float: left;
+    margin-right: 7px;
+    font-weight: bold;
+}
+
+.text-border-solid {
+    margin-left: 7px;
+    padding-right: 12px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    padding-left: 6px;
+    padding-top: 5px;
+    font-size: 15px;
+    text-justify: inter-word;
+    border-left: 6px solid #ccc ;
+    /*background-color: #ddffff !important;*/
+    border-radius: 16px;
+    
+}
+
+.text-border-solid-blue {
+    margin-left: 7px;
+    padding-right: 12px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    padding-left: 6px;
+    padding-top: 5px;
+    font-size: 20px !important;
+    text-justify: inter-word;
+    border-left: 6px solid #ccc !important;
+    background-color: #ddffff ;
+    border-radius: 16px;
+}
+
+.text-border-solid-red {
+    margin-left: 7px;
+    padding-right: 12px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    padding-left: 6px;
+    padding-top: 5px;
+    font-size: 20px !important;
+    text-justify: inter-word;
+    border: 1px solid red !important;
+    background-color: #ddffff !important;
+    border-radius: 8px;
+}
+
+.square-box:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.booknow {
+    width: 134px;
+    height: 72px;
+    position: fixed;
+    top: 20px;
+    right: -30px;
+    z-index: 1010;
+}
+
+.booknowinta {
+    width: 134px;
+    height: 72px;
+    position: fixed;
+    top: 60px;
+    right: -20px;
+    z-index: 1010;
+}
+
+    .booknow a {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+.square-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-size: 30px;
+}
+
+    .square-content div {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+    .square-content span {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+    }

@@ -1,0 +1,35 @@
+create table QuanLyAnhVideo
+(
+  ID bigint identity(1,1) primary key,
+  ID_IMAGE bigint,
+  ID_VIDEO bigint,
+  IS_IMAGE_VIDEO smallint,
+  QUOTE nvarchar(500),
+  NAME nvarchar(500),
+  ICON_VIDEO_IMAGE varchar(100),
+  DURATION_VIDEO varchar(20)
+)
+
+create table Anh
+(
+  ID bigint identity(1,1) primary key,
+  ID_IMAGE bigint,
+
+  IMAGE_THUMB_URL varchar(200),
+  IMAGE_URL varchar(200),
+VITRI_IMAGE nvarchar(200),
+TITLE_IMAGE nvarchar(200),
+IMAGE_HOVER nvarchar(500)
+
+)
+
+create table VIDEO
+(
+  ID bigint identity(1,1) primary key,
+  ID_VIDEO bigint,
+
+  VIDEO_URL  varchar(200)
+
+)
+
+select * from ANH

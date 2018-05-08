@@ -1,0 +1,22 @@
+insert into Quanlyanhvideo (ID_IMAGE,ID_VIDEO,IS_IMAGE_VIDEO,QUOTE,NAME,ICON_VIDEO_IMAGE,DURATION_VIDEO)
+values (1,1,1,'quote','name','icon','02:20')
+
+
+
+USE [Houzing]
+GO
+
+INSERT INTO [bodoi304].[Anh]
+           ([ID_IMAGE]
+           ,[IMAGE_THUMB_URL]
+           ,[IMAGE_URL]
+           ,[VITRI_IMAGE]
+           ,[TITLE_IMAGE]
+           ,[IMAGE_HOVER])
+     VALUES
+           (1
+           ,'../thumb/grid_thumb.jpg'
+           ,'../imageofthumb/HaiPhong/2.jpg'
+           ,'vi tri'
+           ,'title'
+           ,'hover')

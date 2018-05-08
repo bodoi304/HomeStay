@@ -1,0 +1,235 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="Housing.Template" %>
+
+<!DOCTYPE html>
+<head>
+    <title>Houzing
+    </title>
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <link href='/icon/LogoHouzing.jpg' rel='shortcut icon' />
+        <meta content='HOUZING' property='og:title' />
+    <meta content='UNLOCKED THE FUTURE OF TRAVELLERS' property='og:description' />
+    <meta content='http://nguyenphituan.com/icon/LogoHouzing.jpg' property='og:image' />
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+    <script src="/javascripts/jquery-1.4.2.js?1454891014" type="text/javascript"></script>
+    <script src="/javascripts/jquery-ui-1.8.4.custom.min.js?1454891014" type="text/javascript"></script>
+    <script src="/javascripts/jquery.hoverIntent.minified.js?1454891014" type="text/javascript"></script>
+    <script src="/javascripts/mm.full.js?1454891014" type="text/javascript"></script>
+    <script src="/javascripts/jquery.anythingslider.js?1454891014" type="text/javascript"></script>
+    <script src="/javascripts/pageless.js?1454891014" type="text/javascript"></script>
+    <script src="/javascripts/share.js?1454891014" type="text/javascript"></script>
+    <script src="/javascripts/jquery.scrollTo.js?1454891014" type="text/javascript"></script>
+    <script src="/javascripts/jquery.cookie.js?1454891014" type="text/javascript"></script>
+    <script src="/javascripts/bigstories.js?1454891014" type="text/javascript"></script>
+    <link href="<%= ResolveUrl("~/stylesheets/public.css?1454891014") %>" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/bootstrap.min.css?1454891014" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/anythingslider.css?1454891014" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/bigstories.css?1454891014" media="screen" rel="stylesheet" type="text/css" />
+
+    <!-- /<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> -->
+    <script type='text/javascript'>
+        //<![CDATA[
+
+        //]]>
+    </script>
+    <script type='text/javascript'>
+        //<![CDATA[
+        try {
+            Typekit.load({
+                loading: function () {
+                    // Javascript to execute when fonts start loading
+                },
+                active: function () {
+                    // Javascript to execute when fonts become active
+                },
+                inactive: function () {
+                    // Javascript to execute when fonts become inactive
+                    //console.log("Javascript to execute when fonts become inactive")
+                }
+            });
+        } catch (e) { }
+        //]]>
+    </script>
+</head>
+<body id='index' ontouchmove='BlockMove(event);'>
+    <div class='menu'>
+        <a class='home-link' href='/'></a>
+        <ul class='main-menu'>
+            <li class='menu-section towns'>
+                <a class='menu-icon'>
+                    <span class='nav-title'>HOUZING
+                    </span>
+                </a>
+                <div class='sub-menu'>
+                    <div class='sub-menu-label'>
+                        <span>Căn hộ
+                        </span>
+                        <span class='x-menu'></span>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href='/Yoko/Index.aspx'>Đà Lạt
+                                <span class='menu-quote'>Việt Nam
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href='/Sapa/default.aspx'>SaPa
+                                <span class='menu-quote'>Việt Nam
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href='/Happi/default.aspx'>Hải Phòng
+                                <span class='menu-quote'>Việt Nam
+                                </span>
+                            </a>
+                        </li>
+                          <li>
+                            <a href='/NonLa/Index.aspx'>Sải Gòn
+                                <span class='menu-quote'>Việt Nam
+                                </span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href='/SamSam/default.aspx'>Vũng Tàu
+                                <span class='menu-quote'>Việt Nam
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class='clear'></div>
+                </div>
+            </li>
+            <li class='menu-section threads'>
+                <a class='menu-icon' href='javascript:;'>
+                    <span class='nav-title'>Thinking stories
+                    </span>
+                </a>
+                <div class='sub-menu'>
+                    <div class='sub-menu-label'>
+                        <span>Câu chuyện kể
+                        </span>
+                        <span class='x-menu'></span>
+                    </div>
+                    <ul>
+        <%--                <li>
+                            <a href='/index.aspx?Phong=1'>Phòng Đà Lạt
+                                <span class='menu-quote'>Đà Lạt
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href='/index.aspx?Phong=2'>Phòng Sapa
+                                <span class='menu-quote'>Sapa
+                                </span>
+                            </a>
+                        </li>--%>
+                        <li>
+                            <a href='/index.aspx?Phong=3'>Ảnh Khách Hàng
+                                <span class='menu-quote'>Khách Hàng
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class='clear'></div>
+                </div>
+            </li>
+            <li class='menu-section media'>
+                <a class='menu-icon' href='javascript:;'>
+                    <span class='nav-title'>INVESTMENT
+                    </span>
+                </a>
+                <div class='sub-menu'>
+                    <div class='sub-menu-label'>
+                        <span>Media
+                        </span>
+                        <span class='x-menu'></span>
+                    </div>
+                    <ul>
+                        <li class='media_0'>
+                            <a href='/index.aspx?Video=1'>
+                                <span class='icon'></span>
+                                <span class='text'>Coachinh
+                                </span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <div class='clear'></div>
+                </div>
+            </li>
+
+        </ul>
+        <ul class='right-menu'>
+            <li>
+                <a style="font-family: 'ff-enzo-web'; font-size: 17px; font-weight: bold; color: white; text-transform: uppercase;"
+                    href='/AboutMe/AboutMe.aspx'>About Me
+                </a>
+            </li>
+            <li>
+                <a class='share-button' href='javascript:;'>Chia sẻ
+                </a>
+            </li>
+            <li class='collapsed-menu'>
+                <a class='menu-item' href='javascript:;'>Pages
+                </a>
+                <div class='sub-menu'>
+                    <ul>
+                        <li>
+                            <a href='/page/about-us'>Về chúng tôi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <a class='toggle-menu' href='javascript:;'>Toggle menu
+        </a>
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <%--     <script type="text/javascript">
+          //<![CDATA[
+          $('#infinite').pageless({ "totalPages": 10, "loaderMsg": "Loading more results", "url": "/infinite" });
+          //]]>
+    </script>--%>
+</body>
+<script type='text/javascript'>
+    //<![CDATA[
+    $(document).ready(function () {
+
+        var config = {
+            ui: {
+                flyout: "bottom left",
+                button_font: false
+            },
+            networks: {
+                google_plus: {
+                    enabled: false
+                },
+                facebook: {
+                    load_sdk: false
+                },
+                pinterest: {
+                    enabled: false
+                },
+                twitter: {
+                    description: "YOKO Houzing"
+                },
+                email: {
+                    title: "Đên houzing",
+                    description: ""
+                }
+            }
+        };
+
+        var share_button = new Share(".share-button", config);
+
+    });
+    //]]>
+</script>
+

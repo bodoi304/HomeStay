@@ -1,0 +1,204 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SapaMaster.master.cs" Inherits="Housing.Sapa.SapaMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>SAPA Houzing</title>
+    <!-- for-mobile-apps -->
+      <link href="style.css" rel="stylesheet" />
+    <link href='/icon/LogoHouzing.jpg' rel='shortcut icon' />
+<link href="/Sapa/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--theme-style-->
+<link href="/Sapa/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="/Sapa/css/font-awesome.css" rel="stylesheet">
+<!--//theme-style-->
+  <meta name="description" content="NGÔI NHÀ ĐẸP NHƯ MƠ GIỮA THUNG LŨNG NGÀN MÂY TẢ VAN , SAPA.Đến SAPA có 1 nơi được gọi là THIÊN ĐƯỜNG chẳng cần đi đâu xa,các bạn cứ tới thẳng thung lũng mường hoa, bản Tả Van." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="HOUZING" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="HomeStay,Home,Houzing" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!---->
+<script src="/Sapa/js/jquery.min.js"></script>
+<script src="/Sapa/js/bootstrap.min.js"></script>
+<!---->
+   
+        <link rel='fluid-icon' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
+    <link rel='logo' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
+    <link rel='image_src' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<link href='//fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<!---strat-date-piker---->
+<!-- requried-jsfiles-for owl -->
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							            $(document).ready(function () {
+							                $("#owl-demo").owlCarousel({
+							                    items: 1,
+							                    lazyLoad: true,
+							                    autoPlay: true,
+							                    navigation: false,
+							                    navigationText: false,
+							                    pagination: true,
+							                });
+							            });
+							    </script>
+							 <!-- //requried-jsfiles-for owl -->
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+   <div class="banner-section">
+		<section class="slider">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<div class="slider-info">
+							<img src="/Sapa/ImageWeb/baner1.jpg" class="img-responsive" alt="">
+						</div>
+						<div class="container">
+							<div class="banner-text">
+								<h3>SAPA Houzing</h3>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slider-info">
+							<img src="/Sapa/ImageWeb/banner2.jpg" class="img-responsive" alt="">
+						</div>
+						<div class="container">
+							<div class="banner-text">
+								<h3>SAPA Houzing</h3>
+							</div>
+						</div>
+					</li>
+		
+				</ul>
+			</div>
+		</section>
+			<!-- FlexSlider -->
+			<script defer src="js/jquery.flexslider.js"></script>
+				<script type="text/javascript">
+				    $(function () {
+				        SyntaxHighlighter.all();
+				    });
+				    $(window).load(function () {
+				        $('.flexslider').flexslider({
+				            animation: "slide",
+				            start: function (slider) {
+				                $('body').removeClass('loading');
+				            }
+				        });
+				    });
+				</script>
+			<!-- FlexSlider -->
+			<!-- slider -->
+	</div>
+    <div class="header">
+		<div class="container">
+			<div class="header-menu">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						  <div class="navbar-brand logo">
+								<h1><a href="index.html"><span>Sapa  </span> Houzing</a></h1>
+							</div>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						  <ul class="nav navbar-nav">
+							<li class="active"><a href="/Sapa" data-hover="Home">Trang Chủ </a></li>
+							<li><a href="/Sapa/ThongTinSapa.aspx" data-hover="About">Thông tin Sapa và bản Tả Van</a></li>
+							<li><a data-hover="Restaurant" href="/Sapa/Cau_hoi_thuong_gap.aspx">Câu hỏi thường gặp</a></li>
+							<li><a data-hover="Gallery" href="/Sapa/Thuc_Don.aspx">Thực đơn</a></li>
+
+							 
+						  </ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			<div class="clearfix"></div>
+			</div>	
+		</div> 
+	</div>
+		<!---header--->		
+		<div class="content">
+			<!---welcome--->
+			<div class="welcome">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+			</div>
+			<!---welcome--->
+		
+		</div>
+		<div class="footer-section">
+			<div class="container">
+				<div class="footer-grids">
+					<div class="col-md-3 footer-grid">
+						<h4>HotLine</h4>
+						<ul>
+							<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> Số điện thoại: 0868 248 396</li>
+							<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> <a href="#"><a href="mailto:houzing01@gmail.com">houzing01@gmail.com</a></a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4>Hệ thống Homestay</h4>
+						<ul>
+							<li><a href="/Sila">SiLa houzing - Đà Lạt</a></li>
+							<li><a href="/Yoko/index.aspx">Yoko houzing - Đà Lạt</a></li>
+							<li><a href="/Happi">Happi houzing - Hải Phòng</a></li>
+                            <li><a href="/SamSam">Samsam houzing - Vũng Tàu</a></li>
+                            <li><a href="/NonLa">Nón Lá - Sải Gòn</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4>Loại Phòng</h4>
+						<ul>
+							<li>Phòng riêng cho 2 người</li>
+							<li>Phòng riêng cho 4 người</li>
+						</ul>
+					</div>
+					<%--<div class="col-md-3 footer-grid">
+						<h4>Our Services </h4>
+						<ul>
+							<li>Room services</li>
+							<li>Free internet Wifi</li>
+							<li>Television (50 channels)</li>
+							<li>Pets allowed</li>
+						</ul>
+					</div>--%>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>	
+		<!--footer-->
+			<div class="copy-section">
+				<div class="container">
+					<div class="footer-top">
+						<p>&copy; 2017 Houzing. Thiết kế bởi <a href="">houzing</a></p>
+					</div>
+					<%--<div class="social-icons">
+						<a href="#"><i class="icon"></i></a>
+						<a href="#"><i class="icon1"></i></a>
+						<a href="#"><i class="icon2"></i></a>
+						<a href="#"><i class="icon3"></i></a>
+					</div>--%>
+				</div>
+			</div>
+	<!--footer-->
+    </form>
+</body>
+</html>
