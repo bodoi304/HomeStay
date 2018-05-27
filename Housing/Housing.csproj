@@ -297,9 +297,11 @@
     <Content Include="HoiPhong\js\jquery-ui.js" />
     <Content Include="icon\arrow-samsam.png" />
     <Content Include="icon\Book-now-samsam.png" />
+    <Content Include="icon\booknow.png" />
     <Content Include="icon\inta.png" />
     <Content Include="icon\samsam.png" />
     <Content Include="images\iconface.jpg" />
+    <Content Include="images\weather.png" />
     <Content Include="javascripts\bootstrap-datepicker.vi.min.js" />
     <Content Include="javascripts\datepiker.js" />
     <Content Include="javascripts\jssor.slider-25.2.0.min.js" />
@@ -807,11 +809,13 @@
     <Content Include="Safa\ThongTinSaFa\ThongTinSaFa.ascx" />
     <Content Include="stylesheets\bootstrap-datepicker3.min.css" />
     <Content Include="stylesheets\grids.css" />
+    <Content Include="javascripts\JavaScript1.js" />
     <Content Include="stylesheets\style.css" />
     <Content Include="stylesheets\StyleSheet1.css" />
     <Content Include="stylesheets\swipebox.css" />
     <Content Include="TemplateChung\footerAn.ascx" />
     <Content Include="TemplateChung\footerHeThong.ascx" />
+    <Content Include="TemplateChung\MenuFix.ascx" />
     <Content Include="thumb\AnhTuan.jpg" />
     <Content Include="images\bs-logo.png" />
     <Content Include="images\bs_pause.png" />
@@ -1656,6 +1660,13 @@
     </Compile>
     <Compile Include="TemplateChung\footerHeThong.ascx.designer.cs">
       <DependentUpon>footerHeThong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateChung\MenuFix.ascx.cs">
+      <DependentUpon>MenuFix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateChung\MenuFix.ascx.designer.cs">
+      <DependentUpon>MenuFix.ascx</DependentUpon>
     </Compile>
     <Compile Include="ThongTinYoko\en\ThongTinEn.ascx.cs">
       <DependentUpon>ThongTinEn.ascx</DependentUpon>

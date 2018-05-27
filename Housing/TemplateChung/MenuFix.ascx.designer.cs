@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Housing.ThongTinHappyHouzing {
+namespace Housing.TemplateChung {
     
     
-    public partial class _default {
+    public partial class MenuFix {
         
         /// <summary>
-        /// form1 control.
+        /// pnInta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        public global::System.Web.UI.WebControls.Panel pnInta;
         
         /// <summary>
-        /// MenuFix control.
+        /// imageWether control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Housing.TemplateChung.MenuFix MenuFix;
+        protected global::DevExpress.Web.ASPxEditors.ASPxImage imageWether;
         
         /// <summary>
-        /// footer control.
+        /// popup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Housing.TemplateChung.footer footer;
+        protected global::DevExpress.Web.ASPxPopupControl.ASPxPopupControl popup;
     }
 }

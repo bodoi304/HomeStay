@@ -10,6 +10,8 @@
 
 <%@ Register Src="~/HoiDapYoKo/HoiDapYoKo.ascx" TagPrefix="uc1" TagName="HoiDapYoKo" %>
 <%@ Register Src="~/ThongTinYoko/ThongTinYoKo.ascx" TagPrefix="uc10" TagName="ThongTinYoKo" %>
+<%@ Register Src="~/TemplateChung/MenuFix.ascx" TagPrefix="uc1" TagName="MenuFix" %>
+
 
 <html>
 <head>
@@ -97,7 +99,7 @@
             </div>--%>
 
         <!-- //Portfolio -->
-                <div class="booknow">
+<%--                <div class="booknow">
            <a href="https://www.facebook.com/yokohouse01">
                <img src="../icon/arrow-38-xxl.png" width="15" height="15" /><img src="../icon/Book-now_blue.png" width="70" height="30"/> </a> 
         </div>
@@ -105,7 +107,7 @@
             <a href="https://www.instagram.com/yokohousedalat" target="_blank" >
                <img src="/icon/inta.png"  />
             </a>
-        </div>
+        </div>--%><uc1:MenuFix runat="server" ID="MenuFix" />
         <div class="portfolio" id="port">
             <div class="port-head">
                 <div class="tittle" style="color: #33BBFB;font-size:30px">

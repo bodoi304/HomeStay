@@ -47,8 +47,8 @@ namespace Housing.Common
 
                 case Constant.NHA_NAO.YOKO:
                     return "[-YOKO-]";
-                case Constant.NHA_NAO.SAMSAM:
-                    return "[-SAMSAM-]";
+                case Constant.NHA_NAO.TINA:
+                    return "[-TINA-]";
                 case Constant.NHA_NAO.LALA:
                     return "[-LALA-]";
                 default:
@@ -71,9 +71,9 @@ namespace Housing.Common
             {
                 dr.Items.Add(new ListItem("YOKO - DALAT", "3"));
             }
-            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.SAMSAM))
+            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.TINA))
             {
-                dr.Items.Add(new ListItem("SAMSAM - VUNGTAU", "4"));
+                dr.Items.Add(new ListItem("TINA - PHUOCHAI", "4"));
             }
             if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.LALA))
             {
@@ -99,9 +99,9 @@ namespace Housing.Common
             {
                 dr.Items.Add(new ListItem("YOKO", "3"));
             }
-            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.SAMSAM))
+            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.TINA))
             {
-                dr.Items.Add(new ListItem("SAMSAM", "4"));
+                dr.Items.Add(new ListItem("TINA", "4"));
             }
             if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.LALA))
             {
@@ -127,9 +127,9 @@ namespace Housing.Common
             {
                 return Constant.NHA_NAO.YOKO;
             }
-            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.SAMSAM))
+            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.TINA))
             {
-                return Constant.NHA_NAO.SAMSAM;
+                return Constant.NHA_NAO.TINA;
             }
             if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.LALA))
             {
@@ -149,8 +149,8 @@ namespace Housing.Common
                     return " (F1,F2,F3: phòng 2 người, F4: phòng 4 người)";
                 case Constant.NHA_NAO.YOKO:
                     return " (Y1,Y2: phòng 2 người, Y3: phòng 3 người)";
-                case Constant.NHA_NAO.SAMSAM:
-                    return " (DT: Dorm trên, DD: Dorm dưới, PR: phòng riêng)";
+                case Constant.NHA_NAO.TINA:
+                    return " (2D1,2D2: giường dorm đôi, D1,D2,D3,D4,D5,D6: giường dorm 1 người)";
                 case Constant.NHA_NAO.LALA:
                     return " (L1T: Dorm trên,L1D: Dorm dưới,L2,L3,L4)";
                 default :
@@ -260,25 +260,25 @@ namespace Housing.Common
 
             }
 
-            Boolean isHetPhongSamSam = false;
-            String Ma_Hieu_Phong_MinSamSam = lstTrangThaiRoom[0].Ma_Hieu_Phong;
+            Boolean isHetPhongTina = false;
+            String Ma_Hieu_Phong_MinTina = lstTrangThaiRoom[0].Ma_Hieu_Phong;
             foreach (Trang_Thai_Phong_Obj objTT in lstTrangThaiRoom)
             {
                 if (objTT.Ma_Hieu_Phong.Replace(",", "").Length <= 1)
                 {
                     txtKetQua.Text = "Hết Phòng rồi huhu.";
-                    isHetPhongSamSam = true;
+                    isHetPhongTina = true;
                     break;
                 }
-                if (Ma_Hieu_Phong_MinSamSam.Length > objTT.Ma_Hieu_Phong.Length)
+                if (Ma_Hieu_Phong_MinTina.Length > objTT.Ma_Hieu_Phong.Length)
                 {
-                    Ma_Hieu_Phong_MinSamSam = objTT.Ma_Hieu_Phong;
+                    Ma_Hieu_Phong_MinTina = objTT.Ma_Hieu_Phong;
                 }
 
             }
-            if (!isHetPhongSamSam)
+            if (!isHetPhongTina)
             {
-                txtKetQua.Text = "Còn " + Ma_Hieu_Phong_MinSamSam.Replace(",", "") + " có thể book.";
+                txtKetQua.Text = "Còn " + Ma_Hieu_Phong_MinTina.Replace(",", "") + " có thể book.";
             }
 
         }
@@ -290,7 +290,7 @@ namespace Housing.Common
             dr.Items.Add(new ListItem("ANAN", "1"));
             dr.Items.Add(new ListItem("SAFA", "2"));
             dr.Items.Add(new ListItem("YOKO", "3"));
-            dr.Items.Add(new ListItem("SAMSAM", "4"));
+            dr.Items.Add(new ListItem("TINA", "4"));
             dr.DataBind();
             dr.SelectedIndex = 0;
             return dr;

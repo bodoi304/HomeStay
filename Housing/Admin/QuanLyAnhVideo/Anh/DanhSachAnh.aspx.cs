@@ -161,7 +161,7 @@ namespace Housing.Admin.QuanLyAnhVideo.Anh
         protected void btnThemVideo_Click(object sender, EventArgs e)
         {
             Video_DH ctlVideo = new Video_DH();
-            ctlVideo.Video_Insertitem( txtVideoUrl.Text);
+            ctlVideo.Video_Insertitem(Convert.ToInt64(hdID.Value), txtVideoUrl.Text);
             lblError.Text = "Thêm thành công video.";
             lstVideo.Add(new Video_Obj(txtVideoUrl.Text));
         }

@@ -16,6 +16,8 @@
 
 <%@ Register Src="ThongTinSaFa/ThongTinSaFaEn.ascx" TagName="ThongTinSaFaEn" TagPrefix="uc8" %>
 <%@ Register Src="~/TemplateChung/footer.ascx" TagPrefix="uc1" TagName="footer" %>
+<%@ Register Src="~/TemplateChung/MenuFix.ascx" TagPrefix="uc1" TagName="MenuFix" %>
+
 
 
 
@@ -131,12 +133,13 @@
     </style>
 </head>
 <body style="background-image: url('CommonImage/iconbckground.png'); background-repeat: repeat-x; background-color: #F5FFF5;">
-    <div style="height: 39px"></div>
+
 
 
     <form id="form1" runat="server">
-
-        <div class="booknow">
+        <uc1:MenuFix runat="server" ID="MenuFix" />
+        <div style="height: 39px"></div>
+        <%--        <div class="booknow">
             <a href="https://www.facebook.com/SAFAHOUZING/">
                 <img src="../icon/arrow-38-green.png" width="15" height="15" /><img src="../icon/Book-nowgreen.png" width="70" height="30" />
             </a>
@@ -145,17 +148,17 @@
             <a href="https://www.instagram.com/safahouzing01" target="_blank">
                 <img src="/icon/inta.png" />
             </a>
-        </div>
+        </div>--%>
         <div>
             <video id="my_video_1" class="video-js vjs-sublime-skin"
-                controls preload="none"  poster='CommonImage/anhnen.jpg'
+                controls preload="none" poster='CommonImage/anhnen.jpg'
                 data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
                 <source src="http://nguyenphituan.com/Video/VideoSapa.mp4" type='video/mp4' />
             </video>
-      
+
             <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
 
-   
+
             <div class="port-head">
                 <div style="color: #6ad29a; font-size: 30px;">
                     <img src="../icon/icon-safa.png" width="100" height="100" />SAFA Houzing

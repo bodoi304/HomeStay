@@ -1,6 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AnAnmaster.master.cs" Inherits="Housing.AnAn.AnAnmaster" %>
 
 <%@ Register Src="~/TemplateChung/footerAn.ascx" TagPrefix="uc1" TagName="footerAn" %>
+<%@ Register Src="~/TemplateChung/MenuFix.ascx" TagPrefix="uc1" TagName="MenuFix" %>
+
 
 
 <!DOCTYPE html>
@@ -50,25 +52,7 @@
             });
         });
     </script>
-    <style>
-        .booknow {
-            width: 134px;
-            height: 72px;
-            position: fixed;
-            top: 20px;
-            right: -30px;
-            z-index: 1010;
-        }
-
-        .booknowinta {
-            width: 134px;
-            height: 72px;
-            position: fixed;
-            top: 60px;
-            right: -20px;
-            z-index: 1010;
-        }
-    </style>
+  
     <link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
 
     <!-- If you'd like to support IE8 -->
@@ -77,16 +61,8 @@
 
 <body>
     <form id="form1" runat="server">
-        <div class="booknow">
-            <a href="https://www.facebook.com/anansapa/" target="_blank">
-                <img src="../icon/arrow-38-green.png" width="15" height="15" /><img src="../icon/Book-nowgreen.png" width="70" height="30" />
-            </a>
-        </div>
-        <div class="booknowinta">
-            <a href="https://www.instagram.com/anansapamountainair" target="_blank">
-                <img src="/icon/inta.png" />
-            </a>
-        </div>
+        <uc1:MenuFix runat="server" id="MenuFix" />
+          <div style="height:8px"></div>
         <video id="my_video_1" class="video-js vjs-sublime-skin"
             controls preload="none" poster='/Sapa/ImageWeb/baner1.jpg'
             data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>

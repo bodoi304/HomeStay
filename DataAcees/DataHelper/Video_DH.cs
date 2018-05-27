@@ -29,10 +29,11 @@ namespace DataAcees
 
         }
 
-           public void Video_Insertitem( String videoURL)
+           public void Video_Insertitem( Int64 IDVIDEO ,String videoURL)
         {
             defaultDB.ExecuteNonQuery("Video_Insertitem"
-             , videoURL);
+             , videoURL
+             , IDVIDEO);
 
         }
 

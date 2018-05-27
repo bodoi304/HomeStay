@@ -22,6 +22,15 @@ namespace Housing.YoKo {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// MenuFix control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Housing.TemplateChung.MenuFix MenuFix;
+        
+        /// <summary>
         /// PhongY11 control.
         /// </summary>
         /// <remarks>

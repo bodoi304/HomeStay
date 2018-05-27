@@ -77,7 +77,7 @@ namespace DataAcees.Common
            public const int YOKO =3;
            public const int ANAN = 1;
            public const int SAFA = 2;
-           public const int SAMSAM = 4;
+           public const int TINA = 4;
            public const int LALA = 5;
        }
 
@@ -86,7 +86,7 @@ namespace DataAcees.Common
            public const int YOKO = 2;
            public const int ANAN = 1;
            public const int SAFA = 4;
-           public const int SAMSAM = 8;
+           public const int TINA = 8;
            public const int LALA = 16;
        }
 

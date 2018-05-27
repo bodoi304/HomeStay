@@ -11,6 +11,9 @@ namespace Housing.YoKo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            MenuFix.BindData("/icon/inta.png", "https://www.instagram.com/yokohousedalat", "/icon/booknow.png", "https://www.facebook.com/yokohouse01",
+                "https://www.accuweather.com/vi/vn/da-lat/354287/current-weather/354287"
+               , "354287", "awtd1526571483105");
             for(int i = 0; i < 15; i++)
             {
 
