@@ -85,6 +85,42 @@ namespace Housing.Admin.QuanLyPhong.Glistphong {
         protected global::System.Web.UI.WebControls.Label lblThongBao;
         
         /// <summary>
+        /// txtNgayTaoTu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNgayTaoTu;
+        
+        /// <summary>
+        /// txtNgayTaoDen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNgayTaoDen;
+        
+        /// <summary>
+        /// btnNgayTaoTK control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNgayTaoTK;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
         /// grd_DSPhong control.
         /// </summary>
         /// <remarks>

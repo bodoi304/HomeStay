@@ -40,6 +40,14 @@ namespace DataAcees
 
         }
 
+        public List<LichDatPhong_Obj> select_item_ngaytao_exact(DateTime NgayTaoTu, DateTime NgayTaoDen, int nhanao)
+        {
+            List<LichDatPhong_Obj> enumerable = defaultDB.ExecuteSprocAccessor<LichDatPhong_Obj>("select_item_ngaytao_exact", NgayTaoTu, NgayTaoDen, nhanao).ToList<LichDatPhong_Obj>();
+            return enumerable;
+
+        }
+        
+
         public List<LichDatPhong_Obj> select_item_checkin_out_exact_byPageIndex(DateTime Checkin, DateTime Checkout, int nhanao, int PageIndex, int Pagesize)
         {
             List<LichDatPhong_Obj> enumerable = defaultDB.ExecuteSprocAccessor<LichDatPhong_Obj>("select_item_checkin_out_exact_byPageIndex", Checkin, Checkout, nhanao, PageIndex, Pagesize).ToList<LichDatPhong_Obj>();

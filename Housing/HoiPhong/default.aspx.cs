@@ -189,7 +189,7 @@ namespace Housing.HoiPhong
 
                         case Constant.NHA_NAO.TINA:
                             List<Trang_Thai_Phong_Obj> lstTrangThaiRoomTina = new List<Trang_Thai_Phong_Obj>();
-                            StringBuilder MaHieuPhongConTina = new StringBuilder("[2D1],[2D2],[D1],[D2],[D3],[D4],[D5],[D6]");
+                            StringBuilder MaHieuPhongConTina = new StringBuilder("[CC],[2D1],[2D2],[D1],[D2],[D3],[D4],[D5],[D6]");
                             utilsWeb.checkPhong(txtKetQua, noidat, MaHieuPhongConTina, lstNgayCheck, lstTrangThaiRoomTina);
 
                             lblThongKe.Text = utilsWeb.getKetQuaPhong(lstTrangThaiRoomTina);

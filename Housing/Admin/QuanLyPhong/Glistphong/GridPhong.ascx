@@ -15,28 +15,44 @@
                     <div class="form-inline">
                         <asp:Panel ID="pnTimKiem" runat="server">
                             <div class="form-group">
-                                <asp:TextBox data-mask="00/00/0000" data-mask-selectonfocus="true" ID="txtCheckin" Style="color: black !important" runat="server" placeholder="check-In dd/mm/yyyy" CssClass="simple-field-data-mask-selectonfocus date form-control datepicker" ></asp:TextBox>
+                                <asp:TextBox data-mask="00/00/0000" data-mask-selectonfocus="true" ID="txtCheckin" Style="color: black !important" runat="server" placeholder="check-In dd/mm/yyyy" CssClass="simple-field-data-mask-selectonfocus date form-control datepicker"></asp:TextBox>
 
 
 
                             </div>
                             <div class="form-group">
-                                <asp:TextBox data-mask="00/00/0000" data-mask-selectonfocus="true" ID="txtCheckout" Style="color: black !important" runat="server" placeholder="check-Out dd/mm/yyyy" CssClass="simple-field-data-mask-selectonfocus date form-control datepicker" ></asp:TextBox>
+                                <asp:TextBox data-mask="00/00/0000" data-mask-selectonfocus="true" ID="txtCheckout" Style="color: black !important" runat="server" placeholder="check-Out dd/mm/yyyy" CssClass="simple-field-data-mask-selectonfocus date form-control datepicker"></asp:TextBox>
 
                             </div>
                             <div class="form-group">
                                 <asp:TextBox ID="txtSoDienThoai" Style="color: black !important" runat="server" placeholder="Số Điện Thoại" CssClass=" form-control"></asp:TextBox>
 
                             </div>
-                                 <div class="form-group">
-                                      <asp:TextBox ID="txtIDPhong" Style="color: black !important" runat="server" placeholder="ID đặt phòng" CssClass=" form-control"></asp:TextBox>
+                            <div class="form-group">
+                                <asp:TextBox ID="txtIDPhong" Style="color: black !important" runat="server" placeholder="ID đặt phòng" CssClass=" form-control"></asp:TextBox>
 
                             </div>
                             <asp:Button ID="btnTimKiem" runat="server" Text="Tìm Kiếm" CssClass="btn btn-default" OnClick="btnTimKiem_Click" />
                             <p style="margin-top: 15px">
-                                <asp:Label ID="lblThongBao" runat="server" Text="" ForeColor="Blue" Font-Bold="true"></asp:Label></p>
-                        </asp:Panel>
+                                <asp:Label ID="lblThongBao" runat="server" Text="" ForeColor="Blue" Font-Bold="true"></asp:Label>
+                            </p>
+                            <div class="form-group">
+                                <asp:TextBox data-mask="00/00/0000" data-mask-selectonfocus="true" ID="txtNgayTaoTu" Style="color: black !important" runat="server" placeholder="Ngày tạo từ dd/mm/yyyy" CssClass="simple-field-data-mask-selectonfocus date form-control datepicker"></asp:TextBox>
 
+
+
+                            </div>
+                            <div class="form-group">
+                                <asp:TextBox data-mask="00/00/0000" data-mask-selectonfocus="true" ID="txtNgayTaoDen" Style="color: black !important" runat="server" placeholder="Ngày tạo đến dd/mm/yyyy" CssClass="simple-field-data-mask-selectonfocus date form-control datepicker"></asp:TextBox>
+
+                            </div>
+
+                            <asp:Button ID="btnNgayTaoTK" runat="server" Text="Tìm Kiếm" CssClass="btn btn-default" OnClick="btnNgayTaoTK_Click"  />
+                            <p style="margin-top: 15px">
+                                <asp:Label ID="Label1" runat="server" Text="" ForeColor="Blue" Font-Bold="true"></asp:Label>
+                            </p>
+                        </asp:Panel>
+                       
 
 
                         <div class="form-grids widget-shadow" data-example-id="basic-forms" style="margin-top: 15px">
@@ -45,14 +61,14 @@
                                 <SettingsBehavior ColumnResizeMode="Control" />
                                 <Columns>
                                     <dx:GridViewDataTextColumn Caption="" ReadOnly="True"
-                                        VisibleIndex="0" >
+                                        VisibleIndex="0" Width="50px">
                                         <DataItemTemplate>
-                                            <a href='/Admin/QuanLyPhong/SuaPhong.aspx?bnm=<%# Eval("ID") %>' >Sửa Đặt Phòng</a>
+                                            <a href='/Admin/QuanLyPhong/SuaPhong.aspx?bnm=<%# Eval("ID") %>'>Sửa Đặt Phòng</a>
                                         </DataItemTemplate>
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="" ReadOnly="True"
-                                        VisibleIndex="0" >
+                                        VisibleIndex="0" Width="50px">
                                         <DataItemTemplate>
                                             <asp:LinkButton OnClientClick="return confirm('Bạn muốn xóa đặt phòng này không?')" ID="btnXoa" runat="server"
                                                 CommandArgument='' CommandName="cmdXoa"
@@ -61,7 +77,7 @@
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn FieldName="ID" VisibleIndex="1" Caption="ID"
-                                        ReadOnly="True" Width ="50px">
+                                        ReadOnly="True" Width="50px">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn FieldName="Ten_Khach_Hang" VisibleIndex="1" Caption="Tên khách hàng"
@@ -69,25 +85,25 @@
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn FieldName="So_Dien_Thoai" VisibleIndex="1" Caption="Số điện thoại"
-                                        ReadOnly="True" >
+                                        ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
 
                                     <dx:GridViewDataTextColumn FieldName="So_Phong_Dat" VisibleIndex="1" Caption="Số hiệu phòng"
-                                        ReadOnly="True" >
+                                        ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn FieldName="Check_in" VisibleIndex="1" Caption="Check In"
-                                        ReadOnly="True" >
+                                        ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
 
                                     <dx:GridViewDataTextColumn FieldName="Check_out" VisibleIndex="1" Caption="Check Out"
-                                        ReadOnly="True" >
+                                        ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn FieldName="Tong_tien_phong" VisibleIndex="1" Caption="Tổng tiền phòng"
-                                        ReadOnly="True" >
+                                        ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn FieldName="Tien_chuyen_khoan" VisibleIndex="1" Caption="Tiền chuyển khoản"
@@ -98,17 +114,21 @@
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
-                                       <dx:GridViewDataTextColumn FieldName="Ngay_Sinh_Nhat" VisibleIndex="1" Caption="Ngày Sinh"
+                 <%--                   <dx:GridViewDataTextColumn FieldName="Ngay_Sinh_Nhat" VisibleIndex="1" Caption="Ngày Sinh"
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
-                                       <dx:GridViewDataTextColumn FieldName="Noi_Song" VisibleIndex="1" Caption="Nơi Sống"
+                                    <dx:GridViewDataTextColumn FieldName="Noi_Song" VisibleIndex="1" Caption="Nơi Sống"
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
-                                    </dx:GridViewDataTextColumn>
-                                      <dx:GridViewDataTextColumn FieldName="Ghi_chu" VisibleIndex="1" Caption="Ghi Chú"
+                                    </dx:GridViewDataTextColumn>--%>
+                                    <dx:GridViewDataTextColumn FieldName="Ghi_chu" VisibleIndex="1" Caption="Ghi Chú"
                                         ReadOnly="True">
-                                        <CellStyle CssClass="GridItemCode" HorizontalAlign="Left" ></CellStyle>
+                                        <CellStyle CssClass="GridItemCode" HorizontalAlign="Left"></CellStyle>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="NGAY_TAO" VisibleIndex="1" Caption="Ngày tạo"
+                                        ReadOnly="True">
+                                        <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                 </Columns>
                                 <Settings GroupFormat="" ShowGroupButtons="False" />

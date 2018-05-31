@@ -215,7 +215,17 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                         {
                             e.DisplayText = Convert.ToDateTime(e.Value.ToString()).ToString(Constant.DateTimeFormatCustom.DISPLAY_DATE_FORMAT);
                         }
-
+                        break;
+                    case "NGAY_TAO":
+                        DateTime strDate1 = Convert.ToDateTime(e.Value.ToString());
+                        if (strDate1 == DateTime.MinValue)
+                        {
+                            e.DisplayText = "";
+                        }
+                        else
+                        {
+                            e.DisplayText = Convert.ToDateTime(e.Value.ToString()).ToString(Constant.DateTimeFormatCustom.DISPLAY_DATE_FORMAT);
+                        }
 
                        
                         break;
@@ -254,6 +264,32 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                 Bindata(checkint, checkout);
             }
           
+        }
+
+        protected void btnNgayTaoTK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Lich_Dat_Phong_DH ctl = new Lich_Dat_Phong_DH();
+                lblThongBao.Text = "";
+                DateTime NgayTaoTu = Utils.convertDate(txtNgayTaoTu.Text);
+                DateTime NgayTaoDen = Utils.convertDate(txtNgayTaoDen.Text).AddHours(24);
+                if (NgayTaoTu >= NgayTaoDen)
+                {
+                    lblThongBao.Text = "Bạn nhập ngày sai rồi." + txtCheckin.Text + " " + txtCheckout.Text;
+                    return;
+                }
+
+                List<LichDatPhong_Obj> lstPhong = ctl.select_item_ngaytao_exact(NgayTaoTu, NgayTaoDen, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+
+                grd_DSPhong.DataSource = lstPhong;
+                grd_DSPhong.DataBind();
+            }
+            catch (Exception ex)
+            {
+
+                lblThongBao.Text = ex.Message + " " + ex.StackTrace;
+            }
         }
 
 

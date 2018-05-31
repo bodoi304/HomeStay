@@ -150,7 +150,7 @@ namespace Housing.Common
                 case Constant.NHA_NAO.YOKO:
                     return " (Y1,Y2: phòng 2 người, Y3: phòng 3 người)";
                 case Constant.NHA_NAO.TINA:
-                    return " (2D1,2D2: giường dorm đôi, D1,D2,D3,D4,D5,D6: giường dorm 1 người)";
+                    return " (CC: cả căn, 2D1,2D2: giường dorm đôi, D1,D2,D3,D4,D5,D6: giường dorm 1 người)";
                 case Constant.NHA_NAO.LALA:
                     return " (L1T: Dorm trên,L1D: Dorm dưới,L2,L3,L4)";
                 default :
