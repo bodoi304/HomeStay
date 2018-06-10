@@ -32,7 +32,7 @@
                                 <asp:TextBox ID="txtIDPhong" Style="color: black !important" runat="server" placeholder="ID đặt phòng" CssClass=" form-control"></asp:TextBox>
 
                             </div>
-                            <asp:Button ID="btnTimKiem" runat="server" Text="Tìm Kiếm" CssClass="btn btn-default" OnClick="btnTimKiem_Click" />
+                            <asp:Button ID="btnTimKiem" runat="server" Text="Kiểm Tra Phòng" CssClass="btn btn-default" OnClick="btnTimKiem_Click" />
                             <p style="margin-top: 15px">
                                 <asp:Label ID="lblThongBao" runat="server" Text="" ForeColor="Blue" Font-Bold="true"></asp:Label>
                             </p>
@@ -47,7 +47,7 @@
 
                             </div>
 
-                            <asp:Button ID="btnNgayTaoTK" runat="server" Text="Tìm Kiếm" CssClass="btn btn-default" OnClick="btnNgayTaoTK_Click"  />
+                            <asp:Button ID="btnNgayTaoTK" runat="server" Text="Kiểm Tra Doanh Thu" CssClass="btn btn-default" OnClick="btnNgayTaoTK_Click"  />
                             <p style="margin-top: 15px">
                                 <asp:Label ID="Label1" runat="server" Text="" ForeColor="Blue" Font-Bold="true"></asp:Label>
                             </p>

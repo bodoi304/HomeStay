@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Tina.master.cs" Inherits="Housing.Tina.Tina" %>
+
+<%@ Register Src="~/TemplateChung/footerAn.ascx" TagPrefix="uc1" TagName="footerAn" %>
+<%@ Register Src="~/TemplateChung/MenuFix.ascx" TagPrefix="uc1" TagName="MenuFix" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Tina House</title>
+    <!-- for-mobile-apps -->
+    <link href="/Sapa/style.css" rel="stylesheet" />
+    <link href='/icon/LogoHouzing.jpg' rel='shortcut icon' />
+    <link href="/Sapa/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--theme-style-->
+    <link href="/Sapa/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Sapa/css/font-awesome.css" rel="stylesheet">
+    <!--//theme-style-->
+    <meta name="description" content="LÀNG CHÀI PHƯỚC HẢI - mộc mạc như cái tên vậy, đây cũng đang là một cái phễu hun hút cuốn con người lại gần với thiên nhiên, gội rửa sạch ồn ào của phố thị bằng cái vẫy tay táo bạo của sóng biển, của cung đường đèo nước ngọt đẹp đến nao lòng." />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:title" content="HOUZING" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="HomeStay,Home,Houzing" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!---->
+    <script src="/Sapa/js/jquery.min.js"></script>
+    <script src="/Sapa/js/bootstrap.min.js"></script>
+    <!---->
+
+    <link rel='fluid-icon' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
+    <link rel='logo' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
+    <link rel='image_src' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
+    <link rel="stylesheet" href="/Sapa/css/flexslider.css" type="text/css" media="screen" />
+    <link href='//fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
+    <!---strat-date-piker---->
+    <!-- requried-jsfiles-for owl -->
+    <link href="/Sapa/css/owl.carousel.css" rel="stylesheet">
+    <script src="/Sapa/js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                items: 1,
+                lazyLoad: true,
+                autoPlay: true,
+                navigation: false,
+                navigationText: false,
+                pagination: true,
+            });
+        });
+    </script>
+  
+    <link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
+
+    <!-- If you'd like to support IE8 -->
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+      <uc1:MenuFix ID="MenuFix1" runat="server" />
+          <div style="height:8px"></div>
+        <video id="my_video_1" class="video-js vjs-sublime-skin"
+            controls preload="none" poster='/Tina/Image/1.png'
+            data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+            <source src="http://nguyenphituan.com/Video/VideoTina.mp4" type='video/mp4' />
+        </video>
+
+        <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
+
+        <div class="header">
+            <div class="container">
+                <div class="header-menu">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="navbar-brand logo">
+                                    <h1><a><span>Tina House</span> </a></h1>
+                                </div>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="/Tina" data-hover="Home">Trang Chủ </a></li>
+                                    <li><a href="/Tina/ThongTinTina.aspx" data-hover="About">Thông tin về TINA</a></li>
+   <%--                                 <li><a data-hover="Restaurant" href="/AnAn/Cau_hoi_thuong_gapAnAn.aspx">Câu hỏi thường gặp</a></li>
+                                    <li><a data-hover="Gallery" href="/AnAn/Thuc_Don_AnAn.aspx">Thực đơn</a></li>--%>
+
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container-fluid -->
+                    </nav>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!---header--->
+        <div class="content">
+            <!---welcome--->
+            <div class="welcome">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
+                </asp:ContentPlaceHolder>
+
+            </div>
+            <!---welcome--->
+
+        </div>
+        <div class="footer-section">
+            <div class="container">
+                <div class="footer-grids">
+                    <div class="col-md-3 footer-grid">
+                        <h4>HotLine</h4>
+                        <ul>
+                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Số điện thoại: 0868 248 396</li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="#"><a href="https://www.facebook.com/tinahomestay/">https://www.facebook.com/tinahomestay/</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footer-grid">
+                        <uc1:footerAn ID="footerAn1" runat="server" />
+                    </div>
+                    <div class="col-md-3 footer-grid">
+                        <h4>Loại Phòng</h4>
+                        <ul>
+                            <li>Cả Căn</li>
+                            <li>Phòng Dorm</li>
+                        </ul>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <div class="copy-section">
+            <div class="container">
+                <div class="footer-top">
+                    <p>&copy; 2017 Houzing. Thiết kế bởi <a href="">Houzing</a></p>
+                </div>
+
+            </div>
+        </div>
+
+
+    </form>
+</body>
+</html>

@@ -871,6 +871,12 @@
     <Content Include="thumb\grid_thumb1.jpg" />
     <Content Include="thumb\images.jpg" />
     <Content Include="icon\arrow-37-xxl.png" />
+    <Content Include="Tina\Image\1.png" />
+    <Content Include="Tina\Image\dorm.png" />
+    <Content Include="Tina\Image\nhanhotina.JPG" />
+    <Content Include="Tina\index.aspx" />
+    <Content Include="Tina\RoomTina.aspx" />
+    <Content Include="Tina\ThongTinTina.aspx" />
     <Content Include="VideoSapa.mp4" />
     <Content Include="YoKo\CommonImage\1.jpg" />
     <Content Include="YoKo\CommonImage\10.jpg" />
@@ -1123,6 +1129,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Sila\fonts\UVF-Ventography_Personal_Use_Only.ttf" />
+    <Content Include="Tina\Tina.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -1681,6 +1688,34 @@
     </Compile>
     <Compile Include="ThongTinYoko\ThongTinYoKo.ascx.designer.cs">
       <DependentUpon>ThongTinYoKo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tina\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tina\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tina\RoomTina.aspx.cs">
+      <DependentUpon>RoomTina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tina\RoomTina.aspx.designer.cs">
+      <DependentUpon>RoomTina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tina\ThongTinTina.aspx.cs">
+      <DependentUpon>ThongTinTina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tina\ThongTinTina.aspx.designer.cs">
+      <DependentUpon>ThongTinTina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tina\Tina.Master.cs">
+      <DependentUpon>Tina.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tina\Tina.Master.designer.cs">
+      <DependentUpon>Tina.Master</DependentUpon>
     </Compile>
     <Compile Include="YoKo\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
