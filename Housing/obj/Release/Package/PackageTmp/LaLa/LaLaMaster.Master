@@ -1,6 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LaLaMaster.master.cs" Inherits="Housing.LaLa.LaLaMaster" %>
 
 <%@ Register Src="~/TemplateChung/footerAn.ascx" TagPrefix="uc1" TagName="footerAn" %>
+<%@ Register Src="~/TemplateChung/MenuFix.ascx" TagPrefix="uc1" TagName="MenuFix" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -40,7 +42,7 @@
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
                 items: 1,
-                lazyLoad: true,
+                lazyLoad: true, 
                 autoPlay: true,
                 navigation: false,
                 navigationText: false,
@@ -75,24 +77,26 @@
 
 <body>
     <form id="form1" runat="server">
-        <div class="booknow">
+        <uc1:MenuFix runat="server" ID="MenuFix" />
+  <%--      <div class="booknow">
             <a href="https://www.facebook.com/lalahouse/" target="_blank">
                 <img src="../icon/arrow-38-green.png" width="15" height="15" /><img src="../icon/Book-nowgreen.png" width="70" height="30" />
             </a>
-        </div>
+        </div>--%>
         <%--        <div class="booknowinta">
             <a href="https://www.instagram.com/anansapamountainair" target="_blank">
                 <img src="/icon/inta.png" />
             </a>
         </div>--%>
-     <video id="my_video_1" class="video-js vjs-sublime-skin"
-                controls preload="none" poster='image/content-min.png'
-                data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
-                <source src="http://nguyenphituan.com/Video/lalabanner.mp4" type='video/mp4' />
-            </video>
+          <div style="height:8px"></div>
+        <video id="my_video_1" class="video-js vjs-sublime-skin"
+            controls preload="none" poster='image/content-min.png'
+            data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+            <source src="http://nguyenphituan.com/Video/lalabanner.mp4" type='video/mp4' />
+        </video>
 
-            <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
-       
+        <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
+
         <div class="header" style="background: rgb(139, 226, 241) !important;">
             <div class="container">
                 <div class="header-menu">
@@ -106,7 +110,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <div class="navbar-brand logo" style="padding-bottom :4px">
+                                <div class="navbar-brand logo" style="padding-bottom: 4px">
                                     <h1><a><span>LaLa HomeStay</span> </a></h1>
                                 </div>
                             </div>
@@ -114,7 +118,7 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
                                     <li class="active"><a href="/LaLa" data-hover="Home">Trang Chủ </a></li>
-                                                                        <li><a href="/LaLa/ThongTinLaLa.aspx" data-hover="About">Thông tin LaLa</a></li>
+                                    <li><a href="/LaLa/ThongTinLaLa.aspx" data-hover="About">Thông tin LaLa</a></li>
                                     <li><a data-hover="Restaurant" href="/LaLa/ThongTinLaLaEn.aspx">Infomation of LaLa</a></li>
                                 </ul>
                             </div>
@@ -150,15 +154,16 @@
                                         <td><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></td>
                                         <td>0122.7943890 (Ms.Nhi)</td>
                                     </tr>
-                                     <tr>
+                                    <tr>
                                         <td></td>
-                                        <td> 0868 248 396 (Mr.Tuấn)</td>
+                                        <td>0868 248 396 (Mr.Tuấn)</td>
                                     </tr>
                                 </table>
 
-                               </li>
+                            </li>
                             <li>
-                                <i class="glyphicon" aria-hidden="true"><img src="../images/iconface.jpg" /></i><a href="#"><a href="http://facebook.com/lalahouse">http://facebook.com/lalahouse</a></li>
+                                <i class="glyphicon" aria-hidden="true">
+                                    <img src="../images/iconface.jpg" /></i><a href="#"><a href="http://facebook.com/lalahouse">http://facebook.com/lalahouse</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 footer-grid">
@@ -167,10 +172,14 @@
                             <li><a href="/Sila">SiLa houzing Đà Lạt</a></li>
                             <li><a href="/Yoko/index.aspx">Yoko houzing Đà Lạt</a></li>
                             <li><a href="/Happi">Happi houzing Hải Phòng</a></li>
-                            <li><a href="/SamSam">Samsam houzing Vũng Tàu</a></li>
+                            <li><a href="https://www.facebook.com/tinahomestay/">Tina houzing Phước Hải</a></li>
+                            <li><a href="/SamSam">Samsam houzing Vũng Tàu</a></li> 
+                            <li><a href="/Amigo">Amigo houzing Vũng Tàu</a></li>
                             <li><a href="/AnAn">AnAn houzing Sapa</a></li>
                             <li><a href="/Safa">SaFa houzing Sapa</a></li>
                             <li><a href="/Safa">LaLa houzing Sài Gòn</a></li>
+
+
                         </ul>
                     </div>
                     <div class="col-md-3 footer-grid">

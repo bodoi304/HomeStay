@@ -72,7 +72,8 @@ vẽ khiến ai cũng sững sờ .
 trưa. Các bạn có thể check out muộn ,check in sớm so với quy định trừ khi trước đó hoặc sau phòng bạn ở không
 có khách đến ở ạ (Ví dụ: “Chị A đến giờ check out mà hỏi nhân viên AnAn phòng chị A đang ở ngày hôm nay
 không ai đến thuê thì AnAn sẽ tạo điều kiện cho chị A ở đến chiều muộn mà không phải đóng thêm bất kỳ một
-khoản phí nào, Và ngược lại nếu có khách đến check in thì chị A vui lòng check out muộn nhất là 10h sáng ạ” )
+khoản phí nào, Và ngược lại nếu có khách đến check in thì chị A vui lòng check out muộn nhất là 10h sáng ạ” )
+
                 </div>
             </div>
         </div>
@@ -124,7 +125,8 @@ Xanh,Sạch .Sống vài ngày Ở AnAn các bạn được:
                         <br />
                     Một thư viên sách trong nhà cùng mấy quyển truyện chẳng tìm đâu có,1 sân sinh hoạt chung view ra dãy núi hoàng ̣
 liên sơn và mây lưng chừng núi ,1 phòng tắm super view núi mây ,1 phòng tắm thuờng-đều có bình nóng lạnh.Toilet
-là điều quan trọng nhất mà nhà AnAn đăc biê ̣ ̣t quan tâm nên luôn Sạch Sẽ,đẹp đẽ :)
+là điều quan trọng nhất mà nhà AnAn đăc biê ̣ ̣t quan tâm nên luôn Sạch Sẽ,đẹp đẽ :)
+
                 </div>
             </div>
         </div>
@@ -138,7 +140,8 @@ là điều quan trọng nhất mà nhà AnAn đăc biê ̣ ̣t quan tâm nên l
                 <div class="panel-body">
                     Nếu không có sự kiện đặc biệt nào được lên kế hoạch trước, Các bạn vui lòng
 tôn trọng quy định về “Giờ yên tĩnh” tại căn hộ từ 22.00 đến 6.00 sáng ngày hôm sau để đảm bảo quyền được nghỉ
-ngơi và thư giãn cho những bạn ở phòng khác.
+ngơi và thư giãn cho những bạn ở phòng khác.
+
                 </div>
             </div>
         </div>
@@ -168,7 +171,8 @@ tây đến đầu tháng 1 năm kế tiếp .
             </div>
             <div id="5" class="panel-collapse collapse">
                 <div class="panel-body">
-                    Mùa lúa chín đẹp nhất tại sapa sẽ vào tháng 5 & tháng 10 hàng năm
+                    Mùa lúa chín đẹp nhất tại sapa sẽ vào tháng 5 & tháng 10 hàng năm
+
                 </div>
             </div>
         </div>
@@ -183,7 +187,8 @@ tây đến đầu tháng 1 năm kế tiếp .
                 <div class="panel-body">
                     Để thuê xe máy khách hàng liên hệ trước với anh Đạt,thuê
 tại thị trấn sapa,sđt: 097 778 36 52, Giá thuê là từ 80 đến 100 ngàn/1 xe/1 ngày thuê (khách hàng chỉ cần để lại
-chứng minh thư ,không cần đặt cọc tiền ,trả tiền sau khi trả lại xe cho anh Đạt)
+chứng minh thư ,không cần đặt cọc tiền ,trả tiền sau khi trả lại xe cho anh Đạt)
+
                 </div>
             </div>
         </div>
@@ -198,7 +203,8 @@ chứng minh thư ,không cần đặt cọc tiền ,trả tiền sau khi trả 
             <div id="7" class="panel-collapse collapse">
                 <div class="panel-body">
                     Các bạn liên hệ tới Hotline (Anh Tuấn ): 0868248396 hoặc qua
-inbox Fanpage: 
+inbox Fanpage:
+ 
                 </div>
             </div>
         </div>
@@ -230,7 +236,8 @@ tiếp với hotline:0868248396 hoặc inbox Fanpage:
             <div id="9" class="panel-collapse collapse">
                 <div class="panel-body">
                     Bắt xe bus từ Lào Cai khoảng 1 tiếng sẽ lên đến Sapa:
-26k/người, hoặc có thể bắt taxi đến Sapa.
+26k/người, hoặc có thể bắt taxi đến Sapa.
+
                 </div>
             </div>
         </div>
@@ -243,7 +250,8 @@ tiếp với hotline:0868248396 hoặc inbox Fanpage:
             <div id="10" class="panel-collapse collapse">
                 <div class="panel-body">
                     bạn có thể thuê xe máy tự đi hoặc gọi taxi Xanh , bạn xem chi tiết tại
-đây: phần "Thông tin AnAn".
+đây: phần "Thông tin AnAn".
+
                 </div>
             </div>
         </div>
@@ -284,7 +292,8 @@ tiếp với hotline:0868248396 hoặc inbox Fanpage:
                     <br />
                     <img src="/Safa/dot.png" />
                     Đèo Ô Quy Hồ-cổng trời (cùng phía đường đi Fanxipan).
-
+
+
                 </div>
             </div>
         </div>
@@ -292,7 +301,8 @@ tiếp với hotline:0868248396 hoặc inbox Fanpage:
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#12">13. giá vé tham quan<br />
-                        các khu du lịch?</a>
+                        các khu du lịch?
+</a>
                 </h4>
             </div>
             <div id="12" class="panel-collapse collapse">
@@ -320,7 +330,9 @@ tiếp với hotline:0868248396 hoặc inbox Fanpage:
                 <h4 class="panel-title">
                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#100">14.Chính sách huỷ đặt phòng
                         <br />
-                        của AnAn Sapa Mountain Air:</a>
+                        của AnAn Sapa Mountain Air:
+
+</a>
                 </h4>
             </div>
             <div id="100" class="panel-collapse collapse">

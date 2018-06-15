@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <link rel="stylesheet" type="text/css" href="/HoiDapYoKo/font-awesome/css/font-awesome.min.css" />
     <link href="/stylesheets/cssweb.css" rel="stylesheet" />
-    <h2 class="tittle">AMIGO HOUSE</h2>
+    <h2 class="tittle">AMIGO HOMESTAY</h2>
 
     <style>
         .a img {
@@ -56,7 +56,7 @@
             <div style="">
                 <div class="w3-container" id="menu" style="margin-top: 20px; margin-left: 10px">
                     <div class="w3-content" style="max-width: 100%">
-                        <h6 style="font-size: 16px"><b>🏠 Amigos Vung Tau Homestay  </b></h6>
+                        <h6 style="font-size: 16px"><b>🏠 Amigo Vung Tau Homestay  </b></h6>
                         <div class="w3-panel w3-leftbar w3-light-grey" style="margin-left: 22px">
 
                             <p class="w3-text-grey">
@@ -112,7 +112,7 @@
                                 <br />
                                 <b>Weekend:</b> 1.000.000 vnd/night (Friday to Saturday)
                                 <br />
-                                🌟 <b>On the occasion of Tet</b> Amigos Homestay will charge an extra 200.000 vnd per night.
+                                🌟 <b>On the occasion of Tet</b> Amigo Homestay will charge an extra 200.000 vnd per night.
                             </div>
                         </div>
                         <br />

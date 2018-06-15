@@ -37,9 +37,9 @@
 
     <%--    <link href='//fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>--%>
     <!-- //for-mobile-apps -->
-    <link rel='fluid-icon' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
-    <link rel='logo' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
-    <link rel='image_src' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
+    <link rel='fluid-icon' href='http://nguyenphituan.com/icon/samsamicon.png' />
+    <link rel='logo' href='http://nguyenphituan.com/icon/samsamicon.png' />
+    <link rel='image_src' href='http://nguyenphituan.com/icon/samsamicon.png' />
     <script type="text/javascript" src="/Yoko/js/jquery-2.1.4.min.js"></script>
     <!--//fonts-->
     <!--fonts-->

@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link rel="stylesheet" type="text/css" href="/HoiDapYoKo/font-awesome/css/font-awesome.min.css" />
     <link href="/stylesheets/cssweb.css" rel="stylesheet" />
-    <h2 class="tittle">AMIGO HOUSE</h2>
+    <h2 class="tittle">AMIGO HOMESTAY</h2>
 
     <style>
         .a img {
@@ -97,26 +97,26 @@
                             <br />
 
                             <p class="w3-text-grey">
-                                🌵 Nếu như gia đình bạn có cuộc hẹn với Vũng Tàu trong dịp Tết Nguyên Đán Mậu Tuất 2018 thì đừng nên bỏ lỡ Amigos VungTau Homestay vừa mới xây dựng xong. Đến với Homestay đẹp Vũng Tàu này, du khách sẽ cảm nhận được hết nét đẹp chân chất mà nồng hậu của vùng đất biển xinh đẹp này.
+                                🌵 Nếu như gia đình bạn có cuộc hẹn với Vũng Tàu trong dịp Tết Nguyên Đán Mậu Tuất 2018 thì đừng nên bỏ lỡ Amigo VungTau Homestay vừa mới xây dựng xong. Đến với Homestay đẹp Vũng Tàu này, du khách sẽ cảm nhận được hết nét đẹp chân chất mà nồng hậu của vùng đất biển xinh đẹp này.
                             </p>
                             <br />
-                            <p class="w3-text-grey">🌵 Homesay nằm ở địa chỉ 22/18/1 Nam Kì Khởi Nghĩa ngay gần trung tâm nên vô cùng thuận tiện cho du khách ghé thăm các điểm lân cận. Đặc biệt bạn chỉ mất 5 phút đi xe máy là có thể ra tới biển; hoặc có thể tản bộ ngắm biển cũng là cách vô cùng thú vị.</p>
+                            <p class="w3-text-grey">🌵 Homestay nằm ở địa chỉ 22/18/1 Nam Kì Khởi Nghĩa ngay trung tâm nên vô cùng thuận tiện cho du khách ghé thăm các điểm lân cận. Đặc biệt bạn chỉ mất 5 phút đi xe máy là có thể ra tới biển; hoặc có thể tản bộ ngắm biển cũng là cách vô cùng thú vị.</p>
                             <br />
 
-                            <p class="w3-text-grey">🌵 Ghé thăm Amigos VungTau Homestay vào những ngày như thế này, du khách sẽ bất giác cảm nhận được sự bình dị trong cách xây dựng, lựa chọn thiết bị nội thất, cách bài trí trong mỗi căn phòng. Không hề có sự phá cách, không rườm rà cũng không cầu kỳ; người ta ví Amigos VungTau giống như một cô gái quê vừa gặp đã thấy gần gũi biết bao.</p>
+                            <p class="w3-text-grey">🌵 Ghé thăm Amigo VungTau Homestay vào những ngày như thế này, du khách sẽ bất giác cảm nhận được sự bình dị trong cách xây dựng, lựa chọn thiết bị nội thất, cách bài trí trong mỗi căn phòng. Không hề có sự phá cách, không rườm rà cũng không cầu kỳ; người ta ví Amigo VungTau giống như một cô gái quê vừa gặp đã thấy gần gũi biết bao.</p>
                             <br />
                             <p class="w3-text-grey">🌵 Gam màu vàng nhẹ của bức tường kết hợp với gam màu vàng nghệ của bộ bàn ghế, chiếc tủ trong nhà bếp dường như khiến cho căn phòng trở nên ấm cúng và gần gũi hơn bao giờ hết.</p>
                             <br />
                             <p class="w3-text-grey">🌵 Cách bài trí, sắp xếp trong không gian phòng bếp khá đơn giản và gọn nhẹ nhưng lại đầy đủ tiện nghi có thể giúp cho bạn chuẩn bị bữa cơm thật tươn tất cho các thành viên trong chuyến đi. Thực sự khi bước vào căn phòng này, nhiều người có cảm giác như đang trở về ngôi nhà của mình.</p>
                             <br />
-                            <p class="w3-text-grey">🌵 Đến với homestay Amigos VungTau, bạn sẽ nhận ra sự bình dị và giản đơn trong mỗi căn phòng. Chủ nhân của ngôi nhà này đã thiết kế và bài trí theo phong cách tối giản nhất để vừa mang đến sự gần gũi vừa khiến cho du khách thấy thoải mái khi ở.</p>
+                            <p class="w3-text-grey">🌵 Đến với homestay Amigo VungTau, bạn sẽ nhận ra sự bình dị và giản đơn trong mỗi căn phòng. Chủ nhân của ngôi nhà này đã thiết kế và bài trí theo phong cách tối giản nhất để vừa mang đến sự gần gũi vừa khiến cho du khách thấy thoải mái khi ở.</p>
                             <br />
                             <p class="w3-text-grey">🌵  Mỗi chiếc giường đều được đồng bộ về gam màu của gối và ga trải; gam màu xanh nước biển dịu nhẹ dường như tượng trưng cho mảnh đất biển xinh đẹp.</p>
                             <br />
                             <p class="w3-text-grey">🌵 Mỗi căn phòng đều có hướng nhìn ra ban công giúp bạn có thể thư giãn và hít thở sau nhiều ngày rong ruổi khám phá Vũng Tàu. </p>
                             <br />
                             <p class="w3-text-grey">
-                                🌵 Thật tuyệt vời nếu như được nghỉ ngơi cùng với gia đình hay bạn bè tại Amigos VungTau Homestay như thế này. 
+                                🌵 Thật tuyệt vời nếu như được nghỉ ngơi cùng với gia đình hay bạn bè tại Amigo VungTau Homestay như thế này. 
 Nếu thực sự có cảm tình đối với homestay vũng tàu giá rẻ này, bạn có thể liên hệ theo địa chỉ dưới đây để đặt phòng để tận hưởng chuyến đi Vũng Tàu một cách trọn vẹn nhất.
                             </p>
                             <br />

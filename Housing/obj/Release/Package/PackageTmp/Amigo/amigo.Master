@@ -1,6 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="amigo.master.cs" Inherits="Housing.Amigo.amigo" %>
 
 <%@ Register Src="~/TemplateChung/footerAn.ascx" TagPrefix="uc1" TagName="footerAn" %>
+<%@ Register Src="~/TemplateChung/MenuFix.ascx" TagPrefix="uc1" TagName="MenuFix" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -76,7 +78,8 @@
 
 <body>
     <form id="form1" runat="server">
-        <div class="booknow">
+        <uc1:MenuFix runat="server" ID="MenuFix" />
+        <%--<div class="booknow">
             <a href="https://www.facebook.com/amigohomestay/" target="_blank">
                 <img src="../icon/arrow-38-green.png" width="15" height="15" /><img src="../icon/Book-nowgreen.png" width="70" height="30" />
             </a>
@@ -86,10 +89,11 @@
                 <img src="/icon/inta.png" />
             </a>
         </div>--%>
+        <div style="height:8px"></div>
      <video id="my_video_1" class="video-js vjs-sublime-skin"
                 controls preload="none" poster='image/banner.jpg'
                 data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
-                <source src="http://nguyenphituan.com/Video/lalabanner.mp4" type='video/mp4' />
+                <source src="http://nguyenphituan.com/Video/AmigoHomestay.mp4" type='video/mp4' />
             </video>
 
             <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
@@ -149,7 +153,7 @@
                                 <table>
                                     <tr>
                                         <td><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></td>
-                                        <td>0122.7943890 (Ms.Nhi)</td>
+                                        <td>091 416 2244 (Ms.Phung)</td>
                                     </tr>
                                      <tr>
                                         <td></td>
@@ -163,16 +167,7 @@
                         </ul>
                     </div>
                     <div class="col-md-3 footer-grid">
-                        <h4>Hệ thống Homestay</h4>
-                        <ul>
-                            <li><a href="/Sila">SiLa houzing Đà Lạt</a></li>
-                            <li><a href="/Yoko/index.aspx">Yoko houzing Đà Lạt</a></li>
-                            <li><a href="/Happi">Happi houzing Hải Phòng</a></li>
-                            <li><a href="/SamSam">Samsam houzing Vũng Tàu</a></li>
-                            <li><a href="/AnAn">AnAn houzing Sapa</a></li>
-                            <li><a href="/Safa">SaFa houzing Sapa</a></li>
-                            <li><a href="/Safa">LaLa houzing Sài Gòn</a></li>
-                        </ul>
+                        <uc1:footerAn runat="server" ID="footerAn" />
                     </div>
     <%--                <div class="col-md-3 footer-grid">
                         <h4>Loại Phòng</h4>

@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Housing.ThongTinHappyHouzing._default" %>
 
 <%@ Register Src="~/TemplateChung/footer.ascx" TagPrefix="uc1" TagName="footer" %>
+<%@ Register Src="~/TemplateChung/MenuFix.ascx" TagPrefix="uc1" TagName="MenuFix" %>
+
 
 
 <!DOCTYPE html>
@@ -44,11 +46,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="booknow">
+<%--        <div class="booknow">
             <a href="https://www.facebook.com/HAPPI-Houzing-1222803611179771/">
                 <img src="../icon/arrow-37-xxl.png" width="15" height="15" /><img src="../icon/Book-now.png" width="70" height="30" />
             </a>
-        </div>
+        </div>--%><uc1:MenuFix runat="server" ID="MenuFix" />
         <div class="portfolio" id="port" style="font-family: Znikomit; font-weight: bolder; font-size: 20px; font-weight: 900;">
             <div class="port-head" style="margin-top: -25px">
                 <div class="tittle">

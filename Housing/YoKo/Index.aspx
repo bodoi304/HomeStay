@@ -28,9 +28,9 @@
     <meta name="description" content="Căn hộ trong khu phố Trần Phú nhỏ xinh nằm giữa trung tâm thành phố ngàn hoa Đà Lạt , toạ lạc ngay trong khu xóm người Đà Lạt." />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <link rel='fluid-icon' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
-    <link rel='logo' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
-    <link rel='image_src' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
+    <link rel='fluid-icon' href='http://nguyenphituan.com/icon/iconyoko.jpg' />
+    <link rel='logo' href='http://nguyenphituan.com/icon/iconyoko.jpg' />
+    <link rel='image_src' href='http://nguyenphituan.com/icon/iconyoko.jpg' />
     <!-- //for-mobile-apps -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />

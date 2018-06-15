@@ -13,6 +13,8 @@
 
 <%@ Register src="CauHoiThuongGapSamSam.ascx" tagname="CauHoiThuongGapSamSam" tagprefix="uc4" %>
 <%@ Register Src="~/TemplateChung/footer.ascx" TagPrefix="uc1" TagName="footer" %>
+<%@ Register Src="~/TemplateChung/MenuFix.ascx" TagPrefix="uc1" TagName="MenuFix" %>
+
 
 
 
@@ -131,8 +133,8 @@
 
 
     <form id="form1" runat="server">
-
-        <div class="booknow">
+        <uc1:MenuFix runat="server" ID="MenuFix" />
+<%--        <div class="booknow">
             <a href="https://www.facebook.com/samsamhouzing/">
                 <img src="../icon/arrow-samsam.png" width="15" height="15" /><img src="../icon/Book-now-samsam.png" width="70" height="30" />
             </a>
@@ -141,7 +143,7 @@
             <a href="https://www.instagram.com/samsamhouzing" target="_blank" >
                <img src="/icon/inta.png"  />
             </a>
-        </div>
+        </div>--%>
         <div>
             <div style="width: 99%; text-align: center; margin: auto; height: 100px">
                 <%--   <img src="CommonImage/03_waterfall.gif" class="img-responsive" width="100%" height="85%" style="border: 2px solid green" />--%>
