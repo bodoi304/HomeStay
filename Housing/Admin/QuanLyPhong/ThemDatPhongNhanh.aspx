@@ -35,7 +35,10 @@
                          <asp:TextBox ID="txtKhachHang" Style="color: black !important" runat="server" placeholder="Tên Khách Hàng" CssClass=" form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Tên Khách Hàng bắt buộc phải nhập" ControlToValidate="txtKhachHang" ForeColor="Red" Display="None"></asp:RequiredFieldValidator>
                     </div>
-
+                     <div class="form-group">
+                        <label for="exampleInputEmail1">Ở Trong Ngày</label>
+                        <asp:CheckBox ID="chkOtrongNgay" runat="server" />
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Check In</label>
                         <asp:TextBox ID="txtCheckin" data-mask="00/00/0000" data-mask-selectonfocus="true" Style="color: black !important" runat="server" placeholder="check-In dd/mm/yyyy" CssClass="date form-control datepicker" ></asp:TextBox>

@@ -96,7 +96,7 @@ namespace DataAcees
                       , obj.Thu_checkin
                       , obj.Th_checkout
                       , obj.Nha_Nao
-                      , user, obj.TrangThai ).ToString();
+                      , user, obj.TrangThai,obj.Trang_Thai_Dat  ).ToString();
                     strId.Append("," + ID);
                 }
                 tran.Commit();
@@ -165,7 +165,8 @@ namespace DataAcees
                     , objLich.TrangThai
                     , objLich.Trang_Thai_CK 
                     , objLich.Nha_Nao
-                    , objLich.Ghi_chu );
+                    , objLich.Ghi_chu
+                    , objLich.Trang_Thai_Dat);
 
                 return true;
 

@@ -61,7 +61,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
         {
 
             lblTitle.Text = str + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies["user"]["vitri"]));
-            
+
         }
 
         protected void btnTimKiem_Click(object sender, EventArgs e)
@@ -95,9 +95,9 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
         {
             Lich_Dat_Phong_DH ctl = new Lich_Dat_Phong_DH();
             List<LichDatPhong_Obj> lst;
-         
-               lst = ctl.select_list_trangthai(Constant.TRANG_THAI_PHONG.THEM_PHONG_NHANH, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
- 
+
+            lst = ctl.select_list_trangthai(Constant.TRANG_THAI_PHONG.THEM_PHONG_NHANH, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+
             List<LichDatPhong_Obj> lstOrder = (from cust in lst orderby cust.Check_in ascending select cust).ToList<LichDatPhong_Obj>();
             grd_DSPhong.DataSource = lstOrder;
             grd_DSPhong.DataBind();
@@ -127,7 +127,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                     if (!String.IsNullOrEmpty(txtSoDienThoai.Text))
                     {
 
-                            lst = ctl.select_item_Sdt(txtSoDienThoai.Text, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+                        lst = ctl.select_item_Sdt(txtSoDienThoai.Text, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
 
                         lstOrder = (from cust in lst orderby cust.Check_in ascending select cust).ToList<LichDatPhong_Obj>();
                         grd_DSPhong.DataSource = lstOrder;
@@ -136,7 +136,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                     else
                     {
 
-                            lst = ctl.select_item_checkin_out_exact(checkint, checkout, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+                        lst = ctl.select_item_checkin_out_exact(checkint, checkout, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
 
                         lstOrder = (from cust in lst orderby cust.Check_in ascending select cust).ToList<LichDatPhong_Obj>();
                         grd_DSPhong.DataSource = lstOrder;
@@ -179,7 +179,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                         DateTime checkout = Utils.convertDate(txtCheckout.Text);
                         Bindata(checkint, checkout);
                     }
-                 
+
                     lblThongBao.Text = "Xóa thành công cho đặt phòng có ID [" + key[0] + "]";
 
                 }
@@ -227,7 +227,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                             e.DisplayText = Convert.ToDateTime(e.Value.ToString()).ToString(Constant.DateTimeFormatCustom.DISPLAY_DATE_FORMAT);
                         }
 
-                       
+
                         break;
                     case "Tien_chuyen_khoan":
                         e.DisplayText = Convert.ToDecimal(e.Value.ToString()).ToString(Constant.Numbers.DISPLAY_NUMBER);
@@ -253,7 +253,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
 
         protected void grd_DSPhong_PageIndexChanged(object sender, EventArgs e)
         {
-            if (Khau_NV == Constant .KHAU_NV .SUA_THEM_PHONG_NHANH )
+            if (Khau_NV == Constant.KHAU_NV.SUA_THEM_PHONG_NHANH)
             {
                 BindataThemNhanh();
             }
@@ -263,7 +263,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                 DateTime checkout = Utils.convertDate(txtCheckout.Text);
                 Bindata(checkint, checkout);
             }
-          
+
         }
 
         protected void btnNgayTaoTK_Click(object sender, EventArgs e)
@@ -290,6 +290,18 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
 
                 lblThongBao.Text = ex.Message + " " + ex.StackTrace;
             }
+        }
+
+        protected void grd_DSPhong_HtmlRowPrepared(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewTableRowEventArgs e)
+        {
+            if (e.GetValue("Trang_Thai_Dat") != null)
+            {
+                if (e.GetValue("Trang_Thai_Dat").ToString().Equals("1"))
+                {
+                    e.Row.BackColor = Color.Red;
+                }
+            }
+
         }
 
 

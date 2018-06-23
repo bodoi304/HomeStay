@@ -71,7 +71,7 @@
 
         <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
 
-        <div class="header">
+        <div class="header" style="background-color:#ff49cc !important">
             <div class="container">
                 <div class="header-menu">
                     <nav class="navbar navbar-default">
@@ -107,7 +107,7 @@
             </div>
         </div>
         <!---header--->
-        <div class="content">
+        <div class="content" style="background-color:#fff4fc !important" >
             <!---welcome--->
             <div class="welcome">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

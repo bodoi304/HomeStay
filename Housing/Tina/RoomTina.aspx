@@ -47,7 +47,7 @@
     </script>
 </head>
 <body id='photoseries' style="background-color: #F5FFF5">
-    <div class='menu' style="text-align :center; background :#00AD8A ">
+    <div class='menu' style="text-align :center; background :#ff72db ">
         <a class='home-link' href='/'></a>
         <ul class='main-menu' >
             <li class='menu-section towns ' >

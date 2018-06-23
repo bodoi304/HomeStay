@@ -28,6 +28,7 @@ namespace DataAcees.Object
         public int TrangThai { get; set; }
         public long ID { get; set; }
         public DateTime NGAY_TAO { get; set; }
+        public int Trang_Thai_Dat { get; set; }  
     }
     public class LichDatPhongAPI_Obj
     {

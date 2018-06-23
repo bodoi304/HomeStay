@@ -101,6 +101,14 @@ namespace Housing.Admin.QuanLyPhong
                 objLichInsert.TrangThai = Constant .TRANG_THAI_PHONG .BINH_THUONG ;
                 objLichInsert.Trang_Thai_CK = drTinhTrangChuyenKhoan.SelectedValue.ToString ();
                 objLichInsert.Nha_Nao = Convert.ToInt32(Request.Cookies["user"]["vitri"]);
+                if (chkOtrongNgay.Checked)
+                {
+                    objLichInsert.Trang_Thai_Dat = 1;
+                }
+                else
+                {
+                    objLichInsert.Trang_Thai_Dat = 0;
+                }
                 objLichInsert.Ghi_chu = txtGhiChu.Text;
                 ctl.update_lich_dat_phong(objLichInsert, Request.Cookies["user"]["name"].ToString());
                 lblError.Text = "Cập nhập đặt phòng cho khách hàng thành công.";
@@ -130,6 +138,11 @@ namespace Housing.Admin.QuanLyPhong
             txtPhongDat.Text = objLich.So_Phong_Dat;
             drTinhTrangChuyenKhoan.SelectedValue = objLich.Trang_Thai_CK;
             txtGhiChu.Text = objLich.Ghi_chu;
+            if (objLich.Trang_Thai_Dat == 0)
+                chkOtrongNgay.Checked = false;
+            else
+                chkOtrongNgay.Checked = true;
+          
         }
 
     }

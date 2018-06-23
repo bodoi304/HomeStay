@@ -88,6 +88,14 @@ namespace Housing.Admin.QuanLyPhong
                 objLichInsert.Trang_Thai_CK = drTinhTrangChuyenKhoan.SelectedValue.ToString();
                 objLichInsert.Ghi_chu = txtGhiChu.Text;
                 objLichInsert.So_Dien_Thoai  = txtSoDienThoai .Text;
+                if (chkOtrongNgay.Checked)
+                {
+                         objLichInsert.Trang_Thai_Dat = 1;
+                }
+                else
+                {
+                      objLichInsert.Trang_Thai_Dat = 0;
+                }
                 lstobjL.Add(objLichInsert);
 
                 StringBuilder strID = new StringBuilder();

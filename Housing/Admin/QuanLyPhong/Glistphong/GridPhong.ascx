@@ -57,7 +57,7 @@
 
                         <div class="form-grids widget-shadow" data-example-id="basic-forms" style="margin-top: 15px">
                             <dx:ASPxGridView ID="grd_DSPhong" ClientInstanceName="grid" runat="server" KeyFieldName="ID"
-                                Width="100%" AutoGenerateColumns="False" OnCustomColumnDisplayText="grd_DSPhong_CustomColumnDisplayText" OnRowCommand="grd_DSPhong_RowCommand" OnPageIndexChanged="grd_DSPhong_PageIndexChanged">
+                                Width="100%" AutoGenerateColumns="False" OnCustomColumnDisplayText="grd_DSPhong_CustomColumnDisplayText" OnRowCommand="grd_DSPhong_RowCommand" OnPageIndexChanged="grd_DSPhong_PageIndexChanged" OnHtmlRowPrepared="grd_DSPhong_HtmlRowPrepared">
                                 <SettingsBehavior ColumnResizeMode="Control" />
                                 <Columns>
                                     <dx:GridViewDataTextColumn Caption="" ReadOnly="True"
@@ -127,6 +127,10 @@
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Left"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn FieldName="NGAY_TAO" VisibleIndex="1" Caption="Ngày tạo"
+                                        ReadOnly="True">
+                                        <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
+                                    </dx:GridViewDataTextColumn>
+                                      <dx:GridViewDataTextColumn FieldName="Trang_Thai_Dat" VisibleIndex="1" Visible="false"  Caption="Ngày tạo"
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>

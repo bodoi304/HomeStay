@@ -197,7 +197,7 @@ namespace Housing.Common
             {
                 strTable1 += "  <tr style='margin-top:4px'> ";
                 strTable1 += "  <td style='border-right : 1px solid white;border-bottom : 1px solid white;padding-top:5px;padding-bottom:5px;padding-right:6px'> " + item.Ngay_Phong.Date.ToString("dd/MM/yyyy") + "</td> ";
-                strTable1 += "  <td style='padding-left:6px;border-bottom : 1px solid white;padding-top:5px;padding-bottom:5px' > " + item.Tinh_Trang + "</td> ";
+                strTable1 += "  <td style='padding-left:6px;border-bottom : 1px solid white;padding-top:5px;padding-bottom:5px' > " + item.Tinh_Trang + "  " + item.Trang_Thai_Dat +" <span style='color:red; font-weight:bold'>Trong Ngày</span>" + "</td> ";
                 strTable1 += " </tr> ";
             }
 
@@ -220,6 +220,7 @@ namespace Housing.Common
                 lstPhong = ctl.select_item_checkin_out(item, noidat);
                 if (lstPhong.Count > 0)
                 {
+                    StringBuilder phongTrongNgay = new StringBuilder();
                     foreach (LichDatPhong_Obj objLich in lstPhong)
                     {
                         String[] str = objLich.So_Phong_Dat.Trim().ToUpper().Split(',');
@@ -235,10 +236,14 @@ namespace Housing.Common
                                 }
 
                             }
-
-
                         }
+                        if(objLich .Trang_Thai_Dat == 1)
+                        {
+                             phongTrongNgay.Append( objLich .So_Phong_Dat +" " );
+                        }
+                       
                     }
+                    String phongTrongNgayFinish = "<span style='color:red; font-weight:bold'>" + phongTrongNgay.ToString() + "</span>";
                     if (MaHieuPhongCon.ToString().Replace(",", "").Length <= 1)
                     {
                         objTrangThaiRoom.Tinh_Trang = "Hết phòng";
@@ -247,7 +252,7 @@ namespace Housing.Common
                     {
                         objTrangThaiRoom.Tinh_Trang = "Còn " + MaHieuPhongCon.ToString().Replace(",", "") + " có thể book.";
                     }
-
+                    objTrangThaiRoom.Trang_Thai_Dat = phongTrongNgayFinish;
                     objTrangThaiRoom.Ma_Hieu_Phong = MaHieuPhongCon.ToString();
                     lstTrangThaiRoom.Add(objTrangThaiRoom);
                 }

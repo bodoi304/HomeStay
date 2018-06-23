@@ -13,5 +13,6 @@ namespace DataAcees.Object
         public int Phong_Don_Con_Lai { get; set; }
         public int Phong_Doi_Con_Lai { get; set; }
         public string Ma_Hieu_Phong { get; set; }
+        public String Trang_Thai_Dat { get; set; }
     }
 }
