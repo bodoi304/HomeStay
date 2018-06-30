@@ -109,7 +109,7 @@ namespace Housing.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxUploadControl.ASPxUploadControl UploadControl;
+        protected global::DevExpress.Web.ASPxUploadControl UploadControl;
         
         /// <summary>
         /// btnThemAlbum control.
@@ -163,7 +163,7 @@ namespace Housing.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxUploadControl.ASPxUploadControl uploadChoalbum;
+        protected global::DevExpress.Web.ASPxUploadControl uploadChoalbum;
         
         /// <summary>
         /// btnUpdateAnh control.

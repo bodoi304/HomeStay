@@ -28,7 +28,7 @@ namespace Housing.TemplateChung {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxImage imageWether;
+        protected global::DevExpress.Web.ASPxImage imageWether;
         
         /// <summary>
         /// popup control.
@@ -37,6 +37,6 @@ namespace Housing.TemplateChung {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPopupControl.ASPxPopupControl popup;
+        protected global::DevExpress.Web.ASPxPopupControl popup;
     }
 }

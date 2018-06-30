@@ -82,7 +82,7 @@ namespace Housing.Admin.QuanLyAnhVideo.QuanLyAnh {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxUploadControl.ASPxUploadControl UploadControl;
+        protected global::DevExpress.Web.ASPxUploadControl UploadControl;
         
         /// <summary>
         /// imgAnhWeb control.

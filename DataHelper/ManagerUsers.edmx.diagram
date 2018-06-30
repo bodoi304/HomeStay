@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a7d5e80206724c089ca18cd5f243b124" Name="Diagram1">
+        <EntityTypeShape EntityType="HouzingModel.AccountLog" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Anh" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Group" Width="1.5" PointX="7.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Lich_Dat_Phong" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.MenuItemFunction" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.QuanLyAnhVideo" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Role" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.User" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.VIDEO" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="HouzingModel.ApplicationRoleGroups" ManuallyRouted="false" />
+        <AssociationConnector Association="HouzingModel.ApplicationUserGroups" ManuallyRouted="false" />
+        <AssociationConnector Association="HouzingModel.ApplicationUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="HouzingModel.MenuItemRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HouzingModel.Quan_Ly_Ghi_No" Width="1.5" PointX="9.375" PointY="8.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

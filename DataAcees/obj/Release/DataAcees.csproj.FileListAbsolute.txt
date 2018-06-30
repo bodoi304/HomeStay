@@ -28,14 +28,14 @@ E:\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Newtonsoft.Json.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DataAcees.dll.config
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DataAcees.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DataAcees.pdb
-D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\EntityFramework.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Microsoft.Practices.ServiceLocation.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Microsoft.Practices.Unity.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Microsoft.Practices.Unity.Interception.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Newtonsoft.Json.dll
-D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\EntityFramework.xml
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.csprojResolveAssemblyReference.cache
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.pdb
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Common.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Common.pdb

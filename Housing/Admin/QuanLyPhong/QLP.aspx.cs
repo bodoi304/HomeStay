@@ -1,5 +1,5 @@
-﻿using DataAcees;
-using DataAcees.Common;
+﻿using Common;
+using DataAcees;
 using DataAcees.Object;
 using Housing.Common;
 using System;
@@ -18,7 +18,7 @@ namespace Housing.Admin.QuanLyPhong
         protected void Page_Load(object sender, EventArgs e)
         {
 
-                lblTiTT.Text = "THÊM THÔNG TIN ĐẶT PHÒNG TỪ EXCEL NHÀ " + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+                lblTiTT.Text = "THÊM THÔNG TIN ĐẶT PHÒNG TỪ EXCEL NHÀ " + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE ][Constant .VITRI ]));
 
             GridPhong.Khau_NV  = Constant .KHAU_NV .THEM_PHONG_EXCEL ;
             GridPhong.pnTimKiem.Visible = false;
@@ -39,7 +39,7 @@ namespace Housing.Admin.QuanLyPhong
                 Lich_Dat_Phong_DH ctl = new Lich_Dat_Phong_DH();
 
                 List<LichDatPhong_Obj> lstobjL = new List<LichDatPhong_Obj>();
-                int Nhanao = Convert.ToInt32(Request.Cookies["user"]["vitri"]);
+                int Nhanao = Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI]);
 
                 String[] banghi = txtNhapTTCH.Text.Split('\n');
                 foreach (String item in banghi)
@@ -144,7 +144,7 @@ namespace Housing.Admin.QuanLyPhong
                     {
                         abc += "[" +item.Ten_Khach_Hang + "]";
                     }
-                    lblError.Text = "Thêm đặt phòng cho khách hàng " + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies["user"]["vitri"])) + " " + abc + " thành công.";
+                    lblError.Text = "Thêm đặt phòng cho khách hàng " + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI])) + " " + abc + " thành công.";
                     GridPhong.Visible = true ;
                     GridPhong.lblTitle.Text = "ĐẶT PHÒNG ĐÃ THÊM";
                     GridPhong.grd_DSPhong.DataSource = ctl.select_lstId(strID.ToString().Substring(1));

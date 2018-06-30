@@ -29,7 +29,7 @@
     <link href='/icon/LogoHouzing.jpg' rel='shortcut icon' />
     <meta content='HOUZING' property='og:title' />
     <meta content='UNLOCKED THE FUTURE OF TRAVELLERS' property='og:description' />
-    <meta content='http://nguyenphituan.com/icon/LogoHouzing.jpg' property='og:image' />
+    <meta content='http://nguyenphituan.com/icon/iconsafa.jpg' property='og:image' />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="NGÔI NHÀ ĐẸP NHƯ MƠ GIỮA THUNG LŨNG NGÀN MÂY TẢ VAN , SAPA.Đến SAPA có 1 nơi được gọi là THIÊN ĐƯỜNG chẳng cần đi đâu xa,các bạn cứ tới thẳng thung lũng mường hoa, bản Tả Van." />
@@ -38,9 +38,9 @@
 
     <%--    <link href='//fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>--%>
     <!-- //for-mobile-apps -->
-    <link rel='fluid-icon' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
-    <link rel='logo' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
-    <link rel='image_src' href='http://nguyenphituan.com/icon/LogoHouzing.jpg' />
+    <link rel='fluid-icon' href='http://nguyenphituan.com/icon/iconsafa.jpg' />
+    <link rel='logo' href='http://nguyenphituan.com/icon/iconsafa.jpg' />
+    <link rel='image_src' href='http://nguyenphituan.com/icon/iconsafa.jpg' />
     <script type="text/javascript" src="/Yoko/js/jquery-2.1.4.min.js"></script>
     <!--//fonts-->
     <!--fonts-->

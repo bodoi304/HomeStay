@@ -1,6 +1,7 @@
-﻿using DataAcees;
-using DataAcees.Common;
+﻿using Common;
+using DataAcees;
 using DataAcees.Object;
+using DevExpress.Web;
 using Housing.Common;
 using System;
 using System.Collections.Generic;
@@ -46,7 +47,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
 
                 if (!IsPostBack)
                 {
-
+                    grd_DSPhong = Utils.setDisplayGridView(grd_DSPhong, false,false  );
                     DateTime checkint = DateTime.Today.AddDays(1);
                     DateTime checkout = DateTime.Today.AddDays(10);
                     txtCheckin.Text = DateTime.Today.AddDays(1).ToString(Constant.DateTimeFormatCustom.DISPLAY_DATE_FORMAT);
@@ -60,7 +61,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
         public void settitle(String str)
         {
 
-            lblTitle.Text = str + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+            lblTitle.Text = str + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies[Constant .USER_COOKIE ][Constant.VITRI ]));
 
         }
 
@@ -96,7 +97,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
             Lich_Dat_Phong_DH ctl = new Lich_Dat_Phong_DH();
             List<LichDatPhong_Obj> lst;
 
-            lst = ctl.select_list_trangthai(Constant.TRANG_THAI_PHONG.THEM_PHONG_NHANH, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+            lst = ctl.select_list_trangthai(Constant.TRANG_THAI_PHONG.THEM_PHONG_NHANH, Convert.ToInt32(Request.Cookies[Constant .USER_COOKIE ][Constant.VITRI ]));
 
             List<LichDatPhong_Obj> lstOrder = (from cust in lst orderby cust.Check_in ascending select cust).ToList<LichDatPhong_Obj>();
             grd_DSPhong.DataSource = lstOrder;
@@ -127,7 +128,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                     if (!String.IsNullOrEmpty(txtSoDienThoai.Text))
                     {
 
-                        lst = ctl.select_item_Sdt(txtSoDienThoai.Text, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+                        lst = ctl.select_item_Sdt(txtSoDienThoai.Text, Convert.ToInt32(Request.Cookies[Constant .USER_COOKIE ][Constant.VITRI ]));
 
                         lstOrder = (from cust in lst orderby cust.Check_in ascending select cust).ToList<LichDatPhong_Obj>();
                         grd_DSPhong.DataSource = lstOrder;
@@ -136,7 +137,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                     else
                     {
 
-                        lst = ctl.select_item_checkin_out_exact(checkint, checkout, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+                        lst = ctl.select_item_checkin_out_exact(checkint, checkout, Convert.ToInt32(Request.Cookies[Constant .USER_COOKIE ][Constant.VITRI ]));
 
                         lstOrder = (from cust in lst orderby cust.Check_in ascending select cust).ToList<LichDatPhong_Obj>();
                         grd_DSPhong.DataSource = lstOrder;
@@ -155,7 +156,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
 
         }
 
-        protected void grd_DSPhong_RowCommand(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewRowCommandEventArgs e)
+        protected void grd_DSPhong_RowCommand(object sender, ASPxGridViewRowCommandEventArgs e)
         {
             try
             {
@@ -193,7 +194,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
 
 
 
-        protected void grd_DSPhong_CustomColumnDisplayText(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewColumnDisplayTextEventArgs e)
+        protected void grd_DSPhong_CustomColumnDisplayText(object sender, ASPxGridViewColumnDisplayTextEventArgs e)
         {
             try
             {
@@ -266,6 +267,8 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
 
         }
 
+
+
         protected void btnNgayTaoTK_Click(object sender, EventArgs e)
         {
             try
@@ -280,7 +283,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                     return;
                 }
 
-                List<LichDatPhong_Obj> lstPhong = ctl.select_item_ngaytao_exact(NgayTaoTu, NgayTaoDen, Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+                List<LichDatPhong_Obj> lstPhong = ctl.select_item_ngaytao_exact(NgayTaoTu, NgayTaoDen, Convert.ToInt32(Request.Cookies[Constant .USER_COOKIE ][Constant.VITRI ]));
 
                 grd_DSPhong.DataSource = lstPhong;
                 grd_DSPhong.DataBind();
@@ -292,7 +295,7 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
             }
         }
 
-        protected void grd_DSPhong_HtmlRowPrepared(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewTableRowEventArgs e)
+        protected void grd_DSPhong_HtmlRowPrepared(object sender, ASPxGridViewTableRowEventArgs e)
         {
             if (e.GetValue("Trang_Thai_Dat") != null)
             {
@@ -302,6 +305,20 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                 }
             }
 
+        }
+
+        protected void grd_DSPhong_BeforeColumnSortingGrouping(object sender, ASPxGridViewBeforeColumnGroupingSortingEventArgs e)
+        {
+            if (Khau_NV == Constant.KHAU_NV.SUA_THEM_PHONG_NHANH)
+            {
+                BindataThemNhanh();
+            }
+            else
+            {
+                DateTime checkint = Utils.convertDate(txtCheckin.Text);
+                DateTime checkout = Utils.convertDate(txtCheckout.Text);
+                Bindata(checkint, checkout);
+            }
         }
 
 

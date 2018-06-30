@@ -13,12 +13,15 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Housing</RootNamespace>
     <AssemblyName>Housing</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,39 +40,43 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\DevExpress.Data.v15.2.dll</HintPath>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\DevExpress.Printing.v15.2.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Office.v13.1.Core, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\DevExpress.RichEdit.v15.2.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxThemes.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.ASPxThemes.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v13.1.Core, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\DevExpress.Web.ASPxThemes.v15.2.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\DevExpress.Web.v15.2.dll</HintPath>
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -124,115 +132,179 @@
     <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.0\lib\net40\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutMe\AboutMe.aspx" />
     <Content Include="AboutMe\nguyenphituanHoso.jpg" />
     <Content Include="AboutMe\tuan.jpg" />
+    <Content Include="Admin\css\pnotify.css" />
+    <Content Include="Admin\css\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\css\atlas.css" />
     <Content Include="Admin\css\bootstrap.min.css" />
     <Content Include="Admin\css\clndr.css" />
-    <Content Include="Admin\css\custom.css" />
+    <Content Include="Admin\css\fabochart.css" />
+    <Content Include="Admin\css\flexslider.css" />
     <Content Include="Admin\css\font-awesome.css" />
-    <Content Include="Admin\css\jqvmap.css" />
-    <Content Include="Admin\css\lines.css" />
+    <Content Include="Admin\css\graph.css" />
+    <Content Include="Admin\css\icon-font.min.css" />
+    <Content Include="Admin\css\jquery-ui.css" />
+    <Content Include="Admin\css\owl.carousel.css" />
     <Content Include="Admin\css\style.css" />
-    <Content Include="Admin\Default.aspx" />
-    <Content Include="Admin\images\1.png" />
-    <Content Include="Admin\images\2.png" />
-    <Content Include="Admin\images\3.png" />
-    <Content Include="Admin\images\4.png" />
-    <Content Include="Admin\images\5.png" />
-    <Content Include="Admin\images\arrow-left.png" />
-    <Content Include="Admin\images\arrow-right.png" />
-    <Content Include="Admin\images\bg.jpg" />
-    <Content Include="Admin\images\cloud.png" />
+    <Content Include="Admin\css\style1.css" />
+    <Content Include="Admin\css\style_grid.css" />
+    <Content Include="Admin\images\icon\add-icon.png" />
+    <Content Include="Admin\images\icon\arrowTreelist.png" />
+    <Content Include="Admin\images\icon\Go-back-icon.png" />
+    <Content Include="Admin\images\icon\loading.gif" />
+    <Content Include="Admin\images\icon\lock.png" />
+    <Content Include="Admin\images\icon\save-512.png" />
+    <Content Include="Admin\images\ui-icons_444444_256x240.png" />
+    <Content Include="Admin\js\jquery.mask.js" />
+    <Content Include="Admin\Login\css\style.css" />
+    <Content Include="Admin\Login\images\adm.png" />
+    <Content Include="Admin\Login\images\admin.jpg" />
+    <Content Include="Admin\Login\images\admin.png" />
+    <Content Include="Admin\Login\images\avtar.png" />
+    <Content Include="Admin\Login\images\fb.png" />
+    <Content Include="Admin\Login\images\pass.png" />
+    <Content Include="Admin\Login\images\tw.png" />
+    <Content Include="Admin\ManageUsers\Common\TreeListFunction.ascx" />
+    <Content Include="Admin\ManageUsers\ManageRoles\ManageRolesMain.aspx" />
+    <Content Include="Admin\ManageUsers\ManageRules\ManageRulesMain.aspx" />
+    <Content Include="Admin\ManageUsers\ManageUsers\ManageUsersMain.aspx" />
+    <Content Include="Admin\navigatorAdmin.ascx" />
+    <Content Include="Admin\QuanLyAnhVideo\Anh\DanhSachAnh.aspx" />
+    <Content Include="Admin\QuanLyAnhVideo\Anh\SuaAnh.aspx" />
+    <Content Include="Admin\QuanLyAnhVideo\QuanLyAnh\QuanLyAnh.aspx" />
+    <Content Include="Admin\QuanLyAnhVideo\QuanLyAnh\ThemQuanLyAnhVideo.aspx" />
+    <Content Include="Admin\QuanLyPhong\EDP.aspx" />
+    <Content Include="Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\QuanLyPhong\Glistphong\GridPhong.ascx" />
+    <Content Include="Admin\images\11.jpg" />
+    <Content Include="Admin\images\8.jpg" />
+    <Content Include="Admin\images\a.png" />
+    <Content Include="Admin\images\b.png" />
+    <Content Include="Admin\images\b1.jpg" />
+    <Content Include="Admin\images\b2.jpg" />
+    <Content Include="Admin\images\b3.jpg" />
+    <Content Include="Admin\images\b4.jpg" />
+    <Content Include="Admin\images\b5.jpg" />
+    <Content Include="Admin\images\b6.jpg" />
+    <Content Include="Admin\images\b7.jpg" />
+    <Content Include="Admin\images\b8.jpg" />
+    <Content Include="Admin\images\b9.jpg" />
+    <Content Include="Admin\images\bag.png" />
+    <Content Include="Admin\images\bottom.jpg" />
+    <Content Include="Admin\images\closew.gif" />
+    <Content Include="Admin\images\close_1.png" />
+    <Content Include="Admin\images\cross.png" />
+    <Content Include="Admin\images\d1.jpg" />
+    <Content Include="Admin\images\d2.jpg" />
+    <Content Include="Admin\images\d3.jpg" />
+    <Content Include="Admin\images\d4.jpg" />
+    <Content Include="Admin\images\g1.jpg" />
+    <Content Include="Admin\images\g2.jpg" />
+    <Content Include="Admin\images\g3.jpg" />
+    <Content Include="Admin\images\g4.jpg" />
+    <Content Include="Admin\images\g5.jpg" />
+    <Content Include="Admin\images\g6.jpg" />
+    <Content Include="Admin\images\grid.png" />
+    <Content Include="Admin\images\icons.png" />
+    <Content Include="Admin\images\icon_sprite.png" />
+    <Content Include="Admin\images\img-sprite.png" />
+    <Content Include="Admin\images\leftw.gif" />
     <Content Include="Admin\images\logo.png" />
-    <Content Include="Admin\images\pic1.png" />
-    <Content Include="Admin\images\pic2.png" />
-    <Content Include="Admin\images\pic3.jpg" />
-    <Content Include="Admin\images\pic4.jpg" />
+    <Content Include="Admin\images\na.jpg" />
+    <Content Include="Admin\images\na1.jpg" />
+    <Content Include="Admin\images\na2.jpg" />
+    <Content Include="Admin\images\overlay.png" />
+    <Content Include="Admin\images\phon.png" />
+    <Content Include="Admin\images\rightw.gif" />
+    <Content Include="Admin\images\right_arrow.png" />
+    <Content Include="Admin\images\s1.jpg" />
+    <Content Include="Admin\images\s2.jpg" />
+    <Content Include="Admin\images\s3.jpg" />
+    <Content Include="Admin\images\s4.jpg" />
+    <Content Include="Admin\images\s5.jpg" />
+    <Content Include="Admin\images\s6.jpg" />
+    <Content Include="Admin\images\s7.jpg" />
+    <Content Include="Admin\images\s8.jpg" />
+    <Content Include="Admin\images\s9.jpg" />
+    <Content Include="Admin\images\search.png" />
+    <Content Include="Admin\images\sh1.jpg" />
+    <Content Include="Admin\images\sh2.jpg" />
+    <Content Include="Admin\images\sh3.jpg" />
+    <Content Include="Admin\images\sh4.jpg" />
+    <Content Include="Admin\images\sh5.jpg" />
+    <Content Include="Admin\images\sh6.jpg" />
+    <Content Include="Admin\images\slider_handle.png" />
+    <Content Include="Admin\images\tick.png" />
+    <Content Include="Admin\images\tick1.png" />
+    <Content Include="Admin\images\tw.png" />
+    <Content Include="Admin\images\w1.jpg" />
+    <Content Include="Admin\images\w10.jpg" />
+    <Content Include="Admin\images\w11.jpg" />
+    <Content Include="Admin\images\w12.jpg" />
+    <Content Include="Admin\images\w2.jpg" />
+    <Content Include="Admin\images\w3.jpg" />
+    <Content Include="Admin\images\w4.jpg" />
+    <Content Include="Admin\images\w5.jpg" />
+    <Content Include="Admin\images\w6.jpg" />
+    <Content Include="Admin\images\w7.jpg" />
+    <Content Include="Admin\images\w8.jpg" />
+    <Content Include="Admin\images\w9.jpg" />
+    <Content Include="Admin\images\wh2.jpg" />
+    <Content Include="Admin\images\wh3.jpg" />
+    <Content Include="Admin\images\wh4.jpg" />
+    <Content Include="Admin\images\wh5.jpg" />
+    <Content Include="Admin\images\wh6.jpg" />
+    <Content Include="Admin\QuanLyPhong\input.html" />
+    <Content Include="Admin\js\amcharts.js" />
     <Content Include="Admin\js\bootstrap.min.js" />
+    <Content Include="Admin\js\cbpFWTabs.js" />
     <Content Include="Admin\js\Chart.js" />
     <Content Include="Admin\js\clndr.js" />
-    <Content Include="Admin\js\custom.js" />
-    <Content Include="Admin\js\d3.v3.js" />
-    <Content Include="Admin\js\jquery.min.js" />
-    <Content Include="Admin\js\jquery.vmap.js" />
-    <Content Include="Admin\js\jquery.vmap.sampledata.js" />
-    <Content Include="Admin\js\jquery.vmap.world.js" />
-    <Content Include="Admin\js\metisMenu.min.js" />
+    <Content Include="Admin\js\imagezoom.js" />
+    <Content Include="Admin\js\jquery-1.10.2.min.js" />
+    <Content Include="Admin\js\jquery-1.11.1.min.js" />
+    <Content Include="Admin\js\jquery-ui.js" />
+    <Content Include="Admin\js\jquery.flexslider.js" />
+    <Content Include="Admin\js\jquery.flot.js" />
+    <Content Include="Admin\js\jquery.fn.gantt.js" />
+    <Content Include="Admin\js\jquery.nicescroll.js" />
+    <Content Include="Admin\js\light.js" />
+    <Content Include="Admin\js\menu_jquery.js" />
     <Content Include="Admin\js\moment-2.2.1.js" />
-    <Content Include="Admin\js\rickshaw.js" />
+    <Content Include="Admin\js\owl.carousel.js" />
+    <Content Include="Admin\js\pie-chart.js" />
+    <Content Include="Admin\js\scripts.js" />
+    <Content Include="Admin\js\serial.js" />
+    <Content Include="Admin\js\simpleCart.min.js" />
     <Content Include="Admin\js\site.js" />
     <Content Include="Admin\js\underscore-min.js" />
-    <Content Include="Admin\QuanLyPhong\css\basictable.css" />
-    <Content Include="Admin\QuanLyPhong\css\bootstrap.css" />
-    <Content Include="Admin\QuanLyPhong\css\circles.css" />
-    <Content Include="Admin\QuanLyPhong\css\component.css" />
-    <Content Include="Admin\QuanLyPhong\css\export.css" />
-    <Content Include="Admin\QuanLyPhong\css\flipclock.css" />
-    <Content Include="Admin\QuanLyPhong\css\font-awesome.css" />
-    <Content Include="Admin\QuanLyPhong\css\jQuery-plugin-progressbar1.css" />
-    <Content Include="Admin\QuanLyPhong\css\monthly.css" />
-    <Content Include="Admin\QuanLyPhong\css\style.css" />
-    <Content Include="Admin\QuanLyPhong\css\style_grid.css" />
-    <Content Include="Admin\QuanLyPhong\css\table-style.css" />
-    <Content Include="Admin\QuanLyPhong\EDP.aspx" />
-    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.svg" />
-    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Admin\QuanLyPhong\images\a1.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\a2.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\a3.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\a4.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\admin.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\bottom.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\overlay.png" />
-    <Content Include="Admin\QuanLyPhong\images\pic.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\pic1.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\profile.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\profile_bg.jpg" />
-    <Content Include="Admin\QuanLyPhong\images\progress.jpg" />
-    <Content Include="Admin\QuanLyPhong\input.html" />
-    <Content Include="Admin\QuanLyPhong\js\amcharts.js" />
-    <Content Include="Admin\QuanLyPhong\js\bars.js" />
-    <Content Include="Admin\QuanLyPhong\js\bootstrap-3.1.1.min.js" />
-    <Content Include="Admin\QuanLyPhong\js\Chart.min.js" />
-    <Content Include="Admin\QuanLyPhong\js\circles.js" />
-    <Content Include="Admin\QuanLyPhong\js\classie.js" />
-    <Content Include="Admin\QuanLyPhong\js\contact_me.js" />
-    <Content Include="Admin\QuanLyPhong\js\export.js" />
-    <Content Include="Admin\QuanLyPhong\js\flipclock.js" />
-    <Content Include="Admin\QuanLyPhong\js\gauge.js" />
-    <Content Include="Admin\QuanLyPhong\js\gnmenu.js" />
-    <Content Include="Admin\QuanLyPhong\js\jqBootstrapValidation.js" />
-    <Content Include="Admin\QuanLyPhong\js\jquery-2.1.4.min.js" />
-    <Content Include="Admin\QuanLyPhong\js\jQuery-plugin-progressbar.js" />
-    <Content Include="Admin\QuanLyPhong\js\jquery.basictable.min.js" />
-    <Content Include="Admin\QuanLyPhong\js\jquery.nicescroll.js" />
-    <Content Include="Admin\QuanLyPhong\js\light.js" />
-    <Content Include="Admin\QuanLyPhong\js\modernizr.custom.js" />
-    <Content Include="Admin\QuanLyPhong\js\monthly.js" />
-    <Content Include="Admin\QuanLyPhong\js\pie.js" />
-    <Content Include="Admin\QuanLyPhong\js\prettymaps.js" />
-    <Content Include="Admin\QuanLyPhong\js\radar.js" />
-    <Content Include="Admin\QuanLyPhong\js\screenfull.js" />
-    <Content Include="Admin\QuanLyPhong\js\scripts.js" />
-    <Content Include="Admin\QuanLyPhong\js\serial.js" />
-    <Content Include="Admin\QuanLyPhong\js\skycons.js" />
-    <Content Include="Admin\QuanLyPhong\js\valida.2.1.6.min.js" />
-    <Content Include="Admin\QuanLyPhong\js\validator.min.js" />
-    <Content Include="Admin\QuanLyPhong\js\xy.js" />
-    <Content Include="Admin\QuanLyPhong\Login.aspx" />
+    <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\QuanLyPhong\QLP.aspx" />
-    <Content Include="Admin\QuanLyPhong\signin.html" />
+    <Content Include="Admin\QuanLyPhong\SuaPhong.aspx" />
+    <Content Include="Admin\QuanLyPhong\SuaThemPhongNhanh.aspx" />
+    <Content Include="Admin\QuanLyPhong\ThemDatPhongNhanh.aspx" />
     <Content Include="Admin\QuanLyVideoAnh.aspx" />
-    <Content Include="Admin\Upload_Anh.aspx" />
+    <Content Include="Amigo\image\anhcanho.jpg" />
+    <Content Include="Amigo\image\banner.jpg" />
+    <Content Include="Amigo\image\logo.jpg" />
+    <Content Include="Amigo\image\sinhhoatamigo.jpg" />
+    <Content Include="Amigo\Index.aspx" />
+    <Content Include="Amigo\RoomAmigo.aspx" />
+    <Content Include="Amigo\ThongTinAmigo.aspx" />
+    <Content Include="Amigo\ThongTinAmigoEn.aspx" />
     <Content Include="AnAn\Cau_hoi_Thuong_gapAnAn.aspx" />
     <Content Include="AnAn\index.aspx" />
     <Content Include="AnAn\RoomAnAn.aspx" />
     <Content Include="AnAn\ThongTinAnAn.aspx" />
     <Content Include="AnAn\Thuc_Don_AnAn.aspx" />
-    <Content Include="HoiPhong\1.aspx" />
+    <Content Include="favicon.ico" />
     <Content Include="HoiPhong\css\jquery-ui.css" />
     <Content Include="HoiPhong\css\style.css" />
     <Content Include="HoiPhong\default.aspx" />
@@ -245,8 +317,31 @@
     <Content Include="HoiPhong\js\jquery-ui.js" />
     <Content Include="icon\arrow-samsam.png" />
     <Content Include="icon\Book-now-samsam.png" />
+    <Content Include="icon\booknow.png" />
+    <Content Include="icon\inta.png" />
     <Content Include="icon\samsam.png" />
+    <Content Include="images\iconface.jpg" />
+    <Content Include="images\weather.png" />
+    <Content Include="javascripts\bootstrap-datepicker.vi.min.js" />
+    <Content Include="javascripts\datepiker.js" />
     <Content Include="javascripts\jssor.slider-25.2.0.min.js" />
+    <Content Include="javascripts\videojs-ie8.min.js" />
+    <Content Include="LaLa\default.aspx" />
+    <Content Include="LaLa\default1.aspx" />
+    <Content Include="LaLa\image\content-min.png" />
+    <Content Include="LaLa\image\DSCF3473-min.png" />
+    <Content Include="LaLa\image\L1_Ban.png" />
+    <Content Include="LaLa\image\L2_Ban.jpg" />
+    <Content Include="LaLa\image\L3_Ban.png" />
+    <Content Include="LaLa\image\L4_Ban.png" />
+    <Content Include="LaLa\image\lalala8-min.png" />
+    <Content Include="LaLa\image\smiling_sun_312442.png" />
+    <Content Include="LaLa\image\sun-310144_640.png" />
+    <Content Include="LaLa\RoomLaLa.aspx" />
+    <Content Include="LaLa\ThongTinLaLa.ascx" />
+    <Content Include="LaLa\ThongTinLaLa.aspx" />
+    <Content Include="LaLa\ThongTinLaLaEn.ascx" />
+    <Content Include="LaLa\ThongTinLaLaEn.aspx" />
     <Content Include="NonLa\free.png" />
     <Content Include="NonLa\ThongTinNonLa.ascx" />
     <Content Include="NonLa\ThongTinNonLaEn.ascx" />
@@ -732,9 +827,15 @@
     <Content Include="Safa\Menu\MenuSafa.ascx" />
     <Content Include="Safa\Menu\Image\ga.png" />
     <Content Include="Safa\ThongTinSaFa\ThongTinSaFa.ascx" />
+    <Content Include="stylesheets\bootstrap-datepicker3.min.css" />
     <Content Include="stylesheets\grids.css" />
+    <Content Include="javascripts\JavaScript1.js" />
     <Content Include="stylesheets\style.css" />
+    <Content Include="stylesheets\StyleSheet1.css" />
     <Content Include="stylesheets\swipebox.css" />
+    <Content Include="TemplateChung\footerAn.ascx" />
+    <Content Include="TemplateChung\footerHeThong.ascx" />
+    <Content Include="TemplateChung\MenuFix.ascx" />
     <Content Include="thumb\AnhTuan.jpg" />
     <Content Include="images\bs-logo.png" />
     <Content Include="images\bs_pause.png" />
@@ -760,7 +861,7 @@
     <Content Include="javascripts\jquery.cookie.js" />
     <Content Include="javascripts\jquery.scrollTo.js" />
     <Content Include="javascripts\pageless.js" />
-    <Content Include="javascripts\jquery-1.4.2.js" />
+    <Content Include="javascripts\jquery-1.9.1.min.js" />
     <Content Include="javascripts\jquery-ui-1.8.4.custom.min.js" />
     <Content Include="javascripts\jquery.anythingslider.js" />
     <Content Include="javascripts\jquery.hoverIntent.minified.js" />
@@ -790,6 +891,13 @@
     <Content Include="thumb\grid_thumb1.jpg" />
     <Content Include="thumb\images.jpg" />
     <Content Include="icon\arrow-37-xxl.png" />
+    <Content Include="Tina\Image\1.png" />
+    <Content Include="Tina\Image\dorm.png" />
+    <Content Include="Tina\Image\nhanhotina.JPG" />
+    <Content Include="Tina\index.aspx" />
+    <Content Include="Tina\RoomTina.aspx" />
+    <Content Include="Tina\ThongTinTina.aspx" />
+    <Content Include="VideoSapa.mp4" />
     <Content Include="YoKo\CommonImage\1.jpg" />
     <Content Include="YoKo\CommonImage\10.jpg" />
     <Content Include="YoKo\CommonImage\11.jpg" />
@@ -999,18 +1107,6 @@
     <Content Include="Login\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Login\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Login\images\Thumbs.db" />
-    <Content Include="Admin\fonts\fontawesome-webfont.eot" />
-    <Content Include="Admin\fonts\fontawesome-webfont.svg" />
-    <Content Include="Admin\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Admin\fonts\fontawesome-webfont.woff" />
-    <Content Include="Admin\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Admin\fonts\FontAwesome.otf" />
-    <Content Include="Admin\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Admin\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Admin\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Admin\AdminTemplate.Master" />
     <Content Include="Sila\fonts\fontawesome-webfont.ttf" />
     <Content Include="Sila\fonts\fontawesome-webfont.woff" />
     <Content Include="Sila\fonts\fontawesome-webfont.woff2" />
@@ -1019,22 +1115,26 @@
     <Content Include="Sila\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Sila\images\Thumbs.db" />
     <Content Include="AnAn\AnAnmaster.Master" />
-    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.eot" />
-    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.woff" />
-    <Content Include="Admin\QuanLyPhong\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Admin\QuanLyPhong\fonts\FontAwesome.otf" />
-    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Admin\QuanLyPhong\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Admin\QuanLyPhong\images\Thumbs.db" />
-    <Content Include="Admin\QuanLyPhong\js\js" />
-    <Content Include="Admin\QuanLyPhong\AdminPhong.Master" />
+    <Content Include="Admin\AdminPhong.Master" />
+    <Content Include="Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\fonts\FontAwesome.otf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Admin\images\.DS_Store" />
+    <Content Include="Admin\maps\africa.json" />
+    <Content Include="Admin\maps\america.json" />
+    <Content Include="Admin\maps\asia.json" />
+    <Content Include="Admin\maps\europe.json" />
+    <Content Include="Admin\maps\mideast.json" />
+    <Content Include="Admin\maps\risk.json" />
+    <Content Include="Admin\maps\usofa.json" />
+    <Content Include="LaLa\LaLaMaster.Master" />
+    <Content Include="Amigo\amigo.Master" />
     <None Include="Properties\PublishProfiles\huy.pubxml" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Template.Master" />
     <Content Include="SubTemplate.Master" />
     <Content Include="Happi\VNF-Znikomit.ttf" />
@@ -1045,11 +1145,16 @@
     <Content Include="Sapa\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Sapa\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Sapa\SapaMaster.Master" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Sila\fonts\UVF-Ventography_Personal_Use_Only.ttf" />
+    <Content Include="Tina\Tina.Master" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -1060,13 +1165,6 @@
     <Compile Include="AboutMe\AboutMe.aspx.designer.cs">
       <DependentUpon>AboutMe.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminTemplate.Master.cs">
-      <DependentUpon>AdminTemplate.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\AdminTemplate.Master.designer.cs">
-      <DependentUpon>AdminTemplate.Master</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1074,12 +1172,75 @@
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\QuanLyPhong\AdminPhong.Master.cs">
+    <Compile Include="Admin\AdminPhong.Master.cs">
       <DependentUpon>AdminPhong.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\QuanLyPhong\AdminPhong.Master.designer.cs">
+    <Compile Include="Admin\AdminPhong.Master.designer.cs">
       <DependentUpon>AdminPhong.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\Common\TreeListFunction.ascx.cs">
+      <DependentUpon>TreeListFunction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\Common\TreeListFunction.ascx.designer.cs">
+      <DependentUpon>TreeListFunction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageRoles\ManageRolesMain.aspx.cs">
+      <DependentUpon>ManageRolesMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageRoles\ManageRolesMain.aspx.designer.cs">
+      <DependentUpon>ManageRolesMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageRules\ManageRulesMain.aspx.cs">
+      <DependentUpon>ManageRulesMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageRules\ManageRulesMain.aspx.designer.cs">
+      <DependentUpon>ManageRulesMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageUsers\ManageUsersMain.aspx.cs">
+      <DependentUpon>ManageUsersMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageUsers\ManageUsersMain.aspx.designer.cs">
+      <DependentUpon>ManageUsersMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\navigatorAdmin.ascx.cs">
+      <DependentUpon>navigatorAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\navigatorAdmin.ascx.designer.cs">
+      <DependentUpon>navigatorAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyAnhVideo\Anh\DanhSachAnh.aspx.cs">
+      <DependentUpon>DanhSachAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyAnhVideo\Anh\DanhSachAnh.aspx.designer.cs">
+      <DependentUpon>DanhSachAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyAnhVideo\Anh\SuaAnh.aspx.cs">
+      <DependentUpon>SuaAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyAnhVideo\Anh\SuaAnh.aspx.designer.cs">
+      <DependentUpon>SuaAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyAnhVideo\QuanLyAnh\QuanLyAnh.aspx.cs">
+      <DependentUpon>QuanLyAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyAnhVideo\QuanLyAnh\QuanLyAnh.aspx.designer.cs">
+      <DependentUpon>QuanLyAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyAnhVideo\QuanLyAnh\ThemQuanLyAnhVideo.aspx.cs">
+      <DependentUpon>ThemQuanLyAnhVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyAnhVideo\QuanLyAnh\ThemQuanLyAnhVideo.aspx.designer.cs">
+      <DependentUpon>ThemQuanLyAnhVideo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\QuanLyPhong\EDP.aspx.cs">
       <DependentUpon>EDP.aspx</DependentUpon>
@@ -1088,11 +1249,18 @@
     <Compile Include="Admin\QuanLyPhong\EDP.aspx.designer.cs">
       <DependentUpon>EDP.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\QuanLyPhong\Login.aspx.cs">
+    <Compile Include="Admin\QuanLyPhong\Glistphong\GridPhong.ascx.cs">
+      <DependentUpon>GridPhong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\Glistphong\GridPhong.ascx.designer.cs">
+      <DependentUpon>GridPhong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\QuanLyPhong\Login.aspx.designer.cs">
+    <Compile Include="Admin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\QuanLyPhong\QLP.aspx.cs">
@@ -1102,6 +1270,27 @@
     <Compile Include="Admin\QuanLyPhong\QLP.aspx.designer.cs">
       <DependentUpon>QLP.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\QuanLyPhong\SuaPhong.aspx.cs">
+      <DependentUpon>SuaPhong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\SuaPhong.aspx.designer.cs">
+      <DependentUpon>SuaPhong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\SuaThemPhongNhanh.aspx.cs">
+      <DependentUpon>SuaThemPhongNhanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\SuaThemPhongNhanh.aspx.designer.cs">
+      <DependentUpon>SuaThemPhongNhanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\ThemDatPhongNhanh.aspx.cs">
+      <DependentUpon>ThemDatPhongNhanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyPhong\ThemDatPhongNhanh.aspx.designer.cs">
+      <DependentUpon>ThemDatPhongNhanh.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\QuanLyVideoAnh.aspx.cs">
       <DependentUpon>QuanLyVideoAnh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1109,12 +1298,40 @@
     <Compile Include="Admin\QuanLyVideoAnh.aspx.designer.cs">
       <DependentUpon>QuanLyVideoAnh.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Upload_Anh.aspx.cs">
-      <DependentUpon>Upload_Anh.aspx</DependentUpon>
+    <Compile Include="Amigo\amigo.Master.cs">
+      <DependentUpon>amigo.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Upload_Anh.aspx.designer.cs">
-      <DependentUpon>Upload_Anh.aspx</DependentUpon>
+    <Compile Include="Amigo\amigo.Master.designer.cs">
+      <DependentUpon>amigo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Amigo\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Amigo\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Amigo\RoomAmigo.aspx.cs">
+      <DependentUpon>RoomAmigo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Amigo\RoomAmigo.aspx.designer.cs">
+      <DependentUpon>RoomAmigo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Amigo\ThongTinAmigo.aspx.cs">
+      <DependentUpon>ThongTinAmigo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Amigo\ThongTinAmigo.aspx.designer.cs">
+      <DependentUpon>ThongTinAmigo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Amigo\ThongTinAmigoEn.aspx.cs">
+      <DependentUpon>ThongTinAmigoEn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Amigo\ThongTinAmigoEn.aspx.designer.cs">
+      <DependentUpon>ThongTinAmigoEn.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnAn\AnAnmaster.Master.cs">
       <DependentUpon>AnAnmaster.Master</DependentUpon>
@@ -1159,19 +1376,68 @@
       <DependentUpon>Thuc_Don_AnAn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\utilsWeb.cs" />
-    <Compile Include="HoiPhong\1.aspx.cs">
-      <DependentUpon>1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HoiPhong\1.aspx.designer.cs">
-      <DependentUpon>1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="HoiPhong\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="HoiPhong\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LaLa\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaLa\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LaLa\default1.aspx.cs">
+      <DependentUpon>default1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaLa\default1.aspx.designer.cs">
+      <DependentUpon>default1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LaLa\LaLaMaster.Master.cs">
+      <DependentUpon>LaLaMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaLa\LaLaMaster.Master.designer.cs">
+      <DependentUpon>LaLaMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LaLa\RoomLaLa.aspx.cs">
+      <DependentUpon>RoomLaLa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaLa\RoomLaLa.aspx.designer.cs">
+      <DependentUpon>RoomLaLa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LaLa\ThongTinLaLa.ascx.cs">
+      <DependentUpon>ThongTinLaLa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaLa\ThongTinLaLa.ascx.designer.cs">
+      <DependentUpon>ThongTinLaLa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LaLa\ThongTinLaLa.aspx.cs">
+      <DependentUpon>ThongTinLaLa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaLa\ThongTinLaLa.aspx.designer.cs">
+      <DependentUpon>ThongTinLaLa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LaLa\ThongTinLaLaEn.ascx.cs">
+      <DependentUpon>ThongTinLaLaEn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaLa\ThongTinLaLaEn.ascx.designer.cs">
+      <DependentUpon>ThongTinLaLaEn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LaLa\ThongTinLaLaEn.aspx.cs">
+      <DependentUpon>ThongTinLaLaEn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaLa\ThongTinLaLaEn.aspx.designer.cs">
+      <DependentUpon>ThongTinLaLaEn.aspx</DependentUpon>
     </Compile>
     <Compile Include="NonLa\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -1436,6 +1702,27 @@
     <Compile Include="Happi\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TemplateChung\footerAn.ascx.cs">
+      <DependentUpon>footerAn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateChung\footerAn.ascx.designer.cs">
+      <DependentUpon>footerAn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateChung\footerHeThong.ascx.cs">
+      <DependentUpon>footerHeThong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateChung\footerHeThong.ascx.designer.cs">
+      <DependentUpon>footerHeThong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateChung\MenuFix.ascx.cs">
+      <DependentUpon>MenuFix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateChung\MenuFix.ascx.designer.cs">
+      <DependentUpon>MenuFix.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinYoko\en\ThongTinEn.ascx.cs">
       <DependentUpon>ThongTinEn.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1449,6 +1736,34 @@
     </Compile>
     <Compile Include="ThongTinYoko\ThongTinYoKo.ascx.designer.cs">
       <DependentUpon>ThongTinYoKo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tina\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tina\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tina\RoomTina.aspx.cs">
+      <DependentUpon>RoomTina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tina\RoomTina.aspx.designer.cs">
+      <DependentUpon>RoomTina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tina\ThongTinTina.aspx.cs">
+      <DependentUpon>ThongTinTina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tina\ThongTinTina.aspx.designer.cs">
+      <DependentUpon>ThongTinTina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tina\Tina.Master.cs">
+      <DependentUpon>Tina.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tina\Tina.Master.designer.cs">
+      <DependentUpon>Tina.Master</DependentUpon>
     </Compile>
     <Compile Include="YoKo\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -1501,14 +1816,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{c510736a-4240-4e22-af6f-adce1ec9dd97}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAcees\DataAcees.csproj">
       <Project>{8f9ad059-41ce-4165-962c-9184a4e65914}</Project>
       <Name>DataAcees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataHelper\DataHelper.csproj">
+      <Project>{319d87b4-c055-4d6d-a00c-0fea7c12642d}</Project>
+      <Name>DataHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ImageAlbum\DaLat\" />
     <Folder Include="ImageAlbum\HaiPhong\" />
+    <Folder Include="ImageAlbum\SaiGon\" />
     <Folder Include="ImageAlbum\Sapa\" />
     <Folder Include="imageofthumb\DaLat\" />
     <Folder Include="imageofthumb\Sapa\" />

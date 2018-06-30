@@ -1,5 +1,4 @@
 ﻿using DataAcees;
-using DataAcees.Common;
 using DataAcees.Object;
 using System;
 using System.Collections.Generic;
@@ -9,6 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Housing.Common;
+using Common;
 
 namespace Housing.HoiPhong
 {
@@ -16,14 +16,14 @@ namespace Housing.HoiPhong
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie cookie = Request.Cookies["user"];
+            HttpCookie cookie = Request.Cookies[Constant .USER_COOKIE ];
             if (cookie == null)
             {
                 Response.Redirect("~/Admin/Login.aspx");
             }
             if (!IsPostBack)
             {
-                utilsWeb.bindataNhaHoiPhong(rddiemden, Convert.ToInt32(cookie["nharole"].ToString()));
+                utilsWeb.bindataNhaHoiPhong(rddiemden, Convert.ToInt32(cookie[Constant.NHAROLE ].ToString()));
                 rddiemden.SelectedIndex = 0;
             }
 

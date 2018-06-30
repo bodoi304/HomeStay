@@ -1,5 +1,5 @@
-﻿using DataAcees;
-using DataAcees.Common;
+﻿using Common;
+using DataAcees;
 using DataAcees.Object;
 using Housing.Common;
 using System;
@@ -16,8 +16,8 @@ namespace Housing.Admin.QuanLyPhong
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblThemPhongDat.Text = lblThemPhongDat.Text + "<span  style='Color: green'>" + utilsWeb.getMaHieuPhong(Convert.ToInt32(Request.Cookies["user"]["vitri"])) + "</span>";
-                lblTenNha.Text = utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+            lblThemPhongDat.Text = lblThemPhongDat.Text + "<span  style='Color: green'>" + utilsWeb.getMaHieuPhong(Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI])) + "</span>";
+            lblTenNha.Text = utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI]));
 
            
         }
@@ -30,7 +30,7 @@ namespace Housing.Admin.QuanLyPhong
 
                 List<LichDatPhong_Obj> lstobjL = new List<LichDatPhong_Obj>();
                 LichDatPhong_Obj objLichInsert = new LichDatPhong_Obj();
-                objLichInsert.Nha_Nao = Convert.ToInt32(Request.Cookies["user"]["vitri"]);
+                objLichInsert.Nha_Nao = Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI]);
                 objLichInsert.Ten_Khach_Hang = txtKhachHang.Text;
                 objLichInsert.TrangThai = Constant.TRANG_THAI_PHONG.THEM_PHONG_NHANH ;
                 objLichInsert.So_Phong_Dat = txtPhongDat.Text;
@@ -103,7 +103,7 @@ namespace Housing.Admin.QuanLyPhong
                 if (ketqua)
                 {
 
-                    lblError.Text = "Thêm đặt phòng cho khách hàng " + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies["user"]["vitri"])) + " [" + objLichInsert.Ten_Khach_Hang + "] thành công.";
+                    lblError.Text = "Thêm đặt phòng cho khách hàng " + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI])) + " [" + objLichInsert.Ten_Khach_Hang + "] thành công.";
 
                 }
                 else

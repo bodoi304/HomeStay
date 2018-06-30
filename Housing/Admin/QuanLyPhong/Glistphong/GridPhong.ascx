@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GridPhong.ascx.cs" Inherits="Housing.Admin.QuanLyPhong.Glistphong.GridPhong" %>
 
-<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
 
 <div class="panel panel-widget forms-panel">
     <div class="forms">
@@ -57,7 +57,7 @@
 
                         <div class="form-grids widget-shadow" data-example-id="basic-forms" style="margin-top: 15px">
                             <dx:ASPxGridView ID="grd_DSPhong" ClientInstanceName="grid" runat="server" KeyFieldName="ID"
-                                Width="100%" AutoGenerateColumns="False" OnCustomColumnDisplayText="grd_DSPhong_CustomColumnDisplayText" OnRowCommand="grd_DSPhong_RowCommand" OnPageIndexChanged="grd_DSPhong_PageIndexChanged" OnHtmlRowPrepared="grd_DSPhong_HtmlRowPrepared">
+                                Width="100%" AutoGenerateColumns="False" OnCustomColumnDisplayText="grd_DSPhong_CustomColumnDisplayText" OnRowCommand="grd_DSPhong_RowCommand" OnPageIndexChanged="grd_DSPhong_PageIndexChanged" OnHtmlRowPrepared="grd_DSPhong_HtmlRowPrepared" OnBeforeColumnSortingGrouping="grd_DSPhong_BeforeColumnSortingGrouping">
                                 <SettingsBehavior ColumnResizeMode="Control" />
                                 <Columns>
                                     <dx:GridViewDataTextColumn Caption="" ReadOnly="True"

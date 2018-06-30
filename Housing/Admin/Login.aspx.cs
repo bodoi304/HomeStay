@@ -1,6 +1,7 @@
 ﻿using DataAcees;
-using DataAcees.Common;
+using Common;
 using DataAcees.Object;
+using DataHelper;
 using Housing.Common;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
 
 namespace Housing.Admin.QuanLyPhong
 {
@@ -18,8 +20,56 @@ namespace Housing.Admin.QuanLyPhong
         {
 
         }
-
         protected void btnSign_Click(object sender, EventArgs e)
+        {
+            UsersDH ctlUser = new UsersDH();
+            User objUser = ctlUser.validateLogin(txtEmail.Text, Utils.Encrypt(txtPassword.Text));
+            if (objUser == null)
+            {
+                Utils.notifierPage(Page, this.GetType(), Constant.NOTIFY_FAILURE, "Tên đăng nhập hoặc mật khẩu không chính xác.", Constant.TIME_ERROR);
+                return;
+            }
+            List<MenuItemFunction> lstMenuItem = ctlUser.getMenuItem(objUser);
+            if (objUser != null)
+            {
+                if (objUser.LockoutEnabled)
+                {
+                    Utils.notifierPage(Page, this.GetType(), Constant.NOTIFY_FAILURE, "Tài khoản của bạn đã bị khóa.", Constant.TIME_ERROR);
+                    return;
+                }
+                HttpCookie cookie = Request.Cookies[Constant.USER_COOKIE];
+                if (cookie == null)
+                {
+                    cookie = new HttpCookie(Constant.USER_COOKIE);
+                }
+                StringBuilder lst = new StringBuilder();
+                foreach (MenuItemFunction item in lstMenuItem)
+                {
+                    lst.Append("," + item.Path);
+                }
+                if (lstMenuItem.Count == 0)
+                {
+                    cookie[Constant.FUNCTION_COOKIE] = "<>";
+                }
+                else
+                {
+                    cookie[Constant.FUNCTION_COOKIE] =lst.ToString().Substring(1);
+                }
+                cookie[Constant.NAME_COOKIE] = objUser.Id_Login;
+                cookie[Constant.VITRI] = utilsWeb.returnViTri(Convert.ToInt32(objUser.ManageHome)).ToString();
+                cookie[Constant.NHAROLE] = objUser.ManageHome.ToString();
+                if (chkGiuDN.Checked)
+                    cookie.Expires = DateTime.Now.AddDays(30);
+                else
+                    cookie.Expires = DateTime.Now.AddMinutes(50);
+
+
+                Response.Cookies.Add(cookie);
+                Response.Redirect("~/Admin/Default.aspx");
+
+            }
+        }
+        protected void btnSign_Click1(object sender, EventArgs e)
         {
             User_DH ctl = new User_DH();
             User_Obj objUser = ctl.Check_User(txtEmail.Text.ToLower(), txtPassword.Text);
@@ -33,13 +83,13 @@ namespace Housing.Admin.QuanLyPhong
                 cookie["name"] = objUser.User_Name;
                 cookie["nharole"] = objUser.User_Role.ToString();
                 cookie["cnrole"] = objUser.Function_Role.ToString();
-                cookie["vitri"] = utilsWeb.returnViTri(objUser.User_Role).ToString ();
+                cookie["vitri"] = utilsWeb.returnViTri(objUser.User_Role).ToString();
                 if (chkGiuDN.Checked)
-                   cookie.Expires = DateTime.Now.AddDays(30);
+                    cookie.Expires = DateTime.Now.AddDays(30);
                 else
-                  cookie.Expires = DateTime.Now.AddMinutes(50);
+                    cookie.Expires = DateTime.Now.AddMinutes(50);
 
-              
+
                 Response.Cookies.Add(cookie);
                 Response.Redirect("~/Admin/Default.aspx");
 

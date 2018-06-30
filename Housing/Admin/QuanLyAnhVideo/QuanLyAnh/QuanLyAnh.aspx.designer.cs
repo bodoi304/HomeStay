@@ -91,6 +91,6 @@ namespace Housing.Admin.QuanLyAnhVideo.QuanLyAnh {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView.ASPxGridView grd_DSAnhvideo;
+        protected global::DevExpress.Web.ASPxGridView grd_DSAnhvideo;
     }
 }

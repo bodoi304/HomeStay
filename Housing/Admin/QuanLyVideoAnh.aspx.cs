@@ -1,7 +1,7 @@
-﻿using DataAcees;
+﻿using Common;
+using DataAcees;
 using DataAcees.Object;
 using DevExpress.Web;
-using DevExpress.Web.ASPxUploadControl;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,15 +25,15 @@ namespace Housing.Admin
            
             QuanLyAnhVideoDH ctl = new QuanLyAnhVideoDH();
             string UploadDirectory = "/imageofthumb/";
-            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == DataAcees.Common.Constant.DIA_DIEM.DALAT)
+            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == Constant.DIA_DIEM.DALAT)
             {
                 UploadDirectory = "/ImageAlbum/DaLat/";
             }
-            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == DataAcees.Common.Constant.DIA_DIEM.SAPA)
+            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == Constant.DIA_DIEM.SAPA)
             {
                 UploadDirectory = "/ImageAlbum/Sapa/";
             }
-            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == DataAcees.Common.Constant.DIA_DIEM.HAIPHONG)
+            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == Constant.DIA_DIEM.HAIPHONG)
             {
                 UploadDirectory = "/ImageAlbum/HaiPhong/";
             }
@@ -55,15 +55,15 @@ namespace Housing.Admin
         {
             Anh_DH ctl = new Anh_DH();
             string UploadDirectory = "/imageofthumb/";
-            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == DataAcees.Common.Constant.DIA_DIEM.DALAT)
+            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == Constant.DIA_DIEM.DALAT)
             {
                 UploadDirectory = "/ImageAlbum/DaLat/";
             }
-            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == DataAcees.Common.Constant.DIA_DIEM.SAPA)
+            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == Constant.DIA_DIEM.SAPA)
             {
                 UploadDirectory = "/ImageAlbum/Sapa/";
             }
-            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == DataAcees.Common.Constant.DIA_DIEM.HAIPHONG)
+            if (Convert.ToInt32(drDiaDiemBoAnhVideo.SelectedValue) == Constant.DIA_DIEM.HAIPHONG)
             {
                 UploadDirectory = "/ImageAlbum/HaiPhong/";
             }

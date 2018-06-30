@@ -1,6 +1,6 @@
 ﻿using DataAcees;
 using DataAcees.Object;
-using DevExpress.Web.ASPxUploadControl;
+using DevExpress.Web;
 using Housing.Common;
 using System;
 using System.Collections.Generic;
@@ -112,7 +112,7 @@ namespace Housing.Admin.QuanLyAnhVideo.QuanLyAnh
             txtduration.Text = objAlbum.DURATION_VIDEO.ToString();
         }
 
-        protected void UploadControl_FilesUploadComplete(object sender, DevExpress.Web.ASPxUploadControl.FileUploadCompleteEventArgs e)
+        protected void UploadControl_FilesUploadComplete(object sender, FileUploadCompleteEventArgs e)
         {
             //QuanLyAnhVideoDH ctl = new QuanLyAnhVideoDH();
             //string UploadDirectory = "/imageofthumb/";

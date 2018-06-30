@@ -1,6 +1,6 @@
 ﻿using DataAcees;
-using DataAcees.Common;
 using DataAcees.Object;
+using DevExpress.Web;
 using Housing.Common;
 using System;
 using System.Collections.Generic;
@@ -87,7 +87,7 @@ namespace Housing.Admin.QuanLyAnhVideo.QuanLyAnh
 
         }
 
-        protected void grd_DSPhong_RowCommand(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewRowCommandEventArgs e)
+        protected void grd_DSPhong_RowCommand(object sender, ASPxGridViewRowCommandEventArgs e)
         {
             try
             {
@@ -120,7 +120,7 @@ namespace Housing.Admin.QuanLyAnhVideo.QuanLyAnh
 
 
 
-        protected void grd_DSPhong_CustomColumnDisplayText(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewColumnDisplayTextEventArgs e)
+        protected void grd_DSPhong_CustomColumnDisplayText(object sender, ASPxGridViewColumnDisplayTextEventArgs e)
         {
             try
             {

@@ -1,5 +1,5 @@
-﻿using DataAcees;
-using DataAcees.Common;
+﻿using Common;
+using DataAcees;
 using DataAcees.Object;
 using System;
 using System.Collections.Generic;
@@ -16,19 +16,19 @@ namespace Housing.Common
         public static String getPathAlbum(String diadiem)
         {
             string UploadDirectory = "/imageofthumb/";
-            if (Convert.ToInt32(diadiem) == DataAcees.Common.Constant.DIA_DIEM.DALAT)
+            if (Convert.ToInt32(diadiem) == Constant.DIA_DIEM.DALAT)
             {
                 UploadDirectory = "/ImageAlbum/DaLat/";
             }
-            if (Convert.ToInt32(diadiem) == DataAcees.Common.Constant.DIA_DIEM.SAPA)
+            if (Convert.ToInt32(diadiem) == Constant.DIA_DIEM.SAPA)
             {
                 UploadDirectory = "/ImageAlbum/Sapa/";
             }
-            if (Convert.ToInt32(diadiem) == DataAcees.Common.Constant.DIA_DIEM.HAIPHONG)
+            if (Convert.ToInt32(diadiem) == Constant.DIA_DIEM.HAIPHONG)
             {
                 UploadDirectory = "/ImageAlbum/HaiPhong/";
             }
-            if (Convert.ToInt32(diadiem) == DataAcees.Common.Constant.DIA_DIEM.SAIGON )
+            if (Convert.ToInt32(diadiem) == Constant.DIA_DIEM.SAIGON)
             {
                 UploadDirectory = "/ImageAlbum/SaiGon/";
             }
@@ -108,11 +108,11 @@ namespace Housing.Common
                 dr.Items.Add(new ListItem("LALA", "5"));
             }
             dr.DataBind();
-       
+
             return dr;
         }
 
-        public static Int32 returnViTri(Int32 role)
+        public static Int32 returnViTri(int role)
         {
 
             if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.ANAN))
@@ -153,10 +153,10 @@ namespace Housing.Common
                     return " (CC: cả căn, 2D1,2D2: giường dorm đôi, D1,D2,D3,D4,D5,D6: giường dorm 1 người)";
                 case Constant.NHA_NAO.LALA:
                     return " (L1T: Dorm trên,L1D: Dorm dưới,L2,L3,L4)";
-                default :
+                default:
                     return "";
             }
-         
+
 
         }
 
@@ -197,7 +197,7 @@ namespace Housing.Common
             {
                 strTable1 += "  <tr style='margin-top:4px'> ";
                 strTable1 += "  <td style='border-right : 1px solid white;border-bottom : 1px solid white;padding-top:5px;padding-bottom:5px;padding-right:6px'> " + item.Ngay_Phong.Date.ToString("dd/MM/yyyy") + "</td> ";
-                strTable1 += "  <td style='padding-left:6px;border-bottom : 1px solid white;padding-top:5px;padding-bottom:5px' > " + item.Tinh_Trang + "  " + item.Trang_Thai_Dat +" <span style='color:red; font-weight:bold'>Trong Ngày</span>" + "</td> ";
+                strTable1 += "  <td style='padding-left:6px;border-bottom : 1px solid white;padding-top:5px;padding-bottom:5px' > " + item.Tinh_Trang + "  " + item.Trang_Thai_Dat + "</td> ";
                 strTable1 += " </tr> ";
             }
 
@@ -210,6 +210,7 @@ namespace Housing.Common
         {
             List<LichDatPhong_Obj> lstPhong = new List<LichDatPhong_Obj>();
             Lich_Dat_Phong_DH ctl = new Lich_Dat_Phong_DH();
+            int i = 1;
             foreach (DateTime item in lstNgayCheck)
             {
                 Trang_Thai_Phong_Obj objTrangThaiRoom = new Trang_Thai_Phong_Obj();
@@ -221,6 +222,7 @@ namespace Housing.Common
                 if (lstPhong.Count > 0)
                 {
                     StringBuilder phongTrongNgay = new StringBuilder();
+
                     foreach (LichDatPhong_Obj objLich in lstPhong)
                     {
                         String[] str = objLich.So_Phong_Dat.Trim().ToUpper().Split(',');
@@ -237,13 +239,25 @@ namespace Housing.Common
 
                             }
                         }
-                        if(objLich .Trang_Thai_Dat == 1)
+                        if (objLich.Trang_Thai_Dat == 1)
                         {
-                             phongTrongNgay.Append( objLich .So_Phong_Dat +" " );
+                            phongTrongNgay.Append(objLich.So_Phong_Dat + " ");
                         }
-                       
+
                     }
-                    String phongTrongNgayFinish = "<span style='color:red; font-weight:bold'>" + phongTrongNgay.ToString() + "</span>";
+
+
+                    String phongTrongNgayFinish = "";
+                    if (!String.IsNullOrEmpty(phongTrongNgay.ToString()))
+                    {
+                        phongTrongNgayFinish = "<span style='color:red; font-weight:bold'>" + phongTrongNgay.ToString() + " Đặt Trong Ngày" + "</span>";
+                        if (lstTrangThaiRoom.Count > 0)
+                        {
+                            lstTrangThaiRoom[lstTrangThaiRoom.Count - 1].Trang_Thai_Dat = "<span style='color:red; font-weight:bold'>" + phongTrongNgay.ToString() + " Có đặt trong ngày vào hôm sau" + "</span>"; ;
+                        }
+
+                    }
+
                     if (MaHieuPhongCon.ToString().Replace(",", "").Length <= 1)
                     {
                         objTrangThaiRoom.Tinh_Trang = "Hết phòng";
@@ -254,15 +268,62 @@ namespace Housing.Common
                     }
                     objTrangThaiRoom.Trang_Thai_Dat = phongTrongNgayFinish;
                     objTrangThaiRoom.Ma_Hieu_Phong = MaHieuPhongCon.ToString();
+
                     lstTrangThaiRoom.Add(objTrangThaiRoom);
+                    if (lstNgayCheck.Count == i)
+                    {
+                        StringBuilder phongTrongNgay1 = new StringBuilder();
+                        lstPhong = ctl.select_item_checkin_out(lstNgayCheck[lstNgayCheck.Count - 1].AddDays(1), noidat);
+                        if (lstPhong.Count > 0)
+                        {
+                            foreach (LichDatPhong_Obj objLich in lstPhong)
+                            {
+                                if (objLich.Trang_Thai_Dat == 1)
+                                {
+                                    phongTrongNgay1.Append(objLich.So_Phong_Dat + " ");
+                                }
+                            }
+                            if (!String.IsNullOrEmpty(phongTrongNgay1.ToString()))
+                            {
+                                if (lstTrangThaiRoom.Count > 0)
+                                {
+                                    lstTrangThaiRoom[lstTrangThaiRoom.Count - 1].Trang_Thai_Dat = "<span style='color:red; font-weight:bold'>" + phongTrongNgay1.ToString() + " Có đặt trong ngày vào hôm sau" + "</span>"; ;
+                                }
+                            }
+                          
+                        }
+                    }
                 }
                 else
                 {
                     objTrangThaiRoom.Tinh_Trang = "Còn " + MaHieuPhongCon.ToString().Replace(",", "") + " có thể book.";
                     objTrangThaiRoom.Ma_Hieu_Phong = MaHieuPhongCon.ToString();
                     lstTrangThaiRoom.Add(objTrangThaiRoom);
-                }
+                    if (lstNgayCheck.Count == i)
+                    {
+                        StringBuilder phongTrongNgay1 = new StringBuilder();
+                        lstPhong = ctl.select_item_checkin_out(lstNgayCheck[lstNgayCheck.Count - 1].AddDays(1), noidat);
+                        if (lstPhong.Count > 0)
+                        {
+                            foreach (LichDatPhong_Obj objLich in lstPhong)
+                            {
+                                if (objLich.Trang_Thai_Dat == 1)
+                                {
+                                    phongTrongNgay1.Append(objLich.So_Phong_Dat + " ");
+                                }
+                            }
+                            if (!String.IsNullOrEmpty(phongTrongNgay1.ToString()))
+                            {
+                                if (lstTrangThaiRoom.Count > 0)
+                                {
+                                    lstTrangThaiRoom[lstTrangThaiRoom.Count - 1].Trang_Thai_Dat = "<span style='color:red; font-weight:bold'>" + phongTrongNgay1.ToString() + " Có đặt trong ngày vào hôm sau" + "</span>"; ;
+                                }
+                            }
 
+                        }
+                    }
+                }
+                i += 1;
             }
 
             Boolean isHetPhongTina = false;

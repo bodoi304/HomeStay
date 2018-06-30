@@ -13,6 +13,9 @@
     <link href="Login/css/style.css" rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Fjord+One' rel='stylesheet' type='text/css'>
+           <script src="/Admin/js/jquery-1.11.1.min.js"></script>
+    <script src="/Admin/js/pnotify.js"></script>
+    <link href="/Admin/css/pnotify.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">

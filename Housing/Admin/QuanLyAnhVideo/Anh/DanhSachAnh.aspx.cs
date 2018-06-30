@@ -1,5 +1,6 @@
 ﻿using DataAcees;
 using DataAcees.Object;
+using DevExpress.Web;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -77,7 +78,7 @@ namespace Housing.Admin.QuanLyAnhVideo.Anh
 
         }
 
-        protected void grd_DSPhong_RowCommand(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewRowCommandEventArgs e)
+        protected void grd_DSPhong_RowCommand(object sender, ASPxGridViewRowCommandEventArgs e)
         {
             try
             {

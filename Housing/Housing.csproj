@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Housing</RootNamespace>
     <AssemblyName>Housing</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <Use64BitIISExpress />
     <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,37 +40,48 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Resources.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
+      <HintPath>Lib\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Office.v13.1.Core, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DevExpress.RichEdit.v13.1.Core, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DevExpress.Web.ASPxThemes.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>Lib\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -87,9 +100,6 @@
     </Reference>
     <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.24\lib\net40\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
@@ -124,11 +134,14 @@
     <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.0\lib\net40\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutMe\AboutMe.aspx" />
     <Content Include="AboutMe\nguyenphituanHoso.jpg" />
     <Content Include="AboutMe\tuan.jpg" />
+    <Content Include="Admin\css\MyStyle.css" />
+    <Content Include="Admin\css\pnotify.css" />
     <Content Include="Admin\css\ui-bg_glass_65_ffffff_1x400.png" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\css\atlas.css" />
@@ -144,8 +157,15 @@
     <Content Include="Admin\css\style.css" />
     <Content Include="Admin\css\style1.css" />
     <Content Include="Admin\css\style_grid.css" />
+    <Content Include="Admin\images\icon\add-icon.png" />
+    <Content Include="Admin\images\icon\arrowTreelist.png" />
+    <Content Include="Admin\images\icon\Go-back-icon.png" />
+    <Content Include="Admin\images\icon\loading.gif" />
+    <Content Include="Admin\images\icon\lock.png" />
+    <Content Include="Admin\images\icon\save-512.png" />
     <Content Include="Admin\images\ui-icons_444444_256x240.png" />
     <Content Include="Admin\js\jquery.mask.js" />
+    <Content Include="Admin\js\pnotify.js" />
     <Content Include="Admin\Login\css\style.css" />
     <Content Include="Admin\Login\images\adm.png" />
     <Content Include="Admin\Login\images\admin.jpg" />
@@ -154,6 +174,10 @@
     <Content Include="Admin\Login\images\fb.png" />
     <Content Include="Admin\Login\images\pass.png" />
     <Content Include="Admin\Login\images\tw.png" />
+    <Content Include="Admin\ManageUsers\Common\TreeListFunction.ascx" />
+    <Content Include="Admin\ManageUsers\ManageRoles\ManageRolesMain.aspx" />
+    <Content Include="Admin\ManageUsers\ManageRules\ManageRulesMain.aspx" />
+    <Content Include="Admin\ManageUsers\ManageUsers\ManageUsersMain.aspx" />
     <Content Include="Admin\navigatorAdmin.ascx" />
     <Content Include="Admin\QuanLyAnhVideo\Anh\DanhSachAnh.aspx" />
     <Content Include="Admin\QuanLyAnhVideo\Anh\SuaAnh.aspx" />
@@ -1159,6 +1183,34 @@
     <Compile Include="Admin\AdminPhong.Master.designer.cs">
       <DependentUpon>AdminPhong.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ManageUsers\Common\TreeListFunction.ascx.cs">
+      <DependentUpon>TreeListFunction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\Common\TreeListFunction.ascx.designer.cs">
+      <DependentUpon>TreeListFunction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageRoles\ManageRolesMain.aspx.cs">
+      <DependentUpon>ManageRolesMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageRoles\ManageRolesMain.aspx.designer.cs">
+      <DependentUpon>ManageRolesMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageRules\ManageRulesMain.aspx.cs">
+      <DependentUpon>ManageRulesMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageRules\ManageRulesMain.aspx.designer.cs">
+      <DependentUpon>ManageRulesMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageUsers\ManageUsersMain.aspx.cs">
+      <DependentUpon>ManageUsersMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageUsers\ManageUsers\ManageUsersMain.aspx.designer.cs">
+      <DependentUpon>ManageUsersMain.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\navigatorAdmin.ascx.cs">
       <DependentUpon>navigatorAdmin.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1768,9 +1820,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{c510736a-4240-4e22-af6f-adce1ec9dd97}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAcees\DataAcees.csproj">
       <Project>{8f9ad059-41ce-4165-962c-9184a4e65914}</Project>
       <Name>DataAcees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataHelper\DataHelper.csproj">
+      <Project>{319d87b4-c055-4d6d-a00c-0fea7c12642d}</Project>
+      <Name>DataHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -1783,6 +1843,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

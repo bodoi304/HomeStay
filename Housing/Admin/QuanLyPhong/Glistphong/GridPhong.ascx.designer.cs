@@ -127,6 +127,6 @@ namespace Housing.Admin.QuanLyPhong.Glistphong {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::DevExpress.Web.ASPxGridView.ASPxGridView grd_DSPhong;
+        public global::DevExpress.Web.ASPxGridView grd_DSPhong;
     }
 }

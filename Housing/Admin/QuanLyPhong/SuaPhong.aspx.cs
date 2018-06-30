@@ -1,5 +1,5 @@
-﻿using DataAcees;
-using DataAcees.Common;
+﻿using Common;
+using DataAcees;
 using DataAcees.Object;
 using Housing.Common;
 using System;
@@ -16,8 +16,8 @@ namespace Housing.Admin.QuanLyPhong
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblThemPhongDat.Text = lblThemPhongDat.Text + "<span  style='Color: green'>" + utilsWeb.getMaHieuPhong(Convert.ToInt32(Request.Cookies["user"]["vitri"])) + "</span>";
-            lblTenNha.Text = utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+            lblThemPhongDat.Text = lblThemPhongDat.Text + "<span  style='Color: green'>" + utilsWeb.getMaHieuPhong(Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI])) + "</span>";
+            lblTenNha.Text = utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI]));
             if (!IsPostBack)
             {
                 BindData();
@@ -100,7 +100,7 @@ namespace Housing.Admin.QuanLyPhong
                 objLichInsert.So_Phong_Dat = txtPhongDat.Text;
                 objLichInsert.TrangThai = Constant .TRANG_THAI_PHONG .BINH_THUONG ;
                 objLichInsert.Trang_Thai_CK = drTinhTrangChuyenKhoan.SelectedValue.ToString ();
-                objLichInsert.Nha_Nao = Convert.ToInt32(Request.Cookies["user"]["vitri"]);
+                objLichInsert.Nha_Nao = Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI]);
                 if (chkOtrongNgay.Checked)
                 {
                     objLichInsert.Trang_Thai_Dat = 1;
@@ -110,7 +110,7 @@ namespace Housing.Admin.QuanLyPhong
                     objLichInsert.Trang_Thai_Dat = 0;
                 }
                 objLichInsert.Ghi_chu = txtGhiChu.Text;
-                ctl.update_lich_dat_phong(objLichInsert, Request.Cookies["user"]["name"].ToString());
+                ctl.update_lich_dat_phong(objLichInsert, Request.Cookies[Constant.USER_COOKIE][Constant.NAME_COOKIE].ToString());
                 lblError.Text = "Cập nhập đặt phòng cho khách hàng thành công.";
 
             }
@@ -124,7 +124,7 @@ namespace Housing.Admin.QuanLyPhong
         public void BindData()
         {
             Int64 ID = Convert.ToInt64(Request.QueryString["bnm"]);
-            lblTenNha.Text = "SỬA ĐẶT PHÒNG CỦA KHÁCH CÓ ID [" + Request.QueryString["bnm"] + "] NHÀ " + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies["user"]["vitri"]));
+            lblTenNha.Text = "SỬA ĐẶT PHÒNG CỦA KHÁCH CÓ ID [" + Request.QueryString["bnm"] + "] NHÀ " + utilsWeb.getTenNha(Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI]));
             Lich_Dat_Phong_DH ctlLich = new Lich_Dat_Phong_DH();
             LichDatPhong_Obj objLich = ctlLich.select_item_Id(ID);
             txtKhachHang.Text = objLich.Ten_Khach_Hang;
