@@ -143,6 +143,8 @@
     <Content Include="Admin\css\MyStyle.css" />
     <Content Include="Admin\css\pnotify.css" />
     <Content Include="Admin\css\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Admin\DaoTaoAdmin\ManageDocument.aspx" />
+    <Content Include="Admin\DaoTaoAdmin\ThemSuaTaiLieu.ascx" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\css\atlas.css" />
     <Content Include="Admin\css\bootstrap.min.css" />
@@ -294,6 +296,7 @@
     <Content Include="Admin\QuanLyPhong\SuaPhong.aspx" />
     <Content Include="Admin\QuanLyPhong\SuaThemPhongNhanh.aspx" />
     <Content Include="Admin\QuanLyPhong\ThemDatPhongNhanh.aspx" />
+    <Content Include="Admin\QuanLyTaiChinh\QuanLyGhiNo\QuanLyGhiNoMain.aspx" />
     <Content Include="Admin\QuanLyVideoAnh.aspx" />
     <Content Include="Amigo\image\anhcanho.jpg" />
     <Content Include="Amigo\image\banner.jpg" />
@@ -308,6 +311,60 @@
     <Content Include="AnAn\RoomAnAn.aspx" />
     <Content Include="AnAn\ThongTinAnAn.aspx" />
     <Content Include="AnAn\Thuc_Don_AnAn.aspx" />
+    <Content Include="DaoTao\blank.html" />
+    <Content Include="DaoTao\css\bar.css" />
+    <Content Include="DaoTao\css\bootstrap.css" />
+    <Content Include="DaoTao\css\fontawesome-all.css" />
+    <Content Include="DaoTao\css\pignose.calender.css" />
+    <Content Include="DaoTao\css\simplyCountdown.css" />
+    <Content Include="DaoTao\css\style.css" />
+    <Content Include="DaoTao\css\style4.css" />
+    <Content Include="DaoTao\css\widgets.css" />
+    <Content Include="DaoTao\images\1.jpg" />
+    <Content Include="DaoTao\images\2.jpg" />
+    <Content Include="DaoTao\images\3.jpg" />
+    <Content Include="DaoTao\images\4.jpg" />
+    <Content Include="DaoTao\images\5.jpg" />
+    <Content Include="DaoTao\images\b1.jpg" />
+    <Content Include="DaoTao\images\ban1.jpg" />
+    <Content Include="DaoTao\images\ban2.jpg" />
+    <Content Include="DaoTao\images\ban3.jpg" />
+    <Content Include="DaoTao\images\ban4.jpg" />
+    <Content Include="DaoTao\images\ban5.jpg" />
+    <Content Include="DaoTao\images\ban6.jpg" />
+    <Content Include="DaoTao\images\c1.jpg" />
+    <Content Include="DaoTao\images\c2.jpg" />
+    <Content Include="DaoTao\images\c3.jpg" />
+    <Content Include="DaoTao\images\c4.jpg" />
+    <Content Include="DaoTao\images\clone.jpg" />
+    <Content Include="DaoTao\images\menu1.jpg" />
+    <Content Include="DaoTao\images\Preloader_2.gif" />
+    <Content Include="DaoTao\images\profile.jpg" />
+    <Content Include="DaoTao\images\timer.jpg" />
+    <Content Include="DaoTao\index.aspx" />
+    <Content Include="DaoTao\js\amcharts.js" />
+    <Content Include="DaoTao\js\bootstrap.min.js" />
+    <Content Include="DaoTao\js\chart1.js" />
+    <Content Include="DaoTao\js\circle_bar.js" />
+    <Content Include="DaoTao\js\example.js" />
+    <Content Include="DaoTao\js\index.js" />
+    <Content Include="DaoTao\js\jquery-2.2.3.min.js" />
+    <Content Include="DaoTao\js\jquery.charts.js" />
+    <Content Include="DaoTao\js\kuma-gauge.jquery.js" />
+    <Content Include="DaoTao\js\modernizr.js" />
+    <Content Include="DaoTao\js\moment.min.js" />
+    <Content Include="DaoTao\js\percentage-circles.js" />
+    <Content Include="DaoTao\js\pignose.calender.js" />
+    <Content Include="DaoTao\js\prettymaps.js" />
+    <Content Include="DaoTao\js\raphael-min.js" />
+    <Content Include="DaoTao\js\rumcaJS.js" />
+    <Content Include="DaoTao\js\script.js" />
+    <Content Include="DaoTao\js\SimpleChart.js" />
+    <Content Include="DaoTao\js\simplyCountdown.js" />
+    <Content Include="DaoTao\js\skycons.js" />
+    <Content Include="DaoTao\webfonts\fa-brands-400.svg" />
+    <Content Include="DaoTao\webfonts\fa-regular-400.svg" />
+    <Content Include="DaoTao\webfonts\fa-solid-900.svg" />
     <Content Include="favicon.ico" />
     <Content Include="HoiPhong\css\jquery-ui.css" />
     <Content Include="HoiPhong\css\style.css" />
@@ -1138,6 +1195,19 @@
     <Content Include="Admin\maps\usofa.json" />
     <Content Include="LaLa\LaLaMaster.Master" />
     <Content Include="Amigo\amigo.Master" />
+    <Content Include="DaoTao\images\Thumbs.db" />
+    <Content Include="DaoTao\webfonts\fa-brands-400.eot" />
+    <Content Include="DaoTao\webfonts\fa-brands-400.ttf" />
+    <Content Include="DaoTao\webfonts\fa-brands-400.woff" />
+    <Content Include="DaoTao\webfonts\fa-brands-400.woff2" />
+    <Content Include="DaoTao\webfonts\fa-regular-400.eot" />
+    <Content Include="DaoTao\webfonts\fa-regular-400.ttf" />
+    <Content Include="DaoTao\webfonts\fa-regular-400.woff" />
+    <Content Include="DaoTao\webfonts\fa-regular-400.woff2" />
+    <Content Include="DaoTao\webfonts\fa-solid-900.eot" />
+    <Content Include="DaoTao\webfonts\fa-solid-900.ttf" />
+    <Content Include="DaoTao\webfonts\fa-solid-900.woff" />
+    <Content Include="DaoTao\webfonts\fa-solid-900.woff2" />
     <None Include="Properties\PublishProfiles\huy.pubxml" />
     <Content Include="Template.Master" />
     <Content Include="SubTemplate.Master" />
@@ -1168,6 +1238,20 @@
     </Compile>
     <Compile Include="AboutMe\AboutMe.aspx.designer.cs">
       <DependentUpon>AboutMe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DaoTaoAdmin\ManageDocument.aspx.cs">
+      <DependentUpon>ManageDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DaoTaoAdmin\ManageDocument.aspx.designer.cs">
+      <DependentUpon>ManageDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DaoTaoAdmin\ThemSuaTaiLieu.ascx.cs">
+      <DependentUpon>ThemSuaTaiLieu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DaoTaoAdmin\ThemSuaTaiLieu.ascx.designer.cs">
+      <DependentUpon>ThemSuaTaiLieu.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -1295,6 +1379,13 @@
     <Compile Include="Admin\QuanLyPhong\ThemDatPhongNhanh.aspx.designer.cs">
       <DependentUpon>ThemDatPhongNhanh.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\QuanLyTaiChinh\QuanLyGhiNo\QuanLyGhiNoMain.aspx.cs">
+      <DependentUpon>QuanLyGhiNoMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyTaiChinh\QuanLyGhiNo\QuanLyGhiNoMain.aspx.designer.cs">
+      <DependentUpon>QuanLyGhiNoMain.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\QuanLyVideoAnh.aspx.cs">
       <DependentUpon>QuanLyVideoAnh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1380,6 +1471,13 @@
       <DependentUpon>Thuc_Don_AnAn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\utilsWeb.cs" />
+    <Compile Include="DaoTao\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DaoTao\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HoiPhong\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1834,6 +1932,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\DaoTaoAdmin\Document\" />
     <Folder Include="ImageAlbum\DaLat\" />
     <Folder Include="ImageAlbum\HaiPhong\" />
     <Folder Include="ImageAlbum\SaiGon\" />

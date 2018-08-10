@@ -172,7 +172,7 @@ namespace Housing.Admin.QuanLyPhong {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTongTienPhong;
+        protected global::DevExpress.Web.ASPxSpinEdit txtTongTienPhong;
         
         /// <summary>
         /// txtTienChuyenKhoan control.
@@ -181,7 +181,7 @@ namespace Housing.Admin.QuanLyPhong {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTienChuyenKhoan;
+        protected global::DevExpress.Web.ASPxSpinEdit txtTienChuyenKhoan;
         
         /// <summary>
         /// txtTienConPhaiTra control.
@@ -190,7 +190,7 @@ namespace Housing.Admin.QuanLyPhong {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTienConPhaiTra;
+        protected global::DevExpress.Web.ASPxSpinEdit txtTienConPhaiTra;
         
         /// <summary>
         /// txtGhiChu control.

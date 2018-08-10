@@ -267,6 +267,12 @@ ClientPopupControl.Show();
 
                         </li>
 
+                         <li id="menu-academico"><a href="#"><i class="fa fa-table"></i><span>Quản Lý Tài Chính</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                            <ul id="menu-academico-sub">
+                                <li id="menu-academico-avaliacoes"><a href="/Admin/QuanLyTaiChinh/QuanLyGhiNo/QuanLyGhiNoMain.aspx">Quản Lý Ghi Nợ</a></li>
+                             
+                            </ul>
+                        </li>
 
                         <li id="menu-academico"><a href="#"><i class="lnr lnr-book"></i><span>Quản Lý Ảnh Video</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                             <ul id="menu-academico-sub">

@@ -59,6 +59,13 @@
     <Compile Include="Anh.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
+    <Compile Include="CategoryDocument.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Document.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Document_DH.cs" />
     <Compile Include="Group.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>

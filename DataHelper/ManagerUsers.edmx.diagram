@@ -19,6 +19,8 @@
         <AssociationConnector Association="HouzingModel.ApplicationUserRoles" ManuallyRouted="false" />
         <AssociationConnector Association="HouzingModel.MenuItemRoles" ManuallyRouted="false" />
         <EntityTypeShape EntityType="HouzingModel.Quan_Ly_Ghi_No" Width="1.5" PointX="9.375" PointY="8.75" />
+        <EntityTypeShape EntityType="HouzingModel.CategoryDocument" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HouzingModel.Document" Width="1.5" PointX="0.75" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

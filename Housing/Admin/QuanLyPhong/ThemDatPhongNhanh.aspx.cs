@@ -99,7 +99,7 @@ namespace Housing.Admin.QuanLyPhong
                 lstobjL.Add(objLichInsert);
 
                 StringBuilder strID = new StringBuilder();
-                Boolean ketqua = ctl.insertItem(lstobjL, Request.Cookies["user"]["name"], strID);
+                Boolean ketqua = ctl.insertItem(lstobjL, Request.Cookies[Constant .USER_COOKIE ][Constant .NAME_COOKIE], strID);
                 if (ketqua)
                 {
 

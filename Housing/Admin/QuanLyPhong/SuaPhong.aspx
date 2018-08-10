@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPhong.Master" AutoEventWireup="true" CodeBehind="SuaPhong.aspx.cs" Inherits="Housing.Admin.QuanLyPhong.SuaPhong" %>
-
+<%@ Register Assembly="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -77,15 +77,20 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Tổng tiền phòng</label>
-                        <asp:TextBox ID="txtTongTienPhong" Style="color: black !important" runat="server" placeholder="Tổng tiền phòng" CssClass=" form-control"></asp:TextBox>
+                        <dx:aspxspinedit id="txtTongTienPhong" style="color: black !important" runat="server" displayformatstring="###,##0.######" >
+                                                                            </dx:aspxspinedit>
+
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Tiền chuyển khoản</label>
-                        <asp:TextBox ID="txtTienChuyenKhoan" Style="color: black !important" runat="server" placeholder="Tiền chuyển khoản" CssClass=" form-control"></asp:TextBox>
+                        <dx:aspxspinedit id="txtTienChuyenKhoan" style="color: black !important" runat="server" displayformatstring="###,##0.######" >
+                                                                            </dx:aspxspinedit>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Tiền còn phải trả</label>
-                        <asp:TextBox ID="txtTienConPhaiTra" Style="color: black !important" runat="server" placeholder="Tiền còn phải trả" CssClass=" form-control"></asp:TextBox>
+
+                        <dx:aspxspinedit id="txtTienConPhaiTra" style="color: black !important" runat="server" displayformatstring="###,##0.######" >
+                                                                            </dx:aspxspinedit>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Ghi Chú</label>

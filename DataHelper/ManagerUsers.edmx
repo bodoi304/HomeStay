@@ -54,6 +54,24 @@
           <Property Name="UserId" Type="bigint" Nullable="false" />
           <Property Name="RoleId" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="CategoryDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_Category" Type="int" />
+          <Property Name="NameDocument" Type="nvarchar" MaxLength="100" />
+          <Property Name="PathDocument" Type="varchar" MaxLength="100" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="Groups">
           <Key>
             <PropertyRef Name="Id" />
@@ -311,6 +329,8 @@
           <EntitySet Name="ApplicationRoleGroups" EntityType="Self.ApplicationRoleGroups" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="ApplicationUserGroups" EntityType="Self.ApplicationUserGroups" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="ApplicationUserRoles" EntityType="Self.ApplicationUserRoles" Schema="bodoi304" store:Type="Tables" />
+          <EntitySet Name="CategoryDocument" EntityType="Self.CategoryDocument" Schema="bodoi304" store:Type="Tables" />
+          <EntitySet Name="Document" EntityType="Self.Document" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="Groups" EntityType="Self.Groups" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="Lich_Dat_Phong" EntityType="Self.Lich_Dat_Phong" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="MenuItemFunctions" EntityType="Self.MenuItemFunctions" Schema="bodoi304" store:Type="Tables" />
@@ -553,6 +573,8 @@
           <Parameter Name="IDRole" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="Quan_Ly_Ghi_No" EntityType="HouzingModel.Quan_Ly_Ghi_No" />
+          <EntitySet Name="CategoryDocuments" EntityType="HouzingModel.CategoryDocument" />
+          <EntitySet Name="Documents" EntityType="HouzingModel.Document" />
         </EntityContainer>
         <ComplexType Name="Users_SelectUsersNoRole_Result">
           <Property Type="Int64" Name="Id" Nullable="false" />
@@ -569,6 +591,24 @@
           <Property Name="Nha_Nao" Type="Int32" />
           <Property Name="Nguoi_Nhap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CategoryDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Category" Type="Int32" />
+          <Property Name="NameDocument" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PathDocument" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -765,6 +805,26 @@
                 <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
                 <ScalarProperty Name="Ghi_Chu" ColumnName="Ghi_Chu" />
                 <ScalarProperty Name="So_Tien_No" ColumnName="So_Tien_No" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CategoryDocuments">
+            <EntityTypeMapping TypeName="HouzingModel.CategoryDocument">
+              <MappingFragment StoreEntitySet="CategoryDocument">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="NameCategory" ColumnName="NameCategory" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Documents">
+            <EntityTypeMapping TypeName="HouzingModel.Document">
+              <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="PathDocument" ColumnName="PathDocument" />
+                <ScalarProperty Name="NameDocument" ColumnName="NameDocument" />
+                <ScalarProperty Name="ID_Category" ColumnName="ID_Category" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
