@@ -35,6 +35,34 @@ namespace Housing.Common
             return UploadDirectory;
         }
 
+        public static void checkLogin(HttpRequest rq,HttpResponse res)
+        {
+            HttpCookie cookie = rq.Cookies[Constant.USER_COOKIE];
+            HttpCookie cookieHistory = rq.Cookies[Constant.HISTORY];
+            if (cookieHistory == null)
+            {
+                cookieHistory = new HttpCookie(Constant.HISTORY);
+                if (!rq.Url.ToString().Contains("Login"))
+                {
+                    cookieHistory["path"] = rq.Url.ToString();
+                    res.Cookies.Add(cookieHistory);
+                }
+
+            }
+            else
+            {
+                if (!rq.Url.ToString().Contains("Login"))
+                {
+                    cookieHistory["path"] = rq.Url.ToString();
+                    res.Cookies.Add(cookieHistory);
+                }
+            }
+            if (cookie == null)
+            {
+                res.Redirect("~/Admin/Login.aspx");
+            }
+        }
+
         public static String getTenNha(Int32 ID)
         {
             switch (ID)
@@ -150,7 +178,7 @@ namespace Housing.Common
                 case Constant.NHA_NAO.YOKO:
                     return " (Y1,Y2: phòng 2 người, Y3: phòng 3 người)";
                 case Constant.NHA_NAO.TINA:
-                    return " (CC: cả căn, 2D1,2D2: giường dorm đôi, D1,D2,D3,D4,D5,D6: giường dorm 1 người)";
+                    return " (CC: nhà nhỏ nguyên căn, DD: phòng dorm nhà lớn, LL: Lều sân thượng)";
                 case Constant.NHA_NAO.LALA:
                     return " (L1T: Dorm trên,L1D: Dorm dưới,L2,L3,L4)";
                 default:

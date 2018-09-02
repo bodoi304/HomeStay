@@ -19,7 +19,13 @@
                 <p></p>
                      </a>
             </div>
-     
+      <div class="col-md-3 wel-grid">
+                 <a href="/Tina/RoomTina.aspx?ID=10054">
+                <img src="Image/leu.jpg" class="img-responsive gray" alt="" />
+                <h4>Lều Sân Thượng</h4>
+                <p></p>
+                     </a>
+            </div>
             <div class="clearfix"></div>
         </div>
     </div>

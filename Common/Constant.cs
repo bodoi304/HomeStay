@@ -14,6 +14,7 @@ namespace Common
         public const Int32 TIME_SUCCESS = 3000;
         public const String PASSWORD_ENCRYTION = "YKLMH";
         public const String USER_COOKIE = "caigiday";
+        public const String HISTORY = "caigidayhis";
         public const String NAME_COOKIE = "1";
         public const String FUNCTION_COOKIE = "2";
         public const String VITRI = "3";

@@ -13,15 +13,6 @@ namespace Housing.Admin.DaoTaoAdmin {
     public partial class ManageDocument {
         
         /// <summary>
-        /// lblTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitle;
-        
-        /// <summary>
         /// mtView control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace Housing.Admin.DaoTaoAdmin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.View vwLoaiTaiLieu;
+        
+        /// <summary>
+        /// lblTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
         /// HF control.
@@ -67,12 +67,12 @@ namespace Housing.Admin.DaoTaoAdmin {
         protected global::System.Web.UI.WebControls.View vwThemTaiLieu;
         
         /// <summary>
-        /// vwSuaTaiLieu control.
+        /// ThemSuaTaiLieu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View vwSuaTaiLieu;
+        protected global::Housing.Admin.DaoTaoAdmin.ThemSuaTaiLieu ThemSuaTaiLieu1;
     }
 }

@@ -41,7 +41,6 @@
                     </p>
                       <div class="form-group">
                         <label>upload ảnh trên web</label>
-                          <dx:aspxuploadcontrol runat="server" uploadmode="Auto" width="280px"></dx:aspxuploadcontrol>
                         <dx:ASPxUploadControl ID="UploadControl" runat="server" ClientInstanceName="UploadControl" Width="320"
                             NullText="Select multiple files..." UploadMode="Advanced" ShowUploadButton="True" ShowProgressPanel="True" OnFileUploadComplete="UploadControl_FilesUploadComplete">
                             <ValidationSettings MaxFileSize="419430455" AllowedFileExtensions=".jpg,.jpeg,.gif,.png">

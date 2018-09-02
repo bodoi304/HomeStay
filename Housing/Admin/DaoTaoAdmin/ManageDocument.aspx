@@ -3,6 +3,8 @@
 <%@ Register Assembly="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.ASPxTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxTreeList" TagPrefix="dx" %>
 
+<%@ Register Src="ThemSuaTaiLieu.ascx" TagName="ThemSuaTaiLieu" TagPrefix="uc1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">
         function MasterGrid_DetailRowCollapsing(s, e) {
@@ -16,20 +18,21 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="panel panel-widget forms-panel">
-        <div class="forms">
-            <div class="inline-form widget-shadow">
-                <div class="form-title">
+    <asp:MultiView ID="mtView" runat="server">
+        <asp:View ID="vwLoaiTaiLieu" runat="server">
+            <div class="panel panel-widget forms-panel">
+                <div class="forms">
+                    <div class="inline-form widget-shadow">
+                        <div class="form-title">
 
-                    <h4>
-                        <asp:Label ID="lblTitle" runat="server" Text="QUẢN LÝ ROLES"></asp:Label></h4>
-                </div>
-                <div class="form-body">
-                    <div data-example-id="simple-form-inline">
-                        <div class="form-inline">
-                            <div class="form-grids widget-shadow" data-example-id="basic-forms" style="margin-top: 15px">
-                                <asp:MultiView ID="mtView" runat="server">
-                                    <asp:View ID="vwLoaiTaiLieu" runat="server">
+                            <h4>
+                                <asp:Label ID="lblTitle" runat="server" Text="QUẢN LÝ TÀI LIỆU"></asp:Label></h4>
+                        </div>
+                        <div class="form-body">
+                            <div data-example-id="simple-form-inline">
+                                <div class="form-inline">
+                                    <div class="form-grids widget-shadow" data-example-id="basic-forms" style="margin-top: 15px">
+
                                         <dx:ASPxHiddenField ID="HF" runat="server" ClientInstanceName="hf"></dx:ASPxHiddenField>
                                         <dx:ASPxGridView ID="grd_LoaiTaiLieu" ClientInstanceName="gridTaiLieu" runat="server" KeyFieldName="ID"
                                             Width="100%" AutoGenerateColumns="False" OnRowDeleting="grd_LoaiTaiLieu_RowDeleting"
@@ -113,20 +116,21 @@ OnGridNotifyEndCallback(s, e);
                                                 </EditForm>
                                             </Templates>
                                         </dx:ASPxGridView>
-                                    </asp:View>
-                                    <asp:View ID="vwThemTaiLieu" runat="server">
-                                    </asp:View>
-                                    <asp:View ID="vwSuaTaiLieu" runat="server">
-                                    </asp:View>
-                                </asp:MultiView>
 
 
+
+
+                                    </div>
+
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </asp:View>
+        <asp:View ID="vwThemTaiLieu" runat="server">
+            <uc1:ThemSuaTaiLieu ID="ThemSuaTaiLieu1" runat="server" />
+        </asp:View>
+    </asp:MultiView>
 </asp:Content>

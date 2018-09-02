@@ -57,7 +57,7 @@
 
                         <div class="form-grids widget-shadow" data-example-id="basic-forms" style="margin-top: 15px">
                             <dx:ASPxGridView ID="grd_DSPhong" ClientInstanceName="grid" runat="server" KeyFieldName="ID"
-                                Width="100%" AutoGenerateColumns="False" OnCustomColumnDisplayText="grd_DSPhong_CustomColumnDisplayText" OnRowCommand="grd_DSPhong_RowCommand" OnPageIndexChanged="grd_DSPhong_PageIndexChanged" OnHtmlRowPrepared="grd_DSPhong_HtmlRowPrepared">
+                                Width="100%" AutoGenerateColumns="False" OnCustomColumnDisplayText="grd_DSPhong_CustomColumnDisplayText" OnRowCommand="grd_DSPhong_RowCommand" OnPageIndexChanged="grd_DSPhong_PageIndexChanged" OnHtmlRowPrepared="grd_DSPhong_HtmlRowPrepared" OnBeforeColumnSortingGrouping="grd_DSPhong_BeforeColumnSortingGrouping">
                                 <SettingsBehavior ColumnResizeMode="Control" />
                                 <Columns>
                                     <dx:GridViewDataTextColumn Caption="" ReadOnly="True"

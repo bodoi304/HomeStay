@@ -26,6 +26,7 @@ namespace Housing.Admin.QuanLyAnhVideo.Anh
             {
                 if (!IsPostBack)
                 {
+                    Session["urlAnh11"] = "";
                     hidIDImage.Value = Request.QueryString["ID"];
                 }
                 
@@ -79,6 +80,7 @@ namespace Housing.Admin.QuanLyAnhVideo.Anh
                 e.UploadedFile.SaveAs(resultFilePath);
                 tmp.IMAGE_THUMB_URL = resultFileUrl;
                 tmp.IMAGE_URL = resultFileUrl;
+                Session["urlAnh11"] = resultFileUrl;
             }
 
              ctl.Anh_insertItem(tmp);
@@ -103,22 +105,19 @@ namespace Housing.Admin.QuanLyAnhVideo.Anh
             {
                 Anh_DH ctl = new Anh_DH();
                 Anh_Obj tmp = new Anh_Obj();
-                if (uploadChoalbum.HasFile)
+                if (!String.IsNullOrEmpty(Session["urlAnh11"].ToString()))
                 {
-                    String UploadDirectory = utilsWeb.getPathAlbum(drDiaDiemBoAnhVideo.SelectedValue);
-                    string resultExtension = Path.GetExtension(uploadChoalbum.FileName);
-                    string resultFileName = Path.ChangeExtension(Path.GetRandomFileName(), resultExtension);
-                    string resultFileUrl = UploadDirectory + resultFileName;
-                    string resultFilePath = MapPath(resultFileUrl);
-                    uploadChoalbum.SaveAs(resultFilePath);
-                    tmp.IMAGE_THUMB_URL = resultFileUrl;
-                    tmp.IMAGE_URL = resultFileUrl;
-                    imgAnhWeb.ImageUrl = resultFileUrl;
+
+                    tmp.IMAGE_THUMB_URL = Session["urlAnh11"].ToString();
+                    tmp.IMAGE_URL = Session["urlAnh11"].ToString();
+                    imgAnhWeb.ImageUrl = Session["urlAnh11"].ToString();
                 }
                 else
                 {
                     tmp.IMAGE_URL = imgAnhWeb.ImageUrl;
                 }
+               
+             
                
                 tmp.VITRI_IMAGE = txtVitri.Text;
                 tmp.TITLE_IMAGE = txtTieuDeImage.Text;
@@ -126,6 +125,7 @@ namespace Housing.Admin.QuanLyAnhVideo.Anh
                 tmp.Sap_xep =Convert .ToInt64 ( txtSapXep.Text);
                 ctl.Anh_updateItemSua(Convert.ToInt64(hidID.Value), tmp);
                 lblError.Text = "Cập nhập ảnh thành công.";
+                Session["urlAnh11"] = "";
             }
             catch (Exception ex)
             {

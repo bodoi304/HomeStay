@@ -24,6 +24,7 @@ namespace Housing.Admin.QuanLyPhong
         {
             UsersDH ctlUser = new UsersDH();
             User objUser = ctlUser.validateLogin(txtEmail.Text, Utils.Encrypt(txtPassword.Text));
+
             if (objUser == null)
             {
                 Utils.notifierPage(Page, this.GetType(), Constant.NOTIFY_FAILURE, "Tên đăng nhập hoặc mật khẩu không chính xác.", Constant.TIME_ERROR);
@@ -65,8 +66,18 @@ namespace Housing.Admin.QuanLyPhong
 
 
                 Response.Cookies.Add(cookie);
-                Response.Redirect("~/Admin/Default.aspx");
+                HttpCookie cookieHistory = Request.Cookies[Constant.HISTORY];
+                if (cookieHistory == null)
+                {
+                    Response.Redirect("~/Admin/Default.aspx?ban=?");
+                }
+                else
+                {
+                    cookieHistory.Expires = DateTime.Now.AddDays(-1d);
+                    Response.Cookies.Add(cookieHistory);
+                    Response.Redirect(cookieHistory["path"]);
 
+                }
             }
         }
       

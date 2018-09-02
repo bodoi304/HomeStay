@@ -16,14 +16,10 @@ namespace Housing.HoiPhong
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie cookie = Request.Cookies[Constant .USER_COOKIE ];
-            if (cookie == null)
-            {
-                Response.Redirect("~/Admin/Login.aspx");
-            }
+            utilsWeb.checkLogin(Request, Response);
             if (!IsPostBack)
             {
-                utilsWeb.bindataNhaHoiPhong(rddiemden, Convert.ToInt32(cookie[Constant.NHAROLE ].ToString()));
+                utilsWeb.bindataNhaHoiPhong(rddiemden, Convert.ToInt32(Request .Cookies[Constant.USER_COOKIE][Constant.NHAROLE].ToString()));
                 rddiemden.SelectedIndex = 0;
             }
 
@@ -189,7 +185,7 @@ namespace Housing.HoiPhong
 
                         case Constant.NHA_NAO.TINA:
                             List<Trang_Thai_Phong_Obj> lstTrangThaiRoomTina = new List<Trang_Thai_Phong_Obj>();
-                            StringBuilder MaHieuPhongConTina = new StringBuilder("[CC],[2D1],[2D2],[D1],[D2],[D3],[D4],[D5],[D6]");
+                            StringBuilder MaHieuPhongConTina = new StringBuilder("[CC],[DD],[LL]");
                             utilsWeb.checkPhong(txtKetQua, noidat, MaHieuPhongConTina, lstNgayCheck, lstTrangThaiRoomTina);
 
                             lblThongKe.Text = utilsWeb.getKetQuaPhong(lstTrangThaiRoomTina);

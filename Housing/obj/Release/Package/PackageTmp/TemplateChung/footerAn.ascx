@@ -9,6 +9,6 @@
                              <li><a href="/Amigo">Amigo houzing Vũng Tàu</a></li>
                              <li><a href="/AnAn">AnAn houzing Sapa</a></li>
                               <li><a href="/Safa">SaFa houzing Sapa</a></li>
-                              <li><a href="/Safa">LaLa houzing Sải Gòn</a></li>
+                              <li><a href="/LaLa">LaLa houzing Sải Gòn</a></li>
 						</ul>
 	<!--footer-->

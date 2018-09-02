@@ -35,7 +35,7 @@
         <% foreach (DataAcees.Object.QuanLyAnhVideo_Obj item in lstQlAnh)
            { %>
 
-        <% if (item.IS_IMAGE_VIDEO == DataAcees.Common.Constant.Video)
+        <% if (item.IS_IMAGE_VIDEO == Common.Constant.Video)
            { %>
         <div class='col-lg-2 col-md-3 col-sm-4 col-xs-6 grid-item'>
             <a href='/film/film.aspx?ID=<%= item.ID %>'>

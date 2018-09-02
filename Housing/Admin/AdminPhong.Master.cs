@@ -20,6 +20,25 @@ namespace Housing.Admin.QuanLyPhong
         {
 
             HttpCookie cookie = Request.Cookies[Constant.USER_COOKIE];
+            HttpCookie cookieHistory = Request.Cookies[Constant.HISTORY];
+            if (cookieHistory == null)
+            {
+                cookieHistory = new HttpCookie(Constant.HISTORY);
+                if (!Request.Url.ToString().Contains("Login"))
+                {
+                    cookieHistory["path"] = Request.Url.ToString();
+                    Response.Cookies.Add(cookieHistory);
+                }
+               
+            }
+            else
+            {
+                if (!Request.Url.ToString().Contains("Login"))
+                {
+                    cookieHistory["path"] = Request.Url.ToString();
+                    Response.Cookies.Add(cookieHistory);
+                }
+            }
             if (cookie == null)
             {
                 Response.Redirect("~/Admin/Login.aspx");
@@ -60,8 +79,8 @@ namespace Housing.Admin.QuanLyPhong
                 }
                 if (!coQuyen)
                 {
+                   
                     Response.Redirect("~/Admin/Default.aspx?ban=?");
-
                 }
                 //Int32 cnrole = Convert.ToInt32(cookie["cnrole"].ToString());
                 //if (utilsWeb.checkQuyenHienChucNang(cnrole,Constant.BIT_AND_CHUC_NANG.QUAN_LY_DAT_PHONG))           

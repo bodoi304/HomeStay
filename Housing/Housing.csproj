@@ -311,7 +311,6 @@
     <Content Include="AnAn\RoomAnAn.aspx" />
     <Content Include="AnAn\ThongTinAnAn.aspx" />
     <Content Include="AnAn\Thuc_Don_AnAn.aspx" />
-    <Content Include="DaoTao\blank.html" />
     <Content Include="DaoTao\css\bar.css" />
     <Content Include="DaoTao\css\bootstrap.css" />
     <Content Include="DaoTao\css\fontawesome-all.css" />
@@ -362,6 +361,7 @@
     <Content Include="DaoTao\js\SimpleChart.js" />
     <Content Include="DaoTao\js\simplyCountdown.js" />
     <Content Include="DaoTao\js\skycons.js" />
+    <Content Include="DaoTao\note3.png" />
     <Content Include="DaoTao\webfonts\fa-brands-400.svg" />
     <Content Include="DaoTao\webfonts\fa-regular-400.svg" />
     <Content Include="DaoTao\webfonts\fa-solid-900.svg" />
@@ -954,11 +954,32 @@
     <Content Include="icon\arrow-37-xxl.png" />
     <Content Include="Tina\Image\1.png" />
     <Content Include="Tina\Image\dorm.png" />
+    <Content Include="Tina\Image\leu.jpg" />
     <Content Include="Tina\Image\nhanhotina.JPG" />
     <Content Include="Tina\index.aspx" />
     <Content Include="Tina\RoomTina.aspx" />
     <Content Include="Tina\ThongTinTina.aspx" />
     <Content Include="VideoSapa.mp4" />
+    <Content Include="ViewerJS\compatibility.js" />
+    <Content Include="ViewerJS\example.local.css" />
+    <Content Include="ViewerJS\images\kogmbh.png" />
+    <Content Include="ViewerJS\images\nlnet.png" />
+    <Content Include="ViewerJS\images\texture.png" />
+    <Content Include="ViewerJS\images\toolbarButton-download.png" />
+    <Content Include="ViewerJS\images\toolbarButton-fullscreen.png" />
+    <Content Include="ViewerJS\images\toolbarButton-menuArrows.png" />
+    <Content Include="ViewerJS\images\toolbarButton-pageDown.png" />
+    <Content Include="ViewerJS\images\toolbarButton-pageUp.png" />
+    <Content Include="ViewerJS\images\toolbarButton-presentation.png" />
+    <Content Include="ViewerJS\images\toolbarButton-zoomIn.png" />
+    <Content Include="ViewerJS\images\toolbarButton-zoomOut.png" />
+    <Content Include="ViewerJS\index.html" />
+    <Content Include="ViewerJS\pdf.js" />
+    <Content Include="ViewerJS\pdf.worker.js" />
+    <Content Include="ViewerJS\pdfjsversion.js" />
+    <Content Include="ViewerJS\text_layer_builder.js" />
+    <Content Include="ViewerJS\ui_utils.js" />
+    <Content Include="ViewerJS\webodf.js" />
     <Content Include="YoKo\CommonImage\1.jpg" />
     <Content Include="YoKo\CommonImage\10.jpg" />
     <Content Include="YoKo\CommonImage\11.jpg" />
@@ -1208,6 +1229,7 @@
     <Content Include="DaoTao\webfonts\fa-solid-900.ttf" />
     <Content Include="DaoTao\webfonts\fa-solid-900.woff" />
     <Content Include="DaoTao\webfonts\fa-solid-900.woff2" />
+    <Content Include="Admin\DaoTaoAdmin\Document\Book1.pdf" />
     <None Include="Properties\PublishProfiles\huy.pubxml" />
     <Content Include="Template.Master" />
     <Content Include="SubTemplate.Master" />
@@ -1932,7 +1954,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\DaoTaoAdmin\Document\" />
     <Folder Include="ImageAlbum\DaLat\" />
     <Folder Include="ImageAlbum\HaiPhong\" />
     <Folder Include="ImageAlbum\SaiGon\" />
