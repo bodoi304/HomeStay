@@ -77,8 +77,8 @@ namespace Housing.Common
                     return "[-YOKO-]";
                 case Constant.NHA_NAO.TINA:
                     return "[-TINA-]";
-                case Constant.NHA_NAO.LALA:
-                    return "[-LALA-]";
+                case Constant.NHA_NAO.SAMSAM:
+                    return "[-SAMSAM-]";
                 default:
                     return "[Không biết]";
             }
@@ -103,9 +103,9 @@ namespace Housing.Common
             {
                 dr.Items.Add(new ListItem("TINA - PHUOCHAI", "4"));
             }
-            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.LALA))
+            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.SAMSAM ))
             {
-                dr.Items.Add(new ListItem("LALA - SAIGON", "5"));
+                dr.Items.Add(new ListItem("SAMSAM - VUNGTAU", "5"));
             }
             dr.DataBind();
             return dr;
@@ -131,9 +131,9 @@ namespace Housing.Common
             {
                 dr.Items.Add(new ListItem("TINA", "4"));
             }
-            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.LALA))
+            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.SAMSAM))
             {
-                dr.Items.Add(new ListItem("LALA", "5"));
+                dr.Items.Add(new ListItem("SAMSAM", "5"));
             }
             dr.DataBind();
 
@@ -159,9 +159,9 @@ namespace Housing.Common
             {
                 return Constant.NHA_NAO.TINA;
             }
-            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.LALA))
+            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.SAMSAM))
             {
-                return Constant.NHA_NAO.LALA;
+                return Constant.NHA_NAO.SAMSAM;
             }
             return 0;
 
@@ -179,8 +179,8 @@ namespace Housing.Common
                     return " (Y1,Y2: phòng 2 người, Y3: phòng 3 người)";
                 case Constant.NHA_NAO.TINA:
                     return " (CC: nhà nhỏ nguyên căn, DD: phòng dorm nhà lớn, LL: Lều sân thượng)";
-                case Constant.NHA_NAO.LALA:
-                    return " (L1T: Dorm trên,L1D: Dorm dưới,L2,L3,L4)";
+                case Constant.NHA_NAO.SAMSAM:
+                    return " (S1: Phòng Riêng, S2: Phòng Dorm)";
                 default:
                     return "";
             }

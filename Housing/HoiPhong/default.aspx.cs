@@ -191,12 +191,12 @@ namespace Housing.HoiPhong
                             lblThongKe.Text = utilsWeb.getKetQuaPhong(lstTrangThaiRoomTina);
                             pnThongKe.Visible = true;
                             break;
-                        case Constant.NHA_NAO.LALA:
-                            List<Trang_Thai_Phong_Obj> lstTrangThaiRoomLaLa = new List<Trang_Thai_Phong_Obj>();
-                            StringBuilder MaHieuPhongConLaLa = new StringBuilder("[L1T],[L1D],[L2],[L3],[L4]");
-                            utilsWeb.checkPhong(txtKetQua, noidat, MaHieuPhongConLaLa, lstNgayCheck, lstTrangThaiRoomLaLa);
+                        case Constant.NHA_NAO.SAMSAM:
+                            List<Trang_Thai_Phong_Obj> lstTrangThaiRoomSamSam = new List<Trang_Thai_Phong_Obj>();
+                            StringBuilder MaHieuPhongConSamSam = new StringBuilder("[S1],[S2]");
+                            utilsWeb.checkPhong(txtKetQua, noidat, MaHieuPhongConSamSam, lstNgayCheck, lstTrangThaiRoomSamSam);
 
-                            lblThongKe.Text = utilsWeb.getKetQuaPhong(lstTrangThaiRoomLaLa);
+                            lblThongKe.Text = utilsWeb.getKetQuaPhong(lstTrangThaiRoomSamSam);
                             pnThongKe.Visible = true;
                             break;
                         default:

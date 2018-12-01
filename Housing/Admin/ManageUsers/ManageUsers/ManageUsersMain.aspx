@@ -160,6 +160,7 @@ OnGridNotifyEndCallback(s, e);
                                                                                   <asp:ListItem Value="4">Safa</asp:ListItem>
                                                                                   <asp:ListItem Value="2">Yoko</asp:ListItem>
                                                                                   <asp:ListItem Value="8">Tina</asp:ListItem>
+                                                                                 <asp:ListItem Value="16">SamSam</asp:ListItem>
                                                                             </asp:CheckBoxList>
                                                                         </dx:LayoutItemNestedControlContainer>
                                                                     </LayoutItemNestedControlCollection>

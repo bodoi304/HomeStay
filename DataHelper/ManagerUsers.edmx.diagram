@@ -21,6 +21,10 @@
         <EntityTypeShape EntityType="HouzingModel.Quan_Ly_Ghi_No" Width="1.5" PointX="9.375" PointY="8.75" />
         <EntityTypeShape EntityType="HouzingModel.CategoryDocument" Width="1.5" PointX="10.75" PointY="0.75" />
         <EntityTypeShape EntityType="HouzingModel.Document" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HouzingModel.Quan_Ly_Chi_Phi" Width="1.5" PointX="11.375" PointY="3.75" />
+        <AssociationConnector Association="HouzingModel.FK__Document__ID_Cat__2A363CC5" />
+        <AssociationConnector Association="HouzingModel.FK__Document__ID_Cat__2B2A60FE" />
+        <AssociationConnector Association="HouzingModel.FK__Document__ID_Cat__2C1E8537" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

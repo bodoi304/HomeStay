@@ -96,9 +96,13 @@
     <Compile Include="QuanLyAnhVideo.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Quan_Ly_Chi_Phi.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Quan_Ly_Ghi_No.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Quan_Ly_Chi_Phi_DH.cs" />
     <Compile Include="Quan_Ly_Ghi_No_DH.cs" />
     <Compile Include="Role.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>

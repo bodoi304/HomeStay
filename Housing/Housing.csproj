@@ -296,6 +296,7 @@
     <Content Include="Admin\QuanLyPhong\SuaPhong.aspx" />
     <Content Include="Admin\QuanLyPhong\SuaThemPhongNhanh.aspx" />
     <Content Include="Admin\QuanLyPhong\ThemDatPhongNhanh.aspx" />
+    <Content Include="Admin\QuanLyTaiChinh\QuanLyChiPhi\QuanLyChiPhiMain.aspx" />
     <Content Include="Admin\QuanLyTaiChinh\QuanLyGhiNo\QuanLyGhiNoMain.aspx" />
     <Content Include="Admin\QuanLyVideoAnh.aspx" />
     <Content Include="Amigo\image\anhcanho.jpg" />
@@ -1400,6 +1401,13 @@
     </Compile>
     <Compile Include="Admin\QuanLyPhong\ThemDatPhongNhanh.aspx.designer.cs">
       <DependentUpon>ThemDatPhongNhanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyTaiChinh\QuanLyChiPhi\QuanLyChiPhiMain.aspx.cs">
+      <DependentUpon>QuanLyChiPhiMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyTaiChinh\QuanLyChiPhi\QuanLyChiPhiMain.aspx.designer.cs">
+      <DependentUpon>QuanLyChiPhiMain.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\QuanLyTaiChinh\QuanLyGhiNo\QuanLyGhiNoMain.aspx.cs">
       <DependentUpon>QuanLyGhiNoMain.aspx</DependentUpon>

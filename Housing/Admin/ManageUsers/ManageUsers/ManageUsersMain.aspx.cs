@@ -80,7 +80,7 @@ namespace ReportFinance.ManageUsers.ManageUsers
                 User user = new User();
                 Utils.setView2ObjectLayout<User>(user, pnLayData);
                 user.LockoutEnabled = false;
-                user.Password = user.Password;
+                user.Password =Utils.Encrypt( user.Password);
                 getFirstLastName(user);
                 ctlUser.insertUsers(user);
                 Bindata();

@@ -82,7 +82,7 @@ namespace Common
             public const int HAIPHONG = 2;
             public const int SAPA = 3;
             public const int SAIGON = 4;
-            public const int LALA = 5;
+            public const int SAMSAM = 5;
         }
 
         public class NHA_NAO
@@ -91,7 +91,7 @@ namespace Common
             public const int ANAN = 1;
             public const int SAFA = 2;
             public const int TINA = 4;
-            public const int LALA = 5;
+            public const int SAMSAM = 5;
         }
 
         public class BIT_AND_NHA_NAO
@@ -100,7 +100,7 @@ namespace Common
             public const int ANAN = 1;
             public const int SAFA = 4;
             public const int TINA = 8;
-            public const int LALA = 16;
+            public const int SAMSAM = 16;
         }
 
         public class BIT_AND_CHUC_NANG

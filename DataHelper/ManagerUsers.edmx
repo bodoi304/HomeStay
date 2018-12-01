@@ -127,6 +127,18 @@
           <Property Name="MenuItem_ID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Role_ID" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="Quan_Ly_Chi_Phi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="So_Tien_Chi_Phi" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Ghi_Chu" Type="nvarchar(max)" />
+          <Property Name="Nha_Nao" Type="int" />
+          <Property Name="Ngay_Nhap_Chi_Phi" Type="datetime" />
+          <Property Name="Nguoi_Nhap" Type="nvarchar" MaxLength="15" />
+          <Property Name="NGAY_TAO" Type="datetime" />
+        </EntityType>
         <EntityType Name="Quan_Ly_Ghi_No">
           <Key>
             <PropertyRef Name="ID" />
@@ -193,6 +205,44 @@
           <Property Name="MAIN_HOVER_TEXT" Type="nvarchar" MaxLength="300" />
           <Property Name="NGAY_TAO" Type="datetime" />
         </EntityType>
+        <Association Name="FK__Document__ID_Cat__2A363CC5">
+          <End Role="CategoryDocument" Type="Self.CategoryDocument" Multiplicity="0..1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="ID_Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__ID_Cat__2B2A60FE">
+          <End Role="CategoryDocument" Type="Self.CategoryDocument" Multiplicity="0..1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="ID_Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__ID_Cat__2C1E8537">
+          <End Role="CategoryDocument" Type="Self.CategoryDocument" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="ID_Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_dbo_ApplicationRoleGroups_dbo_Groups_GroupId">
           <End Role="Groups" Type="Self.Groups" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -335,11 +385,24 @@
           <EntitySet Name="Lich_Dat_Phong" EntityType="Self.Lich_Dat_Phong" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="MenuItemFunctions" EntityType="Self.MenuItemFunctions" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="MenuItemRoles" EntityType="Self.MenuItemRoles" Schema="bodoi304" store:Type="Tables" />
+          <EntitySet Name="Quan_Ly_Chi_Phi" EntityType="Self.Quan_Ly_Chi_Phi" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="Quan_Ly_Ghi_No" EntityType="Self.Quan_Ly_Ghi_No" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="QuanLyAnhVideo" EntityType="Self.QuanLyAnhVideo" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="VIDEO" EntityType="Self.VIDEO" Schema="bodoi304" store:Type="Tables" />
+          <AssociationSet Name="FK__Document__ID_Cat__2A363CC5" Association="Self.FK__Document__ID_Cat__2A363CC5">
+            <End Role="CategoryDocument" EntitySet="CategoryDocument" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__ID_Cat__2B2A60FE" Association="Self.FK__Document__ID_Cat__2B2A60FE">
+            <End Role="CategoryDocument" EntitySet="CategoryDocument" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__ID_Cat__2C1E8537" Association="Self.FK__Document__ID_Cat__2C1E8537">
+            <End Role="CategoryDocument" EntitySet="CategoryDocument" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
           <AssociationSet Name="FK_dbo_ApplicationRoleGroups_dbo_Groups_GroupId" Association="Self.FK_dbo_ApplicationRoleGroups_dbo_Groups_GroupId">
             <End Role="Groups" EntitySet="Groups" />
             <End Role="ApplicationRoleGroups" EntitySet="ApplicationRoleGroups" />
@@ -575,6 +638,19 @@
           <EntitySet Name="Quan_Ly_Ghi_No" EntityType="HouzingModel.Quan_Ly_Ghi_No" />
           <EntitySet Name="CategoryDocuments" EntityType="HouzingModel.CategoryDocument" />
           <EntitySet Name="Documents" EntityType="HouzingModel.Document" />
+          <EntitySet Name="Quan_Ly_Chi_Phi" EntityType="HouzingModel.Quan_Ly_Chi_Phi" />
+          <AssociationSet Name="FK__Document__ID_Cat__2A363CC5" Association="HouzingModel.FK__Document__ID_Cat__2A363CC5">
+            <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
+            <End Role="Document" EntitySet="Documents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__ID_Cat__2B2A60FE" Association="HouzingModel.FK__Document__ID_Cat__2B2A60FE">
+            <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
+            <End Role="Document" EntitySet="Documents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__ID_Cat__2C1E8537" Association="HouzingModel.FK__Document__ID_Cat__2C1E8537">
+            <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
+            <End Role="Document" EntitySet="Documents" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="Users_SelectUsersNoRole_Result">
           <Property Type="Int64" Name="Id" Nullable="false" />
@@ -599,6 +675,9 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NameCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Documents" Relationship="HouzingModel.FK__Document__ID_Cat__2A363CC5" FromRole="CategoryDocument" ToRole="Document" />
+          <NavigationProperty Name="Documents1" Relationship="HouzingModel.FK__Document__ID_Cat__2B2A60FE" FromRole="CategoryDocument" ToRole="Document" />
+          <NavigationProperty Name="Documents2" Relationship="HouzingModel.FK__Document__ID_Cat__2C1E8537" FromRole="CategoryDocument" ToRole="Document" />
         </EntityType>
         <EntityType Name="Document">
           <Key>
@@ -609,7 +688,60 @@
           <Property Name="NameDocument" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="PathDocument" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CategoryDocument" Relationship="HouzingModel.FK__Document__ID_Cat__2A363CC5" FromRole="Document" ToRole="CategoryDocument" />
+          <NavigationProperty Name="CategoryDocument1" Relationship="HouzingModel.FK__Document__ID_Cat__2B2A60FE" FromRole="Document" ToRole="CategoryDocument" />
+          <NavigationProperty Name="CategoryDocument2" Relationship="HouzingModel.FK__Document__ID_Cat__2C1E8537" FromRole="Document" ToRole="CategoryDocument" />
         </EntityType>
+        <EntityType Name="Quan_Ly_Chi_Phi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="So_Tien_Chi_Phi" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Ghi_Chu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nha_Nao" Type="Int32" />
+          <Property Name="Ngay_Nhap_Chi_Phi" Type="DateTime" Precision="3" />
+          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+          <Property Name="Nguoi_Nhap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__Document__ID_Cat__2A363CC5">
+          <End Type="HouzingModel.CategoryDocument" Role="CategoryDocument" Multiplicity="0..1" />
+          <End Type="HouzingModel.Document" Role="Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="ID_Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__ID_Cat__2B2A60FE">
+          <End Type="HouzingModel.CategoryDocument" Role="CategoryDocument" Multiplicity="0..1" />
+          <End Type="HouzingModel.Document" Role="Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="ID_Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__ID_Cat__2C1E8537">
+          <End Type="HouzingModel.CategoryDocument" Role="CategoryDocument" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="HouzingModel.Document" Role="Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="ID_Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -825,6 +957,19 @@
                 <ScalarProperty Name="PathDocument" ColumnName="PathDocument" />
                 <ScalarProperty Name="NameDocument" ColumnName="NameDocument" />
                 <ScalarProperty Name="ID_Category" ColumnName="ID_Category" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quan_Ly_Chi_Phi">
+            <EntityTypeMapping TypeName="HouzingModel.Quan_Ly_Chi_Phi">
+              <MappingFragment StoreEntitySet="Quan_Ly_Chi_Phi">
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="Ngay_Nhap_Chi_Phi" ColumnName="Ngay_Nhap_Chi_Phi" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Ghi_Chu" ColumnName="Ghi_Chu" />
+                <ScalarProperty Name="So_Tien_Chi_Phi" ColumnName="So_Tien_Chi_Phi" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
