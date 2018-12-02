@@ -11,9 +11,10 @@ namespace DataHelper
 {
     using System;
     using System.Collections.Generic;
-    
+    [Serializable]
     public partial class Role
     {
+       
         public Role()
         {
             this.Groups = new HashSet<Group>();

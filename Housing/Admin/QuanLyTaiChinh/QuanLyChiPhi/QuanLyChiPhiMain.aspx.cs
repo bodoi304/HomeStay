@@ -24,6 +24,7 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
                 BindataThemNhanh();
             }
         }
+        
         public void BindataThemNhanh()
         {
 
@@ -55,12 +56,14 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
                 e.Cancel = true;
                 Int64 idChiPhi = Convert.ToInt64(e.Keys[grd_ChiPhi.KeyFieldName]);
                 ASPxFormLayout pnLayData = grd_ChiPhi.FindEditFormTemplateControl("LayOutThemSua") as ASPxFormLayout;
+                ASPxDateEdit txtNgayNhapChiPhi = pnLayData.FindControl("txtNgayNhapChiPhi") as ASPxDateEdit;
                 ASPxSpinEdit txtSotienNo = pnLayData.FindControl("txtSotienNo") as ASPxSpinEdit;
                 ASPxMemo txtGhiChu = pnLayData.FindControl("txtGhiChu") as ASPxMemo;
                 Quan_Ly_Chi_Phi objChiPhi = new Quan_Ly_Chi_Phi();
                 objChiPhi.Ghi_Chu = txtGhiChu.Text;
                 objChiPhi.So_Tien_Chi_Phi = (Decimal)txtSotienNo.Value;
                 objChiPhi.Nguoi_Nhap = Request.Cookies[Constant.USER_COOKIE][Constant.NAME_COOKIE];
+                objChiPhi.Ngay_Nhap_Chi_Phi = Utils.convertDate(txtNgayNhapChiPhi.Text);
                 objChiPhi.NGAY_TAO = DateTime.Now;
                 ctlQuanLyChiPhi.updateChiPhi(idChiPhi, objChiPhi);
                 BindataThemNhanh();
@@ -82,12 +85,14 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
                 e.Cancel = true;
                 ASPxFormLayout pnLayData = grd_ChiPhi.FindEditFormTemplateControl("LayOutThemSua") as ASPxFormLayout;
                 ASPxSpinEdit txtSotienNo = pnLayData.FindControl("txtSotienNo") as ASPxSpinEdit;
+                ASPxDateEdit txtNgayNhapChiPhi = pnLayData.FindControl("txtNgayNhapChiPhi") as ASPxDateEdit;
                 ASPxMemo txtGhiChu = pnLayData.FindControl("txtGhiChu") as ASPxMemo;
                 Quan_Ly_Chi_Phi objChiPhi = new Quan_Ly_Chi_Phi();
                 objChiPhi.Ghi_Chu = txtGhiChu.Text;
                 objChiPhi.So_Tien_Chi_Phi = (Decimal)txtSotienNo.Value;
                 objChiPhi.Nguoi_Nhap = Request.Cookies[Constant.USER_COOKIE][Constant.NAME_COOKIE];
                 objChiPhi.Nha_Nao = Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI]);
+                objChiPhi.Ngay_Nhap_Chi_Phi = Utils.convertDate(txtNgayNhapChiPhi.Text);
                 objChiPhi.NGAY_TAO = DateTime.Now;
                 ctlQuanLyChiPhi.insertChiPhi(objChiPhi);
                 BindataThemNhanh();
@@ -126,7 +131,7 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
             {
                 switch (e.Column.FieldName.ToString())
                 {
-                    case "NGAY_TAO":
+                    case "Ngay_Nhap_Chi_Phi":
                         DateTime strDate1 = Convert.ToDateTime(e.Value.ToString());
                         if (strDate1 == DateTime.MinValue)
                         {
@@ -137,7 +142,7 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
                             e.DisplayText = Convert.ToDateTime(e.Value.ToString()).ToString(Constant.DateTimeFormatCustom.DISPLAY_DATE_FORMAT);
                         }
                         break;
-                    case "So_Tien_No":
+                    case "So_Tien_Chi_Phi":
                         e.DisplayText = Convert.ToDecimal(e.Value.ToString()).ToString(Constant.Numbers.DISPLAY_NUMBER);
                         break;
 
@@ -153,6 +158,23 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
             }
 
 
+        }
+
+        protected void grd_ChiPhi_RowValidating(object sender, DevExpress.Web.Data.ASPxDataValidationEventArgs e)
+        {
+            Utils.notifierListClearGrid(grd_ChiPhi, Constant.NOTIFY_CLEAR);
+            List<Error_Obj> lstError = new List<Error_Obj>();
+            ASPxFormLayout pnLayData = grd_ChiPhi.FindEditFormTemplateControl("LayOutThemSua") as ASPxFormLayout;
+            ASPxDateEdit txtNgayNhapChiPhi = pnLayData.FindControl("txtNgayNhapChiPhi") as ASPxDateEdit;
+            if (String.IsNullOrEmpty(txtNgayNhapChiPhi.Text))
+            {
+                lstError.Add(new Error_Obj { error = "Ngày nhập chi phí không được để trống." });
+            }
+            if (lstError.Count > 0)
+            {
+                e.Errors[grd_ChiPhi.Columns[0]] = "error";
+                Utils.notifierListErrorGrid(grd_ChiPhi, Constant.NOTIFY_FAILURE, lstError);
+            }
         }
     }
 }

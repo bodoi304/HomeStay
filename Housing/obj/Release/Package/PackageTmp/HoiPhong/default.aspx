@@ -85,7 +85,7 @@
         </div>
     </div>
     <div class="agileits-w3layouts-copyright text-center">
-        <h2>© 2017 Kiểm tra phòng trống. Bản quyền <a href="//nguyenphituan.com/">Houzing</a>| Thiết kế bởi Hoang Quang Huy</h2>
+        <h2 >© 2015 Phần mềm quản lý khách hàng & phân tích đầu tư thị trường du lịch Việt Nam. Bản quyền hệ thống HOUZING | Thiết kế & phát triển bởi Hoang Quang Huy và Nguyễn Phi Tuấn<br />HOUZING là 1 chuỗi Apartment, Homestay, Officetel Uy Tín tại Việt Nam đã xuất hiện tại Tam Đảo 2, SAPA, VŨNG TÀU, PHƯỚC HẢI, HẢI PHÒNG, ĐÀ LẠT,HỒ CHÍ MINH</h2>
     </div>
     <!--start-date-piker-->
     <link rel="stylesheet" href="css/jquery-ui.css" />

@@ -11,7 +11,7 @@ namespace DataHelper
 {
     using System;
     using System.Collections.Generic;
-    
+    [Serializable]
     public partial class Lich_Dat_Phong
     {
         public string Ten_Khach_Hang { get; set; }

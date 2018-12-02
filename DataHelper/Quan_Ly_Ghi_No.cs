@@ -11,7 +11,7 @@ namespace DataHelper
 {
     using System;
     using System.Collections.Generic;
-    
+    [Serializable]
     public partial class Quan_Ly_Ghi_No
     {
         public long ID { get; set; }

@@ -34,8 +34,12 @@ D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Microsoft.Practices.
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Microsoft.Practices.Unity.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Microsoft.Practices.Unity.Interception.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Newtonsoft.Json.dll
-D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.csprojResolveAssemblyReference.cache
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.pdb
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Common.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\Common.pdb
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DevExpress.Web.v17.1.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DevExpress.Data.v17.1.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.csprojAssemblyReference.cache
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.csproj.CoreCompileInputs.cache
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.csproj.CopyComplete

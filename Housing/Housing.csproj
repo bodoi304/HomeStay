@@ -43,29 +43,29 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="DevExpress.Data.v17.1">
+      <HintPath>Lib\DevExpress.Data.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="DevExpress.Printing.v17.1.Core">
+      <HintPath>Lib\DevExpress.Printing.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="DevExpress.RichEdit.v17.1.Core">
+      <HintPath>Lib\DevExpress.RichEdit.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxThemes.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="DevExpress.Web.ASPxThemes.v17.1">
+      <HintPath>Lib\DevExpress.Web.ASPxThemes.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v17.1">
+      <HintPath>Lib\DevExpress.Web.ASPxTreeList.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Web.Resources.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="DevExpress.Web.Resources.v17.1">
+      <HintPath>Lib\DevExpress.Web.Resources.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="DevExpress.Web.v17.1">
+      <HintPath>Lib\DevExpress.Web.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="DevExpress.XtraTreeList.v17.1">
+      <HintPath>Lib\DevExpress.XtraTreeList.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -298,6 +298,7 @@
     <Content Include="Admin\QuanLyPhong\ThemDatPhongNhanh.aspx" />
     <Content Include="Admin\QuanLyTaiChinh\QuanLyChiPhi\QuanLyChiPhiMain.aspx" />
     <Content Include="Admin\QuanLyTaiChinh\QuanLyGhiNo\QuanLyGhiNoMain.aspx" />
+    <Content Include="Admin\QuanLyTaiChinh\QuanLyThongKeLoiNhuan\QuanLyThongKeLoiNhuanMain.aspx" />
     <Content Include="Admin\QuanLyVideoAnh.aspx" />
     <Content Include="Amigo\image\anhcanho.jpg" />
     <Content Include="Amigo\image\banner.jpg" />
@@ -1416,6 +1417,13 @@
     <Compile Include="Admin\QuanLyTaiChinh\QuanLyGhiNo\QuanLyGhiNoMain.aspx.designer.cs">
       <DependentUpon>QuanLyGhiNoMain.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\QuanLyTaiChinh\QuanLyThongKeLoiNhuan\QuanLyThongKeLoiNhuanMain.aspx.cs">
+      <DependentUpon>QuanLyThongKeLoiNhuanMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyTaiChinh\QuanLyThongKeLoiNhuan\QuanLyThongKeLoiNhuanMain.aspx.designer.cs">
+      <DependentUpon>QuanLyThongKeLoiNhuanMain.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\QuanLyVideoAnh.aspx.cs">
       <DependentUpon>QuanLyVideoAnh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1970,10 +1978,10 @@
     <Folder Include="imageofthumb\Sapa\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

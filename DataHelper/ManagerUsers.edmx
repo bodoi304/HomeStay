@@ -370,6 +370,11 @@
           <Parameter Name="MenuItem_ID" Type="varchar" Mode="In" />
           <Parameter Name="Role_ID" Type="int" Mode="In" />
         </Function>
+        <Function Name="qlchiphi_select_item_ngaytao_exact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bodoi304">
+          <Parameter Name="ngaytao_tu" Type="date" Mode="In" />
+          <Parameter Name="ngaytao_den" Type="date" Mode="In" />
+          <Parameter Name="NhaNao" Type="int" Mode="In" />
+        </Function>
         <Function Name="Users_SelectUsersNoRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bodoi304">
           <Parameter Name="IDRole" Type="int" Mode="In" />
         </Function>
@@ -651,6 +656,11 @@
             <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
             <End Role="Document" EntitySet="Documents" />
           </AssociationSet>
+          <FunctionImport Name="qlchiphi_select_item_ngaytao_exact" ReturnType="Collection(HouzingModel.qlchiphi_select_item_ngaytao_exact_Result)">
+            <Parameter Name="ngaytao_tu" Mode="In" Type="DateTime" />
+            <Parameter Name="ngaytao_den" Mode="In" Type="DateTime" />
+            <Parameter Name="NhaNao" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="Users_SelectUsersNoRole_Result">
           <Property Type="Int64" Name="Id" Nullable="false" />
@@ -742,6 +752,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="qlchiphi_select_item_ngaytao_exact_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Decimal" Name="So_Tien_Chi_Phi" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="Ghi_Chu" Nullable="true" />
+          <Property Type="Int32" Name="Nha_Nao" Nullable="true" />
+          <Property Type="DateTime" Name="Ngay_Nhap_Chi_Phi" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -974,6 +993,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="qlchiphi_select_item_ngaytao_exact" FunctionName="HouzingModel.Store.qlchiphi_select_item_ngaytao_exact">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.qlchiphi_select_item_ngaytao_exact_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="So_Tien_Chi_Phi" ColumnName="So_Tien_Chi_Phi" />
+                <ScalarProperty Name="Ghi_Chu" ColumnName="Ghi_Chu" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Ngay_Nhap_Chi_Phi" ColumnName="Ngay_Nhap_Chi_Phi" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

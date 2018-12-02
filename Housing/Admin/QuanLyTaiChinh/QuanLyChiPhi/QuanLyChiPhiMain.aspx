@@ -7,20 +7,19 @@
         <div class="forms">
             <div class="inline-form widget-shadow">
                 <div class="form-title">
-
                     <h4>
-                        <asp:Label ID="lblTitle" runat="server" Text="QUẢN LÝ GHI NỢ"></asp:Label></h4>
+                        <asp:Label ID="lblTitle" runat="server" Text="QUẢN LÝ CHI PHÍ"></asp:Label></h4>
                 </div>
                 <div class="form-body">
                     <div data-example-id="simple-form-inline">
                         <div class="form-inline">
                             <div class="form-grids widget-shadow" data-example-id="basic-forms" style="margin-top: 15px">
-                                <dx:aspxgridview id="grd_ChiPhi" clientinstancename="grd_ChiPhi" runat="server" keyfieldname="ID"
+                                <dx:aspxgridview id="grd_ChiPhi" clientinstancename="grd_ChiPhi" runat="server" keyfieldname="ID" Visible="false"
                                     width="100%" autogeneratecolumns="False" onrowdeleting="grd_ChiPhi_RowDeleting"
                                     onrowupdating="grd_ChiPhi_RowUpdating" onrowinserting="grd_ChiPhi_RowInserting"
                                     onpageindexchanged="grd_ChiPhi_PageIndexChanged"
                                     onprocesscolumnautofilter="grd_ChiPhi_ProcessColumnAutoFilter"
-                                    onbeforecolumnsortinggrouping="grd_ChiPhi_BeforeColumnSortingGrouping" OnCustomColumnDisplayText="grd_ChiPhi_CustomColumnDisplayText">
+                                    onbeforecolumnsortinggrouping="grd_ChiPhi_BeforeColumnSortingGrouping" OnCustomColumnDisplayText="grd_ChiPhi_CustomColumnDisplayText" OnRowValidating="grd_ChiPhi_RowValidating">
                                     <ClientSideEvents  EndCallback="function(s, e) {
 OnGridNotifyEndCallback(s, e);
 }" />
@@ -31,14 +30,14 @@ OnGridNotifyEndCallback(s, e);
                                             Width="35px">
                                             <Settings AllowAutoFilter="False" />
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="So_Tien_Chi_Phi" VisibleIndex="1" Caption="Số tiền nợ">
+                                        <dx:GridViewDataTextColumn FieldName="So_Tien_Chi_Phi" VisibleIndex="1" Caption="Chi phí">
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Ghi_Chu" VisibleIndex="1" Caption="Ghi chú">
-                                        </dx:GridViewDataTextColumn>
-                                                                            <dx:GridViewDataTextColumn FieldName="NGAY_TAO" VisibleIndex="1" Caption="Ngày tạo"
+                                       <dx:GridViewDataTextColumn FieldName="Ngay_Nhap_Chi_Phi" VisibleIndex="1" Caption="Ngày tạo"
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
+                                        <dx:GridViewDataTextColumn FieldName="Ghi_Chu" VisibleIndex="1" Caption="Ghi chú">
+                                        </dx:GridViewDataTextColumn>
                                     </Columns>
                                     <Templates>
 
@@ -46,17 +45,29 @@ OnGridNotifyEndCallback(s, e);
                                                        <dx:ASPxFormLayout runat="server" ID="LayOutThemSua">
                                                     <SettingsAdaptivity AdaptivityMode="SingleColumnWindowLimit" SwitchToSingleColumnAtWindowInnerWidth="576" />
                                                     <Items>
-                                                        <dx:LayoutGroup Caption="GHI NỢ" ColCount="1" GroupBoxDecoration="HeadingLine" Paddings-Padding="0" Paddings-PaddingTop="10">
+                                                        <dx:LayoutGroup Caption="CHI PHÍ" ColCount="1" GroupBoxDecoration="HeadingLine" Paddings-Padding="0" Paddings-PaddingTop="10">
                                                             <GroupBoxStyle>
                                                                 <Caption Font-Bold="true" Font-Size="16" CssClass="groupCaption" />
                                                             </GroupBoxStyle>
                                                             <Items>
-                                                                <dx:LayoutItem Caption="Số tiền nợ:">
+                                                                <dx:LayoutItem Caption="Số tiền chi phí:">
                                                                     <LayoutItemNestedControlCollection>
                                                                         <dx:LayoutItemNestedControlContainer>
-                                                        <%--                    <dx:ASPxTextBox ID="txtSotienNo" runat="server" Width="170px" Text='<%# Bind("So_Tien_No")%>'></dx:ASPxTextBox>--%>
                                                                             <dx:ASPxSpinEdit ID="txtSotienNo" runat="server" Text='<%# Bind("So_Tien_Chi_Phi")%>' DisplayFormatString="###,##0.######">
                                                                             </dx:ASPxSpinEdit>
+                                                                        </dx:LayoutItemNestedControlContainer>
+                                                                    </LayoutItemNestedControlCollection>
+                                                                </dx:LayoutItem>
+                                                                 <dx:LayoutItem Caption="Ngày nhập chi phí:">
+                                                                    <LayoutItemNestedControlCollection>
+                                                                        <dx:LayoutItemNestedControlContainer>
+                                                                            <dx:ASPxDateEdit ID="txtNgayNhapChiPhi" Width="250" Value='<%# Bind("Ngay_Nhap_Chi_Phi") %>' runat="server" EditFormatString="dd/MM/yyyy" UseMaskBehavior="True">
+                                                                                <calendarproperties clearbuttontext="Xóa" todaybuttontext="Ngày hôm nay">
+                                                                                   
+                                                                                </calendarproperties>
+                                                                                <TimeSectionProperties CancelButtonText="Thoát" OkButtonText="Đồng ý"></TimeSectionProperties>
+                                                                            </dx:ASPxDateEdit>
+                           
                                                                         </dx:LayoutItemNestedControlContainer>
                                                                     </LayoutItemNestedControlCollection>
                                                                 </dx:LayoutItem>

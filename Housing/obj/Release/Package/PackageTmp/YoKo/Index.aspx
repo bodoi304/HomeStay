@@ -111,7 +111,7 @@
         <div class="portfolio" id="port">
             <div class="port-head">
                 <div class="tittle" style="color: #33BBFB;font-size:30px">
-                 <img src="../icon/icon-yoko.png"  width="100" height="100"/>YOKO Houzing</div>
+                 <img src="../icon/icon-yoko.png"  width="100" height="100"/>YOKO House</div>
             </div>
             <ul class="nav nav-tabs simplefilter" role="tablist">
                 <li role="presentation" ><a href="YoKoY1/PhongY1.aspx" >PHÒNG Y1</a></li>

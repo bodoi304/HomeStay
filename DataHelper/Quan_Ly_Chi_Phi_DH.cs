@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataHelper
 {
-   public class Quan_Ly_Chi_Phi_DH
+    public class Quan_Ly_Chi_Phi_DH
     {
         public List<Quan_Ly_Chi_Phi> getAllwithHome(int nhaNao)
         {
@@ -14,14 +14,26 @@ namespace DataHelper
             using (var context = new HouzingEntities())
             {
 
-                ghino = (from s in context.Quan_Ly_Chi_Phi where s.Nha_Nao  == nhaNao orderby s.Ngay_Nhap_Chi_Phi descending select s).ToList();
+                ghino = (from s in context.Quan_Ly_Chi_Phi where s.Nha_Nao == nhaNao orderby s.Ngay_Nhap_Chi_Phi descending select s).ToList();
 
 
             }
             return ghino;
         }
 
-     
+        public List<qlchiphi_select_item_ngaytao_exact_Result> qlchiphi_select_item_ngaytao_exact(DateTime NgayTaoTu, DateTime NgayTaoDen, int nhanao)
+        {
+            List<qlchiphi_select_item_ngaytao_exact_Result> lst;
+            using (var context = new HouzingEntities())
+            {
+
+                lst = context.qlchiphi_select_item_ngaytao_exact(NgayTaoTu, NgayTaoDen, nhanao).ToList<qlchiphi_select_item_ngaytao_exact_Result>();
+
+
+            }
+            return lst;
+        }
+
         public void deleteChiPhi(Int64 ID)
         {
 
@@ -44,7 +56,7 @@ namespace DataHelper
             {
 
                 Quan_Ly_Chi_Phi ghinoDb = (from s in context.Quan_Ly_Chi_Phi where s.ID == ID select s).Single();
-                ghinoDb.So_Tien_Chi_Phi  = ghiNo.So_Tien_Chi_Phi;
+                ghinoDb.So_Tien_Chi_Phi = ghiNo.So_Tien_Chi_Phi;
                 ghinoDb.Ghi_Chu = ghiNo.Ghi_Chu;
                 ghinoDb.Nguoi_Nhap = ghiNo.Nguoi_Nhap;
                 ghinoDb.Ngay_Nhap_Chi_Phi = ghiNo.Ngay_Nhap_Chi_Phi;

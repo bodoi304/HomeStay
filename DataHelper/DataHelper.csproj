@@ -93,6 +93,9 @@
     <Compile Include="MenuItemFunctionDH.cs" />
     <Compile Include="Object\ApplicationUserRolesObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qlchiphi_select_item_ngaytao_exact_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyAnhVideo.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>

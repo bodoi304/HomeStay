@@ -97,5 +97,22 @@ namespace DataHelper
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Users_SelectUsersNoRole_Result>("Users_SelectUsersNoRole", iDRoleParameter);
         }
+    
+        public virtual ObjectResult<qlchiphi_select_item_ngaytao_exact_Result> qlchiphi_select_item_ngaytao_exact(Nullable<System.DateTime> ngaytao_tu, Nullable<System.DateTime> ngaytao_den, Nullable<int> nhaNao)
+        {
+            var ngaytao_tuParameter = ngaytao_tu.HasValue ?
+                new ObjectParameter("ngaytao_tu", ngaytao_tu) :
+                new ObjectParameter("ngaytao_tu", typeof(System.DateTime));
+    
+            var ngaytao_denParameter = ngaytao_den.HasValue ?
+                new ObjectParameter("ngaytao_den", ngaytao_den) :
+                new ObjectParameter("ngaytao_den", typeof(System.DateTime));
+    
+            var nhaNaoParameter = nhaNao.HasValue ?
+                new ObjectParameter("NhaNao", nhaNao) :
+                new ObjectParameter("NhaNao", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<qlchiphi_select_item_ngaytao_exact_Result>("qlchiphi_select_item_ngaytao_exact", ngaytao_tuParameter, ngaytao_denParameter, nhaNaoParameter);
+        }
     }
 }
