@@ -46,7 +46,7 @@ OnGridNotifyEndCallback(s, e);
                                                        <dx:ASPxFormLayout runat="server" ID="LayOutThemSua">
                                                     <SettingsAdaptivity AdaptivityMode="SingleColumnWindowLimit" SwitchToSingleColumnAtWindowInnerWidth="576" />
                                                     <Items>
-                                                        <dx:LayoutGroup Caption="ROLE" ColCount="1" GroupBoxDecoration="HeadingLine" Paddings-Padding="0" Paddings-PaddingTop="10">
+                                                        <dx:LayoutGroup Caption="GHI NỢ" ColCount="1" GroupBoxDecoration="HeadingLine" Paddings-Padding="0" Paddings-PaddingTop="10">
                                                             <GroupBoxStyle>
                                                                 <Caption Font-Bold="true" Font-Size="16" CssClass="groupCaption" />
                                                             </GroupBoxStyle>

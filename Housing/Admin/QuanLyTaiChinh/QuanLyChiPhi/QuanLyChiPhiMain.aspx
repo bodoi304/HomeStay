@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPhong.Master" AutoEventWireup="true" CodeBehind="QuanLyChiPhiMain.aspx.cs" Inherits="Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi.QuanLyChiPhiMain" %>
-<%@ Register Assembly="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %><%@ Register Assembly="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPhong.Master" AutoEventWireup="true" CodeBehind="QuanLyChiPhiMain.aspx.cs" Inherits="Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi.QuanLyChiPhiMain1" %>
+<%@ Register Assembly="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -9,7 +9,7 @@
                 <div class="form-title">
 
                     <h4>
-                        <asp:Label ID="lblTitle" runat="server" Text="QUẢN LÝ CHI PHÍ"></asp:Label></h4>
+                        <asp:Label ID="lblTitle" runat="server" Text="QUẢN LÝ GHI NỢ"></asp:Label></h4>
                 </div>
                 <div class="form-body">
                     <div data-example-id="simple-form-inline">
@@ -31,7 +31,7 @@ OnGridNotifyEndCallback(s, e);
                                             Width="35px">
                                             <Settings AllowAutoFilter="False" />
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="So_Tien_No" VisibleIndex="1" Caption="Số tiền nợ">
+                                        <dx:GridViewDataTextColumn FieldName="So_Tien_Chi_Phi" VisibleIndex="1" Caption="Số tiền nợ">
                                         </dx:GridViewDataTextColumn>
                                         <dx:GridViewDataTextColumn FieldName="Ghi_Chu" VisibleIndex="1" Caption="Ghi chú">
                                         </dx:GridViewDataTextColumn>
@@ -46,16 +46,16 @@ OnGridNotifyEndCallback(s, e);
                                                        <dx:ASPxFormLayout runat="server" ID="LayOutThemSua">
                                                     <SettingsAdaptivity AdaptivityMode="SingleColumnWindowLimit" SwitchToSingleColumnAtWindowInnerWidth="576" />
                                                     <Items>
-                                                        <dx:LayoutGroup Caption="ROLE" ColCount="1" GroupBoxDecoration="HeadingLine" Paddings-Padding="0" Paddings-PaddingTop="10">
+                                                        <dx:LayoutGroup Caption="GHI NỢ" ColCount="1" GroupBoxDecoration="HeadingLine" Paddings-Padding="0" Paddings-PaddingTop="10">
                                                             <GroupBoxStyle>
                                                                 <Caption Font-Bold="true" Font-Size="16" CssClass="groupCaption" />
                                                             </GroupBoxStyle>
                                                             <Items>
-                                                                <dx:LayoutItem Caption="Số tiền chi phí:">
+                                                                <dx:LayoutItem Caption="Số tiền nợ:">
                                                                     <LayoutItemNestedControlCollection>
                                                                         <dx:LayoutItemNestedControlContainer>
                                                         <%--                    <dx:ASPxTextBox ID="txtSotienNo" runat="server" Width="170px" Text='<%# Bind("So_Tien_No")%>'></dx:ASPxTextBox>--%>
-                                                                            <dx:ASPxSpinEdit ID="txtSotienNo" runat="server" Text='<%# Bind("So_Tien_No")%>' DisplayFormatString="###,##0.######">
+                                                                            <dx:ASPxSpinEdit ID="txtSotienNo" runat="server" Text='<%# Bind("So_Tien_Chi_Phi")%>' DisplayFormatString="###,##0.######">
                                                                             </dx:ASPxSpinEdit>
                                                                         </dx:LayoutItemNestedControlContainer>
                                                                     </LayoutItemNestedControlCollection>

@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
 {
-    public partial class QuanLyChiPhiMain : System.Web.UI.Page
+    public partial class QuanLyChiPhiMain1 : System.Web.UI.Page
     {
         Quan_Ly_Chi_Phi_DH ctlQuanLyChiPhi = new Quan_Ly_Chi_Phi_DH();
 
@@ -39,7 +39,7 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
                 Int64 idChiPhi = Convert.ToInt64(e.Keys[grd_ChiPhi.KeyFieldName]);
                 ctlQuanLyChiPhi.deleteChiPhi(idChiPhi);
                 BindataThemNhanh();
-                Utils.notifierGrid(grd_ChiPhi, Constant.NOTIFY_SUCCESS, "Bạn đã xóa thành công cho số chi phí có ID [" + idChiPhi.ToString() + "]");
+                Utils.notifierGrid(grd_ChiPhi, Constant.NOTIFY_SUCCESS, "Bạn đã xóa thành công cho số ghi nợ có ID [" + idChiPhi.ToString() + "]");
             }
             catch (Exception ex)
             {
@@ -64,7 +64,7 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
                 objChiPhi.NGAY_TAO = DateTime.Now;
                 ctlQuanLyChiPhi.updateChiPhi(idChiPhi, objChiPhi);
                 BindataThemNhanh();
-                Utils.notifierGrid(grd_ChiPhi, Constant.NOTIFY_SUCCESS, "Bạn đã cập nhập thành công cho số chi phí có ID [" + idChiPhi.ToString() + "]");
+                Utils.notifierGrid(grd_ChiPhi, Constant.NOTIFY_SUCCESS, "Bạn đã cập nhập thành công cho số ghi nợ có ID [" + idChiPhi.ToString() + "]");
             }
             catch (Exception ex)
             {
@@ -85,13 +85,13 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
                 ASPxMemo txtGhiChu = pnLayData.FindControl("txtGhiChu") as ASPxMemo;
                 Quan_Ly_Chi_Phi objChiPhi = new Quan_Ly_Chi_Phi();
                 objChiPhi.Ghi_Chu = txtGhiChu.Text;
-                objChiPhi.So_Tien_Chi_Phi= (Decimal)txtSotienNo.Value;
+                objChiPhi.So_Tien_Chi_Phi = (Decimal)txtSotienNo.Value;
                 objChiPhi.Nguoi_Nhap = Request.Cookies[Constant.USER_COOKIE][Constant.NAME_COOKIE];
                 objChiPhi.Nha_Nao = Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI]);
                 objChiPhi.NGAY_TAO = DateTime.Now;
                 ctlQuanLyChiPhi.insertChiPhi(objChiPhi);
                 BindataThemNhanh();
-                Utils.notifierGrid(grd_ChiPhi, Constant.NOTIFY_SUCCESS, "Bạn đã thêm thành công số chi phí có [" + objChiPhi.So_Tien_Chi_Phi + "]");
+                Utils.notifierGrid(grd_ChiPhi, Constant.NOTIFY_SUCCESS, "Bạn đã thêm thành công số ghi nợ có [" + objChiPhi.So_Tien_Chi_Phi + "]");
             }
             catch (Exception ex)
             {
@@ -154,7 +154,5 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
 
 
         }
-
-       
     }
 }

@@ -10,7 +10,7 @@
 namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi {
     
     
-    public partial class QuanLyChiPhiMain {
+    public partial class QuanLyChiPhiMain1 {
         
         /// <summary>
         /// lblTitle control.
