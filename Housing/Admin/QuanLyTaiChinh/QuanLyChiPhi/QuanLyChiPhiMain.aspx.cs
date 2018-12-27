@@ -1,6 +1,7 @@
 ﻿using Common;
 using DataHelper;
 using DevExpress.Web;
+using DevExpress.Web.ASPxHtmlEditor;
 using Housing.Common;
 using System;
 using System.Collections.Generic;
@@ -58,9 +59,9 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
                 ASPxFormLayout pnLayData = grd_ChiPhi.FindEditFormTemplateControl("LayOutThemSua") as ASPxFormLayout;
                 ASPxDateEdit txtNgayNhapChiPhi = pnLayData.FindControl("txtNgayNhapChiPhi") as ASPxDateEdit;
                 ASPxSpinEdit txtSotienNo = pnLayData.FindControl("txtSotienNo") as ASPxSpinEdit;
-                ASPxMemo txtGhiChu = pnLayData.FindControl("txtGhiChu") as ASPxMemo;
+                ASPxHtmlEditor txtGhiChu = pnLayData.FindControl("txtGhiChu") as ASPxHtmlEditor;
                 Quan_Ly_Chi_Phi objChiPhi = new Quan_Ly_Chi_Phi();
-                objChiPhi.Ghi_Chu = txtGhiChu.Text;
+                objChiPhi.Ghi_Chu = txtGhiChu.Html ;
                 objChiPhi.So_Tien_Chi_Phi = (Decimal)txtSotienNo.Value;
                 objChiPhi.Nguoi_Nhap = Request.Cookies[Constant.USER_COOKIE][Constant.NAME_COOKIE];
                 objChiPhi.Ngay_Nhap_Chi_Phi = Utils.convertDate(txtNgayNhapChiPhi.Text);
@@ -86,9 +87,9 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi
                 ASPxFormLayout pnLayData = grd_ChiPhi.FindEditFormTemplateControl("LayOutThemSua") as ASPxFormLayout;
                 ASPxSpinEdit txtSotienNo = pnLayData.FindControl("txtSotienNo") as ASPxSpinEdit;
                 ASPxDateEdit txtNgayNhapChiPhi = pnLayData.FindControl("txtNgayNhapChiPhi") as ASPxDateEdit;
-                ASPxMemo txtGhiChu = pnLayData.FindControl("txtGhiChu") as ASPxMemo;
+                ASPxHtmlEditor txtGhiChu = pnLayData.FindControl("txtGhiChu") as ASPxHtmlEditor;
                 Quan_Ly_Chi_Phi objChiPhi = new Quan_Ly_Chi_Phi();
-                objChiPhi.Ghi_Chu = txtGhiChu.Text;
+                objChiPhi.Ghi_Chu = txtGhiChu.Html ;
                 objChiPhi.So_Tien_Chi_Phi = (Decimal)txtSotienNo.Value;
                 objChiPhi.Nguoi_Nhap = Request.Cookies[Constant.USER_COOKIE][Constant.NAME_COOKIE];
                 objChiPhi.Nha_Nao = Convert.ToInt32(Request.Cookies[Constant.USER_COOKIE][Constant.VITRI]);

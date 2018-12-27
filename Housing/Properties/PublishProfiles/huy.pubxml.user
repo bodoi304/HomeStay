@@ -19,7 +19,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/05/2017 22:10:54</publishTime>
     </File>
     <File Include="Admin/AdminPhong.Master">
-      <publishTime>12/02/2018 00:31:59</publishTime>
+      <publishTime>12/27/2018 23:06:35</publishTime>
     </File>
     <File Include="Admin/AdminTemplate.Master">
       <publishTime>12/18/2017 23:57:38</publishTime>
@@ -88,7 +88,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/13/2018 00:34:48</publishTime>
     </File>
     <File Include="Admin/DaoTaoAdmin/ThemSuaTaiLieu.ascx">
-      <publishTime>08/13/2018 00:37:07</publishTime>
+      <publishTime>12/02/2018 14:22:01</publishTime>
     </File>
     <File Include="Admin/Default.aspx">
       <publishTime>01/20/2018 11:51:10</publishTime>
@@ -709,7 +709,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 20:27:31</publishTime>
     </File>
     <File Include="Admin/QuanLyPhong/Glistphong/GridPhong.ascx">
-      <publishTime>06/30/2018 14:52:23</publishTime>
+      <publishTime>12/18/2018 00:44:01</publishTime>
     </File>
     <File Include="Admin/QuanLyPhong/images/.DS_Store">
       <publishTime>01/19/2018 20:27:31</publishTime>
@@ -1155,23 +1155,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Admin/QuanLyPhong/QLP.aspx">
       <publishTime>07/01/2018 02:17:07</publishTime>
     </File>
+    <File Include="Admin/QuanLyPhong/QuanLyPhongMain.aspx">
+      <publishTime>12/27/2018 22:44:45</publishTime>
+    </File>
     <File Include="Admin/QuanLyPhong/signin.html">
       <publishTime>12/20/2017 23:50:14</publishTime>
     </File>
     <File Include="Admin/QuanLyPhong/SuaPhong.aspx">
-      <publishTime>07/01/2018 02:17:19</publishTime>
+      <publishTime>12/21/2018 01:42:16</publishTime>
     </File>
     <File Include="Admin/QuanLyPhong/SuaThemPhongNhanh.aspx">
       <publishTime>01/20/2018 22:33:52</publishTime>
     </File>
     <File Include="Admin/QuanLyPhong/ThemDatPhongNhanh.aspx">
-      <publishTime>07/01/2018 02:09:16</publishTime>
+      <publishTime>12/21/2018 01:41:53</publishTime>
     </File>
     <File Include="Admin/QuanLyTaiChinh/QuanLyChiPhi/QuanLyChiPhiMain.aspx">
-      <publishTime>12/02/2018 12:15:59</publishTime>
+      <publishTime>12/18/2018 00:57:42</publishTime>
     </File>
     <File Include="Admin/QuanLyTaiChinh/QuanLyGhiNo/QuanLyGhiNoMain.aspx">
       <publishTime>12/02/2018 00:57:55</publishTime>
+    </File>
+    <File Include="Admin/QuanLyTaiChinh/QuanLyThongKeLoiNhuan/QuanLyThongKeLoiNhuanMain.aspx">
+      <publishTime>12/02/2018 21:11:55</publishTime>
     </File>
     <File Include="Admin/QuanLyVideoAnh.aspx">
       <publishTime>06/28/2018 22:01:52</publishTime>
@@ -1234,28 +1240,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 00:30:45</publishTime>
     </File>
     <File Include="bin/Common.dll">
-      <publishTime>12/02/2018 12:18:18</publishTime>
+      <publishTime>12/27/2018 23:19:33</publishTime>
     </File>
     <File Include="bin/Common.pdb">
-      <publishTime>12/02/2018 12:18:18</publishTime>
+      <publishTime>12/27/2018 23:19:33</publishTime>
     </File>
     <File Include="bin/DataAcees.dll">
-      <publishTime>12/02/2018 12:18:19</publishTime>
+      <publishTime>12/27/2018 23:19:34</publishTime>
     </File>
     <File Include="bin/DataAcees.dll.config">
       <publishTime>06/28/2018 20:37:12</publishTime>
     </File>
     <File Include="bin/DataAcees.pdb">
-      <publishTime>12/02/2018 12:18:19</publishTime>
+      <publishTime>12/27/2018 23:19:34</publishTime>
     </File>
     <File Include="bin/DataHelper.dll">
-      <publishTime>12/02/2018 12:18:19</publishTime>
+      <publishTime>12/27/2018 23:19:35</publishTime>
     </File>
     <File Include="bin/DataHelper.dll.config">
       <publishTime>06/30/2018 00:43:32</publishTime>
     </File>
     <File Include="bin/DataHelper.pdb">
-      <publishTime>12/02/2018 12:18:19</publishTime>
+      <publishTime>12/27/2018 23:19:35</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Data.v13.1.resources.dll">
       <publishTime>04/05/2018 15:36:59</publishTime>
@@ -1268,6 +1274,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/de/DevExpress.Office.v13.1.Core.resources.dll">
       <publishTime>04/05/2018 15:37:14</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Office.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:05</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Pdf.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:07</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Printing.v13.1.Core.resources.dll">
       <publishTime>04/05/2018 15:37:16</publishTime>
@@ -1287,6 +1299,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/de/DevExpress.RichEdit.v17.1.Core.resources.dll">
       <publishTime>04/25/2018 16:49:13</publishTime>
     </File>
+    <File Include="bin/de/DevExpress.Sparkline.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:10</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Utils.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:11</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxHtmlEditor.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:34</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxRichEdit.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:36</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxSpellChecker.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:36</publishTime>
+    </File>
     <File Include="bin/de/DevExpress.Web.ASPxTreeList.v17.1.resources.dll">
       <publishTime>04/25/2018 16:48:59</publishTime>
     </File>
@@ -1298,6 +1325,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/de/DevExpress.Web.v17.1.resources.dll">
       <publishTime>04/25/2018 16:48:57</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraEditors.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:19</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraLayout.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:21</publishTime>
     </File>
     <File Include="bin/de/DevExpress.XtraTreeList.v17.1.resources.dll">
       <publishTime>04/25/2018 16:49:17</publishTime>
@@ -1313,6 +1346,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/DevExpress.Office.v13.1.Core.dll">
       <publishTime>04/05/2018 15:37:14</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Office.v17.1.Core.dll">
+      <publishTime>12/17/2018 22:31:07</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v17.1.Core.dll">
+      <publishTime>12/17/2018 22:31:07</publishTime>
     </File>
     <File Include="bin/DevExpress.Printing.v13.1.Core.dll">
       <publishTime>04/05/2018 15:37:16</publishTime>
@@ -1331,6 +1370,24 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/DevExpress.RichEdit.v17.1.Core.dll">
       <publishTime>12/02/2018 11:17:15</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Sparkline.v17.1.Core.dll">
+      <publishTime>12/17/2018 22:31:10</publishTime>
+    </File>
+    <File Include="bin/DevExpress.SpellChecker.v17.1.Core.dll">
+      <publishTime>12/17/2018 22:31:10</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Utils.v17.1.dll">
+      <publishTime>12/17/2018 22:31:11</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxHtmlEditor.v17.1.dll">
+      <publishTime>12/17/2018 22:30:34</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxRichEdit.v17.1.dll">
+      <publishTime>12/17/2018 22:30:36</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxSpellChecker.v17.1.dll">
+      <publishTime>12/17/2018 22:30:37</publishTime>
     </File>
     <File Include="bin/DevExpress.Web.ASPxThemes.v13.1.dll">
       <publishTime>04/05/2018 15:36:53</publishTime>
@@ -1355,6 +1412,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/DevExpress.Web.v17.1.dll">
       <publishTime>12/02/2018 11:16:59</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraEditors.v17.1.dll">
+      <publishTime>12/17/2018 22:31:20</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraLayout.v17.1.dll">
+      <publishTime>12/17/2018 22:31:21</publishTime>
     </File>
     <File Include="bin/DevExpress.XtraTreeList.v17.1.dll">
       <publishTime>12/02/2018 11:17:16</publishTime>
@@ -1395,6 +1458,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/es/DevExpress.Office.v13.1.Core.resources.dll">
       <publishTime>04/05/2018 15:37:14</publishTime>
     </File>
+    <File Include="bin/es/DevExpress.Office.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:07</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Pdf.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:07</publishTime>
+    </File>
     <File Include="bin/es/DevExpress.Printing.v13.1.Core.resources.dll">
       <publishTime>04/05/2018 15:37:17</publishTime>
     </File>
@@ -1413,6 +1482,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/es/DevExpress.RichEdit.v17.1.Core.resources.dll">
       <publishTime>04/25/2018 16:49:13</publishTime>
     </File>
+    <File Include="bin/es/DevExpress.Sparkline.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:10</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Utils.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:11</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxHtmlEditor.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:34</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxRichEdit.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:36</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxSpellChecker.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:37</publishTime>
+    </File>
     <File Include="bin/es/DevExpress.Web.ASPxTreeList.v17.1.resources.dll">
       <publishTime>04/25/2018 16:48:59</publishTime>
     </File>
@@ -1425,14 +1509,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/es/DevExpress.Web.v17.1.resources.dll">
       <publishTime>04/25/2018 16:48:58</publishTime>
     </File>
+    <File Include="bin/es/DevExpress.XtraEditors.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:20</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraLayout.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:21</publishTime>
+    </File>
     <File Include="bin/es/DevExpress.XtraTreeList.v17.1.resources.dll">
       <publishTime>04/25/2018 16:49:17</publishTime>
     </File>
     <File Include="bin/Housing.dll">
-      <publishTime>12/02/2018 12:18:20</publishTime>
+      <publishTime>12/27/2018 23:19:37</publishTime>
     </File>
     <File Include="bin/Housing.pdb">
-      <publishTime>12/02/2018 12:18:20</publishTime>
+      <publishTime>12/27/2018 23:19:37</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Data.v13.1.resources.dll">
       <publishTime>04/05/2018 15:36:59</publishTime>
@@ -1445,6 +1535,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/ja/DevExpress.Office.v13.1.Core.resources.dll">
       <publishTime>04/05/2018 15:37:14</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Office.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:07</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Pdf.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:07</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Printing.v13.1.Core.resources.dll">
       <publishTime>04/05/2018 15:37:17</publishTime>
@@ -1464,6 +1560,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/ja/DevExpress.RichEdit.v17.1.Core.resources.dll">
       <publishTime>04/25/2018 16:49:13</publishTime>
     </File>
+    <File Include="bin/ja/DevExpress.Sparkline.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:10</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Utils.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:11</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxHtmlEditor.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:34</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxRichEdit.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:36</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxSpellChecker.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:37</publishTime>
+    </File>
     <File Include="bin/ja/DevExpress.Web.ASPxTreeList.v17.1.resources.dll">
       <publishTime>04/25/2018 16:48:59</publishTime>
     </File>
@@ -1475,6 +1586,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/ja/DevExpress.Web.v17.1.resources.dll">
       <publishTime>04/25/2018 16:48:58</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraEditors.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:20</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraLayout.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:21</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.XtraTreeList.v17.1.resources.dll">
       <publishTime>04/25/2018 16:49:17</publishTime>
@@ -1524,6 +1641,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/ru/DevExpress.Office.v13.1.Core.resources.dll">
       <publishTime>04/05/2018 15:37:14</publishTime>
     </File>
+    <File Include="bin/ru/DevExpress.Office.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:07</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Pdf.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:07</publishTime>
+    </File>
     <File Include="bin/ru/DevExpress.Printing.v13.1.Core.resources.dll">
       <publishTime>04/05/2018 15:37:17</publishTime>
     </File>
@@ -1542,6 +1665,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/ru/DevExpress.RichEdit.v17.1.Core.resources.dll">
       <publishTime>04/25/2018 16:49:13</publishTime>
     </File>
+    <File Include="bin/ru/DevExpress.Sparkline.v17.1.Core.resources.dll">
+      <publishTime>12/17/2018 22:31:10</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Utils.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:11</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.ASPxHtmlEditor.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:34</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.ASPxRichEdit.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:36</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.ASPxSpellChecker.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:30:37</publishTime>
+    </File>
     <File Include="bin/ru/DevExpress.Web.ASPxTreeList.v17.1.resources.dll">
       <publishTime>04/25/2018 16:48:59</publishTime>
     </File>
@@ -1553,6 +1691,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/ru/DevExpress.Web.v17.1.resources.dll">
       <publishTime>04/25/2018 16:48:58</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraEditors.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:20</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraLayout.v17.1.resources.dll">
+      <publishTime>12/17/2018 22:31:21</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.XtraTreeList.v17.1.resources.dll">
       <publishTime>04/25/2018 16:49:17</publishTime>
@@ -4645,7 +4789,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/12/2018 23:46:34</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/02/2018 12:18:21</publishTime>
+      <publishTime>12/18/2018 01:02:42</publishTime>
     </File>
     <File Include="Webimage/arrow-37-xxl.png">
       <publishTime>04/30/2017 11:41:44</publishTime>

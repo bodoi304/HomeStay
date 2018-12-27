@@ -36,7 +36,7 @@ a:focus {
     box-shadow: none;
     outline: none !important;
     border: none;
-    background: #4463dc;
+    background: #b52e31;
 }
 
 .btn-info:focus,
@@ -77,7 +77,7 @@ span {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #4c6ef5;
+    background: #b52e31;
     color: #fff;
     transition: all 0.3s;
 }
@@ -152,7 +152,7 @@ span {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #4463dc;
+    background: #b52e31;
 }
 
 #sidebar .sidebar-header span {
@@ -175,7 +175,7 @@ span {
 }
 
 #sidebar ul li a:hover {
-    color: #4c6ef5;
+    color: #b52e31;
     background: #fff;
 }
 
@@ -232,7 +232,7 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #4c6ef5;
+    color: #b52e31;
 }
 
 a.article,

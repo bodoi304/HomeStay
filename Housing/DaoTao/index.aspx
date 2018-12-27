@@ -51,9 +51,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <h1>
-                        <a href="index.html">ĐÀO TẠO</a>
+                        <a href="index.html"></a>
                     </h1>
-                    <span>M</span>
+                    <span></span>
                 </div>
                 <div class="profile-bg"></div>
                 <ul class="list-unstyled components">
@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                         <!-- Search-from -->
                         <form action="#" method="post" class="form-inline mx-auto search-form">
-                            <asp:Label ID="lbltaiLieu" runat="server" Text="TÀI LIỆU ĐÀO TẠO"></asp:Label>
+                            <asp:Label ID="lbltaiLieu" runat="server" Text="TÀI LIỆU ĐÀO TẠO" style="font-weight:bold"></asp:Label>
                         </form>
                         <!--// Search-from -->
                     </div>
@@ -119,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <SettingsLoadingPanel Text="Đang tải&amp;hellip;"></SettingsLoadingPanel>
 
                                 <Styles Header-Wrap="True">
-                                    <Header BackColor="#4c6ef5"
+                                    <Header BackColor="#b52e31"
                                         CssClass="GridHeader" ForeColor="White" Font-Bold="True" HorizontalAlign="Center">
                                     </Header>
                                     <Footer

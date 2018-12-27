@@ -278,10 +278,10 @@ namespace Housing.Common
                     String phongTrongNgayFinish = "";
                     if (!String.IsNullOrEmpty(phongTrongNgay.ToString()))
                     {
-                        phongTrongNgayFinish = "<span style='color:red; font-weight:bold'>" + phongTrongNgay.ToString() + " Đặt Trong Ngày" + "</span>";
+                        phongTrongNgayFinish = "<span style='color:red; font-weight:bold'>" + phongTrongNgay.ToString() + " CẢNH BÁO" + "</span>";
                         if (lstTrangThaiRoom.Count > 0)
                         {
-                            lstTrangThaiRoom[lstTrangThaiRoom.Count - 1].Trang_Thai_Dat = "<span style='color:red; font-weight:bold'>" + phongTrongNgay.ToString() + " Có đặt trong ngày vào hôm sau" + "</span>"; ;
+                            lstTrangThaiRoom[lstTrangThaiRoom.Count - 1].Trang_Thai_Dat = "<span style='color:red; font-weight:bold'>" + phongTrongNgay.ToString() + " CẢNH BÁO" + "</span>"; ;
                         }
 
                     }

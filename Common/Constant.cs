@@ -47,6 +47,7 @@ namespace Common
             public const int THEM_PHONG_EXCEL = 1;
             public const int SUA_THEM_PHONG_NHANH = 2;
             public const int DASHBOARD = 3;
+            public const int QUAN_LY_PHONG=4;
         }
 
         public class TRANG_THAI_PHONG

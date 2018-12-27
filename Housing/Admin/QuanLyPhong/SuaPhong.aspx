@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPhong.Master" AutoEventWireup="true" CodeBehind="SuaPhong.aspx.cs" Inherits="Housing.Admin.QuanLyPhong.SuaPhong" %>
 <%@ Register Assembly="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxHtmlEditor.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxHtmlEditor" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -40,7 +41,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Ở Trong Ngày</label>
+                        <label for="exampleInputEmail1">Cảnh báo</label>
                         <asp:CheckBox ID="chkOtrongNgay" runat="server" />
                     </div>
                     <div class="form-group">
@@ -94,7 +95,14 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Ghi Chú</label>
-                        <asp:TextBox ID="txtGhiChu" Style="color: black !important" runat="server" placeholder="Ghi Chú" CssClass=" form-control" Height="150px" TextMode="MultiLine" Width="100%"></asp:TextBox>
+                                                <dx:ASPxHtmlEditor ID="txtGhiChu" runat="server" >
+                            <Settings AllowHtmlView="False" AllowInsertDirectImageUrls="False" AllowPreview="False" AllowContextMenu="False">
+                            </Settings>
+                             <ClientSideEvents Init="function(s, e) {
+        s.core.setSpellCheckAttributeValue(false);
+    }" />
+                        </dx:ASPxHtmlEditor>
+
                     </div>
                     <div class="form-group">
                         <asp:Button ID="btnSuaDuoi" runat="server" Text="Sửa Đặt Phòng" CssClass="btn btn-default" OnClick="btnSuaPhong_Click" ValidationGroup="sua" />

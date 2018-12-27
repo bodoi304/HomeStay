@@ -43,3 +43,17 @@ D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DevExpress.Data.v17.
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.csprojAssemblyReference.cache
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.csproj.CoreCompileInputs.cache
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\obj\Release\DataAcees.csproj.CopyComplete
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DevExpress.Printing.v17.1.Core.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DevExpress.Office.v17.1.Core.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DevExpress.RichEdit.v17.1.Core.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DevExpress.Pdf.v17.1.Core.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DevExpress.Office.v17.1.Core.xml
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\DevExpress.Pdf.v17.1.Core.xml
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\de\DevExpress.Office.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\es\DevExpress.Office.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\ja\DevExpress.Office.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\ru\DevExpress.Office.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\de\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\es\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Release\ru\DevExpress.Pdf.v17.1.Core.resources.dll

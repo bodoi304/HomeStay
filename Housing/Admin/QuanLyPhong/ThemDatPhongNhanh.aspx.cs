@@ -86,7 +86,7 @@ namespace Housing.Admin.QuanLyPhong
                     objLichInsert.Tien_Con_Phai_Tra = 0;
                 }
                 objLichInsert.Trang_Thai_CK = drTinhTrangChuyenKhoan.SelectedValue.ToString();
-                objLichInsert.Ghi_chu = txtGhiChu.Text;
+                objLichInsert.Ghi_chu = txtGhiChu.Html;
                 objLichInsert.So_Dien_Thoai  = txtSoDienThoai .Text;
                 if (chkOtrongNgay.Checked)
                 {

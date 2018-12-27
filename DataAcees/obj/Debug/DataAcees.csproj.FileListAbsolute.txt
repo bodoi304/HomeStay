@@ -44,3 +44,15 @@ D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\DevExpress.Web.v17.1.d
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\DevExpress.Data.v17.1.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\DevExpress.Printing.v17.1.Core.dll
 D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\DevExpress.Office.v17.1.Core.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\DevExpress.Office.v17.1.Core.xml
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\de\DevExpress.Office.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\HocTap\HomeStay\HousingWeb\Housing\DataAcees\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPhong.Master" AutoEventWireup="true" CodeBehind="QuanLyChiPhiMain.aspx.cs" Inherits="Housing.Admin.QuanLyTaiChinh.QuanLyChiPhi.QuanLyChiPhiMain1" %>
+<%@ Register Assembly="DevExpress.Web.ASPxHtmlEditor.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxHtmlEditor" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -14,7 +15,7 @@
                     <div data-example-id="simple-form-inline">
                         <div class="form-inline">
                             <div class="form-grids widget-shadow" data-example-id="basic-forms" style="margin-top: 15px">
-                                <dx:aspxgridview id="grd_ChiPhi" clientinstancename="grd_ChiPhi" runat="server" keyfieldname="ID" Visible="false"
+                                <dx:aspxgridview id="grd_ChiPhi" clientinstancename="grd_ChiPhi" runat="server" keyfieldname="ID" 
                                     width="100%" autogeneratecolumns="False" onrowdeleting="grd_ChiPhi_RowDeleting"
                                     onrowupdating="grd_ChiPhi_RowUpdating" onrowinserting="grd_ChiPhi_RowInserting"
                                     onpageindexchanged="grd_ChiPhi_PageIndexChanged"
@@ -36,8 +37,15 @@ OnGridNotifyEndCallback(s, e);
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Ghi_Chu" VisibleIndex="1" Caption="Ghi chú">
-                                        </dx:GridViewDataTextColumn>
+                                                          <dx:GridViewDataTextColumn FieldName="Ghi_Chu" Caption="Ghi Chú" ReadOnly="True"
+                                        VisibleIndex="1" >
+                                        <DataItemTemplate>
+                                            <%# Eval("Ghi_chu") %>
+                                        </DataItemTemplate>
+                                        <CellStyle CssClass="GridItemCode" HorizontalAlign="Left"></CellStyle>
+                                    </dx:GridViewDataTextColumn>
+                                      <%--  <dx:GridViewDataTextColumn FieldName="Ghi_Chu" VisibleIndex="1" Caption="Ghi chú">
+                                        </dx:GridViewDataTextColumn>--%>
                                     </Columns>
                                     <Templates>
 
@@ -74,7 +82,14 @@ OnGridNotifyEndCallback(s, e);
                                                                 <dx:LayoutItem Caption="Ghi chú:">
                                                                     <LayoutItemNestedControlCollection>
                                                                         <dx:LayoutItemNestedControlContainer>
-                                                                              <dx:ASPxMemo runat="server" ID="txtGhiChu" Text='<%# Bind("Ghi_Chu")%>' Width="100%" Height="100px" />
+                                                                                                <dx:ASPxHtmlEditor ID="txtGhiChu" runat="server" Html='<%# Bind("Ghi_Chu")%>' >
+                            <Settings AllowHtmlView="False" AllowInsertDirectImageUrls="False" AllowPreview="False" AllowContextMenu="False">
+                            </Settings>
+                             <ClientSideEvents Init="function(s, e) {
+        s.core.setSpellCheckAttributeValue(false);
+    }" />
+                        </dx:ASPxHtmlEditor>
+                                                                         
                                                                         </dx:LayoutItemNestedControlContainer>
                                                                     </LayoutItemNestedControlCollection>
                                                                 </dx:LayoutItem>

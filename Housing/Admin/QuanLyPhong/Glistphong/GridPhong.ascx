@@ -47,12 +47,12 @@
 
                             </div>
 
-                            <asp:Button ID="btnNgayTaoTK" runat="server" Text="Kiểm Tra Doanh Thu" CssClass="btn btn-default" OnClick="btnNgayTaoTK_Click"  />
+                            <asp:Button ID="btnNgayTaoTK" runat="server" Text="Kiểm Tra Doanh Thu" CssClass="btn btn-default" OnClick="btnNgayTaoTK_Click" />
                             <p style="margin-top: 15px">
                                 <asp:Label ID="Label1" runat="server" Text="" ForeColor="Blue" Font-Bold="true"></asp:Label>
                             </p>
                         </asp:Panel>
-                       
+
 
 
                         <div class="form-grids widget-shadow" data-example-id="basic-forms" style="margin-top: 15px">
@@ -114,7 +114,7 @@
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
-                 <%--                   <dx:GridViewDataTextColumn FieldName="Ngay_Sinh_Nhat" VisibleIndex="1" Caption="Ngày Sinh"
+                                    <%--                   <dx:GridViewDataTextColumn FieldName="Ngay_Sinh_Nhat" VisibleIndex="1" Caption="Ngày Sinh"
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
@@ -122,15 +122,18 @@
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>--%>
-                                    <dx:GridViewDataTextColumn FieldName="Ghi_chu" VisibleIndex="1" Caption="Ghi Chú"
-                                        ReadOnly="True">
+                                    <dx:GridViewDataTextColumn Caption="Ghi Chú" ReadOnly="True"
+                                        VisibleIndex="1" >
+                                        <DataItemTemplate>
+                                            <%# Eval("Ghi_chu") %>
+                                        </DataItemTemplate>
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Left"></CellStyle>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn FieldName="NGAY_TAO" VisibleIndex="1" Caption="Ngày tạo"
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>
-                                      <dx:GridViewDataTextColumn FieldName="Trang_Thai_Dat" VisibleIndex="1" Visible="false"  Caption="Ngày tạo"
+                                    <dx:GridViewDataTextColumn FieldName="Trang_Thai_Dat" VisibleIndex="1" Visible="false" Caption="Ngày tạo"
                                         ReadOnly="True">
                                         <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                     </dx:GridViewDataTextColumn>

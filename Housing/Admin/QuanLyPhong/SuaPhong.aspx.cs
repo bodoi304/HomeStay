@@ -109,7 +109,7 @@ namespace Housing.Admin.QuanLyPhong
                 {
                     objLichInsert.Trang_Thai_Dat = 0;
                 }
-                objLichInsert.Ghi_chu = txtGhiChu.Text;
+                objLichInsert.Ghi_chu = txtGhiChu.Html ;
                 ctl.update_lich_dat_phong(objLichInsert, Request.Cookies[Constant.USER_COOKIE][Constant.NAME_COOKIE].ToString());
                 lblError.Text = "Cập nhập đặt phòng cho khách hàng thành công.";
 
@@ -137,7 +137,7 @@ namespace Housing.Admin.QuanLyPhong
             txtTienConPhaiTra.Text = objLich.Tien_Con_Phai_Tra.ToString();
             txtPhongDat.Text = objLich.So_Phong_Dat;
             drTinhTrangChuyenKhoan.SelectedValue = objLich.Trang_Thai_CK;
-            txtGhiChu.Text = objLich.Ghi_chu;
+            txtGhiChu.Html  = objLich.Ghi_chu;
             if (objLich.Trang_Thai_Dat == 0)
                 chkOtrongNgay.Checked = false;
             else

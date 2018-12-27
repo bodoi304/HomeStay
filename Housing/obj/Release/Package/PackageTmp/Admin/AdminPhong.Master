@@ -255,10 +255,11 @@ ClientPopupControl.Show();
 
                         <li id="menu-academico"><a href="#"><i class="fa fa-table"></i><span>Quản Lý Đặt Phòng</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                             <ul id="menu-academico-sub">
+                                <li id="menu-academico-avaliacoes"><a href="/Admin/QuanLyPhong/QuanLyPhongMain.aspx">Quản Lý Phòng</a></li>
                                 <li id="menu-academico-avaliacoes"><a href="/Admin/QuanLyPhong/QLP.aspx">Thêm Đặt Phòng Từ Excel</a></li>
                                 <%--                                    <li id="menu-academico-avaliacoes"><a href="/Admin/QuanLyPhong/EDP.aspx">Sửa Xóa Đặt Phòng Trong Hệ Thống</a></li>--%>
                                 <li id="menu-academico-avaliacoes"><a href="/Admin/QuanLyPhong/ThemDatPhongNhanh.aspx">Thêm Đặt Phòng</a></li>
-                                <%--                                    <li id="menu-academico-avaliacoes"><a href="/Admin/QuanLyPhong/SuaThemPhongNhanh.aspx">Sửa thêm đặt phòng nhanh</a></li>--%>
+                     
                             </ul>
                         </li>
 
@@ -275,6 +276,7 @@ ClientPopupControl.Show();
                          <li id="menu-academico"><a href="#"><i class="fa fa-table"></i><span>Quản Lý Tài Chính</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                             <ul id="menu-academico-sub">
                                 <li id="menu-academico-avaliacoes"><a href="/Admin/QuanLyTaiChinh/QuanLyChiPhi/QuanLyChiPhiMain.aspx">Quản Lý Chi Phí</a></li>
+                                    <li id="menu-academico-avaliacoes"><a href="/Admin/QuanLyTaiChinh/QuanLyThongKeLoiNhuan/QuanLyThongKeLoiNhuanMain.aspx">Quản Lý Lợi Nhuận</a></li>
                                 <li id="menu-academico-avaliacoes"><a href="/Admin/QuanLyTaiChinh/QuanLyGhiNo/QuanLyGhiNoMain.aspx">Quản Lý Ghi Nợ</a></li>
                              
                             </ul>

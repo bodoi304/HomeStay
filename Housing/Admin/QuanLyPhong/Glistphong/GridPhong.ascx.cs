@@ -48,6 +48,19 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                     BindataThemNhanh();
                 }
             }
+            else if (Khau_NV == Constant.KHAU_NV.QUAN_LY_PHONG)
+            {
+                if (!IsPostBack)
+                {
+                    settitle("QUẢN LÝ PHÒNG");
+                    grd_DSPhong = Utils.setDisplayGridView(grd_DSPhong, false, false);
+                    DateTime checkint = DateTime.Today.AddDays(1);
+                    DateTime checkout = DateTime.Today.AddDays(10);
+                    txtCheckin.Text = DateTime.Today.AddDays(1).ToString(Constant.DateTimeFormatCustom.DISPLAY_DATE_FORMAT);
+                    txtCheckout.Text = DateTime.Today.AddDays(10).ToString(Constant.DateTimeFormatCustom.DISPLAY_DATE_FORMAT);
+                    Bindata(checkint, checkout);
+                }
+            }
             else
             {
                 if (Khau_NV != Constant.KHAU_NV.DASHBOARD)
@@ -61,10 +74,11 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
 
 
                 }
-
                 if (!IsPostBack)
                 {
                     grd_DSPhong = Utils.setDisplayGridView(grd_DSPhong, false, false);
+                    grd_DSPhong.Columns[0].Visible = false;
+                    grd_DSPhong.Columns[1].Visible = false;
                     DateTime checkint = DateTime.Today.AddDays(1);
                     DateTime checkout = DateTime.Today.AddDays(10);
                     txtCheckin.Text = DateTime.Today.AddDays(1).ToString(Constant.DateTimeFormatCustom.DISPLAY_DATE_FORMAT);
