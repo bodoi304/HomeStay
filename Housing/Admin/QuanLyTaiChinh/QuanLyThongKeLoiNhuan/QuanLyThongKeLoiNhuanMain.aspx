@@ -64,8 +64,14 @@
                                             ReadOnly="True">
                                             <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Ghi_Chu" VisibleIndex="1" Caption="Ghi chú">
-                                        </dx:GridViewDataTextColumn>
+                                         <dx:GridViewDataTextColumn Caption="Ghi Chú" ReadOnly="True"
+                                        VisibleIndex="1" >
+                                        <DataItemTemplate>
+                                            <%# Eval("Ghi_chu") %>
+                                        </DataItemTemplate>
+                                        <CellStyle CssClass="GridItemCode" HorizontalAlign="Left"></CellStyle>
+                                    </dx:GridViewDataTextColumn>
+                                      
                                     </Columns>
                                     <Settings GroupFormat="" ShowGroupButtons="False" />
                                     <SettingsLoadingPanel Text="Đang tải&amp;hellip;" />
@@ -142,10 +148,13 @@
                                             ReadOnly="True">
                                             <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Ghi_chu" VisibleIndex="1" Caption="Ghi Chú"
-                                            ReadOnly="True">
-                                            <CellStyle CssClass="GridItemCode" HorizontalAlign="Left"></CellStyle>
-                                        </dx:GridViewDataTextColumn>
+                                        <dx:GridViewDataTextColumn Caption="Ghi Chú" ReadOnly="True"
+                                        VisibleIndex="1" >
+                                        <DataItemTemplate>
+                                            <%# Eval("Ghi_chu") %>
+                                        </DataItemTemplate>
+                                        <CellStyle CssClass="GridItemCode" HorizontalAlign="Left"></CellStyle>
+                                    </dx:GridViewDataTextColumn>
                                         <dx:GridViewDataTextColumn FieldName="NGAY_TAO" VisibleIndex="1" Caption="Ngày tạo"
                                             ReadOnly="True">
                                             <CellStyle CssClass="GridItemCode" HorizontalAlign="Center"></CellStyle>

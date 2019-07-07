@@ -14,7 +14,6 @@ namespace DataHelper
     [Serializable]
     public partial class Role
     {
-       
         public Role()
         {
             this.Groups = new HashSet<Group>();

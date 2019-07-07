@@ -59,6 +59,9 @@
     <Compile Include="Anh.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Answer.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="CategoryDocument.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
@@ -107,10 +110,16 @@
     </Compile>
     <Compile Include="Quan_Ly_Chi_Phi_DH.cs" />
     <Compile Include="Quan_Ly_Ghi_No_DH.cs" />
+    <Compile Include="Question.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Role.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
     <Compile Include="RolesDH.cs" />
+    <Compile Include="Subject.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>

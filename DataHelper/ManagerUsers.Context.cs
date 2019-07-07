@@ -40,6 +40,9 @@ namespace DataHelper
         public virtual DbSet<CategoryDocument> CategoryDocuments { get; set; }
         public virtual DbSet<Document> Documents { get; set; }
         public virtual DbSet<Quan_Ly_Chi_Phi> Quan_Ly_Chi_Phi { get; set; }
+        public virtual DbSet<Answer> Answers { get; set; }
+        public virtual DbSet<Question> Questions { get; set; }
+        public virtual DbSet<Subject> Subjects { get; set; }
     
         public virtual int ApplicationUserRoles_DeleteItem(Nullable<long> userId, Nullable<int> roleID)
         {

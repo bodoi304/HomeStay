@@ -77,16 +77,13 @@
                                           <h6 style="font-size: 16px"><b>🎐 Cách thức đi lại từ SÀI GÒN: </b></h6>
                         <div class="w3-panel w3-leftbar w3-light-grey" style="margin-left: 22px">
                             <p>
-                                🍀 Các bạn có thể đi xe PHÚC VINH - bến xe miền đông, số điện thoại: <b>0908.649.488</b> xe sẽ đưa bạn tới Phước Hải, và có cả chiều về lại Sài Gòn nha.
+                                🍀 Đi xe Tòan Thắng từ Sài Gòn tới bờ kè Phước Hải - nhà Tina House : số hotline ở phước hải: <b>025.4367.9001</b>, ở quận 1: <b>0994.700.700</b>, ở khu vực sân bay: <b>0888.400.300</b>.
                         <br />
                                🍀 Các bạn có thể tự đi xe máy, hoặc đi xe ô tô riêng thẳng tới TINA HOUSE ạ.
                         <br />
-                                🍀 Thuê xe riêng Grab = <b>1 triệu/1 chiều</b>, bạn nào có xe riêng thì chạy thẳng tới Long Hải hỏi đường tới bờ kè Phước Hải tầm 8km là thấy Tina House .
+                                🍀 Thuê xe riêng Grab=1tr/1 chiều , bạn nào có xe riêng thì chạy thẳng tới Long Hải hỏi đường tới bờ kè Phước Hải tầm 8km là thấy Tina House.
                         <br />
-                                🍀 Xe: Phương Trang, Hotline: <b>19006067</b> - Sài Gòn ra bến xe Bà Rịa: <b>90K</b> - gọi taxi Bà Rịa: <b>064.3.82.74.74</b> đến bờ kè Phước Hải -Tina House giá: <b>180K</b>.
                         <br />
-                            🍀 Xe: Toàn thắng, Hotline: <b>0283.914.4051</b> , địa chỉ: 21 Nguyễn Tài Bình, Q1- Sài Gòn ra bến xe Bà Rịa: <b>90K - taxi đến bờ kè Phước Hải -Tina House giá: <b>180K</b>.
-                                <br />     <br />
                                <span style="color :red ;font-weight :bold ">(Lưu ý: vừa xuống bến xe là bắt luôn taxi đi thẳng đến Tina House nha, mọi người đừng để Phương Trang trung chuyển vì chỉ đưa đến nửa đoạn đường và phải bắt xe ôm thì mệt lắm ạ )</span> 
                             </p>
                         </div>

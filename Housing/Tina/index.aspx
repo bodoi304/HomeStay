@@ -15,14 +15,14 @@
              <div class="col-md-3 wel-grid">
                  <a href="/Tina/RoomTina.aspx?ID=10052">
                 <img src="Image/dorm.png" class="img-responsive gray" alt="" />
-                <h4>Phòng Dorm - Nhà lớn</h4>
+                <h4>Phòng Dorm hướng Biển - nhà lớn</h4>
                 <p></p>
                      </a>
             </div>
       <div class="col-md-3 wel-grid">
                  <a href="/Tina/RoomTina.aspx?ID=10054">
                 <img src="Image/leu.jpg" class="img-responsive gray" alt="" />
-                <h4>Lều Sân Thượng</h4>
+                <h4>Lều ngàn sao-nhà lớn</h4>
                 <p></p>
                      </a>
             </div>

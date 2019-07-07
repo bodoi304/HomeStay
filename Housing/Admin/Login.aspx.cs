@@ -18,7 +18,7 @@ namespace Housing.Admin.QuanLyPhong
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+        
         }
         protected void btnSign_Click(object sender, EventArgs e)
         {

@@ -30,6 +30,15 @@
           <Property Name="Sap_xep" Type="bigint" />
           <Property Name="NGAY_TAO" Type="datetime" />
         </EntityType>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="STT" Type="int" />
+          <Property Name="ID_SUBJECT" Type="int" />
+          <Property Name="CAU_TRA_LOI" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="ApplicationRoleGroups">
           <Key>
             <PropertyRef Name="RoleId" />
@@ -166,6 +175,15 @@
           <Property Name="THU_TU_UU_TIEN" Type="bigint" />
           <Property Name="NGAY_TAO" Type="datetime" />
         </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="STT" />
+            <PropertyRef Name="ID_SUBJECT" />
+          </Key>
+          <Property Name="STT" Type="int" Nullable="false" />
+          <Property Name="ID_SUBJECT" Type="int" Nullable="false" />
+          <Property Name="CAU_HOI" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="Roles">
           <Key>
             <PropertyRef Name="Id" />
@@ -174,6 +192,13 @@
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="DateCreate" Type="date" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ten_Mon_Hoc" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -355,6 +380,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Question">
+          <End Role="Question" Type="Self.Question" Multiplicity="0..1" />
+          <End Role="Answer" Type="Self.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="STT" />
+              <PropertyRef Name="ID_SUBJECT" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="STT" />
+              <PropertyRef Name="ID_SUBJECT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="ApplicationUserRoles_DeleteItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bodoi304">
           <Parameter Name="UserId" Type="bigint" Mode="In" />
           <Parameter Name="RoleID" Type="int" Mode="In" />
@@ -381,6 +420,7 @@
         <EntityContainer Name="HouzingModelStoreContainer">
           <EntitySet Name="AccountLogs" EntityType="Self.AccountLogs" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="Anh" EntityType="Self.Anh" Schema="bodoi304" store:Type="Tables" />
+          <EntitySet Name="Answer" EntityType="Self.Answer" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="ApplicationRoleGroups" EntityType="Self.ApplicationRoleGroups" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="ApplicationUserGroups" EntityType="Self.ApplicationUserGroups" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="ApplicationUserRoles" EntityType="Self.ApplicationUserRoles" Schema="bodoi304" store:Type="Tables" />
@@ -393,7 +433,9 @@
           <EntitySet Name="Quan_Ly_Chi_Phi" EntityType="Self.Quan_Ly_Chi_Phi" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="Quan_Ly_Ghi_No" EntityType="Self.Quan_Ly_Ghi_No" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="QuanLyAnhVideo" EntityType="Self.QuanLyAnhVideo" Schema="bodoi304" store:Type="Tables" />
+          <EntitySet Name="Question" EntityType="Self.Question" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="bodoi304" store:Type="Tables" />
+          <EntitySet Name="Subject" EntityType="Self.Subject" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="bodoi304" store:Type="Tables" />
           <EntitySet Name="VIDEO" EntityType="Self.VIDEO" Schema="bodoi304" store:Type="Tables" />
           <AssociationSet Name="FK__Document__ID_Cat__2A363CC5" Association="Self.FK__Document__ID_Cat__2A363CC5">
@@ -439,6 +481,10 @@
           <AssociationSet Name="FK_MenuItemRoles_Roles" Association="Self.FK_MenuItemRoles_Roles">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="MenuItemRoles" EntitySet="MenuItemRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Question" Association="Self.FK_Question">
+            <End Role="Question" EntitySet="Question" />
+            <End Role="Answer" EntitySet="Answer" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -661,6 +707,13 @@
             <Parameter Name="ngaytao_den" Mode="In" Type="DateTime" />
             <Parameter Name="NhaNao" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="Answers" EntityType="HouzingModel.Answer" />
+          <EntitySet Name="Questions" EntityType="HouzingModel.Question" />
+          <EntitySet Name="Subjects" EntityType="HouzingModel.Subject" />
+          <AssociationSet Name="FK_Question" Association="HouzingModel.FK_Question">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="Answer" EntitySet="Answers" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="Users_SelectUsersNoRole_Result">
           <Property Type="Int64" Name="Id" Nullable="false" />
@@ -761,6 +814,47 @@
           <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
           <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
         </ComplexType>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="STT" Type="Int32" />
+          <Property Name="ID_SUBJECT" Type="Int32" />
+          <Property Name="CAU_TRA_LOI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Question" Relationship="HouzingModel.FK_Question" FromRole="Answer" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="STT" />
+            <PropertyRef Name="ID_SUBJECT" />
+          </Key>
+          <Property Name="STT" Type="Int32" Nullable="false" />
+          <Property Name="ID_SUBJECT" Type="Int32" Nullable="false" />
+          <Property Name="CAU_HOI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Answers" Relationship="HouzingModel.FK_Question" FromRole="Question" ToRole="Answer" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten_Mon_Hoc" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Question">
+          <End Type="HouzingModel.Question" Role="Question" Multiplicity="0..1" />
+          <End Type="HouzingModel.Answer" Role="Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="STT" />
+              <PropertyRef Name="ID_SUBJECT" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="STT" />
+              <PropertyRef Name="ID_SUBJECT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1006,6 +1100,33 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="HouzingModel.Answer">
+              <MappingFragment StoreEntitySet="Answer">
+                <ScalarProperty Name="CAU_TRA_LOI" ColumnName="CAU_TRA_LOI" />
+                <ScalarProperty Name="ID_SUBJECT" ColumnName="ID_SUBJECT" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="HouzingModel.Question">
+              <MappingFragment StoreEntitySet="Question">
+                <ScalarProperty Name="CAU_HOI" ColumnName="CAU_HOI" />
+                <ScalarProperty Name="ID_SUBJECT" ColumnName="ID_SUBJECT" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="HouzingModel.Subject">
+              <MappingFragment StoreEntitySet="Subject">
+                <ScalarProperty Name="Ten_Mon_Hoc" ColumnName="Ten_Mon_Hoc" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

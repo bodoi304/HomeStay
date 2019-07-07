@@ -36,13 +36,13 @@ namespace Housing.Admin.QuanLyAnhVideo.QuanLyAnh
                 imgAnhWeb.Visible = true;
                 if (!IsPostBack)
                 {
-                    Session["urlAnh"]="";
-                     BindData();
+                    Session["urlAnh"] = "";
+                    BindData();
                 }
-               
+
             }
-            
-            
+
+
         }
 
         protected void btnThemAlbum_Click(object sender, EventArgs e)
@@ -75,9 +75,16 @@ namespace Housing.Admin.QuanLyAnhVideo.QuanLyAnh
                     tmp.LOAI_IMAGE = 0;
                 }
                 String UploadDirectory = utilsWeb.getPathAlbum(drDiaDiemBoAnhVideo.SelectedValue);
-                if (!String.IsNullOrEmpty(Session["urlAnh"].ToString()))
+                if (Session["urlAnh"] == null)
                 {
-                    tmp.ICON_VIDEO_IMAGE = Session["urlAnh"].ToString();
+                   
+                }
+                else
+                {
+                    if (!String.IsNullOrEmpty(Session["urlAnh"].ToString()))
+                    {
+                        tmp.ICON_VIDEO_IMAGE = Session["urlAnh"].ToString();
+                    }
                 }
                 tmp.THU_TU_UU_TIEN = Convert.ToInt64(txtthutuuutien.Text);
                 //ctl.update_QuanlyAnhVideo(Convert.ToInt64(Session["ID"].ToString()), tmp);
@@ -171,13 +178,13 @@ namespace Housing.Admin.QuanLyAnhVideo.QuanLyAnh
                 if (!String.IsNullOrEmpty(Session["urlAnh"].ToString()))
                 {
 
-                    tmp.ICON_VIDEO_IMAGE = Session["urlAnh"].ToString ();
+                    tmp.ICON_VIDEO_IMAGE = Session["urlAnh"].ToString();
                 }
                 else
                 {
                     tmp.ICON_VIDEO_IMAGE = imgAnhWeb.ImageUrl;
                 }
-               
+
                 tmp.THU_TU_UU_TIEN = Convert.ToInt64(txtthutuuutien.Text);
                 if (!String.IsNullOrEmpty(Session["urlAnh"].ToString()))
                 {
