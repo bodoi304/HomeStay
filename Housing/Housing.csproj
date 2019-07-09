@@ -370,6 +370,7 @@
     <Content Include="DaoTao\js\simplyCountdown.js" />
     <Content Include="DaoTao\js\skycons.js" />
     <Content Include="DaoTao\note3.png" />
+    <Content Include="DaoTao\traloi.aspx" />
     <Content Include="DaoTao\webfonts\fa-brands-400.svg" />
     <Content Include="DaoTao\webfonts\fa-regular-400.svg" />
     <Content Include="DaoTao\webfonts\fa-solid-900.svg" />
@@ -1528,6 +1529,13 @@
     </Compile>
     <Compile Include="DaoTao\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DaoTao\traloi.aspx.cs">
+      <DependentUpon>traloi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DaoTao\traloi.aspx.designer.cs">
+      <DependentUpon>traloi.aspx</DependentUpon>
     </Compile>
     <Compile Include="HoiPhong\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
