@@ -565,7 +565,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/28/2018 23:18:06</publishTime>
     </File>
     <File Include="Admin/ManageUsers/ManageUsers/ManageUsersMain.aspx">
-      <publishTime>09/13/2018 00:17:12</publishTime>
+      <publishTime>12/14/2019 22:38:21</publishTime>
     </File>
     <File Include="Admin/maps/africa.json">
       <publishTime>01/19/2018 20:28:57</publishTime>
@@ -709,7 +709,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 20:27:31</publishTime>
     </File>
     <File Include="Admin/QuanLyPhong/Glistphong/GridPhong.ascx">
-      <publishTime>12/18/2018 00:44:01</publishTime>
+      <publishTime>12/14/2019 22:44:54</publishTime>
     </File>
     <File Include="Admin/QuanLyPhong/images/.DS_Store">
       <publishTime>01/19/2018 20:27:31</publishTime>
@@ -1177,7 +1177,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/02/2018 00:57:55</publishTime>
     </File>
     <File Include="Admin/QuanLyTaiChinh/QuanLyThongKeLoiNhuan/QuanLyThongKeLoiNhuanMain.aspx">
-      <publishTime>12/02/2018 21:11:55</publishTime>
+      <publishTime>04/03/2019 21:56:27</publishTime>
     </File>
     <File Include="Admin/QuanLyVideoAnh.aspx">
       <publishTime>06/28/2018 22:01:52</publishTime>
@@ -1222,7 +1222,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/20/2018 22:09:59</publishTime>
     </File>
     <File Include="AnAn/index.aspx">
-      <publishTime>02/08/2018 23:31:20</publishTime>
+      <publishTime>12/28/2019 11:25:02</publishTime>
     </File>
     <File Include="AnAn/RoomAnAn.aspx">
       <publishTime>01/04/2018 22:30:06</publishTime>
@@ -1240,28 +1240,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 00:30:45</publishTime>
     </File>
     <File Include="bin/Common.dll">
-      <publishTime>12/27/2018 23:19:33</publishTime>
+      <publishTime>12/28/2019 12:44:45</publishTime>
     </File>
     <File Include="bin/Common.pdb">
-      <publishTime>12/27/2018 23:19:33</publishTime>
+      <publishTime>12/28/2019 12:44:45</publishTime>
     </File>
     <File Include="bin/DataAcees.dll">
-      <publishTime>12/27/2018 23:19:34</publishTime>
+      <publishTime>12/28/2019 12:44:49</publishTime>
     </File>
     <File Include="bin/DataAcees.dll.config">
       <publishTime>06/28/2018 20:37:12</publishTime>
     </File>
     <File Include="bin/DataAcees.pdb">
-      <publishTime>12/27/2018 23:19:34</publishTime>
+      <publishTime>12/28/2019 12:44:49</publishTime>
     </File>
     <File Include="bin/DataHelper.dll">
-      <publishTime>12/27/2018 23:19:35</publishTime>
+      <publishTime>12/28/2019 12:44:50</publishTime>
     </File>
     <File Include="bin/DataHelper.dll.config">
       <publishTime>06/30/2018 00:43:32</publishTime>
     </File>
     <File Include="bin/DataHelper.pdb">
-      <publishTime>12/27/2018 23:19:35</publishTime>
+      <publishTime>12/28/2019 12:44:50</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Data.v13.1.resources.dll">
       <publishTime>04/05/2018 15:36:59</publishTime>
@@ -1519,10 +1519,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2018 16:49:17</publishTime>
     </File>
     <File Include="bin/Housing.dll">
-      <publishTime>12/27/2018 23:19:37</publishTime>
+      <publishTime>12/28/2019 12:44:55</publishTime>
     </File>
     <File Include="bin/Housing.pdb">
-      <publishTime>12/27/2018 23:19:37</publishTime>
+      <publishTime>12/28/2019 12:44:55</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Data.v13.1.resources.dll">
       <publishTime>04/05/2018 15:36:59</publishTime>
@@ -2107,10 +2107,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/08/2018 00:10:20</publishTime>
     </File>
     <File Include="DaoTao/css/style.css">
-      <publishTime>08/08/2018 00:10:20</publishTime>
+      <publishTime>12/27/2018 23:37:55</publishTime>
     </File>
     <File Include="DaoTao/css/style4.css">
-      <publishTime>08/08/2018 00:10:20</publishTime>
+      <publishTime>12/27/2018 23:33:48</publishTime>
     </File>
     <File Include="DaoTao/css/widgets.css">
       <publishTime>08/08/2018 00:10:20</publishTime>
@@ -2182,7 +2182,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/08/2018 00:10:20</publishTime>
     </File>
     <File Include="DaoTao/index.aspx">
-      <publishTime>08/14/2018 21:32:47</publishTime>
+      <publishTime>12/27/2018 23:39:09</publishTime>
     </File>
     <File Include="DaoTao/js/amcharts.js">
       <publishTime>08/08/2018 00:10:20</publishTime>
@@ -2246,6 +2246,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="DaoTao/note3.png">
       <publishTime>08/14/2018 21:31:28</publishTime>
+    </File>
+    <File Include="DaoTao/traloi.aspx">
+      <publishTime>07/09/2019 22:43:59</publishTime>
     </File>
     <File Include="DaoTao/webfonts/fa-brands-400.eot">
       <publishTime>08/08/2018 00:10:19</publishTime>
@@ -3353,6 +3356,42 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Login/Login.aspx">
       <publishTime>05/07/2017 01:10:03</publishTime>
+    </File>
+    <File Include="Mandara/ImageDaiDien/anh bia khu vuc chung.jpg">
+      <publishTime>12/28/2019 11:10:06</publishTime>
+    </File>
+    <File Include="Mandara/ImageDaiDien/anhbialeu.jpg">
+      <publishTime>12/28/2019 11:10:06</publishTime>
+    </File>
+    <File Include="Mandara/ImageDaiDien/anhbiam5 8.jpg">
+      <publishTime>12/28/2019 11:10:06</publishTime>
+    </File>
+    <File Include="Mandara/ImageDaiDien/anhddM2.jpg">
+      <publishTime>12/28/2019 11:10:06</publishTime>
+    </File>
+    <File Include="Mandara/ImageDaiDien/anhddm3.jpg">
+      <publishTime>12/28/2019 11:10:06</publishTime>
+    </File>
+    <File Include="Mandara/ImageDaiDien/anhddm4.jpg">
+      <publishTime>12/28/2019 11:10:06</publishTime>
+    </File>
+    <File Include="Mandara/ImageDaiDien/anhddm6.jpg">
+      <publishTime>12/28/2019 11:10:06</publishTime>
+    </File>
+    <File Include="Mandara/ImageDaiDien/anhddm7.jpg">
+      <publishTime>12/28/2019 11:10:06</publishTime>
+    </File>
+    <File Include="Mandara/index.aspx">
+      <publishTime>12/28/2019 11:36:13</publishTime>
+    </File>
+    <File Include="Mandara/Mandaramaster.Master">
+      <publishTime>12/28/2019 12:39:57</publishTime>
+    </File>
+    <File Include="Mandara/RoomMandara.aspx">
+      <publishTime>12/14/2019 23:07:27</publishTime>
+    </File>
+    <File Include="Mandara/ThongTinMandara.aspx">
+      <publishTime>12/28/2019 12:42:21</publishTime>
     </File>
     <File Include="NonLa/AnhPhong/1.jpg">
       <publishTime>11/07/2017 21:42:03</publishTime>
@@ -4714,13 +4753,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/11/2018 00:11:14</publishTime>
     </File>
     <File Include="Tina/index.aspx">
-      <publishTime>08/21/2018 23:08:12</publishTime>
+      <publishTime>03/31/2019 21:33:23</publishTime>
     </File>
     <File Include="Tina/RoomTina.aspx">
       <publishTime>06/20/2018 23:13:46</publishTime>
     </File>
     <File Include="Tina/ThongTinTina.aspx">
-      <publishTime>06/11/2018 23:12:24</publishTime>
+      <publishTime>02/23/2019 22:18:58</publishTime>
     </File>
     <File Include="Tina/Tina.Master">
       <publishTime>06/20/2018 23:20:09</publishTime>

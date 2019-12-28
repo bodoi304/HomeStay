@@ -109,11 +109,11 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                     lblThongBao.Text = "Bạn nhập ngày sai rồi." + txtCheckin.Text + " " + txtCheckout.Text;
                     return;
                 }
-                if (!String.IsNullOrEmpty(txtIDPhong.Text) && !utilsWeb.IsNumeric(txtIDPhong.Text))
-                {
-                    lblThongBao.Text = "ID đặt phòng phải là số.";
-                    return;
-                }
+                //if (!String.IsNullOrEmpty(txtIDPhong.Text) && !utilsWeb.IsNumeric(txtIDPhong.Text))
+                //{
+                //    lblThongBao.Text = "ID đặt phòng phải là số.";
+                //    return;
+                //}
 
                 Bindata(checkint, checkout);
             }
@@ -155,19 +155,19 @@ namespace Housing.Admin.QuanLyPhong.Glistphong
                     List<LichDatPhong_Obj> lst = new List<LichDatPhong_Obj>();
 
 
-                    if (!String.IsNullOrEmpty(txtIDPhong.Text))
-                    {
-                        LichDatPhong_Obj objPhong = ctl.select_item_Id(Convert.ToInt64(txtIDPhong.Text));
-                        if (objPhong != null)
-                        {
-                            lst.Add(objPhong);
-                        }
+                    //if (!String.IsNullOrEmpty(txtIDPhong.Text))
+                    //{
+                    //    LichDatPhong_Obj objPhong = ctl.select_item_Id(Convert.ToInt64(txtIDPhong.Text));
+                    //    if (objPhong != null)
+                    //    {
+                    //        lst.Add(objPhong);
+                    //    }
 
 
-                        grd_DSPhong.DataSource = lst;
-                        grd_DSPhong.DataBind();
-                    }
-                    else
+                    //    grd_DSPhong.DataSource = lst;
+                    //    grd_DSPhong.DataBind();
+                    //}
+                    //else
                     {
                         List<LichDatPhong_Obj> lstOrder;
                         if (!String.IsNullOrEmpty(txtSoDienThoai.Text))

@@ -79,6 +79,8 @@ namespace Housing.Common
                     return "[-TINA-]";
                 case Constant.NHA_NAO.SAMSAM:
                     return "[-SAMSAM-]";
+                case Constant.NHA_NAO.MANDARA :
+                    return "[-MANDARA-]";
                 default:
                     return "[Không biết]";
             }
@@ -107,6 +109,10 @@ namespace Housing.Common
             {
                 dr.Items.Add(new ListItem("SAMSAM - VUNGTAU", "5"));
             }
+            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.MANDARA ))
+            {
+                dr.Items.Add(new ListItem("MANDARA - TAYTHIEN", "6"));
+            }
             dr.DataBind();
             return dr;
         }
@@ -115,18 +121,18 @@ namespace Housing.Common
         {
 
             dr.Items.Clear();
-            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.ANAN))
-            {
-                dr.Items.Add(new ListItem("ANAN", "1"));
-            }
-            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.SAFA))
-            {
-                dr.Items.Add(new ListItem("SAFA", "2"));
-            }
-            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.YOKO))
-            {
-                dr.Items.Add(new ListItem("YOKO", "3"));
-            }
+            //if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.ANAN))
+            //{
+            //    dr.Items.Add(new ListItem("ANAN", "1"));
+            //}
+            //if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.SAFA))
+            //{
+            //    dr.Items.Add(new ListItem("SAFA", "2"));
+            //}
+            //if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.YOKO))
+            //{
+            //    dr.Items.Add(new ListItem("YOKO", "3"));
+            //}
             if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.TINA))
             {
                 dr.Items.Add(new ListItem("TINA", "4"));
@@ -134,6 +140,10 @@ namespace Housing.Common
             if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.SAMSAM))
             {
                 dr.Items.Add(new ListItem("SAMSAM", "5"));
+            }
+            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.MANDARA ))
+            {
+                dr.Items.Add(new ListItem("MANDARA", "6"));
             }
             dr.DataBind();
 
@@ -163,6 +173,10 @@ namespace Housing.Common
             {
                 return Constant.NHA_NAO.SAMSAM;
             }
+            if (checkQuyenHienNha(role, Constant.BIT_AND_NHA_NAO.MANDARA))
+            {
+                return Constant.NHA_NAO.MANDARA ;
+            }
             return 0;
 
         }
@@ -181,6 +195,8 @@ namespace Housing.Common
                     return " (CC: nhà nhỏ nguyên căn, DD: phòng dorm nhà lớn, LL: Lều sân thượng)";
                 case Constant.NHA_NAO.SAMSAM:
                     return " (S1: Phòng Riêng, S2: Phòng Dorm)";
+                case Constant.NHA_NAO.MANDARA:
+                    return " (M2->M8: Phòng Riêng)";
                 default:
                     return "";
             }
@@ -385,6 +401,7 @@ namespace Housing.Common
             dr.Items.Add(new ListItem("SAFA", "2"));
             dr.Items.Add(new ListItem("YOKO", "3"));
             dr.Items.Add(new ListItem("TINA", "4"));
+            dr.Items.Add(new ListItem("MANDARA", "6"));
             dr.DataBind();
             dr.SelectedIndex = 0;
             return dr;

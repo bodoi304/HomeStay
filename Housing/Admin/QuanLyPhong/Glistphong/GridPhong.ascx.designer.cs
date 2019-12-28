@@ -58,15 +58,6 @@ namespace Housing.Admin.QuanLyPhong.Glistphong {
         protected global::System.Web.UI.WebControls.TextBox txtSoDienThoai;
         
         /// <summary>
-        /// txtIDPhong control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIDPhong;
-        
-        /// <summary>
         /// btnTimKiem control.
         /// </summary>
         /// <remarks>

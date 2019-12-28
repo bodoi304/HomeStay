@@ -28,10 +28,10 @@
                                 <asp:TextBox ID="txtSoDienThoai" Style="color: black !important" runat="server" placeholder="Số Điện Thoại" CssClass=" form-control"></asp:TextBox>
 
                             </div>
-                            <div class="form-group">
+            <%--                <div class="form-group">
                                 <asp:TextBox ID="txtIDPhong" Style="color: black !important" runat="server" placeholder="ID đặt phòng" CssClass=" form-control"></asp:TextBox>
 
-                            </div>
+                            </div>--%>
                             <asp:Button ID="btnTimKiem" runat="server" Text="Kiểm Tra Phòng" CssClass="btn btn-default" OnClick="btnTimKiem_Click" />
                             <p style="margin-top: 15px">
                                 <asp:Label ID="lblThongBao" runat="server" Text="" ForeColor="Blue" Font-Bold="true"></asp:Label>

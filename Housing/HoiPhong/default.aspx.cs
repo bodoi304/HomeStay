@@ -199,6 +199,14 @@ namespace Housing.HoiPhong
                             lblThongKe.Text = utilsWeb.getKetQuaPhong(lstTrangThaiRoomSamSam);
                             pnThongKe.Visible = true;
                             break;
+                        case Constant.NHA_NAO.MANDARA :
+                            List<Trang_Thai_Phong_Obj> lstTrangThaiRoomMandara = new List<Trang_Thai_Phong_Obj>();
+                            StringBuilder MaHieuPhongConMandara = new StringBuilder("[M2],[M3],[M4],[M5],[M6],[M7],[M8]");
+                            utilsWeb.checkPhong(txtKetQua, noidat, MaHieuPhongConMandara, lstNgayCheck, lstTrangThaiRoomMandara);
+
+                            lblThongKe.Text = utilsWeb.getKetQuaPhong(lstTrangThaiRoomMandara);
+                            pnThongKe.Visible = true;
+                            break;
                         default:
                             break;
                     }

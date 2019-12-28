@@ -314,6 +314,17 @@
     <Content Include="Amigo\RoomAmigo.aspx" />
     <Content Include="Amigo\ThongTinAmigo.aspx" />
     <Content Include="Amigo\ThongTinAmigoEn.aspx" />
+    <Content Include="Mandara\ImageDaiDien\anh bia khu vuc chung.jpg" />
+    <Content Include="Mandara\ImageDaiDien\anhbialeu.jpg" />
+    <Content Include="Mandara\ImageDaiDien\anhbiam5 8.jpg" />
+    <Content Include="Mandara\ImageDaiDien\anhddm3.jpg" />
+    <Content Include="Mandara\ImageDaiDien\anhddM2.jpg" />
+    <Content Include="Mandara\ImageDaiDien\anhddm4.jpg" />
+    <Content Include="Mandara\ImageDaiDien\anhddm6.jpg" />
+    <Content Include="Mandara\ImageDaiDien\anhddm7.jpg" />
+    <Content Include="Mandara\index.aspx" />
+    <Content Include="Mandara\RoomMandara.aspx" />
+    <Content Include="Mandara\ThongTinMandara.aspx" />
     <Content Include="AnAn\Cau_hoi_Thuong_gapAnAn.aspx" />
     <Content Include="AnAn\index.aspx" />
     <Content Include="AnAn\RoomAnAn.aspx" />
@@ -1239,6 +1250,7 @@
     <Content Include="DaoTao\webfonts\fa-solid-900.woff" />
     <Content Include="DaoTao\webfonts\fa-solid-900.woff2" />
     <Content Include="Admin\DaoTaoAdmin\Document\Book1.pdf" />
+    <Content Include="Mandara\Mandaramaster.Master" />
     <None Include="Properties\PublishProfiles\huy.pubxml" />
     <Content Include="Template.Master" />
     <Content Include="SubTemplate.Master" />
@@ -1479,6 +1491,34 @@
     </Compile>
     <Compile Include="Amigo\ThongTinAmigoEn.aspx.designer.cs">
       <DependentUpon>ThongTinAmigoEn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mandara\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mandara\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mandara\Mandaramaster.Master.cs">
+      <DependentUpon>Mandaramaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mandara\Mandaramaster.Master.designer.cs">
+      <DependentUpon>Mandaramaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mandara\RoomMandara.aspx.cs">
+      <DependentUpon>RoomMandara.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mandara\RoomMandara.aspx.designer.cs">
+      <DependentUpon>RoomMandara.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mandara\ThongTinMandara.aspx.cs">
+      <DependentUpon>ThongTinMandara.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mandara\ThongTinMandara.aspx.designer.cs">
+      <DependentUpon>ThongTinMandara.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnAn\AnAnmaster.Master.cs">
       <DependentUpon>AnAnmaster.Master</DependentUpon>
