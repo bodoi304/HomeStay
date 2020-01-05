@@ -23,7 +23,7 @@ namespace Housing.Admin.QuanLyPhong
         protected void btnSign_Click(object sender, EventArgs e)
         {
             UsersDH ctlUser = new UsersDH();
-            User objUser = ctlUser.validateLogin(txtEmail.Text, Utils.Encrypt(txtPassword.Text));
+            Users objUser = ctlUser.validateLogin(txtEmail.Text, Utils.Encrypt(txtPassword.Text));
 
             if (objUser == null)
             {

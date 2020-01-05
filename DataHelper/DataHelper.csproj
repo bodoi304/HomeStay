@@ -59,10 +59,22 @@
     <Compile Include="Anh.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Anh_Deleteitem_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Anh_SelectitemID_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Anh_Selectitem_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Answer.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
     <Compile Include="CategoryDocument.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Check_User_Result.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
     <Compile Include="Document.cs">
@@ -70,6 +82,9 @@
     </Compile>
     <Compile Include="Document_DH.cs" />
     <Compile Include="Group.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IntegerCommaSplit_Result.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
     <Compile Include="Lich_Dat_Phong.cs">
@@ -95,6 +110,9 @@
     </Compile>
     <Compile Include="MenuItemFunctionDH.cs" />
     <Compile Include="Object\ApplicationUserRolesObj.cs" />
+    <Compile Include="Product.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="qlchiphi_select_item_ngaytao_exact_Result.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
@@ -102,13 +120,37 @@
     <Compile Include="QuanLyAnhVideo.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyVideo_deleteById_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyViDeo_SelectAll_QL_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyViDeo_SelectAll_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyViDeo_SelectByCanHo_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyViDeo_SelectByDiaDiem_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyViDeo_SelectByLoaiVideo_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyViDeo_SelectID_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyViDeo_SelectIsAnhVideo_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Quan_Ly_Chi_Phi.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
+    <Compile Include="Quan_Ly_Chi_Phi_DH.cs" />
     <Compile Include="Quan_Ly_Ghi_No.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Quan_Ly_Chi_Phi_DH.cs" />
     <Compile Include="Quan_Ly_Ghi_No_DH.cs" />
     <Compile Include="Question.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
@@ -117,10 +159,31 @@
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
     <Compile Include="RolesDH.cs" />
+    <Compile Include="select_item_checkin_out_exact_byPageIndex_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_item_checkin_out_exact_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_item_checkin_out_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_item_Id_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_item_ngaytao_exact_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_item_Sdt_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_list_trangthai_Result.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Subject.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
+    <Compile Include="Users.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
     <Compile Include="UsersDH.cs" />
@@ -128,6 +191,9 @@
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
     <Compile Include="VIDEO.cs">
+      <DependentUpon>ManagerUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Video_Selectitem_Result.cs">
       <DependentUpon>ManagerUsers.tt</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -212,7 +212,7 @@ namespace Housing.Admin.QuanLyTaiChinh.QuanLyThongKeLoiNhuan
                 {
                     item.So_Tien_Chi_Phi = item.So_Tien_Chi_Phi / 1000;
                 }
-                tongchiphi += item.So_Tien_Chi_Phi;
+                tongchiphi += item.So_Tien_Chi_Phi??0;
             }
             grd_ChiPhi.DataSource = lst;
             grd_ChiPhi.DataBind();

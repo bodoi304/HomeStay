@@ -143,7 +143,7 @@ namespace Housing.Admin.QuanLyPhong
                 }
                 UsersDH ctlUser = new UsersDH();
                 String UserLog = cookie[Constant.NAME_COOKIE];
-                User objUser = ctlUser.validateLogin(UserLog, Utils.Encrypt(txtMatKhauCu.Text));
+                Users objUser = ctlUser.validateLogin(UserLog, Utils.Encrypt(txtMatKhauCu.Text));
                 if (objUser == null)
                 {
                     PopupDoiMatKhau.JSProperties["cpUpdateStatus"] = Constant.NOTIFY_FAILURE;

@@ -55,8 +55,8 @@ namespace ReportFinance.ManageUsers.ManageUsers
                 e.Cancel = true;
                 Int32 idUser = Convert.ToInt32(e.Keys[grd_DSUsers.KeyFieldName]);
                 ASPxFormLayout pnLayData = grd_DSUsers.FindEditFormTemplateControl("LayOutThemSua") as ASPxFormLayout;
-                User user = new User(); 
-                Utils.setView2ObjectLayout<User>(user, pnLayData);
+                Users user = new Users(); 
+                Utils.setView2ObjectLayout<Users>(user, pnLayData);
                 ctlUser.updateUsers(idUser,user);
                 Bindata();
                 Utils.notifierGrid(grd_DSUsers, Constant.NOTIFY_SUCCESS, "Bạn đã cập nhập thành công tài khoản [" + user.Id_Login + "]");
@@ -77,8 +77,8 @@ namespace ReportFinance.ManageUsers.ManageUsers
 
                 e.Cancel = true;
                 ASPxFormLayout pnLayData = grd_DSUsers.FindEditFormTemplateControl("LayOutThemSua") as ASPxFormLayout;
-                User user = new User();
-                Utils.setView2ObjectLayout<User>(user, pnLayData);
+                Users user = new Users();
+                Utils.setView2ObjectLayout<Users>(user, pnLayData);
                 user.LockoutEnabled = false;
                 user.Password =Utils.Encrypt( user.Password);
                 getFirstLastName(user);
@@ -93,7 +93,7 @@ namespace ReportFinance.ManageUsers.ManageUsers
         }
 
 
-        public void getFirstLastName(User user)
+        public void getFirstLastName(Users user)
         {
             string fullName = user.UserName;
             string[] names = fullName.Split(' ');
@@ -129,7 +129,7 @@ namespace ReportFinance.ManageUsers.ManageUsers
                 lstError.Add(new Error_Obj { error = "[Tên đăng nhập] không được để trống." });
             }
 
-            User user = ctlUser.getUsersByIDLogin(txtId_Login.Text.Trim ());
+            Users user = ctlUser.getUsersByIDLogin(txtId_Login.Text.Trim ());
             if (user != null && grd_DSUsers.IsNewRowEditing)
             {
                 lstError.Add(new Error_Obj { error = "Tên đăng nhập đã tồn tại." });
@@ -177,7 +177,7 @@ namespace ReportFinance.ManageUsers.ManageUsers
                 Object objKey = grd_DSUsers.GetMasterRowKeyValue();
                 String[] str = objKey.ToString().Split('|');
                 Int32 idUser = Convert.ToInt32(str[0]);
-                User  user = ctlUser.getUsersByID(idUser);
+                Users user = ctlUser.getUsersByID(idUser);
                 grd_DSUsers.DataSource = user.Roles;
             }
 

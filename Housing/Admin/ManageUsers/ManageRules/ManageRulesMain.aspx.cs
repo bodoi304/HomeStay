@@ -41,9 +41,9 @@ namespace ReportFinance.ManageUsers.ManageRules
          
             Int32 idRole = Convert.ToInt32(cbRoles.SelectedItem.Value);
          
-            ICollection<User> lstUserOfRoles = BindataListUserOfRole(Convert.ToInt32(cbRoles.SelectedItem.Value));
+            ICollection<Users> lstUserOfRoles = BindataListUserOfRole(Convert.ToInt32(cbRoles.SelectedItem.Value));
             List<Users_SelectUsersNoRole_Result> lstUsers = ctlUser.SelectUsersNoRole(idRole);
-            foreach (User item in lstUserOfRoles)
+            foreach (Users item in lstUserOfRoles)
             {
                 lstUsers.Remove(lstUsers.Where(x => x.Id == item.Id).FirstOrDefault());
             }
@@ -56,7 +56,7 @@ namespace ReportFinance.ManageUsers.ManageRules
             txtUserOfRole.Text = "";
         }
 
-        public ICollection<User> BindataListUserOfRole(Int32 IdRole)
+        public ICollection<Users> BindataListUserOfRole(Int32 IdRole)
         {
             Role role = ctlRole.getListUserofRole(IdRole);
             lbUserOfRole.TextField = "Id_Login";
@@ -136,9 +136,9 @@ namespace ReportFinance.ManageUsers.ManageRules
 
         protected void txtUser_TextChanged(object sender, EventArgs e)
         {
-            ICollection<User> lstUserOfRoles = BindataListUserOfRole(Convert.ToInt32(cbRoles.SelectedItem.Value));
-            List<User> lstUsers = ctlUser.getUsersByIdLogInLike(txtUser.Text);
-            foreach (User item in lstUserOfRoles)
+            ICollection<Users> lstUserOfRoles = BindataListUserOfRole(Convert.ToInt32(cbRoles.SelectedItem.Value));
+            List<Users> lstUsers = ctlUser.getUsersByIdLogInLike(txtUser.Text);
+            foreach (Users item in lstUserOfRoles)
             {
                 lstUsers.Remove(lstUsers.Where(x => x.Id == item.Id).FirstOrDefault());
             }

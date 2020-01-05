@@ -4,31 +4,32 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a7d5e80206724c089ca18cd5f243b124" Name="Diagram1">
-        <EntityTypeShape EntityType="HouzingModel.AccountLog" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HouzingModel.Anh" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+      <Diagram DiagramId="7b71ec6b2c9d4e798eaa268e231a3f36" Name="Diagram1">
+        <EntityTypeShape EntityType="HouzingModel.AccountLog" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Anh" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Answer" Width="1.5" PointX="8" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.CategoryDocument" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Document" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="HouzingModel.Group" Width="1.5" PointX="7.5" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="HouzingModel.Lich_Dat_Phong" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Lich_Dat_Phong" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HouzingModel.MenuItemFunction" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HouzingModel.QuanLyAnhVideo" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Product" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Quan_Ly_Chi_Phi" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Quan_Ly_Ghi_No" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.QuanLyAnhVideo" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Question" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="HouzingModel.Role" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="HouzingModel.User" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="HouzingModel.VIDEO" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Subject" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.Users" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HouzingModel.VIDEO" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="HouzingModel.FK_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="HouzingModel.FK__Document__ID_Cat__2A363CC5" ManuallyRouted="false" />
+        <AssociationConnector Association="HouzingModel.FK__Document__ID_Cat__2B2A60FE" ManuallyRouted="false" />
+        <AssociationConnector Association="HouzingModel.FK__Document__ID_Cat__2C1E8537" ManuallyRouted="false" />
         <AssociationConnector Association="HouzingModel.ApplicationRoleGroups" ManuallyRouted="false" />
         <AssociationConnector Association="HouzingModel.ApplicationUserGroups" ManuallyRouted="false" />
         <AssociationConnector Association="HouzingModel.ApplicationUserRoles" ManuallyRouted="false" />
         <AssociationConnector Association="HouzingModel.MenuItemRoles" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="HouzingModel.Quan_Ly_Ghi_No" Width="1.5" PointX="9.375" PointY="8.75" />
-        <EntityTypeShape EntityType="HouzingModel.CategoryDocument" Width="1.5" PointX="10.75" PointY="0.75" />
-        <EntityTypeShape EntityType="HouzingModel.Document" Width="1.5" PointX="0.75" PointY="10.75" />
-        <EntityTypeShape EntityType="HouzingModel.Quan_Ly_Chi_Phi" Width="1.5" PointX="11.375" PointY="3.75" />
-        <AssociationConnector Association="HouzingModel.FK__Document__ID_Cat__2A363CC5" />
-        <AssociationConnector Association="HouzingModel.FK__Document__ID_Cat__2B2A60FE" />
-        <AssociationConnector Association="HouzingModel.FK__Document__ID_Cat__2C1E8537" />
-        <EntityTypeShape EntityType="HouzingModel.Answer" Width="1.5" PointX="13.625" PointY="7.875" />
-        <EntityTypeShape EntityType="HouzingModel.Question" Width="1.5" PointX="11.375" PointY="8" />
-        <EntityTypeShape EntityType="HouzingModel.Subject" Width="1.5" PointX="7.375" PointY="11.75" />
-        <AssociationConnector Association="HouzingModel.FK_Question" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

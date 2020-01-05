@@ -10,9 +10,9 @@ namespace DataHelper
 {
     public class UsersDH
     {
-        public List<User> getAllUsers()
+        public List<Users> getAllUsers()
         {
-            List<User> userList;
+            List<Users> userList;
             using (var context = new HouzingEntities())
             {
 
@@ -33,9 +33,9 @@ namespace DataHelper
             return userList;
         }
 
-        public List<User> getUsersByIdLogInLike(String idLogin)
+        public List<Users> getUsersByIdLogInLike(String idLogin)
         {
-            List<User> userList;
+            List<Users> userList;
             using (var context = new HouzingEntities())
             {
 
@@ -46,9 +46,9 @@ namespace DataHelper
             return userList;
         }
 
-        public User getUsersByID(Int64 Iduser)
+        public Users getUsersByID(Int64 Iduser)
         {
-            User user;
+            Users user;
             using (var context = new HouzingEntities())
             {
 
@@ -58,9 +58,9 @@ namespace DataHelper
             return user;
         }
 
-        public User validateLogin(String IdLogIn, String passWord)
+        public Users validateLogin(String IdLogIn, String passWord)
         {
-            User user;
+            Users user;
             using (var context = new HouzingEntities())
             {
 
@@ -78,7 +78,7 @@ namespace DataHelper
             return user;
         }
 
-        public List<MenuItemFunction> getMenuItem(User user)
+        public List<MenuItemFunction> getMenuItem(Users user)
         {
             List<MenuItemFunction> lstAll = new List<MenuItemFunction>();
             using (var context = new HouzingEntities())
@@ -94,9 +94,9 @@ namespace DataHelper
         }
 
 
-        public User getUsersByIDLogin(String IdLogIn)
+        public Users getUsersByIDLogin(String IdLogIn)
         {
-            User user;
+            Users user;
             using (var context = new HouzingEntities())
             {
                 IdLogIn = IdLogIn.Trim();
@@ -112,7 +112,7 @@ namespace DataHelper
             using (var context = new HouzingEntities())
             {
 
-                User user = (from s in context.Users where s.Id == Iduser select s).Single();
+                Users user = (from s in context.Users where s.Id == Iduser select s).Single();
                 context.Users.Remove(user);
 
                 context.SaveChanges();
@@ -121,13 +121,13 @@ namespace DataHelper
 
         }
 
-        public void updateUsers(Int64 Iduser, User user)
+        public void updateUsers(Int64 Iduser, Users user)
         {
 
             using (var context = new HouzingEntities())
             {
 
-                User userDb = (from s in context.Users where s.Id == Iduser select s).Single();
+                Users userDb = (from s in context.Users where s.Id == Iduser select s).Single();
                 userDb.Id_Login = user.Id_Login;
                 userDb.Email = user.Email;
                 userDb.PhoneNumber = user.PhoneNumber;
@@ -152,7 +152,7 @@ namespace DataHelper
             using (var context = new HouzingEntities())
             {
 
-                User user = (from s in context.Users where s.Id == Iduser select s).Single();
+                Users user = (from s in context.Users where s.Id == Iduser select s).Single();
                 user.LockoutEnabled = !user.LockoutEnabled;
 
                 context.SaveChanges();
@@ -167,7 +167,7 @@ namespace DataHelper
             using (var context = new HouzingEntities())
             {
 
-                User user = (from s in context.Users where s.Id_Login == idLogIn select s).Single();
+                Users user = (from s in context.Users where s.Id_Login == idLogIn select s).Single();
                 user.Password = password;
 
                 context.SaveChanges();
@@ -176,7 +176,7 @@ namespace DataHelper
 
         }
 
-        public void insertUsers(User user)
+        public void insertUsers(Users user)
         {
 
             using (var context = new HouzingEntities())

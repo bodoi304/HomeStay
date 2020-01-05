@@ -11,9 +11,10 @@ namespace DataHelper
 {
     using System;
     using System.Collections.Generic;
-    [Serializable]
+    
     public partial class MenuItemFunction
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MenuItemFunction()
         {
             this.Roles = new HashSet<Role>();
@@ -28,6 +29,7 @@ namespace DataHelper
         public Nullable<bool> ExistChild { get; set; }
         public Nullable<bool> isDisplay { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Role> Roles { get; set; }
     }
 }

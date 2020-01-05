@@ -136,6 +136,16 @@
           <Property Name="MenuItem_ID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Role_ID" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Category" Type="nvarchar(max)" />
+          <Property Name="PurchasePrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
         <EntityType Name="Quan_Ly_Chi_Phi">
           <Key>
             <PropertyRef Name="ID" />
@@ -394,50 +404,226 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="ApplicationUserRoles_DeleteItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bodoi304">
+        <Function Name="Anh_Deleteitem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="Anh_insertItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_IMAGE" Type="bigint" Mode="In" />
+          <Parameter Name="IMAGE_THUMB_URL" Type="varchar" Mode="In" />
+          <Parameter Name="IMAGE_URL" Type="varchar" Mode="In" />
+          <Parameter Name="VITRI_IMAGE" Type="nvarchar" Mode="In" />
+          <Parameter Name="TITLE_IMAGE" Type="nvarchar" Mode="In" />
+          <Parameter Name="IMAGE_HOVER" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Anh_Selectitem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_IMAGE" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="Anh_SelectitemID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="Anh_updateItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+          <Parameter Name="ID_IMAGE" Type="bigint" Mode="In" />
+          <Parameter Name="VITRI_IMAGE" Type="nvarchar" Mode="In" />
+          <Parameter Name="TITLE_IMAGE" Type="nvarchar" Mode="In" />
+          <Parameter Name="IMAGE_HOVER" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Anh_updateItemSua" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+          <Parameter Name="VITRI_IMAGE" Type="nvarchar" Mode="In" />
+          <Parameter Name="TITLE_IMAGE" Type="nvarchar" Mode="In" />
+          <Parameter Name="IMAGE_HOVER" Type="nvarchar" Mode="In" />
+          <Parameter Name="IMAGE_URL" Type="varchar" Mode="In" />
+          <Parameter Name="Sap_xep" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="ApplicationUserRoles_DeleteItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserId" Type="bigint" Mode="In" />
           <Parameter Name="RoleID" Type="int" Mode="In" />
         </Function>
-        <Function Name="ApplicationUserRoles_InsertItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bodoi304">
+        <Function Name="ApplicationUserRoles_InsertItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserId" Type="bigint" Mode="In" />
           <Parameter Name="RoleID" Type="int" Mode="In" />
         </Function>
-        <Function Name="MenuItemRoles_DeleteByRoleID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bodoi304">
+        <Function Name="Check_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="User_Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Password" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="delete_lich_dat_phong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="Insert_QuanLyAnhVideo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IS_IMAGE_VIDEO" Type="smallint" Mode="In" />
+          <Parameter Name="QUOTE" Type="nvarchar" Mode="In" />
+          <Parameter Name="NAME" Type="nvarchar" Mode="In" />
+          <Parameter Name="ICON_VIDEO_IMAGE" Type="varchar" Mode="In" />
+          <Parameter Name="DURATION_VIDEO" Type="varchar" Mode="In" />
+          <Parameter Name="DIA_DIEM" Type="smallint" Mode="In" />
+          <Parameter Name="LOAI_VIDEO" Type="smallint" Mode="In" />
+          <Parameter Name="LOAI_IMAGE" Type="smallint" Mode="In" />
+          <Parameter Name="THU_TU_UU_TIEN" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="IntegerCommaSplit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ListofIds" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="IntegerValue" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="Lich_Dat_Phong_InsertItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Ten_Khach_Hang" Type="nvarchar" Mode="In" />
+          <Parameter Name="So_Dien_Thoai" Type="varchar" Mode="In" />
+          <Parameter Name="Ngay_Sinh_Nhat" Type="date" Mode="In" />
+          <Parameter Name="Noi_Song" Type="nvarchar" Mode="In" />
+          <Parameter Name="So_Phong_Dat" Type="nvarchar" Mode="In" />
+          <Parameter Name="Check_in" Type="date" Mode="In" />
+          <Parameter Name="Check_out" Type="date" Mode="In" />
+          <Parameter Name="Tong_tien_phong" Type="decimal" Mode="In" />
+          <Parameter Name="Tien_chuyen_khoan" Type="decimal" Mode="In" />
+          <Parameter Name="Trang_Thai_CK" Type="varchar" Mode="In" />
+          <Parameter Name="Tien_Con_Phai_Tra" Type="decimal" Mode="In" />
+          <Parameter Name="Tong_so_dem" Type="int" Mode="In" />
+          <Parameter Name="Quoc_Gia" Type="nvarchar" Mode="In" />
+          <Parameter Name="Ghi_chu" Type="nvarchar" Mode="In" />
+          <Parameter Name="Thu_checkin" Type="nvarchar" Mode="In" />
+          <Parameter Name="Th_checkout" Type="nvarchar" Mode="In" />
+          <Parameter Name="Nha_Nao" Type="int" Mode="In" />
+          <Parameter Name="Nguoi_Nhap" Type="nvarchar" Mode="In" />
+          <Parameter Name="TrangThai" Type="int" Mode="In" />
+          <Parameter Name="Trang_Thai_Dat" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MenuItemRoles_DeleteByRoleID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDRole" Type="int" Mode="In" />
         </Function>
-        <Function Name="MenuItemRoles_InsertItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bodoi304">
+        <Function Name="MenuItemRoles_InsertItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MenuItem_ID" Type="varchar" Mode="In" />
           <Parameter Name="Role_ID" Type="int" Mode="In" />
         </Function>
-        <Function Name="qlchiphi_select_item_ngaytao_exact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bodoi304">
+        <Function Name="qlchiphi_select_item_ngaytao_exact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ngaytao_tu" Type="date" Mode="In" />
           <Parameter Name="ngaytao_den" Type="date" Mode="In" />
           <Parameter Name="NhaNao" Type="int" Mode="In" />
         </Function>
-        <Function Name="Users_SelectUsersNoRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bodoi304">
+        <Function Name="QuanLyVideo_deleteById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="QuanLyViDeo_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="QuanLyViDeo_SelectAll_QL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="QuanLyViDeo_SelectByCanHo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LOAI_IMAGE" Type="smallint" Mode="In" />
+        </Function>
+        <Function Name="QuanLyViDeo_SelectByDiaDiem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DIA_DIEM" Type="smallint" Mode="In" />
+        </Function>
+        <Function Name="QuanLyViDeo_SelectByLoaiVideo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Loai_video" Type="int" Mode="In" />
+        </Function>
+        <Function Name="QuanLyViDeo_SelectID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="QuanLyViDeo_SelectIsAnhVideo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="isAnhVideo" Type="smallint" Mode="In" />
+        </Function>
+        <Function Name="select_item_checkin_out" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="check" Type="date" Mode="In" />
+          <Parameter Name="NhaNao" Type="int" Mode="In" />
+        </Function>
+        <Function Name="select_item_checkin_out_exact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="checkin" Type="date" Mode="In" />
+          <Parameter Name="checkout" Type="date" Mode="In" />
+          <Parameter Name="NhaNao" Type="int" Mode="In" />
+        </Function>
+        <Function Name="select_item_checkin_out_exact_byPageIndex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="checkin" Type="date" Mode="In" />
+          <Parameter Name="checkout" Type="date" Mode="In" />
+          <Parameter Name="NhaNao" Type="int" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+        </Function>
+        <Function Name="select_item_Id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="select_item_ngaytao_exact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngaytao_tu" Type="date" Mode="In" />
+          <Parameter Name="ngaytao_den" Type="date" Mode="In" />
+          <Parameter Name="NhaNao" Type="int" Mode="In" />
+        </Function>
+        <Function Name="select_item_Sdt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sodienthoai" Type="varchar" Mode="In" />
+          <Parameter Name="NhaNao" Type="int" Mode="In" />
+        </Function>
+        <Function Name="select_list_trangthai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TrangThai" Type="int" Mode="In" />
+          <Parameter Name="NhaNao" Type="int" Mode="In" />
+        </Function>
+        <Function Name="update_lich_dat_phong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+          <Parameter Name="Ten_Khach_Hang" Type="nvarchar" Mode="In" />
+          <Parameter Name="checkin" Type="date" Mode="In" />
+          <Parameter Name="checkout" Type="date" Mode="In" />
+          <Parameter Name="So_Dien_Thoai" Type="varchar" Mode="In" />
+          <Parameter Name="Ngay_Sinh_Nhat" Type="date" Mode="In" />
+          <Parameter Name="Tong_tien_phong" Type="decimal" Mode="In" />
+          <Parameter Name="Tien_chuyen_khoan" Type="decimal" Mode="In" />
+          <Parameter Name="Tien_Con_Phai_Tra" Type="decimal" Mode="In" />
+          <Parameter Name="So_Phong_Dat" Type="nvarchar" Mode="In" />
+          <Parameter Name="nguoi_nhap" Type="nvarchar" Mode="In" />
+          <Parameter Name="TrangThai" Type="int" Mode="In" />
+          <Parameter Name="Trang_Thai_CK" Type="varchar" Mode="In" />
+          <Parameter Name="Nha_Nao" Type="int" Mode="In" />
+          <Parameter Name="Ghi_chu" Type="nvarchar" Mode="In" />
+          <Parameter Name="Trang_Thai_Dat" Type="int" Mode="In" />
+        </Function>
+        <Function Name="update_QuanlyAnhVideo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bigint" Mode="In" />
+          <Parameter Name="IS_IMAGE_VIDEO" Type="smallint" Mode="In" />
+          <Parameter Name="QUOTE" Type="nvarchar" Mode="In" />
+          <Parameter Name="NAME" Type="nvarchar" Mode="In" />
+          <Parameter Name="DURATION_VIDEO" Type="varchar" Mode="In" />
+          <Parameter Name="DIA_DIEM" Type="smallint" Mode="In" />
+          <Parameter Name="LOAI_VIDEO" Type="smallint" Mode="In" />
+          <Parameter Name="LOAI_IMAGE" Type="smallint" Mode="In" />
+          <Parameter Name="THU_TU_UU_TIEN" Type="bigint" Mode="In" />
+          <Parameter Name="ICON_VIDEO_IMAGE" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Users_SelectUsersNoRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDRole" Type="int" Mode="In" />
         </Function>
+        <Function Name="Video_Insertitem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Video_URL" Type="varchar" Mode="In" />
+          <Parameter Name="ID_Video" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="Video_Selectitem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_VIDEO" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="Video_Updateitem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_VIDEO" Type="bigint" Mode="In" />
+          <Parameter Name="Video_URL" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="HouzingModelStoreContainer">
-          <EntitySet Name="AccountLogs" EntityType="Self.AccountLogs" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Anh" EntityType="Self.Anh" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Answer" EntityType="Self.Answer" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="ApplicationRoleGroups" EntityType="Self.ApplicationRoleGroups" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="ApplicationUserGroups" EntityType="Self.ApplicationUserGroups" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="ApplicationUserRoles" EntityType="Self.ApplicationUserRoles" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="CategoryDocument" EntityType="Self.CategoryDocument" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Document" EntityType="Self.Document" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Groups" EntityType="Self.Groups" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Lich_Dat_Phong" EntityType="Self.Lich_Dat_Phong" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="MenuItemFunctions" EntityType="Self.MenuItemFunctions" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="MenuItemRoles" EntityType="Self.MenuItemRoles" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Quan_Ly_Chi_Phi" EntityType="Self.Quan_Ly_Chi_Phi" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Quan_Ly_Ghi_No" EntityType="Self.Quan_Ly_Ghi_No" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="QuanLyAnhVideo" EntityType="Self.QuanLyAnhVideo" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Question" EntityType="Self.Question" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Subject" EntityType="Self.Subject" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="Users" EntityType="Self.Users" Schema="bodoi304" store:Type="Tables" />
-          <EntitySet Name="VIDEO" EntityType="Self.VIDEO" Schema="bodoi304" store:Type="Tables" />
+          <EntitySet Name="AccountLogs" EntityType="Self.AccountLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Anh" EntityType="Self.Anh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Answer" EntityType="Self.Answer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationRoleGroups" EntityType="Self.ApplicationRoleGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationUserGroups" EntityType="Self.ApplicationUserGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationUserRoles" EntityType="Self.ApplicationUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CategoryDocument" EntityType="Self.CategoryDocument" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Document" EntityType="Self.Document" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lich_Dat_Phong" EntityType="Self.Lich_Dat_Phong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenuItemFunctions" EntityType="Self.MenuItemFunctions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenuItemRoles" EntityType="Self.MenuItemRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Quan_Ly_Chi_Phi" EntityType="Self.Quan_Ly_Chi_Phi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Quan_Ly_Ghi_No" EntityType="Self.Quan_Ly_Ghi_No" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QuanLyAnhVideo" EntityType="Self.QuanLyAnhVideo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VIDEO" EntityType="Self.VIDEO" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Document__ID_Cat__2A363CC5" Association="Self.FK__Document__ID_Cat__2A363CC5">
             <End Role="CategoryDocument" EntitySet="CategoryDocument" />
             <End Role="Document" EntitySet="Document" />
@@ -491,6 +677,9 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HouzingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="IntegerCommaSplit_Result">
+          <Property Name="IntegerValue" Type="Int32" />
+        </ComplexType>
         <EntityType Name="AccountLog">
           <Key>
             <PropertyRef Name="Id" />
@@ -515,6 +704,40 @@
           <Property Name="IMAGE_HOVER" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Sap_xep" Type="Int64" />
           <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="STT" Type="Int32" />
+          <Property Name="ID_SUBJECT" Type="Int32" />
+          <Property Name="CAU_TRA_LOI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Question" Relationship="Self.FK_Question" FromRole="Answer" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="CategoryDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Documents" Relationship="Self.FK__Document__ID_Cat__2A363CC5" FromRole="CategoryDocument" ToRole="Document" />
+          <NavigationProperty Name="Documents1" Relationship="Self.FK__Document__ID_Cat__2B2A60FE" FromRole="CategoryDocument" ToRole="Document" />
+          <NavigationProperty Name="Documents2" Relationship="Self.FK__Document__ID_Cat__2C1E8537" FromRole="CategoryDocument" ToRole="Document" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Category" Type="Int32" />
+          <Property Name="NameDocument" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PathDocument" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CategoryDocument" Relationship="Self.FK__Document__ID_Cat__2A363CC5" FromRole="Document" ToRole="CategoryDocument" />
+          <NavigationProperty Name="CategoryDocument1" Relationship="Self.FK__Document__ID_Cat__2B2A60FE" FromRole="Document" ToRole="CategoryDocument" />
+          <NavigationProperty Name="CategoryDocument2" Relationship="Self.FK__Document__ID_Cat__2C1E8537" FromRole="Document" ToRole="CategoryDocument" />
         </EntityType>
         <EntityType Name="Group">
           <Key>
@@ -566,6 +789,39 @@
           <Property Name="isDisplay" Type="Boolean" />
           <NavigationProperty Name="Roles" Relationship="Self.MenuItemRoles" FromRole="MenuItemFunctions" ToRole="Roles" />
         </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PurchasePrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="RetailPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Quan_Ly_Chi_Phi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="So_Tien_Chi_Phi" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Ghi_Chu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nha_Nao" Type="Int32" />
+          <Property Name="Ngay_Nhap_Chi_Phi" Type="DateTime" Precision="3" />
+          <Property Name="Nguoi_Nhap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Quan_Ly_Ghi_No">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="So_Tien_No" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Ghi_Chu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nha_Nao" Type="Int32" />
+          <Property Name="Nguoi_Nhap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+        </EntityType>
         <EntityType Name="QuanLyAnhVideo">
           <Key>
             <PropertyRef Name="ID" />
@@ -582,6 +838,16 @@
           <Property Name="THU_TU_UU_TIEN" Type="Int64" />
           <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
         </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="STT" />
+            <PropertyRef Name="ID_SUBJECT" />
+          </Key>
+          <Property Name="STT" Type="Int32" Nullable="false" />
+          <Property Name="ID_SUBJECT" Type="Int32" Nullable="false" />
+          <Property Name="CAU_HOI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Answers" Relationship="Self.FK_Question" FromRole="Question" ToRole="Answer" />
+        </EntityType>
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="Id" />
@@ -594,7 +860,14 @@
           <NavigationProperty Name="Users" Relationship="Self.ApplicationUserRoles" FromRole="Roles" ToRole="Users" />
           <NavigationProperty Name="MenuItemFunctions" Relationship="Self.MenuItemRoles" FromRole="Roles" ToRole="MenuItemFunctions" />
         </EntityType>
-        <EntityType Name="User">
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten_Mon_Hoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -626,17 +899,69 @@
           <Property Name="MAIN_HOVER_TEXT" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
         </EntityType>
+        <Association Name="FK_Question">
+          <End Role="Question" Type="Self.Question" Multiplicity="0..1" />
+          <End Role="Answer" Type="Self.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="STT" />
+              <PropertyRef Name="ID_SUBJECT" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="STT" />
+              <PropertyRef Name="ID_SUBJECT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__ID_Cat__2A363CC5">
+          <End Role="CategoryDocument" Type="Self.CategoryDocument" Multiplicity="0..1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="ID_Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__ID_Cat__2B2A60FE">
+          <End Role="CategoryDocument" Type="Self.CategoryDocument" Multiplicity="0..1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="ID_Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__ID_Cat__2C1E8537">
+          <End Role="CategoryDocument" Type="Self.CategoryDocument" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="ID_Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="ApplicationRoleGroups">
           <End Role="Groups" Type="Self.Group" Multiplicity="*" />
           <End Role="Roles" Type="Self.Role" Multiplicity="*" />
         </Association>
         <Association Name="ApplicationUserGroups">
-          <End Role="Users" Type="Self.User" Multiplicity="*" />
+          <End Role="Users" Type="HouzingModel.Users" Multiplicity="*" />
           <End Role="Groups" Type="Self.Group" Multiplicity="*" />
         </Association>
         <Association Name="ApplicationUserRoles">
           <End Role="Roles" Type="Self.Role" Multiplicity="*" />
-          <End Role="Users" Type="Self.User" Multiplicity="*" />
+          <End Role="Users" Type="HouzingModel.Users" Multiplicity="*" />
         </Association>
         <Association Name="MenuItemRoles">
           <End Role="MenuItemFunctions" Type="Self.MenuItemFunction" Multiplicity="*" />
@@ -645,13 +970,37 @@
         <EntityContainer Name="HouzingEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AccountLogs" EntityType="Self.AccountLog" />
           <EntitySet Name="Anhs" EntityType="Self.Anh" />
+          <EntitySet Name="Answers" EntityType="Self.Answer" />
+          <EntitySet Name="CategoryDocuments" EntityType="Self.CategoryDocument" />
+          <EntitySet Name="Documents" EntityType="Self.Document" />
           <EntitySet Name="Groups" EntityType="Self.Group" />
           <EntitySet Name="Lich_Dat_Phong" EntityType="Self.Lich_Dat_Phong" />
           <EntitySet Name="MenuItemFunctions" EntityType="Self.MenuItemFunction" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="Quan_Ly_Chi_Phi" EntityType="Self.Quan_Ly_Chi_Phi" />
+          <EntitySet Name="Quan_Ly_Ghi_No" EntityType="Self.Quan_Ly_Ghi_No" />
           <EntitySet Name="QuanLyAnhVideos" EntityType="Self.QuanLyAnhVideo" />
+          <EntitySet Name="Questions" EntityType="Self.Question" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
-          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Subjects" EntityType="Self.Subject" />
+          <EntitySet Name="Users" EntityType="HouzingModel.Users" />
           <EntitySet Name="VIDEOs" EntityType="Self.VIDEO" />
+          <AssociationSet Name="FK_Question" Association="Self.FK_Question">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="Answer" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__ID_Cat__2A363CC5" Association="Self.FK__Document__ID_Cat__2A363CC5">
+            <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
+            <End Role="Document" EntitySet="Documents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__ID_Cat__2B2A60FE" Association="Self.FK__Document__ID_Cat__2B2A60FE">
+            <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
+            <End Role="Document" EntitySet="Documents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__ID_Cat__2C1E8537" Association="Self.FK__Document__ID_Cat__2C1E8537">
+            <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
+            <End Role="Document" EntitySet="Documents" />
+          </AssociationSet>
           <AssociationSet Name="ApplicationRoleGroups" Association="Self.ApplicationRoleGroups">
             <End Role="Groups" EntitySet="Groups" />
             <End Role="Roles" EntitySet="Roles" />
@@ -668,6 +1017,41 @@
             <End Role="MenuItemFunctions" EntitySet="MenuItemFunctions" />
             <End Role="Roles" EntitySet="Roles" />
           </AssociationSet>
+          <FunctionImport Name="IntegerCommaSplit" IsComposable="true" ReturnType="Collection(HouzingModel.IntegerCommaSplit_Result)">
+          <Parameter Name="ListofIds" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Anh_Deleteitem" ReturnType="Collection(HouzingModel.Anh_Deleteitem_Result)">
+          <Parameter Name="ID" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="Anh_insertItem">
+            <Parameter Name="ID_IMAGE" Mode="In" Type="Int64" />
+            <Parameter Name="IMAGE_THUMB_URL" Mode="In" Type="String" />
+            <Parameter Name="IMAGE_URL" Mode="In" Type="String" />
+            <Parameter Name="VITRI_IMAGE" Mode="In" Type="String" />
+            <Parameter Name="TITLE_IMAGE" Mode="In" Type="String" />
+            <Parameter Name="IMAGE_HOVER" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Anh_Selectitem" ReturnType="Collection(HouzingModel.Anh_Selectitem_Result)">
+          <Parameter Name="ID_IMAGE" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="Anh_SelectitemID" ReturnType="Collection(HouzingModel.Anh_SelectitemID_Result)">
+          <Parameter Name="ID" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="Anh_updateItem">
+            <Parameter Name="ID" Mode="In" Type="Int64" />
+            <Parameter Name="ID_IMAGE" Mode="In" Type="Int64" />
+            <Parameter Name="VITRI_IMAGE" Mode="In" Type="String" />
+            <Parameter Name="TITLE_IMAGE" Mode="In" Type="String" />
+            <Parameter Name="IMAGE_HOVER" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Anh_updateItemSua">
+            <Parameter Name="ID" Mode="In" Type="Int64" />
+            <Parameter Name="VITRI_IMAGE" Mode="In" Type="String" />
+            <Parameter Name="TITLE_IMAGE" Mode="In" Type="String" />
+            <Parameter Name="IMAGE_HOVER" Mode="In" Type="String" />
+            <Parameter Name="IMAGE_URL" Mode="In" Type="String" />
+            <Parameter Name="Sap_xep" Mode="In" Type="Int64" />
+          </FunctionImport>
           <FunctionImport Name="ApplicationUserRoles_DeleteItem">
             <Parameter Name="UserId" Mode="In" Type="Int64" />
             <Parameter Name="RoleID" Mode="In" Type="Int32" />
@@ -676,6 +1060,46 @@
             <Parameter Name="UserId" Mode="In" Type="Int64" />
             <Parameter Name="RoleID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="Check_User" ReturnType="Collection(HouzingModel.Check_User_Result)">
+            <Parameter Name="User_Name" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="delete_lich_dat_phong">
+          <Parameter Name="ID" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="Insert_QuanLyAnhVideo">
+            <Parameter Name="IS_IMAGE_VIDEO" Mode="In" Type="Int16" />
+            <Parameter Name="QUOTE" Mode="In" Type="String" />
+            <Parameter Name="NAME" Mode="In" Type="String" />
+            <Parameter Name="ICON_VIDEO_IMAGE" Mode="In" Type="String" />
+            <Parameter Name="DURATION_VIDEO" Mode="In" Type="String" />
+            <Parameter Name="DIA_DIEM" Mode="In" Type="Int16" />
+            <Parameter Name="LOAI_VIDEO" Mode="In" Type="Int16" />
+            <Parameter Name="LOAI_IMAGE" Mode="In" Type="Int16" />
+            <Parameter Name="THU_TU_UU_TIEN" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="Lich_Dat_Phong_InsertItem" ReturnType="Collection(Decimal)">
+            <Parameter Name="Ten_Khach_Hang" Mode="In" Type="String" />
+            <Parameter Name="So_Dien_Thoai" Mode="In" Type="String" />
+            <Parameter Name="Ngay_Sinh_Nhat" Mode="In" Type="DateTime" />
+            <Parameter Name="Noi_Song" Mode="In" Type="String" />
+            <Parameter Name="So_Phong_Dat" Mode="In" Type="String" />
+            <Parameter Name="Check_in" Mode="In" Type="DateTime" />
+            <Parameter Name="Check_out" Mode="In" Type="DateTime" />
+            <Parameter Name="Tong_tien_phong" Mode="In" Type="Decimal" />
+            <Parameter Name="Tien_chuyen_khoan" Mode="In" Type="Decimal" />
+            <Parameter Name="Trang_Thai_CK" Mode="In" Type="String" />
+            <Parameter Name="Tien_Con_Phai_Tra" Mode="In" Type="Decimal" />
+            <Parameter Name="Tong_so_dem" Mode="In" Type="Int32" />
+            <Parameter Name="Quoc_Gia" Mode="In" Type="String" />
+            <Parameter Name="Ghi_chu" Mode="In" Type="String" />
+            <Parameter Name="Thu_checkin" Mode="In" Type="String" />
+            <Parameter Name="Th_checkout" Mode="In" Type="String" />
+            <Parameter Name="Nha_Nao" Mode="In" Type="Int32" />
+            <Parameter Name="Nguoi_Nhap" Mode="In" Type="String" />
+            <Parameter Name="TrangThai" Mode="In" Type="Int32" />
+            <Parameter Name="Trang_Thai_Dat" Mode="In" Type="Int32" />
+          </FunctionImport>
           <FunctionImport Name="MenuItemRoles_DeleteByRoleID">
           <Parameter Name="IDRole" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -683,128 +1107,148 @@
             <Parameter Name="MenuItem_ID" Mode="In" Type="String" />
             <Parameter Name="Role_ID" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="Users_SelectUsersNoRole" ReturnType="Collection(HouzingModel.Users_SelectUsersNoRole_Result)">
-          <Parameter Name="IDRole" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <EntitySet Name="Quan_Ly_Ghi_No" EntityType="HouzingModel.Quan_Ly_Ghi_No" />
-          <EntitySet Name="CategoryDocuments" EntityType="HouzingModel.CategoryDocument" />
-          <EntitySet Name="Documents" EntityType="HouzingModel.Document" />
-          <EntitySet Name="Quan_Ly_Chi_Phi" EntityType="HouzingModel.Quan_Ly_Chi_Phi" />
-          <AssociationSet Name="FK__Document__ID_Cat__2A363CC5" Association="HouzingModel.FK__Document__ID_Cat__2A363CC5">
-            <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
-            <End Role="Document" EntitySet="Documents" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Document__ID_Cat__2B2A60FE" Association="HouzingModel.FK__Document__ID_Cat__2B2A60FE">
-            <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
-            <End Role="Document" EntitySet="Documents" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Document__ID_Cat__2C1E8537" Association="HouzingModel.FK__Document__ID_Cat__2C1E8537">
-            <End Role="CategoryDocument" EntitySet="CategoryDocuments" />
-            <End Role="Document" EntitySet="Documents" />
-          </AssociationSet>
           <FunctionImport Name="qlchiphi_select_item_ngaytao_exact" ReturnType="Collection(HouzingModel.qlchiphi_select_item_ngaytao_exact_Result)">
             <Parameter Name="ngaytao_tu" Mode="In" Type="DateTime" />
             <Parameter Name="ngaytao_den" Mode="In" Type="DateTime" />
             <Parameter Name="NhaNao" Mode="In" Type="Int32" />
           </FunctionImport>
-          <EntitySet Name="Answers" EntityType="HouzingModel.Answer" />
-          <EntitySet Name="Questions" EntityType="HouzingModel.Question" />
-          <EntitySet Name="Subjects" EntityType="HouzingModel.Subject" />
-          <AssociationSet Name="FK_Question" Association="HouzingModel.FK_Question">
-            <End Role="Question" EntitySet="Questions" />
-            <End Role="Answer" EntitySet="Answers" />
-          </AssociationSet>
+          <FunctionImport Name="QuanLyVideo_deleteById" ReturnType="Collection(HouzingModel.QuanLyVideo_deleteById_Result)">
+          <Parameter Name="ID" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="QuanLyViDeo_SelectAll" ReturnType="Collection(HouzingModel.QuanLyViDeo_SelectAll_Result)" />
+          <FunctionImport Name="QuanLyViDeo_SelectAll_QL" ReturnType="Collection(HouzingModel.QuanLyViDeo_SelectAll_QL_Result)" />
+          <FunctionImport Name="QuanLyViDeo_SelectByCanHo" ReturnType="Collection(HouzingModel.QuanLyViDeo_SelectByCanHo_Result)">
+          <Parameter Name="LOAI_IMAGE" Mode="In" Type="Int16" />
+          </FunctionImport>
+          <FunctionImport Name="QuanLyViDeo_SelectByDiaDiem" ReturnType="Collection(HouzingModel.QuanLyViDeo_SelectByDiaDiem_Result)">
+          <Parameter Name="DIA_DIEM" Mode="In" Type="Int16" />
+          </FunctionImport>
+          <FunctionImport Name="QuanLyViDeo_SelectByLoaiVideo" ReturnType="Collection(HouzingModel.QuanLyViDeo_SelectByLoaiVideo_Result)">
+          <Parameter Name="Loai_video" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="QuanLyViDeo_SelectID" ReturnType="Collection(HouzingModel.QuanLyViDeo_SelectID_Result)">
+          <Parameter Name="ID" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="QuanLyViDeo_SelectIsAnhVideo" ReturnType="Collection(HouzingModel.QuanLyViDeo_SelectIsAnhVideo_Result)">
+          <Parameter Name="isAnhVideo" Mode="In" Type="Int16" />
+          </FunctionImport>
+          <FunctionImport Name="select_item_checkin_out" ReturnType="Collection(HouzingModel.select_item_checkin_out_Result)">
+            <Parameter Name="check" Mode="In" Type="DateTime" />
+            <Parameter Name="NhaNao" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="select_item_checkin_out_exact" ReturnType="Collection(HouzingModel.select_item_checkin_out_exact_Result)">
+            <Parameter Name="checkin" Mode="In" Type="DateTime" />
+            <Parameter Name="checkout" Mode="In" Type="DateTime" />
+            <Parameter Name="NhaNao" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="select_item_checkin_out_exact_byPageIndex" ReturnType="Collection(HouzingModel.select_item_checkin_out_exact_byPageIndex_Result)">
+            <Parameter Name="checkin" Mode="In" Type="DateTime" />
+            <Parameter Name="checkout" Mode="In" Type="DateTime" />
+            <Parameter Name="NhaNao" Mode="In" Type="Int32" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="select_item_Id" ReturnType="Collection(HouzingModel.select_item_Id_Result)">
+          <Parameter Name="ID" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="select_item_ngaytao_exact" ReturnType="Collection(HouzingModel.select_item_ngaytao_exact_Result)">
+            <Parameter Name="ngaytao_tu" Mode="In" Type="DateTime" />
+            <Parameter Name="ngaytao_den" Mode="In" Type="DateTime" />
+            <Parameter Name="NhaNao" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="select_item_Sdt" ReturnType="Collection(HouzingModel.select_item_Sdt_Result)">
+            <Parameter Name="sodienthoai" Mode="In" Type="String" />
+            <Parameter Name="NhaNao" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="select_list_trangthai" ReturnType="Collection(HouzingModel.select_list_trangthai_Result)">
+            <Parameter Name="TrangThai" Mode="In" Type="Int32" />
+            <Parameter Name="NhaNao" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="update_lich_dat_phong">
+            <Parameter Name="ID" Mode="In" Type="Int64" />
+            <Parameter Name="Ten_Khach_Hang" Mode="In" Type="String" />
+            <Parameter Name="checkin" Mode="In" Type="DateTime" />
+            <Parameter Name="checkout" Mode="In" Type="DateTime" />
+            <Parameter Name="So_Dien_Thoai" Mode="In" Type="String" />
+            <Parameter Name="Ngay_Sinh_Nhat" Mode="In" Type="DateTime" />
+            <Parameter Name="Tong_tien_phong" Mode="In" Type="Decimal" />
+            <Parameter Name="Tien_chuyen_khoan" Mode="In" Type="Decimal" />
+            <Parameter Name="Tien_Con_Phai_Tra" Mode="In" Type="Decimal" />
+            <Parameter Name="So_Phong_Dat" Mode="In" Type="String" />
+            <Parameter Name="nguoi_nhap" Mode="In" Type="String" />
+            <Parameter Name="TrangThai" Mode="In" Type="Int32" />
+            <Parameter Name="Trang_Thai_CK" Mode="In" Type="String" />
+            <Parameter Name="Nha_Nao" Mode="In" Type="Int32" />
+            <Parameter Name="Ghi_chu" Mode="In" Type="String" />
+            <Parameter Name="Trang_Thai_Dat" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="update_QuanlyAnhVideo">
+            <Parameter Name="ID" Mode="In" Type="Int64" />
+            <Parameter Name="IS_IMAGE_VIDEO" Mode="In" Type="Int16" />
+            <Parameter Name="QUOTE" Mode="In" Type="String" />
+            <Parameter Name="NAME" Mode="In" Type="String" />
+            <Parameter Name="DURATION_VIDEO" Mode="In" Type="String" />
+            <Parameter Name="DIA_DIEM" Mode="In" Type="Int16" />
+            <Parameter Name="LOAI_VIDEO" Mode="In" Type="Int16" />
+            <Parameter Name="LOAI_IMAGE" Mode="In" Type="Int16" />
+            <Parameter Name="THU_TU_UU_TIEN" Mode="In" Type="Int64" />
+            <Parameter Name="ICON_VIDEO_IMAGE" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Users_SelectUsersNoRole" ReturnType="Collection(HouzingModel.Users_SelectUsersNoRole_Result)">
+          <Parameter Name="IDRole" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Video_Insertitem">
+            <Parameter Name="Video_URL" Mode="In" Type="String" />
+            <Parameter Name="ID_Video" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="Video_Selectitem" ReturnType="Collection(HouzingModel.Video_Selectitem_Result)">
+          <Parameter Name="ID_VIDEO" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="Video_Updateitem">
+            <Parameter Name="ID_VIDEO" Mode="In" Type="Int64" />
+            <Parameter Name="Video_URL" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
-        <ComplexType Name="Users_SelectUsersNoRole_Result">
-          <Property Type="Int64" Name="Id" Nullable="false" />
-          <Property Type="String" Name="Id_login" Nullable="false" MaxLength="50" />
-          <Property Type="Int64" Name="UserId" Nullable="true" />
+        <ComplexType Name="Anh_Deleteitem_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="ID_IMAGE" Nullable="true" />
+          <Property Type="String" Name="IMAGE_THUMB_URL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IMAGE_URL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="VITRI_IMAGE" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="TITLE_IMAGE" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IMAGE_HOVER" Nullable="true" MaxLength="500" />
+          <Property Type="Int64" Name="Sap_xep" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
         </ComplexType>
-        <EntityType Name="Quan_Ly_Ghi_No">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="So_Tien_No" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Ghi_Chu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Nha_Nao" Type="Int32" />
-          <Property Name="Nguoi_Nhap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
-        </EntityType>
-        <EntityType Name="CategoryDocument">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NameCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Documents" Relationship="HouzingModel.FK__Document__ID_Cat__2A363CC5" FromRole="CategoryDocument" ToRole="Document" />
-          <NavigationProperty Name="Documents1" Relationship="HouzingModel.FK__Document__ID_Cat__2B2A60FE" FromRole="CategoryDocument" ToRole="Document" />
-          <NavigationProperty Name="Documents2" Relationship="HouzingModel.FK__Document__ID_Cat__2C1E8537" FromRole="CategoryDocument" ToRole="Document" />
-        </EntityType>
-        <EntityType Name="Document">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_Category" Type="Int32" />
-          <Property Name="NameDocument" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="PathDocument" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="CategoryDocument" Relationship="HouzingModel.FK__Document__ID_Cat__2A363CC5" FromRole="Document" ToRole="CategoryDocument" />
-          <NavigationProperty Name="CategoryDocument1" Relationship="HouzingModel.FK__Document__ID_Cat__2B2A60FE" FromRole="Document" ToRole="CategoryDocument" />
-          <NavigationProperty Name="CategoryDocument2" Relationship="HouzingModel.FK__Document__ID_Cat__2C1E8537" FromRole="Document" ToRole="CategoryDocument" />
-        </EntityType>
-        <EntityType Name="Quan_Ly_Chi_Phi">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="So_Tien_Chi_Phi" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Ghi_Chu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Nha_Nao" Type="Int32" />
-          <Property Name="Ngay_Nhap_Chi_Phi" Type="DateTime" Precision="3" />
-          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
-          <Property Name="Nguoi_Nhap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <Association Name="FK__Document__ID_Cat__2A363CC5">
-          <End Type="HouzingModel.CategoryDocument" Role="CategoryDocument" Multiplicity="0..1" />
-          <End Type="HouzingModel.Document" Role="Document" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CategoryDocument">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Document">
-              <PropertyRef Name="ID_Category" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Document__ID_Cat__2B2A60FE">
-          <End Type="HouzingModel.CategoryDocument" Role="CategoryDocument" Multiplicity="0..1" />
-          <End Type="HouzingModel.Document" Role="Document" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CategoryDocument">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Document">
-              <PropertyRef Name="ID_Category" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Document__ID_Cat__2C1E8537">
-          <End Type="HouzingModel.CategoryDocument" Role="CategoryDocument" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="HouzingModel.Document" Role="Document" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CategoryDocument">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Document">
-              <PropertyRef Name="ID_Category" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <ComplexType Name="Anh_Selectitem_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="ID_IMAGE" Nullable="true" />
+          <Property Type="String" Name="IMAGE_THUMB_URL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IMAGE_URL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="VITRI_IMAGE" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="TITLE_IMAGE" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IMAGE_HOVER" Nullable="true" MaxLength="500" />
+          <Property Type="Int64" Name="Sap_xep" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="Anh_SelectitemID_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="ID_IMAGE" Nullable="true" />
+          <Property Type="String" Name="IMAGE_THUMB_URL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IMAGE_URL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="VITRI_IMAGE" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="TITLE_IMAGE" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IMAGE_HOVER" Nullable="true" MaxLength="500" />
+          <Property Type="Int64" Name="Sap_xep" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="Check_User_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="User_Name" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="User_Role" Nullable="true" />
+          <Property Type="Int32" Name="Function_Role" Nullable="true" />
+        </ComplexType>
         <ComplexType Name="qlchiphi_select_item_ngaytao_exact_Result">
           <Property Type="Int64" Name="ID" Nullable="false" />
           <Property Type="Decimal" Name="So_Tien_Chi_Phi" Nullable="true" Precision="18" Scale="0" />
@@ -814,47 +1258,291 @@
           <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
           <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
         </ComplexType>
-        <EntityType Name="Answer">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="STT" Type="Int32" />
-          <Property Name="ID_SUBJECT" Type="Int32" />
-          <Property Name="CAU_TRA_LOI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Question" Relationship="HouzingModel.FK_Question" FromRole="Answer" ToRole="Question" />
-        </EntityType>
-        <EntityType Name="Question">
-          <Key>
-            <PropertyRef Name="STT" />
-            <PropertyRef Name="ID_SUBJECT" />
-          </Key>
-          <Property Name="STT" Type="Int32" Nullable="false" />
-          <Property Name="ID_SUBJECT" Type="Int32" Nullable="false" />
-          <Property Name="CAU_HOI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Answers" Relationship="HouzingModel.FK_Question" FromRole="Question" ToRole="Answer" />
-        </EntityType>
-        <EntityType Name="Subject">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ten_Mon_Hoc" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <Association Name="FK_Question">
-          <End Type="HouzingModel.Question" Role="Question" Multiplicity="0..1" />
-          <End Type="HouzingModel.Answer" Role="Answer" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Question">
-              <PropertyRef Name="STT" />
-              <PropertyRef Name="ID_SUBJECT" />
-            </Principal>
-            <Dependent Role="Answer">
-              <PropertyRef Name="STT" />
-              <PropertyRef Name="ID_SUBJECT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <ComplexType Name="QuanLyVideo_deleteById_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int16" Name="IS_IMAGE_VIDEO" Nullable="true" />
+          <Property Type="String" Name="QUOTE" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="NAME" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ICON_VIDEO_IMAGE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DURATION_VIDEO" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="DIA_DIEM" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_VIDEO" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_IMAGE" Nullable="true" />
+          <Property Type="Int64" Name="THU_TU_UU_TIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="QuanLyViDeo_SelectAll_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int16" Name="IS_IMAGE_VIDEO" Nullable="true" />
+          <Property Type="String" Name="QUOTE" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="NAME" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ICON_VIDEO_IMAGE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DURATION_VIDEO" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="DIA_DIEM" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_VIDEO" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_IMAGE" Nullable="true" />
+          <Property Type="Int64" Name="THU_TU_UU_TIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="QuanLyViDeo_SelectAll_QL_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int16" Name="IS_IMAGE_VIDEO" Nullable="true" />
+          <Property Type="String" Name="QUOTE" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="NAME" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ICON_VIDEO_IMAGE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DURATION_VIDEO" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="DIA_DIEM" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_VIDEO" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_IMAGE" Nullable="true" />
+          <Property Type="Int64" Name="THU_TU_UU_TIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="QuanLyViDeo_SelectByCanHo_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int16" Name="IS_IMAGE_VIDEO" Nullable="true" />
+          <Property Type="String" Name="QUOTE" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="NAME" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ICON_VIDEO_IMAGE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DURATION_VIDEO" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="DIA_DIEM" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_VIDEO" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_IMAGE" Nullable="true" />
+          <Property Type="Int64" Name="THU_TU_UU_TIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="QuanLyViDeo_SelectByDiaDiem_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int16" Name="IS_IMAGE_VIDEO" Nullable="true" />
+          <Property Type="String" Name="QUOTE" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="NAME" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ICON_VIDEO_IMAGE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DURATION_VIDEO" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="DIA_DIEM" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_VIDEO" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_IMAGE" Nullable="true" />
+          <Property Type="Int64" Name="THU_TU_UU_TIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="QuanLyViDeo_SelectByLoaiVideo_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int16" Name="IS_IMAGE_VIDEO" Nullable="true" />
+          <Property Type="String" Name="QUOTE" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="NAME" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ICON_VIDEO_IMAGE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DURATION_VIDEO" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="DIA_DIEM" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_VIDEO" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_IMAGE" Nullable="true" />
+          <Property Type="Int64" Name="THU_TU_UU_TIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="QuanLyViDeo_SelectID_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int16" Name="IS_IMAGE_VIDEO" Nullable="true" />
+          <Property Type="String" Name="QUOTE" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="NAME" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ICON_VIDEO_IMAGE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DURATION_VIDEO" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="DIA_DIEM" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_VIDEO" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_IMAGE" Nullable="true" />
+          <Property Type="Int64" Name="THU_TU_UU_TIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="QuanLyViDeo_SelectIsAnhVideo_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int16" Name="IS_IMAGE_VIDEO" Nullable="true" />
+          <Property Type="String" Name="QUOTE" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="NAME" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ICON_VIDEO_IMAGE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DURATION_VIDEO" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="DIA_DIEM" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_VIDEO" Nullable="true" />
+          <Property Type="Int16" Name="LOAI_IMAGE" Nullable="true" />
+          <Property Type="Int64" Name="THU_TU_UU_TIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="select_item_checkin_out_Result">
+          <Property Type="String" Name="Ten_Khach_Hang" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="So_Dien_Thoai" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="Ngay_Sinh_Nhat" Nullable="true" />
+          <Property Type="String" Name="Noi_Song" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="So_Phong_Dat" Nullable="true" MaxLength="70" />
+          <Property Type="DateTime" Name="Check_in" Nullable="true" />
+          <Property Type="DateTime" Name="Check_out" Nullable="true" />
+          <Property Type="Decimal" Name="Tong_tien_phong" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Tien_chuyen_khoan" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Trang_Thai_CK" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Tien_Con_Phai_Tra" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Tong_so_dem" Nullable="true" />
+          <Property Type="String" Name="Quoc_Gia" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Ghi_chu" Nullable="true" MaxLength="2000" />
+          <Property Type="String" Name="Thu_checkin" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Th_checkout" Nullable="true" MaxLength="25" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="Nha_Nao" Nullable="true" />
+          <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="TrangThai" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Trang_Thai_Dat" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="select_item_checkin_out_exact_Result">
+          <Property Type="String" Name="Ten_Khach_Hang" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="So_Dien_Thoai" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="Ngay_Sinh_Nhat" Nullable="true" />
+          <Property Type="String" Name="Noi_Song" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="So_Phong_Dat" Nullable="true" MaxLength="70" />
+          <Property Type="DateTime" Name="Check_in" Nullable="true" />
+          <Property Type="DateTime" Name="Check_out" Nullable="true" />
+          <Property Type="Decimal" Name="Tong_tien_phong" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Tien_chuyen_khoan" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Trang_Thai_CK" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Tien_Con_Phai_Tra" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Tong_so_dem" Nullable="true" />
+          <Property Type="String" Name="Quoc_Gia" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Ghi_chu" Nullable="true" MaxLength="2000" />
+          <Property Type="String" Name="Thu_checkin" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Th_checkout" Nullable="true" MaxLength="25" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="Nha_Nao" Nullable="true" />
+          <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="TrangThai" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Trang_Thai_Dat" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="select_item_checkin_out_exact_byPageIndex_Result">
+          <Property Type="Int64" Name="RowNumber" Nullable="true" />
+          <Property Type="String" Name="Ten_Khach_Hang" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="So_Dien_Thoai" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="Ngay_Sinh_Nhat" Nullable="true" />
+          <Property Type="String" Name="Noi_Song" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="So_Phong_Dat" Nullable="true" MaxLength="70" />
+          <Property Type="DateTime" Name="Check_in" Nullable="true" />
+          <Property Type="DateTime" Name="Check_out" Nullable="true" />
+          <Property Type="Decimal" Name="Tong_tien_phong" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Tien_chuyen_khoan" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Trang_Thai_CK" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Tien_Con_Phai_Tra" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Tong_so_dem" Nullable="true" />
+          <Property Type="String" Name="Quoc_Gia" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Ghi_chu" Nullable="true" MaxLength="2000" />
+          <Property Type="String" Name="Thu_checkin" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Th_checkout" Nullable="true" MaxLength="25" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="Nha_Nao" Nullable="true" />
+          <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="TrangThai" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Trang_Thai_Dat" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="select_item_Id_Result">
+          <Property Type="String" Name="Ten_Khach_Hang" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="So_Dien_Thoai" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="Ngay_Sinh_Nhat" Nullable="true" />
+          <Property Type="String" Name="Noi_Song" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="So_Phong_Dat" Nullable="true" MaxLength="70" />
+          <Property Type="DateTime" Name="Check_in" Nullable="true" />
+          <Property Type="DateTime" Name="Check_out" Nullable="true" />
+          <Property Type="Decimal" Name="Tong_tien_phong" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Tien_chuyen_khoan" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Trang_Thai_CK" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Tien_Con_Phai_Tra" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Tong_so_dem" Nullable="true" />
+          <Property Type="String" Name="Quoc_Gia" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Ghi_chu" Nullable="true" MaxLength="2000" />
+          <Property Type="String" Name="Thu_checkin" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Th_checkout" Nullable="true" MaxLength="25" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="Nha_Nao" Nullable="true" />
+          <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="TrangThai" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Trang_Thai_Dat" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="select_item_ngaytao_exact_Result">
+          <Property Type="String" Name="Ten_Khach_Hang" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="So_Dien_Thoai" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="Ngay_Sinh_Nhat" Nullable="true" />
+          <Property Type="String" Name="Noi_Song" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="So_Phong_Dat" Nullable="true" MaxLength="70" />
+          <Property Type="DateTime" Name="Check_in" Nullable="true" />
+          <Property Type="DateTime" Name="Check_out" Nullable="true" />
+          <Property Type="Decimal" Name="Tong_tien_phong" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Tien_chuyen_khoan" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Trang_Thai_CK" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Tien_Con_Phai_Tra" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Tong_so_dem" Nullable="true" />
+          <Property Type="String" Name="Quoc_Gia" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Ghi_chu" Nullable="true" MaxLength="2000" />
+          <Property Type="String" Name="Thu_checkin" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Th_checkout" Nullable="true" MaxLength="25" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="Nha_Nao" Nullable="true" />
+          <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="TrangThai" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Trang_Thai_Dat" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="select_item_Sdt_Result">
+          <Property Type="String" Name="Ten_Khach_Hang" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="So_Dien_Thoai" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="Ngay_Sinh_Nhat" Nullable="true" />
+          <Property Type="String" Name="Noi_Song" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="So_Phong_Dat" Nullable="true" MaxLength="70" />
+          <Property Type="DateTime" Name="Check_in" Nullable="true" />
+          <Property Type="DateTime" Name="Check_out" Nullable="true" />
+          <Property Type="Decimal" Name="Tong_tien_phong" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Tien_chuyen_khoan" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Trang_Thai_CK" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Tien_Con_Phai_Tra" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Tong_so_dem" Nullable="true" />
+          <Property Type="String" Name="Quoc_Gia" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Ghi_chu" Nullable="true" MaxLength="2000" />
+          <Property Type="String" Name="Thu_checkin" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Th_checkout" Nullable="true" MaxLength="25" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="Nha_Nao" Nullable="true" />
+          <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="TrangThai" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Trang_Thai_Dat" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="select_list_trangthai_Result">
+          <Property Type="String" Name="Ten_Khach_Hang" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="So_Dien_Thoai" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="Ngay_Sinh_Nhat" Nullable="true" />
+          <Property Type="String" Name="Noi_Song" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="So_Phong_Dat" Nullable="true" MaxLength="70" />
+          <Property Type="DateTime" Name="Check_in" Nullable="true" />
+          <Property Type="DateTime" Name="Check_out" Nullable="true" />
+          <Property Type="Decimal" Name="Tong_tien_phong" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Tien_chuyen_khoan" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Trang_Thai_CK" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Tien_Con_Phai_Tra" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Tong_so_dem" Nullable="true" />
+          <Property Type="String" Name="Quoc_Gia" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Ghi_chu" Nullable="true" MaxLength="2000" />
+          <Property Type="String" Name="Thu_checkin" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Th_checkout" Nullable="true" MaxLength="25" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="Nha_Nao" Nullable="true" />
+          <Property Type="String" Name="Nguoi_Nhap" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="TrangThai" Nullable="true" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Trang_Thai_Dat" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Users_SelectUsersNoRole_Result">
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Id_login" Nullable="false" MaxLength="50" />
+          <Property Type="Int64" Name="UserId" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Video_Selectitem_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="ID_VIDEO" Nullable="true" />
+          <Property Type="String" Name="VIDEO_URL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="MAIN_HOVER_TEXT" Nullable="true" MaxLength="300" />
+          <Property Type="DateTime" Name="NGAY_TAO" Nullable="true" Precision="23" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -885,6 +1573,36 @@
                 <ScalarProperty Name="IMAGE_HOVER" ColumnName="IMAGE_HOVER" />
                 <ScalarProperty Name="Sap_xep" ColumnName="Sap_xep" />
                 <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="HouzingModel.Answer">
+              <MappingFragment StoreEntitySet="Answer">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="ID_SUBJECT" ColumnName="ID_SUBJECT" />
+                <ScalarProperty Name="CAU_TRA_LOI" ColumnName="CAU_TRA_LOI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CategoryDocuments">
+            <EntityTypeMapping TypeName="HouzingModel.CategoryDocument">
+              <MappingFragment StoreEntitySet="CategoryDocument">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NameCategory" ColumnName="NameCategory" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Documents">
+            <EntityTypeMapping TypeName="HouzingModel.Document">
+              <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Category" ColumnName="ID_Category" />
+                <ScalarProperty Name="NameDocument" ColumnName="NameDocument" />
+                <ScalarProperty Name="PathDocument" ColumnName="PathDocument" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -938,6 +1656,42 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="HouzingModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+                <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quan_Ly_Chi_Phi">
+            <EntityTypeMapping TypeName="HouzingModel.Quan_Ly_Chi_Phi">
+              <MappingFragment StoreEntitySet="Quan_Ly_Chi_Phi">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="So_Tien_Chi_Phi" ColumnName="So_Tien_Chi_Phi" />
+                <ScalarProperty Name="Ghi_Chu" ColumnName="Ghi_Chu" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Ngay_Nhap_Chi_Phi" ColumnName="Ngay_Nhap_Chi_Phi" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quan_Ly_Ghi_No">
+            <EntityTypeMapping TypeName="HouzingModel.Quan_Ly_Ghi_No">
+              <MappingFragment StoreEntitySet="Quan_Ly_Ghi_No">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="So_Tien_No" ColumnName="So_Tien_No" />
+                <ScalarProperty Name="Ghi_Chu" ColumnName="Ghi_Chu" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="QuanLyAnhVideos">
             <EntityTypeMapping TypeName="HouzingModel.QuanLyAnhVideo">
               <MappingFragment StoreEntitySet="QuanLyAnhVideo">
@@ -955,6 +1709,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="HouzingModel.Question">
+              <MappingFragment StoreEntitySet="Question">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="ID_SUBJECT" ColumnName="ID_SUBJECT" />
+                <ScalarProperty Name="CAU_HOI" ColumnName="CAU_HOI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Roles">
             <EntityTypeMapping TypeName="HouzingModel.Role">
               <MappingFragment StoreEntitySet="Roles">
@@ -965,8 +1728,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="HouzingModel.Subject">
+              <MappingFragment StoreEntitySet="Subject">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten_Mon_Hoc" ColumnName="Ten_Mon_Hoc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="HouzingModel.User">
+            <EntityTypeMapping TypeName="HouzingModel.Users">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Id_Login" ColumnName="Id_Login" />
@@ -1029,64 +1800,79 @@
               <ScalarProperty Name="Id" ColumnName="Role_ID" />
             </EndProperty>
           </AssociationSetMapping>
-          <FunctionImportMapping FunctionImportName="ApplicationUserRoles_DeleteItem" FunctionName="HouzingModel.Store.ApplicationUserRoles_DeleteItem" />
-          <FunctionImportMapping FunctionImportName="ApplicationUserRoles_InsertItem" FunctionName="HouzingModel.Store.ApplicationUserRoles_InsertItem" />
-          <FunctionImportMapping FunctionImportName="MenuItemRoles_DeleteByRoleID" FunctionName="HouzingModel.Store.MenuItemRoles_DeleteByRoleID" />
-          <FunctionImportMapping FunctionImportName="MenuItemRoles_InsertItem" FunctionName="HouzingModel.Store.MenuItemRoles_InsertItem" />
-          <FunctionImportMapping FunctionImportName="Users_SelectUsersNoRole" FunctionName="HouzingModel.Store.Users_SelectUsersNoRole">
+          <FunctionImportMapping FunctionName="HouzingModel.Store.IntegerCommaSplit" FunctionImportName="IntegerCommaSplit">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="HouzingModel.Users_SelectUsersNoRole_Result">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Id_login" ColumnName="Id_login" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              <ComplexTypeMapping TypeName="HouzingModel.IntegerCommaSplit_Result">
+                <ScalarProperty Name="IntegerValue" ColumnName="IntegerValue" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="Quan_Ly_Ghi_No">
-            <EntityTypeMapping TypeName="HouzingModel.Quan_Ly_Ghi_No">
-              <MappingFragment StoreEntitySet="Quan_Ly_Ghi_No">
+          <FunctionImportMapping FunctionImportName="Anh_Deleteitem" FunctionName="HouzingModel.Store.Anh_Deleteitem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.Anh_Deleteitem_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_IMAGE" ColumnName="ID_IMAGE" />
+                <ScalarProperty Name="IMAGE_THUMB_URL" ColumnName="IMAGE_THUMB_URL" />
+                <ScalarProperty Name="IMAGE_URL" ColumnName="IMAGE_URL" />
+                <ScalarProperty Name="VITRI_IMAGE" ColumnName="VITRI_IMAGE" />
+                <ScalarProperty Name="TITLE_IMAGE" ColumnName="TITLE_IMAGE" />
+                <ScalarProperty Name="IMAGE_HOVER" ColumnName="IMAGE_HOVER" />
+                <ScalarProperty Name="Sap_xep" ColumnName="Sap_xep" />
                 <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
-                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
-                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
-                <ScalarProperty Name="Ghi_Chu" ColumnName="Ghi_Chu" />
-                <ScalarProperty Name="So_Tien_No" ColumnName="So_Tien_No" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Anh_insertItem" FunctionName="HouzingModel.Store.Anh_insertItem" />
+          <FunctionImportMapping FunctionImportName="Anh_Selectitem" FunctionName="HouzingModel.Store.Anh_Selectitem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.Anh_Selectitem_Result">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CategoryDocuments">
-            <EntityTypeMapping TypeName="HouzingModel.CategoryDocument">
-              <MappingFragment StoreEntitySet="CategoryDocument">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="NameCategory" ColumnName="NameCategory" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Documents">
-            <EntityTypeMapping TypeName="HouzingModel.Document">
-              <MappingFragment StoreEntitySet="Document">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="PathDocument" ColumnName="PathDocument" />
-                <ScalarProperty Name="NameDocument" ColumnName="NameDocument" />
-                <ScalarProperty Name="ID_Category" ColumnName="ID_Category" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Quan_Ly_Chi_Phi">
-            <EntityTypeMapping TypeName="HouzingModel.Quan_Ly_Chi_Phi">
-              <MappingFragment StoreEntitySet="Quan_Ly_Chi_Phi">
-                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="ID_IMAGE" ColumnName="ID_IMAGE" />
+                <ScalarProperty Name="IMAGE_THUMB_URL" ColumnName="IMAGE_THUMB_URL" />
+                <ScalarProperty Name="IMAGE_URL" ColumnName="IMAGE_URL" />
+                <ScalarProperty Name="VITRI_IMAGE" ColumnName="VITRI_IMAGE" />
+                <ScalarProperty Name="TITLE_IMAGE" ColumnName="TITLE_IMAGE" />
+                <ScalarProperty Name="IMAGE_HOVER" ColumnName="IMAGE_HOVER" />
+                <ScalarProperty Name="Sap_xep" ColumnName="Sap_xep" />
                 <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
-                <ScalarProperty Name="Ngay_Nhap_Chi_Phi" ColumnName="Ngay_Nhap_Chi_Phi" />
-                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
-                <ScalarProperty Name="Ghi_Chu" ColumnName="Ghi_Chu" />
-                <ScalarProperty Name="So_Tien_Chi_Phi" ColumnName="So_Tien_Chi_Phi" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Anh_SelectitemID" FunctionName="HouzingModel.Store.Anh_SelectitemID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.Anh_SelectitemID_Result">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+                <ScalarProperty Name="ID_IMAGE" ColumnName="ID_IMAGE" />
+                <ScalarProperty Name="IMAGE_THUMB_URL" ColumnName="IMAGE_THUMB_URL" />
+                <ScalarProperty Name="IMAGE_URL" ColumnName="IMAGE_URL" />
+                <ScalarProperty Name="VITRI_IMAGE" ColumnName="VITRI_IMAGE" />
+                <ScalarProperty Name="TITLE_IMAGE" ColumnName="TITLE_IMAGE" />
+                <ScalarProperty Name="IMAGE_HOVER" ColumnName="IMAGE_HOVER" />
+                <ScalarProperty Name="Sap_xep" ColumnName="Sap_xep" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Anh_updateItem" FunctionName="HouzingModel.Store.Anh_updateItem" />
+          <FunctionImportMapping FunctionImportName="Anh_updateItemSua" FunctionName="HouzingModel.Store.Anh_updateItemSua" />
+          <FunctionImportMapping FunctionImportName="ApplicationUserRoles_DeleteItem" FunctionName="HouzingModel.Store.ApplicationUserRoles_DeleteItem" />
+          <FunctionImportMapping FunctionImportName="ApplicationUserRoles_InsertItem" FunctionName="HouzingModel.Store.ApplicationUserRoles_InsertItem" />
+          <FunctionImportMapping FunctionImportName="Check_User" FunctionName="HouzingModel.Store.Check_User">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.Check_User_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="User_Role" ColumnName="User_Role" />
+                <ScalarProperty Name="Function_Role" ColumnName="Function_Role" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="delete_lich_dat_phong" FunctionName="HouzingModel.Store.delete_lich_dat_phong" />
+          <FunctionImportMapping FunctionImportName="Insert_QuanLyAnhVideo" FunctionName="HouzingModel.Store.Insert_QuanLyAnhVideo" />
+          <FunctionImportMapping FunctionImportName="Lich_Dat_Phong_InsertItem" FunctionName="HouzingModel.Store.Lich_Dat_Phong_InsertItem" />
+          <FunctionImportMapping FunctionImportName="MenuItemRoles_DeleteByRoleID" FunctionName="HouzingModel.Store.MenuItemRoles_DeleteByRoleID" />
+          <FunctionImportMapping FunctionImportName="MenuItemRoles_InsertItem" FunctionName="HouzingModel.Store.MenuItemRoles_InsertItem" />
           <FunctionImportMapping FunctionImportName="qlchiphi_select_item_ngaytao_exact" FunctionName="HouzingModel.Store.qlchiphi_select_item_ngaytao_exact">
             <ResultMapping>
               <ComplexTypeMapping TypeName="HouzingModel.qlchiphi_select_item_ngaytao_exact_Result">
@@ -1100,33 +1886,363 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="Answers">
-            <EntityTypeMapping TypeName="HouzingModel.Answer">
-              <MappingFragment StoreEntitySet="Answer">
-                <ScalarProperty Name="CAU_TRA_LOI" ColumnName="CAU_TRA_LOI" />
-                <ScalarProperty Name="ID_SUBJECT" ColumnName="ID_SUBJECT" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
+          <FunctionImportMapping FunctionImportName="QuanLyVideo_deleteById" FunctionName="HouzingModel.Store.QuanLyVideo_deleteById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.QuanLyVideo_deleteById_Result">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Questions">
-            <EntityTypeMapping TypeName="HouzingModel.Question">
-              <MappingFragment StoreEntitySet="Question">
-                <ScalarProperty Name="CAU_HOI" ColumnName="CAU_HOI" />
-                <ScalarProperty Name="ID_SUBJECT" ColumnName="ID_SUBJECT" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Subjects">
-            <EntityTypeMapping TypeName="HouzingModel.Subject">
-              <MappingFragment StoreEntitySet="Subject">
-                <ScalarProperty Name="Ten_Mon_Hoc" ColumnName="Ten_Mon_Hoc" />
+                <ScalarProperty Name="IS_IMAGE_VIDEO" ColumnName="IS_IMAGE_VIDEO" />
+                <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ICON_VIDEO_IMAGE" ColumnName="ICON_VIDEO_IMAGE" />
+                <ScalarProperty Name="DURATION_VIDEO" ColumnName="DURATION_VIDEO" />
+                <ScalarProperty Name="DIA_DIEM" ColumnName="DIA_DIEM" />
+                <ScalarProperty Name="LOAI_VIDEO" ColumnName="LOAI_VIDEO" />
+                <ScalarProperty Name="LOAI_IMAGE" ColumnName="LOAI_IMAGE" />
+                <ScalarProperty Name="THU_TU_UU_TIEN" ColumnName="THU_TU_UU_TIEN" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="QuanLyViDeo_SelectAll" FunctionName="HouzingModel.Store.QuanLyViDeo_SelectAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.QuanLyViDeo_SelectAll_Result">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+                <ScalarProperty Name="IS_IMAGE_VIDEO" ColumnName="IS_IMAGE_VIDEO" />
+                <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ICON_VIDEO_IMAGE" ColumnName="ICON_VIDEO_IMAGE" />
+                <ScalarProperty Name="DURATION_VIDEO" ColumnName="DURATION_VIDEO" />
+                <ScalarProperty Name="DIA_DIEM" ColumnName="DIA_DIEM" />
+                <ScalarProperty Name="LOAI_VIDEO" ColumnName="LOAI_VIDEO" />
+                <ScalarProperty Name="LOAI_IMAGE" ColumnName="LOAI_IMAGE" />
+                <ScalarProperty Name="THU_TU_UU_TIEN" ColumnName="THU_TU_UU_TIEN" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="QuanLyViDeo_SelectAll_QL" FunctionName="HouzingModel.Store.QuanLyViDeo_SelectAll_QL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.QuanLyViDeo_SelectAll_QL_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IS_IMAGE_VIDEO" ColumnName="IS_IMAGE_VIDEO" />
+                <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ICON_VIDEO_IMAGE" ColumnName="ICON_VIDEO_IMAGE" />
+                <ScalarProperty Name="DURATION_VIDEO" ColumnName="DURATION_VIDEO" />
+                <ScalarProperty Name="DIA_DIEM" ColumnName="DIA_DIEM" />
+                <ScalarProperty Name="LOAI_VIDEO" ColumnName="LOAI_VIDEO" />
+                <ScalarProperty Name="LOAI_IMAGE" ColumnName="LOAI_IMAGE" />
+                <ScalarProperty Name="THU_TU_UU_TIEN" ColumnName="THU_TU_UU_TIEN" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="QuanLyViDeo_SelectByCanHo" FunctionName="HouzingModel.Store.QuanLyViDeo_SelectByCanHo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.QuanLyViDeo_SelectByCanHo_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IS_IMAGE_VIDEO" ColumnName="IS_IMAGE_VIDEO" />
+                <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ICON_VIDEO_IMAGE" ColumnName="ICON_VIDEO_IMAGE" />
+                <ScalarProperty Name="DURATION_VIDEO" ColumnName="DURATION_VIDEO" />
+                <ScalarProperty Name="DIA_DIEM" ColumnName="DIA_DIEM" />
+                <ScalarProperty Name="LOAI_VIDEO" ColumnName="LOAI_VIDEO" />
+                <ScalarProperty Name="LOAI_IMAGE" ColumnName="LOAI_IMAGE" />
+                <ScalarProperty Name="THU_TU_UU_TIEN" ColumnName="THU_TU_UU_TIEN" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="QuanLyViDeo_SelectByDiaDiem" FunctionName="HouzingModel.Store.QuanLyViDeo_SelectByDiaDiem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.QuanLyViDeo_SelectByDiaDiem_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IS_IMAGE_VIDEO" ColumnName="IS_IMAGE_VIDEO" />
+                <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ICON_VIDEO_IMAGE" ColumnName="ICON_VIDEO_IMAGE" />
+                <ScalarProperty Name="DURATION_VIDEO" ColumnName="DURATION_VIDEO" />
+                <ScalarProperty Name="DIA_DIEM" ColumnName="DIA_DIEM" />
+                <ScalarProperty Name="LOAI_VIDEO" ColumnName="LOAI_VIDEO" />
+                <ScalarProperty Name="LOAI_IMAGE" ColumnName="LOAI_IMAGE" />
+                <ScalarProperty Name="THU_TU_UU_TIEN" ColumnName="THU_TU_UU_TIEN" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="QuanLyViDeo_SelectByLoaiVideo" FunctionName="HouzingModel.Store.QuanLyViDeo_SelectByLoaiVideo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.QuanLyViDeo_SelectByLoaiVideo_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IS_IMAGE_VIDEO" ColumnName="IS_IMAGE_VIDEO" />
+                <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ICON_VIDEO_IMAGE" ColumnName="ICON_VIDEO_IMAGE" />
+                <ScalarProperty Name="DURATION_VIDEO" ColumnName="DURATION_VIDEO" />
+                <ScalarProperty Name="DIA_DIEM" ColumnName="DIA_DIEM" />
+                <ScalarProperty Name="LOAI_VIDEO" ColumnName="LOAI_VIDEO" />
+                <ScalarProperty Name="LOAI_IMAGE" ColumnName="LOAI_IMAGE" />
+                <ScalarProperty Name="THU_TU_UU_TIEN" ColumnName="THU_TU_UU_TIEN" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="QuanLyViDeo_SelectID" FunctionName="HouzingModel.Store.QuanLyViDeo_SelectID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.QuanLyViDeo_SelectID_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IS_IMAGE_VIDEO" ColumnName="IS_IMAGE_VIDEO" />
+                <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ICON_VIDEO_IMAGE" ColumnName="ICON_VIDEO_IMAGE" />
+                <ScalarProperty Name="DURATION_VIDEO" ColumnName="DURATION_VIDEO" />
+                <ScalarProperty Name="DIA_DIEM" ColumnName="DIA_DIEM" />
+                <ScalarProperty Name="LOAI_VIDEO" ColumnName="LOAI_VIDEO" />
+                <ScalarProperty Name="LOAI_IMAGE" ColumnName="LOAI_IMAGE" />
+                <ScalarProperty Name="THU_TU_UU_TIEN" ColumnName="THU_TU_UU_TIEN" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="QuanLyViDeo_SelectIsAnhVideo" FunctionName="HouzingModel.Store.QuanLyViDeo_SelectIsAnhVideo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.QuanLyViDeo_SelectIsAnhVideo_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IS_IMAGE_VIDEO" ColumnName="IS_IMAGE_VIDEO" />
+                <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ICON_VIDEO_IMAGE" ColumnName="ICON_VIDEO_IMAGE" />
+                <ScalarProperty Name="DURATION_VIDEO" ColumnName="DURATION_VIDEO" />
+                <ScalarProperty Name="DIA_DIEM" ColumnName="DIA_DIEM" />
+                <ScalarProperty Name="LOAI_VIDEO" ColumnName="LOAI_VIDEO" />
+                <ScalarProperty Name="LOAI_IMAGE" ColumnName="LOAI_IMAGE" />
+                <ScalarProperty Name="THU_TU_UU_TIEN" ColumnName="THU_TU_UU_TIEN" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="select_item_checkin_out" FunctionName="HouzingModel.Store.select_item_checkin_out">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.select_item_checkin_out_Result">
+                <ScalarProperty Name="Ten_Khach_Hang" ColumnName="Ten_Khach_Hang" />
+                <ScalarProperty Name="So_Dien_Thoai" ColumnName="So_Dien_Thoai" />
+                <ScalarProperty Name="Ngay_Sinh_Nhat" ColumnName="Ngay_Sinh_Nhat" />
+                <ScalarProperty Name="Noi_Song" ColumnName="Noi_Song" />
+                <ScalarProperty Name="So_Phong_Dat" ColumnName="So_Phong_Dat" />
+                <ScalarProperty Name="Check_in" ColumnName="Check_in" />
+                <ScalarProperty Name="Check_out" ColumnName="Check_out" />
+                <ScalarProperty Name="Tong_tien_phong" ColumnName="Tong_tien_phong" />
+                <ScalarProperty Name="Tien_chuyen_khoan" ColumnName="Tien_chuyen_khoan" />
+                <ScalarProperty Name="Trang_Thai_CK" ColumnName="Trang_Thai_CK" />
+                <ScalarProperty Name="Tien_Con_Phai_Tra" ColumnName="Tien_Con_Phai_Tra" />
+                <ScalarProperty Name="Tong_so_dem" ColumnName="Tong_so_dem" />
+                <ScalarProperty Name="Quoc_Gia" ColumnName="Quoc_Gia" />
+                <ScalarProperty Name="Ghi_chu" ColumnName="Ghi_chu" />
+                <ScalarProperty Name="Thu_checkin" ColumnName="Thu_checkin" />
+                <ScalarProperty Name="Th_checkout" ColumnName="Th_checkout" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="Trang_Thai_Dat" ColumnName="Trang_Thai_Dat" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="select_item_checkin_out_exact" FunctionName="HouzingModel.Store.select_item_checkin_out_exact">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.select_item_checkin_out_exact_Result">
+                <ScalarProperty Name="Ten_Khach_Hang" ColumnName="Ten_Khach_Hang" />
+                <ScalarProperty Name="So_Dien_Thoai" ColumnName="So_Dien_Thoai" />
+                <ScalarProperty Name="Ngay_Sinh_Nhat" ColumnName="Ngay_Sinh_Nhat" />
+                <ScalarProperty Name="Noi_Song" ColumnName="Noi_Song" />
+                <ScalarProperty Name="So_Phong_Dat" ColumnName="So_Phong_Dat" />
+                <ScalarProperty Name="Check_in" ColumnName="Check_in" />
+                <ScalarProperty Name="Check_out" ColumnName="Check_out" />
+                <ScalarProperty Name="Tong_tien_phong" ColumnName="Tong_tien_phong" />
+                <ScalarProperty Name="Tien_chuyen_khoan" ColumnName="Tien_chuyen_khoan" />
+                <ScalarProperty Name="Trang_Thai_CK" ColumnName="Trang_Thai_CK" />
+                <ScalarProperty Name="Tien_Con_Phai_Tra" ColumnName="Tien_Con_Phai_Tra" />
+                <ScalarProperty Name="Tong_so_dem" ColumnName="Tong_so_dem" />
+                <ScalarProperty Name="Quoc_Gia" ColumnName="Quoc_Gia" />
+                <ScalarProperty Name="Ghi_chu" ColumnName="Ghi_chu" />
+                <ScalarProperty Name="Thu_checkin" ColumnName="Thu_checkin" />
+                <ScalarProperty Name="Th_checkout" ColumnName="Th_checkout" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="Trang_Thai_Dat" ColumnName="Trang_Thai_Dat" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="select_item_checkin_out_exact_byPageIndex" FunctionName="HouzingModel.Store.select_item_checkin_out_exact_byPageIndex">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.select_item_checkin_out_exact_byPageIndex_Result">
+                <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+                <ScalarProperty Name="Ten_Khach_Hang" ColumnName="Ten_Khach_Hang" />
+                <ScalarProperty Name="So_Dien_Thoai" ColumnName="So_Dien_Thoai" />
+                <ScalarProperty Name="Ngay_Sinh_Nhat" ColumnName="Ngay_Sinh_Nhat" />
+                <ScalarProperty Name="Noi_Song" ColumnName="Noi_Song" />
+                <ScalarProperty Name="So_Phong_Dat" ColumnName="So_Phong_Dat" />
+                <ScalarProperty Name="Check_in" ColumnName="Check_in" />
+                <ScalarProperty Name="Check_out" ColumnName="Check_out" />
+                <ScalarProperty Name="Tong_tien_phong" ColumnName="Tong_tien_phong" />
+                <ScalarProperty Name="Tien_chuyen_khoan" ColumnName="Tien_chuyen_khoan" />
+                <ScalarProperty Name="Trang_Thai_CK" ColumnName="Trang_Thai_CK" />
+                <ScalarProperty Name="Tien_Con_Phai_Tra" ColumnName="Tien_Con_Phai_Tra" />
+                <ScalarProperty Name="Tong_so_dem" ColumnName="Tong_so_dem" />
+                <ScalarProperty Name="Quoc_Gia" ColumnName="Quoc_Gia" />
+                <ScalarProperty Name="Ghi_chu" ColumnName="Ghi_chu" />
+                <ScalarProperty Name="Thu_checkin" ColumnName="Thu_checkin" />
+                <ScalarProperty Name="Th_checkout" ColumnName="Th_checkout" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="Trang_Thai_Dat" ColumnName="Trang_Thai_Dat" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="select_item_Id" FunctionName="HouzingModel.Store.select_item_Id">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.select_item_Id_Result">
+                <ScalarProperty Name="Ten_Khach_Hang" ColumnName="Ten_Khach_Hang" />
+                <ScalarProperty Name="So_Dien_Thoai" ColumnName="So_Dien_Thoai" />
+                <ScalarProperty Name="Ngay_Sinh_Nhat" ColumnName="Ngay_Sinh_Nhat" />
+                <ScalarProperty Name="Noi_Song" ColumnName="Noi_Song" />
+                <ScalarProperty Name="So_Phong_Dat" ColumnName="So_Phong_Dat" />
+                <ScalarProperty Name="Check_in" ColumnName="Check_in" />
+                <ScalarProperty Name="Check_out" ColumnName="Check_out" />
+                <ScalarProperty Name="Tong_tien_phong" ColumnName="Tong_tien_phong" />
+                <ScalarProperty Name="Tien_chuyen_khoan" ColumnName="Tien_chuyen_khoan" />
+                <ScalarProperty Name="Trang_Thai_CK" ColumnName="Trang_Thai_CK" />
+                <ScalarProperty Name="Tien_Con_Phai_Tra" ColumnName="Tien_Con_Phai_Tra" />
+                <ScalarProperty Name="Tong_so_dem" ColumnName="Tong_so_dem" />
+                <ScalarProperty Name="Quoc_Gia" ColumnName="Quoc_Gia" />
+                <ScalarProperty Name="Ghi_chu" ColumnName="Ghi_chu" />
+                <ScalarProperty Name="Thu_checkin" ColumnName="Thu_checkin" />
+                <ScalarProperty Name="Th_checkout" ColumnName="Th_checkout" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="Trang_Thai_Dat" ColumnName="Trang_Thai_Dat" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="select_item_ngaytao_exact" FunctionName="HouzingModel.Store.select_item_ngaytao_exact">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.select_item_ngaytao_exact_Result">
+                <ScalarProperty Name="Ten_Khach_Hang" ColumnName="Ten_Khach_Hang" />
+                <ScalarProperty Name="So_Dien_Thoai" ColumnName="So_Dien_Thoai" />
+                <ScalarProperty Name="Ngay_Sinh_Nhat" ColumnName="Ngay_Sinh_Nhat" />
+                <ScalarProperty Name="Noi_Song" ColumnName="Noi_Song" />
+                <ScalarProperty Name="So_Phong_Dat" ColumnName="So_Phong_Dat" />
+                <ScalarProperty Name="Check_in" ColumnName="Check_in" />
+                <ScalarProperty Name="Check_out" ColumnName="Check_out" />
+                <ScalarProperty Name="Tong_tien_phong" ColumnName="Tong_tien_phong" />
+                <ScalarProperty Name="Tien_chuyen_khoan" ColumnName="Tien_chuyen_khoan" />
+                <ScalarProperty Name="Trang_Thai_CK" ColumnName="Trang_Thai_CK" />
+                <ScalarProperty Name="Tien_Con_Phai_Tra" ColumnName="Tien_Con_Phai_Tra" />
+                <ScalarProperty Name="Tong_so_dem" ColumnName="Tong_so_dem" />
+                <ScalarProperty Name="Quoc_Gia" ColumnName="Quoc_Gia" />
+                <ScalarProperty Name="Ghi_chu" ColumnName="Ghi_chu" />
+                <ScalarProperty Name="Thu_checkin" ColumnName="Thu_checkin" />
+                <ScalarProperty Name="Th_checkout" ColumnName="Th_checkout" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="Trang_Thai_Dat" ColumnName="Trang_Thai_Dat" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="select_item_Sdt" FunctionName="HouzingModel.Store.select_item_Sdt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.select_item_Sdt_Result">
+                <ScalarProperty Name="Ten_Khach_Hang" ColumnName="Ten_Khach_Hang" />
+                <ScalarProperty Name="So_Dien_Thoai" ColumnName="So_Dien_Thoai" />
+                <ScalarProperty Name="Ngay_Sinh_Nhat" ColumnName="Ngay_Sinh_Nhat" />
+                <ScalarProperty Name="Noi_Song" ColumnName="Noi_Song" />
+                <ScalarProperty Name="So_Phong_Dat" ColumnName="So_Phong_Dat" />
+                <ScalarProperty Name="Check_in" ColumnName="Check_in" />
+                <ScalarProperty Name="Check_out" ColumnName="Check_out" />
+                <ScalarProperty Name="Tong_tien_phong" ColumnName="Tong_tien_phong" />
+                <ScalarProperty Name="Tien_chuyen_khoan" ColumnName="Tien_chuyen_khoan" />
+                <ScalarProperty Name="Trang_Thai_CK" ColumnName="Trang_Thai_CK" />
+                <ScalarProperty Name="Tien_Con_Phai_Tra" ColumnName="Tien_Con_Phai_Tra" />
+                <ScalarProperty Name="Tong_so_dem" ColumnName="Tong_so_dem" />
+                <ScalarProperty Name="Quoc_Gia" ColumnName="Quoc_Gia" />
+                <ScalarProperty Name="Ghi_chu" ColumnName="Ghi_chu" />
+                <ScalarProperty Name="Thu_checkin" ColumnName="Thu_checkin" />
+                <ScalarProperty Name="Th_checkout" ColumnName="Th_checkout" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="Trang_Thai_Dat" ColumnName="Trang_Thai_Dat" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="select_list_trangthai" FunctionName="HouzingModel.Store.select_list_trangthai">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.select_list_trangthai_Result">
+                <ScalarProperty Name="Ten_Khach_Hang" ColumnName="Ten_Khach_Hang" />
+                <ScalarProperty Name="So_Dien_Thoai" ColumnName="So_Dien_Thoai" />
+                <ScalarProperty Name="Ngay_Sinh_Nhat" ColumnName="Ngay_Sinh_Nhat" />
+                <ScalarProperty Name="Noi_Song" ColumnName="Noi_Song" />
+                <ScalarProperty Name="So_Phong_Dat" ColumnName="So_Phong_Dat" />
+                <ScalarProperty Name="Check_in" ColumnName="Check_in" />
+                <ScalarProperty Name="Check_out" ColumnName="Check_out" />
+                <ScalarProperty Name="Tong_tien_phong" ColumnName="Tong_tien_phong" />
+                <ScalarProperty Name="Tien_chuyen_khoan" ColumnName="Tien_chuyen_khoan" />
+                <ScalarProperty Name="Trang_Thai_CK" ColumnName="Trang_Thai_CK" />
+                <ScalarProperty Name="Tien_Con_Phai_Tra" ColumnName="Tien_Con_Phai_Tra" />
+                <ScalarProperty Name="Tong_so_dem" ColumnName="Tong_so_dem" />
+                <ScalarProperty Name="Quoc_Gia" ColumnName="Quoc_Gia" />
+                <ScalarProperty Name="Ghi_chu" ColumnName="Ghi_chu" />
+                <ScalarProperty Name="Thu_checkin" ColumnName="Thu_checkin" />
+                <ScalarProperty Name="Th_checkout" ColumnName="Th_checkout" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nha_Nao" ColumnName="Nha_Nao" />
+                <ScalarProperty Name="Nguoi_Nhap" ColumnName="Nguoi_Nhap" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="Trang_Thai_Dat" ColumnName="Trang_Thai_Dat" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="update_lich_dat_phong" FunctionName="HouzingModel.Store.update_lich_dat_phong" />
+          <FunctionImportMapping FunctionImportName="update_QuanlyAnhVideo" FunctionName="HouzingModel.Store.update_QuanlyAnhVideo" />
+          <FunctionImportMapping FunctionImportName="Users_SelectUsersNoRole" FunctionName="HouzingModel.Store.Users_SelectUsersNoRole">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.Users_SelectUsersNoRole_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_login" ColumnName="Id_login" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Video_Insertitem" FunctionName="HouzingModel.Store.Video_Insertitem" />
+          <FunctionImportMapping FunctionImportName="Video_Selectitem" FunctionName="HouzingModel.Store.Video_Selectitem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HouzingModel.Video_Selectitem_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_VIDEO" ColumnName="ID_VIDEO" />
+                <ScalarProperty Name="VIDEO_URL" ColumnName="VIDEO_URL" />
+                <ScalarProperty Name="MAIN_HOVER_TEXT" ColumnName="MAIN_HOVER_TEXT" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Video_Updateitem" FunctionName="HouzingModel.Store.Video_Updateitem" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -14,6 +14,7 @@ namespace DataHelper
     
     public partial class Question
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Question()
         {
             this.Answers = new HashSet<Answer>();
@@ -23,6 +24,7 @@ namespace DataHelper
         public int ID_SUBJECT { get; set; }
         public string CAU_HOI { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Answer> Answers { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace DataHelper
 {
     using System;
     using System.Collections.Generic;
-    [Serializable]
+    
     public partial class Quan_Ly_Chi_Phi
     {
         public long ID { get; set; }
@@ -19,7 +19,7 @@ namespace DataHelper
         public string Ghi_Chu { get; set; }
         public Nullable<int> Nha_Nao { get; set; }
         public Nullable<System.DateTime> Ngay_Nhap_Chi_Phi { get; set; }
-        public Nullable<System.DateTime> NGAY_TAO { get; set; }
         public string Nguoi_Nhap { get; set; }
+        public Nullable<System.DateTime> NGAY_TAO { get; set; }
     }
 }

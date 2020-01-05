@@ -14,7 +14,7 @@ namespace DataHelper
     public partial class qlchiphi_select_item_ngaytao_exact_Result
     {
         public long ID { get; set; }
-        public decimal So_Tien_Chi_Phi { get; set; }
+        public Nullable<decimal> So_Tien_Chi_Phi { get; set; }
         public string Ghi_Chu { get; set; }
         public Nullable<int> Nha_Nao { get; set; }
         public Nullable<System.DateTime> Ngay_Nhap_Chi_Phi { get; set; }
